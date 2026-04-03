@@ -1,0 +1,8 @@
+pandas
+matplotlib
+numpy
+ipysigma
+contextily
+myst-nb
+squarify
+spacy
