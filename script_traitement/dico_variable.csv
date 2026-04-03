@@ -1,0 +1,157 @@
+name,label
+N°Obs,N°Obs
+1. so_principles,1_so_principles
+2. hal_depot,2_hal_depot
+3. octavi_depot,3_octavi_depot
+4. open_data,4_open_data
+"5. Autre, précisez : ",5_Autre_précisez__
+6. R,6_R
+7. Python,7_Python
+8. Excel,8_Excel
+9. Julia,9_Julia
+10. Stata,10_Stata
+11. SAS,11_SAS
+12. Aucun,12_Aucun
+13. Autre,13_Autre
+14. other_lang,14_other_lang
+15. dev_code,15_dev_code
+16. dev_exemple,16_dev_exemple
+17. software_depot,17_software_depot
+"18. Oui, autre, précisez : ",18_Oui_autre_précisez__
+19. Faire un dépôt sur HAL,19_Faire_un_dépôt_sur_HAL
+20. Rédiger un Plan de Gestion de données (PGD ou DMP),20_Rédiger_un_Plan_de_Gestion_de_données_(PGD_ou_DMP)
+21. Respecter les principes RGPD dans le cadre d'enquêtes ou d'entretiens,21_Respecter_les_principes_RGPD_dans_le_cadre_d'enquêtes_ou_d'entretiens
+22. Connaître les différents types de licence pour la diffusion des résultats de recherche,22_Connaître_les_différents_types_de_licence_pour_la_diffusion_des_résultats_de_recherche
+23. Déposer des données dans un entrepôt,23_Déposer_des_données_dans_un_entrepôt
+24. Connaître les standards de métadonnées,24_Connaître_les_standards_de_métadonnées
+25. Rédiger un data paper,25_Rédiger_un_data_paper
+"26. FAIRiser des données, gérer des données selon les principes FAIR",26_FAIRiser_des_données_gérer_des_données_selon_les_principes_FAIR
+27. utilite_accomp,27_utilite_accomp
+28. type_data,28_type_data
+"29. Autre, précisez lesquelles : ",29_Autre_précisez_lesquelles__
+30. quali_or_quanti,30_quali_or_quanti
+31. humanum,31_humanum
+32. how_humanum,32_how_humanum
+33. Nakala,33_Nakala
+34. Isidore,34_Isidore
+35. ShareDocs,35_ShareDocs
+36. Hébergement web,36_Hébergement_web
+37. Stylo,37_Stylo
+38. Mattermost,38_Mattermost
+39. GitLab,39_GitLab
+40. Matomo,40_Matomo
+41. HNURL,41_HNURL
+42. Kanboard,42_Kanboard
+43. Nakala (entrepôt de données),43_Nakala_(entrepôt_de_données)
+44. Isidore (moteur de recherche documentaire),44_Isidore_(moteur_de_recherche_documentaire)
+45. ShareDocs (plateforme de partage de fichiers et de traitement des données),45_ShareDocs_(plateforme_de_partage_de_fichiers_et_de_traitement_des_données)
+46. Hébergement web,46_Hébergement_web
+47. Stylo,47_Stylo
+48. Mattermost,48_Mattermost
+49. GitLab,49_GitLab
+50. Matomo,50_Matomo
+51. HNURL,51_HNURL
+52. Kanboard,52_Kanboard
+53. Tableur,53_Tableur
+54. Logiciels d'analyse statistique (ex. R – Rstudio),54_Logiciels_d'analyse_statistique_(ex_R_–_Rstudio)
+"55. Python (web-scraping, traitement automatique des langues…)",55_Python_(web-scraping_traitement_automatique_des_langues…)
+"56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",56_Logiciels_d'exploration_de_textes_analyse_statistique_(ex_Gargantext_Iramuteq_Hyperbase)
+57. Logiciels d'OCR : reconnaissance Optique de Caractères,57_Logiciels_d'OCR__reconnaissance_Optique_de_Caractères
+58. Logiciels d'analyse de réseaux (ex. Gephi),58_Logiciels_d'analyse_de_réseaux_(ex_Gephi)
+"59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",59_Logiciels_d'édition_numérique_en_ligne_(ex_Odette_Atom)
+"60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",60_Logiciel_de_traitement_des_données_qualitatives_CAQDAS_(ex_Taguette)
+61. Logiciels de cartographie thématique (ex. Magrit),61_Logiciels_de_cartographie_thématique_(ex_Magrit)
+62. Logiciels de SIG (ex. QGis),62_Logiciels_de_SIG_(ex_QGis)
+63. Système de gestion de base de données,63_Système_de_gestion_de_base_de_données
+64. Autre,64_Autre
+65. other_accomp_software,65_other_accomp_software
+66. util_accomp_software,66_util_accomp_software
+67. Statistiques descriptives,67_Statistiques_descriptives
+68. Régressions,68_Régressions
+"69. Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)",69_Analyse_de_données_temporelles_(analyse_de_survie_de_séquence_de_données_longitudinales)
+70. Cartographie,70_Cartographie
+71. Analyse textuelle,71_Analyse_textuelle
+72. Analyse de réseaux,72_Analyse_de_réseaux
+73. Extraction de données du web (web-scraping),73_Extraction_de_données_du_web_(web-scraping)
+"74. Intelligence artificielle (deep learning, active learning)",74_Intelligence_artificielle_(deep_learning_active_learning)
+75. Edition numérique,75_Edition_numérique
+76. Construction d'un questionnaire,76_Construction_d'un_questionnaire
+77. Bibliométrie,77_Bibliométrie
+78. utilite_accomp_methode,78_utilite_accomp_methode
+79. Tableur,79_Tableur
+80. Logiciels d'analyse statistique (ex. R – Rstudio),80_Logiciels_d'analyse_statistique_(ex_R_–_Rstudio)
+"81. Python : web-scraping, traitement automatique des langues…",81_Python__web-scraping_traitement_automatique_des_langues…
+"82. Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",82_Logiciels_d'exploration_de_textes__analyse_statistique_(ex_Gargantext_Iramuteq_Hyperbase)
+83. Logiciels d'OCR : reconnaissance Optique de Caractère,83_Logiciels_d'OCR__reconnaissance_Optique_de_Caractère
+84. Logiciels d'analyse de réseaux (ex. Gephi),84_Logiciels_d'analyse_de_réseaux_(ex_Gephi)
+"85. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",85_Logiciels_d'édition_numérique_en_ligne_(ex_Odette_Atom)
+"86. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",86_Logiciel_de_traitement_des_données_qualitatives_CAQDAS_(ex_Taguette)
+87. Logiciels de cartographie thématique (ex. Magrit),87_Logiciels_de_cartographie_thématique_(ex_Magrit)
+88. Logiciels de SIG (ex. QGis),88_Logiciels_de_SIG_(ex_QGis)
+89. Système de gestion de base de données,89_Système_de_gestion_de_base_de_données
+90. Autre,90_Autre
+91. accomp_other_software_2,91_accomp_other_software_2
+92. Excel,92_Excel
+93. SAS,93_SAS
+94. SPSS,94_SPSS
+95. STATA,95_STATA
+96. Nvivo,96_Nvivo
+97. Atlas.ti,97_Atlasti
+98. Oxygen,98_Oxygen
+99. ArcGis,99_ArcGis
+100. Autre,100_Autre
+101. accomp_other_closed_software,101_accomp_other_closed_software
+102. util_accomp_closed_software,102_util_accomp_closed_software
+103. Des postes informatiques équipés de logiciels,103_Des_postes_informatiques_équipés_de_logiciels
+"104. Des ressources documentaires (ouvrages méthodologiques, thématiques…)",104_Des_ressources_documentaires_(ouvrages_méthodologiques_thématiques…)
+"105. Des espaces de travail, salle de réunion",105_Des_espaces_de_travail_salle_de_réunion
+"106. Une permanence d'accueil tenue par des ingénieur·e·s, bibliothécaires à créneaux fixes",106_Une_permanence_d'accueil_tenue_par_des_ingénieur·e·s_bibliothécaires_à_créneaux_fixes
+107. Un équipement (SdBox) et une aide au financement pour l'accès aux données du CASD (Centre d'Accès Sécurisé aux Données),107_Un_équipement_(SdBox)_et_une_aide_au_financement_pour_l'accès_aux_données_du_CASD_(Centre_d'Accès_Sécurisé_aux_Données)
+108. other_service_univ,108_other_service_univ
+109. research_fields,109_research_fields
+110. statut,110_statut
+111. Autre : ,111_Autre__
+112. env_travail,112_env_travail
+"113. Autre, précisez : ",113_Autre_précisez__
+114. Ordinateur fixe bureau,114_Ordinateur_fixe_bureau
+115. Ordinateur fixe maison,115_Ordinateur_fixe_maison
+116. Ordinateur portable perso,116_Ordinateur_portable_perso
+117. Ordinateur portable pro,117_Ordinateur_portable_pro
+118. Téléphone portable perso,118_Téléphone_portable_perso
+119. Téléphone portable pro,119_Téléphone_portable_pro
+120. Tablette perso,120_Tablette_perso
+121. Tablette pro,121_Tablette_pro
+122. Stylos et papier,122_Stylos_et_papier
+123. archive_data,123_archive_data
+"124. Autre, précisez : ",124_Autre_précisez__
+125. os_sys,125_os_sys
+126. webbrowser,126_webbrowser
+"127. Autre, précisez : ",127_Autre_précisez__
+128. stockage_doc,128_stockage_doc
+"129. Autre, précisez : ",129_Autre_précisez__
+130. collab_tools,130_collab_tools
+"131. Oui, précisez : ",131_Oui_précisez__
+132. sauvegarde_data,132_sauvegarde_data
+"133. Autre, précisez : ",133_Autre_précisez__
+134. ia_for_research,134_ia_for_research
+135. ia_tools,135_ia_tools
+136. gratuit_ou_payant,136_gratuit_ou_payant
+137. raison_util_ia,137_raison_util_ia
+138. ok_contact,138_ok_contact
+139. etre_informer,139_etre_informer
+140. present_work,140_present_work
+141. ok_teaching,141_ok_teaching
+142. Nom :,142_Nom_
+143. Prénom :,143_Prénom_
+144. Adresse e-mail :,144_Adresse_e-mail_
+"145. Votre UFR, département, laboratoire d'affiliation :",145_Votre_UFR_département_laboratoire_d'affiliation_
+146. Clé,146_Clé
+147. Date de saisie,147_Date_de_saisie
+148. Date de dernière modification,148_Date_de_dernière_modification
+149. Date de dernier enregistrement,149_Date_de_dernier_enregistrement
+150. Temps de saisie,150_Temps_de_saisie
+151. Langue,151_Langue
+152. Progression,152_Progression
+153. Dernière question saisie,153_Dernière_question_saisie
+154. Origine,154_Origine
+155. Appareil utilisé pour la saisie,155_Appareil_utilisé_pour_la_saisie
