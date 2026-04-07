@@ -1,0 +1,336 @@
+FR
+Besoins d'accompagnement à la recherche 2025-2026
+1/ Diriez-vous que vous êtes familier.ère des principes de la Science Ouverte ?
+so_principles
+
+Non
+"Oui, un peu"
+"Oui, tout à fait"
+"2/ Avez-vous déjà déposé une production scientifique (article, communication...) sur HAL ?"
+hal_depot
+"Oui, une fois"
+"Oui, plusieurs fois"
+"Oui, systématiquement"
+"3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?"
+octavi_depot
+Plusieurs réponses possibles
+Des travaux universitaires
+Des publications
+Des formations
+"Des captations d'évènements (colloque, journée d'étude)"
+Je ne connais pas Octaviana
+4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?
+open_data
+"Oui, sur Data Paris 8"
+"Oui, sur Zenodo, Nakala"
+"Oui, sur Nakala"
+"Autre, précisez"
+"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+R
+Oui
+Python
+Excel
+Julia
+Stata
+SAS
+Aucun
+Autre
+"5.1/ Si Autre, précisez lequel (lesquels) ?"
+other_lang
+"6/ Dans le cadre de vos activités de recherche, êtes-vous amené.e à développer ou faire développer des logiciels/du code spécialisé(s) ?"
+dev_code
+"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?"
+dev_exemple
+7/ Avez-vous déjà déposé des logiciels ou codes sources dans un entrepôt dédié ?
+software_depot
+"Oui, sur GitHub"
+"Oui, sur GitLab"
+"Oui, sur Software Heritage"
+"Oui, autre, précisez"
+"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+Faire un dépôt sur HAL
+"Non, pas utile"
+"Oui, plutôt utile"
+"Oui, très utile"
+Rédiger un Plan de Gestion de données (PGD ou DMP)
+Respecter les principes RGPD dans le cadre d'enquêtes ou d'entretiens
+Connaître les différents types de licence pour la diffusion des résultats de recherche
+Déposer des données dans un entrepôt
+Connaître les standards de métadonnées
+Rédiger un data paper
+"FAIRiser des données, gérer des données selon les principes FAIR"
+"9/ Ce type d'accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si oui, lesquels ?"
+utilite_accomp
+1/ Quelles types de données produisez-vous ?
+type_data
+Données expérimentales ou d'observation
+Données d'enquête
+Données d'entretien
+Données textuelles ou documentaires
+Données du web
+Données statistiques
+Données multimédia
+Données géographiques ou spatiales
+Métadonnées
+Aucune
+"Autre, précisez lesquelles"
+2/ Diriez-vous que vous travaillez le plus souvent avec ?
+quali_or_quanti
+Des données qualitatives
+Des données quantitatives
+Les deux
+3/ Connaissez-vous la TGIR Huma-Num ?
+humanum
+3.1/ Par quel(s) moyen(s) l'avez-vous connue ?
+how_humanum
+Votre structure de recherche
+Des collègues
+Des recherches en ligne
+Des listes de diffusion
+"Les ""Cafés Huma-Num"""
+Des évènements scientofiques (rencontres Huma-Num)
+A l'occasion de formations
+"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
+service_hn
+Nakala
+Isidore
+ShareDocs
+Hébergement web
+5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
+other_tools_hn
+Stylo
+Mattermost
+GitLab
+Matomo
+HNURL
+Kanboard
+6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+hn_accomp
+Nakala (entrepôt de données)
+Isidore (moteur de recherche documentaire)
+ShareDocs (plateforme de partage de fichiers et de traitement des données)
+7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+accomp_open_software
+Tableur
+"Oui, débutant"
+"Oui, avancé"
+Logiciels d'analyse statistique (ex. R – Rstudio)
+"Python (web-scraping, traitement automatique des langues…)"
+"Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)"
+Logiciels d'OCR : reconnaissance Optique de Caractères
+Logiciels d'analyse de réseaux (ex. Gephi)
+"Logiciels d'édition numérique en ligne (ex. Odette, Atom)"
+"Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)"
+Logiciels de cartographie thématique (ex. Magrit)
+Logiciels de SIG (ex. QGis)
+Système de gestion de base de données
+"7.1/ Si Autre, précisez lequel (lesquels) ?"
+other_accomp_software
+"8/ Ce type d'accompagnements serait-il utile pour votre équipe ou vos étudiants ? Si oui, précisez lesquels :"
+util_accomp_software
+1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+accomp_method
+Statistiques descriptives
+Régressions
+"Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)"
+Cartographie
+Analyse textuelle
+Analyse de réseaux
+Extraction de données du web (web-scraping)
+"Intelligence artificielle (deep learning, active learning)"
+Edition numérique
+Construction d'un questionnaire
+Bibliométrie
+"2/  Ce type d’accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si
+oui, lesquels ?"
+utilite_accomp_methode
+"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+open source ?"
+accomp_open_software_2
+"Python : web-scraping, traitement automatique des langues…"
+"Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)"
+Logiciels d'OCR : reconnaissance Optique de Caractère
+"3.1/ Si Autre, précisez lequel (lesquels) ?"
+accomp_other_software_2
+4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+accomp_closed_software
+SPSS
+STATA
+Nvivo
+Atlas.ti
+Oxygen
+ArcGis
+"4.1/ Si Autre, lequel (lesquels) ?"
+accomp_other_closed_software
+"5/ Ce type d’accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si oui, lesquels ?"
+util_accomp_closed_software
+"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
+futur_service_univ
+Des postes informatiques équipés de logiciels
+"Des ressources documentaires (ouvrages méthodologiques, thématiques…)"
+"Des espaces de travail, salle de réunion"
+"Une permanence d'accueil tenue par des ingénieur·e·s, bibliothécaires à créneaux fixes"
+Un équipement (SdBox) et une aide au financement pour l'accès aux données du CASD (Centre d'Accès Sécurisé aux Données)
+7/ D'autres services vous paraîtraient-ils utiles ?
+other_service_univ
+1/ Votre/vos champ(s) principaux de recherche ? <i>Catégories issues de la nomenclature ERC</i>
+research_fields
+"Si vous le souhaitez, vous pourrez renseigner en fin d’enquête, votre rattachement à une UFR, un département, un laboratoire."
+"SH1 Individus, marchés et organisations"
+"SH2 Institutions, gouvernance et systèmes juridiques"
+SH3 Le monde social et ses interactions
+SH4 L'esprit humain et sa complexité
+SH5 Textes et concepts
+SH6 L'étude du passé humain
+"SH7 Mobilité humaine, environnement et espace"
+SH8 Études des cultures et des arts
+PE1 Mathématiques
+PE2 Constituants fondamentaux de la matière
+PE3 Physique de la matière condensée
+PE4 Chimie physique et analytique
+PE5 Chimie de synthèse et matériaux
+PE6 Sciences informatiques et informatique
+PE7 Ingénierie des systèmes et de la communication
+PE8 Ingénierie des produits et des procédés
+PE9 Sciences de l'Univers
+PE10 Sciences du Système Terre
+PE11 Génie des matériaux
+LS1 Molécules de la vie
+LS2 Biologie intégrative
+"LS3 Biologie cellulaire, du développement, cellules souches et régénération"
+"LS4 Physiologie de la santé, de la maladie et du vieillissement"
+LS5 Neurosciences et troubles du système nerveux
+"LS6 Immunité, infection et immunothérapie"
+"LS7 Prévention, diagnostic et traitement des maladies humaines"
+"LS8 Biologie environnementale, écologie et évolution"
+LS9 Biotechnologie et ingénierie des biosystèmes
+2/ Êtes-vous ?
+statut
+Doctorant·e
+Enseignant·e chercheur·e
+Personnel de soutien à la recherche
+1/ Où travaillez-vous le plus souvent ?
+env_travail
+(classez par ordre de priorité ; 1 étant le lieu le plus utilisé)
+A mon domicile
+Dans mon bureau sur site
+"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+freq_materiel
+(0 : pas du tout ; 4 : tout le temps)
+Ordinateur fixe bureau
+0
+1
+2
+3
+4
+Ordinateur fixe maison
+Ordinateur portable perso
+Ordinateur portable pro
+Téléphone portable perso
+Téléphone portable pro
+Tablette perso
+Tablette pro
+Stylos et papier
+8/ Où archivez-vous vos données de recherche une fois le projet terminé ?
+archive_data
+Sur les espaces disques de Paris 8
+"Sur un cloud commercial : GoogleDrive, iCloud d'Apple, Microsoft OneDrive"
+"Sur un cloud de Paris 8 : Nuxeo, NextCloud"
+Sur le cloud d'un partenaire
+"Sur GitHub, GitLab ou équivalent"
+Sur ShareDocs ou équivalent
+Sur une clé usb ou sur un disque dur
+"Dans un entrepôt de données (type Data Paris 8, Zenodo, Nakala etc.)"
+Sur Open Science Framework (OSF)
+"Je n'archive, ni ne diffuse mes données"
+3/ Sous quel système d’exploitation travaillez-vous au quotidien ?
+os_sys
+Apple
+ChromeOS
+Linux
+Windows
+4/ Quel navigateur utilisez-vous au quotidien ?
+webbrowser
+Chrome
+Chromium
+Edge
+Firefox
+Safari
+Tor browser
+5/ Où stockez-vous vos documents de travail ?
+stockage_doc
+Sur papier
+Sur votre ordinateur personnel
+Sur votre ordinateur pro
+Sur une clé USB ou un disque dur
+"Sur un cloud de Paris 8 : Nuxeo, Nextcloud"
+6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
+collab_tools
+"Oui, précisez"
+7/ Quels outils de sauvegarde des données utilisez-vous pendant la durée d'un projet ?
+sauvegarde_data
+Je ne fais pas de sauvergarde
+"9/ Utilisez-vous, dans le cadre de vos travaux universitaires (enseignement, recherche) des outils d'intelligence artificielle ?"
+ia_for_research
+"9.2/ Si oui, lesquels ?"
+ia_tools
+Séparer le nom des outils par des virgules
+9.3/ Les utilisez-vous en version :
+gratuit_ou_payant
+Gratuite
+Payante
+9.4/ Pourquoi les utilisez-vous ?
+raison_util_ia
+"1/ Acceptez-vous que nous vous contactions pour une proposition de formation collective (méthodologie, logiciels...), d'après vos réponses précédentes ?"
+ok_contact
+"2/ Souhaitez-vous des informations de la part des différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) (événements scientifiques, calendrier des formations…) ?"
+etre_informer
+"3/ Seriez- vous intéressé·e pour présenter vos travaux et expériences de recherche à l’occasion de séminaires, journées d’études, colloques, organisés par les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) ?"
+present_work
+"3/ Seriez-vous intéressé·e par le fait de dispenser vous-même des formations (méthodologies, logiciels) selon vos domaines de compétence, dans le cadre des formations organisées par les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) ?"
+ok_teaching
+"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
+contact_info
+Nom :
+Prénom :
+Adresse e-mail :
+"Votre UFR, département, laboratoire d'affiliation :"
+CLE
+Clé
+DATE_SAISIE
+Date de saisie
+DATE_MODIF
+Date de dernière modification
+DATE_ENREG
+Date de dernier enregistrement
+TEMPS_SAISIE
+Temps de saisie
+LANG_SAISIE
+Langue
+PROGRESSION
+Progression
+En cours
+Terminé
+QuotaFull
+ScreenOut
+DERNIERE_QUESTION_SAISIE
+Dernière question saisie
+ORIGINE_SAISIE
+Origine
+APPAREIL_SAISIE
+Appareil utilisé pour la saisie
+PC
+Tablette
+Smartphone
+"Données de Recherche et Science Ouverte, pratiques et besoins - Enquête 2025-2026"
+Science Ouverte
+Gestion et traitement des données
+Analyse de données
+Pour mieux vous connaitre...
+Votre environnement de travail
+Vos informations pour prise de contact ultérieure
+"<div style=""text-align: justify;""><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS;""><span style=""font-size: 16px;""> </span></span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS;""><span style=""font-size: 16px;"">Vous pouvez <a href=""https://nextcloud.univ-paris8.fr/s/DNGwfbak8D8Cdpz"">télécharger le PDF</a> de cette enquête en faisant un <strong>clic-droit</strong>. </span></span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">Votre participation à cette enquête ne prendra que <strong><span style=""text-decoration: underline;"">15 minutes</span></strong> maximum. En y répondant, vous contribuez directement à l’amélioration des services qui vous sont destinés.</span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;""><strong>INTRODUCTION</strong></span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS;""><span style=""font-size: 16px;"">Dans un contexte de transformation profonde des pratiques de recherche sous l’effet du <strong>numérique</strong> et du mouvement international en faveur de la <strong>science ouverte</strong>, l’université engage une <strong>démarche structurée de réflexion et d’action autour de la gestion, du partage et de la valorisation des productions scientifiques</strong>. Cette dynamique s’inscrit dans la volonté de construire, à moyen et long terme, une <span style=""text-decoration: underline;""><strong>politique d’établissement cohérente en matière de science ouverte, fondée sur une compréhension fine des besoins de sa communauté et sur la mise en œuvre progressive d’une offre de services adaptée</strong></span>.</span></span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;""><br />C’est dans ce cadre qu’une enquête est conduite auprès des chercheurs, des personnels de laboratoire et des doctorants, afin de mieux connaître leurs pratiques numériques, leurs environnements de travail et leurs besoins d’accompagnement et de formation autour de plusieurs thématiques clés :</span></p><ul style=""margin-left: 40px;""><li style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">la science ouverte et ses principes ;</span></li><li style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">le cycle de vie des données de la recherche (collecte, traitement, gestion, documentation, ouverture et partage) ;</span></li><li style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">les pratiques de publication en accès ouvert et la diffusion des résultats scientifiques.</span></li></ul><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;""><br />Sous l’égide de la <strong>vice-présidence recherche, de la vice-présidence accompagnement et formation des personnels enseignants et enseignants-chercheurs et de la mission science ouverte</strong>, cette enquête est portée conjointement par la <strong>Bibliothèque de l’université, la Direction de la recherche, le pôle Développement de la Dipefas et la Direction des systèmes d’information et du numérique (DSIN)</strong>. En mutualisant leurs expertises et leurs perspectives, ces acteurs souhaitent dresser un état des lieux partagé des pratiques et des besoins au sein de la communauté universitaire, dans une logique d’accompagnement et de co-construction.</span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;""><br />Les enseignements tirés de cette enquête viendront nourrir une <strong>stratégie d’établissement à cinq ans</strong>, visant à renforcer la <strong>souveraineté scientifique</strong>, à <strong>faciliter l’adoption des bonnes pratiques</strong> et à <strong>favoriser la diffusion et la réutilisation des savoirs</strong>. Ils permettront également de <strong>structurer une offre de services, d’accompagnement et de formation à destination de l’ensemble des acteurs de la recherche</strong>, tout en consolidant la coordination des dispositifs d’appui à la science ouverte.</span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">Les informations collectées dans cette enquête ont pour seul objectif de <strong>mieux comprendre vos pratiques de travail, de mieux connaître vos compétences et vos besoins en termes d’accompagnement et de formation</strong>.</span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">Conformément à la loi n°78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés modifiée et en application du Règlement général sur la protection des données du 25 mai 2018 (RGPD), vous pouvez à tout moment demander à modifier, rectifier ou à retirer* les données renseignées en vous adressant à : <a href=""mailto:serviceschercheurs.bu@listes.univ-paris8.fr"">serviceschercheurs.bu@listes.univ-paris8.fr</a>.</span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">Pour les questions juridiques liées au traitement de vos données à caractère personnel, vous pouvez joindre le délégué à la protection des données au moyen des adresses suivantes :</span><span style=""font-family: Comic Sans MS; font-size: 16px;""></span></p><ul style=""margin-left: 40px;""><li style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">Par voie électronique à : <a href=""mailto:dpo@univ-paris8.fr"">dpo@univ-paris8.fr</a>,</span></li><li style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;""> </span><span style=""font-family: Comic Sans MS; font-size: 16px;"">Par courrier postal :</span><span style=""font-family: Comic Sans MS; font-size: 16px;""><strong></strong></span></li></ul><span style=""font-family: Comic Sans MS;""><span style=""font-size: 16px;"">                Délégué à la protection des données<br /><span style=""font-family: Comic Sans MS;""><span style=""font-size: 16px;"">                </span></span>Direction Générale des Services<br /><span style=""font-family: Comic Sans MS;""><span style=""font-size: 16px;"">                </span></span>Université Paris 8 Vincennes Saint-Denis<br /><span style=""font-family: Comic Sans MS;""><span style=""font-size: 16px;"">                </span></span>2 rue de la Liberté<br /><span style=""font-family: Comic Sans MS;""><span style=""font-size: 16px;"">                </span></span>93526 SAINT DENIS CEDEX</span></span><br /><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">NB : Le délégué à la protection des données (DPO) de l’Université Paris 8 est votre interlocuteur uniquement pour toute demande juridique d'exercice de vos droits sur ce traitement.</span></p><p style=""text-align: justify;""><span style=""font-family: Comic Sans MS; font-size: 16px;"">Réclamation auprès de la CNIL : Si vous estimez, après nous avoir contactés, que vos droits Informatique et Libertés ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL (commission nationale informatique et libertés <a href=""mailto:www.cnil.fr"">www.cnil.fr</a>).</span></p><p style=""text-align: justify;""><br /></p></div>"
+"<div style=""text-align: justify;"">Les différents services de l'université (bibliothèque, direction de la recherche, pôle développement RH...) peuvent proposer à la communauté de recherche un <strong>accompagnement Science Ouverte, adaptées aux sciences humaines et sociales</strong>.</div>"
+"<div><p style=""text-align: justify;""><em>""Les données de la recherche désignent les enregistrements factuels (chiffres, textes, images et sons) considérés comme nécessaires pour valider les résultats de la recherche.""</em></p><p style=""text-align: justify;"">(UNESCO - Recommandation sur une science ouverte, 2021)</p></div>"
+"<div style=""text-align: justify;""><span style=""font-size: 20px;""><span style=""font-family: Comic Sans MS; font-size: 14px;""><em>La TGIR Huma-Num accompagne la communauté de recherche dans le traitement des données, qu'il s'agisse de données d'enquêtes, ou de données relevant davantage du champ des humanités numériques (textes, images, son, données du web...).</em></span></span></div>"
+<p>Merci pour votre participation à cette enquête !</p>
