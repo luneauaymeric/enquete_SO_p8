@@ -144,7 +144,7 @@ N°Obs,no_obs,
 142. Nom :,42_Nom_,True
 143. Prénom :,42_Prénom_,True
 144. Adresse e-mail :,43_Adresse_e-mail_,True
-"145. Votre UFR, département, laboratoire d'affiliation :",44_Votre_UFR_département_laboratoire_d'affiliation_,True
+"145. Votre UFR, département, laboratoire d'affiliation :",44_ufr_labo,True
 146. Clé,45_Clé,True
 147. Date de saisie,46_Date_de_saisie,
 148. Date de dernière modification,47_Date_de_dernière_modification,
