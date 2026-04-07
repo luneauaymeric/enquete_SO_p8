@@ -1,157 +1,157 @@
-name,label,personal_data,type,question,modalités
-N°Obs,qno_obs,False,int64,Diriez-vous que vous êtes familier.ère des principes de la Science Ouverte ?,"Non|Oui, un peu|Oui, tout à fait"
-1. so_principles,q1_so_principles,False,object,"Avez-vous déjà déposé une production scientifique (article, communication…) sur HAL ?",
-2. hal_depot,q2_hal_depot,False,object,"Avez-vous des production déposées sur Octaviana, la bibliothèque numérique de l’université ?",
-3. octavi_depot,q3_octavi_depot,False,object,Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?,
-4. open_data,q4_diff_data,False,object,,
-"5. Autre, précisez : ",q4_autres_entrepots,False,object,,
-6. R,q5_r,False,object,,
-7. Python,q5_python,False,object,,
-8. Excel,q5_excel,False,object,,
-9. Julia,q5_julia,False,object,,
-10. Stata,q5_stata,False,object,,
-11. SAS,q5_sas,False,object,,
-12. Aucun,q5_aucun,False,object,,
-13. Autre,q5_autre,False,object,,
-14. other_lang,q5_1_other_lang,False,object,,
-15. dev_code,q6_dev_code,False,object,,
-16. dev_exemple,q6_1_dev_exemple,False,object,,
-17. software_depot,q7_software_depot,False,object,,
-"18. Oui, autre, précisez : ",q7_1_other_sw_depot,False,object,,
-19. Faire un dépôt sur HAL,q8_depot_hal_help,False,object,,
-20. Rédiger un Plan de Gestion de données (PGD ou DMP),q8_rediger_pdg_help,False,object,,
-21. Respecter les principes RGPD dans le cadre d'enquêtes ou d'entretiens,q8_respect_rgpd_help,False,object,,
-22. Connaître les différents types de licence pour la diffusion des résultats de recherche,q8_licences_help,False,object,,
-23. Déposer des données dans un entrepôt,q8_depot_donnees_help,False,object,,
-24. Connaître les standards de métadonnées,q8_metadonnees_help,False,object,,
-25. Rédiger un data paper,q8_data_paper_help,False,object,,
-"26. FAIRiser des données, gérer des données selon les principes FAIR",q8_fair_data_help,False,object,,
-27. utilite_accomp,q9_utilite_accomp,False,object,,
-28. type_data,q10_type_data,False,object,,
-"29. Autre, précisez lesquelles : ",q10_other_type_data,False,object,,
-30. quali_or_quanti,q11_quali_or_quanti,False,object,,
-31. humanum,q12_humanum,False,object,,
-32. how_humanum,q12_1_how_humanum,False,float64,,
-33. Nakala,q13_nakala,False,object,,
-34. Isidore,q13_isidore,False,object,,
-35. ShareDocs,q13_sharedocs,False,object,,
-36. Hébergement web,q13_hébergement_web,False,object,,
-37. Stylo,q14_stylo,False,object,,
-38. Mattermost,q14_mattermost,False,object,,
-39. GitLab,q14_gitlab,False,object,,
-40. Matomo,q14_matomo,False,object,,
-41. HNURL,q14_hnurl,False,object,,
-42. Kanboard,q14_kanboard,False,object,,
-43. Nakala (entrepôt de données),q15_nakala_help,False,object,,
-44. Isidore (moteur de recherche documentaire),q15_isidore_help,False,object,,
-45. ShareDocs (plateforme de partage de fichiers et de traitement des données),q15_sharedocs_help,False,object,,
-46. Hébergement web,q15_hébergement_web_help,False,object,,
-47. Stylo,q15_stylo_help,False,object,,
-48. Mattermost,q15_mattermost_help,False,object,,
-49. GitLab,q15_gitlab_help,False,object,,
-50. Matomo,q15_matomo_help,False,object,,
-51. HNURL,q15_hnurl_help,False,object,,
-52. Kanboard,q15_kanboard_help,False,object,,
-53. Tableur,q16_tableur_help,False,object,,
-54. Logiciels d'analyse statistique (ex. R – Rstudio),q16_logiciels_d'analyse_statistique_help,False,object,,
-"55. Python (web-scraping, traitement automatique des langues…)",q16_python_help,False,object,,
-"56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q16_garg_iram_hyperbase_help,False,object,,
-57. Logiciels d'OCR : reconnaissance Optique de Caractères,q16_ocr_help,False,object,,
-58. Logiciels d'analyse de réseaux (ex. Gephi),q16_network_analysis_help,False,object,,
-"59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q16_odette_atom_help,False,object,,
-"60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q16_caqdas_help,False,object,,
-61. Logiciels de cartographie thématique (ex. Magrit),q16_carto_help,False,object,,
-62. Logiciels de SIG (ex. QGis),q16_sig_help,False,object,,
-63. Système de gestion de base de données,q16_sgbd_help,False,object,,
-64. Autre,q16_autre_help,False,object,,
-65. other_accomp_software,q16_1_other_software_help,False,object,,
-66. util_accomp_software,q17_util_accomp_software,False,object,,
-67. Statistiques descriptives,q18_stat_desc_help,False,object,,
-68. Régressions,q18_regressions_help,False,object,,
-"69. Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)",q18_temporal_analysis_help,False,object,,
-70. Cartographie,q18_cartographie_help,False,object,,
-71. Analyse textuelle,q18_analyse_text_help,False,object,,
-72. Analyse de réseaux,q18_net_analysis_help,False,object,,
-73. Extraction de données du web (web-scraping),q18_webscrapping,False,object,,
-"74. Intelligence artificielle (deep learning, active learning)",q18_deeplearning_help,False,object,,
-75. Edition numérique,q18_edit_num_help,False,object,,
-76. Construction d'un questionnaire,q18_questionnaire_help,False,object,,
-77. Bibliométrie,q18_bibliométrie_help,False,object,,
-78. utilite_accomp_methode,q18_1_utilite_accomp_methode,False,object,,
-79. Tableur,q19_tableur_help,False,object,,
-80. Logiciels d'analyse statistique (ex. R – Rstudio),q19_logiciels_d'analyse_statistique_help,False,object,,
-"81. Python : web-scraping, traitement automatique des langues…",q19_python_help,False,object,,
-"82. Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q19_garg_iram_hyperbase_help,False,object,,
-83. Logiciels d'OCR : reconnaissance Optique de Caractère,q19_ocr_help,False,object,,
-84. Logiciels d'analyse de réseaux (ex. Gephi),q19_network_analysis_help,False,object,,
-"85. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q19_odette_atom_help,False,object,,
-"86. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q19_caqdas_help,False,object,,
-87. Logiciels de cartographie thématique (ex. Magrit),q19_carto_help,False,object,,
-88. Logiciels de SIG (ex. QGis),q19_sig_help,False,object,,
-89. Système de gestion de base de données,q19_sgbd_help,False,object,,
-90. Autre,q19_autre_help,False,object,,
-91. accomp_other_software_2,q19_1_other_software_help,False,object,,
-92. Excel,q20_excel_help,False,object,,
-93. SAS,q20_sas_help,False,object,,
-94. SPSS,q20_spss_help,False,object,,
-95. STATA,q20_stata_help,False,object,,
-96. Nvivo,q20_nvivo_help,False,object,,
-97. Atlas.ti,q20_atlasti_help,False,object,,
-98. Oxygen,q20_oxygen_help,False,object,,
-99. ArcGis,q20_arcgis_help,False,object,,
-100. Autre,q20_autre_help,False,object,,
-101. accomp_other_closed_software,q20_1_other_closed_software_help,False,object,,
-102. util_accomp_closed_software,q21_util_accomp_closed_software,False,object,,
-103. Des postes informatiques équipés de logiciels,q22_postes_info,False,object,,
-"104. Des ressources documentaires (ouvrages méthodologiques, thématiques…)",q22_ressources_doc,False,object,,
-"105. Des espaces de travail, salle de réunion",q22_working_spaces,False,object,,
-"106. Une permanence d'accueil tenue par des ingénieur·e·s, bibliothécaires à créneaux fixes",q22_permanences,False,object,,
-107. Un équipement (SdBox) et une aide au financement pour l'accès aux données du CASD (Centre d'Accès Sécurisé aux Données),q22_sdbox_casd,False,object,,
-108. other_service_univ,q23_other_service_univ,False,object,,
-109. research_fields,q24_research_fields,False,object,,
-110. statut,q25_statut,False,object,,
-111. Autre : ,q25_1_statut_autre,False,object,,
-112. env_travail,q26_env_travail,False,object,,
-"113. Autre, précisez : ",q26_1_autre_env,False,object,,
-114. Ordinateur fixe bureau,q27_pc_fixe_bureau_freq,False,int64,,
-115. Ordinateur fixe maison,q27_pc_fixe_home_freq,False,int64,,
-116. Ordinateur portable perso,q27_laptop_perso_freq,False,int64,,
-117. Ordinateur portable pro,q27_laptop_pro_freq,False,int64,,
-118. Téléphone portable perso,q27_phone_perso_freq,False,int64,,
-119. Téléphone portable pro,q27_phone_pro_freq,False,int64,,
-120. Tablette perso,q27_tablette_perso_freq,False,int64,,
-121. Tablette pro,q27_tablette_pro_freq,False,int64,,
-122. Stylos et papier,q27_stylos et papiers_freq,False,int64,,
-123. archive_data,q28_archive_data,False,object,,
-"124. Autre, précisez : ",q28_1_autre_archive_data,False,object,,
-125. os_sys,q29_os_sys,False,object,,
-126. webbrowser,q30_webbrowser,False,object,,
-"127. Autre, précisez : ",q30_1_autre_webbrowser,False,object,,
-128. stockage_doc,q31_stockage_doc,False,object,,
-"129. Autre, précisez : ",q31_1_autre_stockage,False,object,,
-130. collab_tools,q32_collab_tools,False,object,,
-"131. Oui, précisez : ",q32_1_autre_collab_tools,False,object,,
-132. sauvegarde_data,q33_sauvegarde_data,False,object,,
-"133. Autre, précisez : ",q33_1_autre_suavegarde,False,object,,
-134. ia_for_research,q34_ia_for_research,False,object,,
-135. ia_tools,q35_ia_tools,False,object,,
-136. gratuit_ou_payant,q36_gratuit_ou_payant,False,object,,
-137. raison_util_ia,q37_raison_util_ia,False,object,,
-138. ok_contact,q38_ok_contact,False,object,,
-139. etre_informer,q39_etre_informer,False,object,,
-140. present_work,q40_present_work,False,object,,
-141. ok_teaching,q41_ok_teaching,False,object,,
-142. Nom :,q42_nom_,True,,,
-143. Prénom :,q42_prénom_,True,,,
-144. Adresse e-mail :,q43_adresse_e-mail_,True,,,
-"145. Votre UFR, département, laboratoire d'affiliation :",q44_ufr_labo,True,,,
-146. Clé,q45_clé,True,,,
-147. Date de saisie,q46_date_de_saisie,False,object,,
-148. Date de dernière modification,q47_date_de_dernière_modification,False,float64,,
-149. Date de dernier enregistrement,q48_date_de_dernier_enregistrement,False,object,,
-150. Temps de saisie,q49_temps_de_saisie,False,object,,
-151. Langue,q50_langue,False,object,,
-152. Progression,q51_progression,False,object,,
-153. Dernière question saisie,q52_dernière_question_saisie,False,float64,,
-154. Origine,q53_origine,False,object,,
-155. Appareil utilisé pour la saisie,q54_appareil_utilisé_pour_la_saisie,False,object,,
+name,label,personal_data,type,no_question
+N°Obs,qno_obs,False,int64,0
+1. so_principles,q1_so_principles,False,object,1
+2. hal_depot,q2_hal_depot,False,object,2
+3. octavi_depot,q3_octavi_depot,False,object,3
+4. open_data,q4_diff_data,False,object,4
+"5. Autre, précisez : ",q4_autres_entrepots,False,object,4
+6. R,q5_r,False,object,5
+7. Python,q5_python,False,object,5
+8. Excel,q5_excel,False,object,5
+9. Julia,q5_julia,False,object,5
+10. Stata,q5_stata,False,object,5
+11. SAS,q5_sas,False,object,5
+12. Aucun,q5_aucun,False,object,5
+13. Autre,q5_autre,False,object,5
+14. other_lang,q5_1_other_lang,False,object,6
+15. dev_code,q6_dev_code,False,object,7
+16. dev_exemple,q6_1_dev_exemple,False,object,8
+17. software_depot,q7_software_depot,False,object,9
+"18. Oui, autre, précisez : ",q7_1_other_sw_depot,False,object,9
+19. Faire un dépôt sur HAL,q8_depot_hal_help,False,object,10
+20. Rédiger un Plan de Gestion de données (PGD ou DMP),q8_rediger_pdg_help,False,object,10
+21. Respecter les principes RGPD dans le cadre d'enquêtes ou d'entretiens,q8_respect_rgpd_help,False,object,10
+22. Connaître les différents types de licence pour la diffusion des résultats de recherche,q8_licences_help,False,object,10
+23. Déposer des données dans un entrepôt,q8_depot_donnees_help,False,object,10
+24. Connaître les standards de métadonnées,q8_metadonnees_help,False,object,10
+25. Rédiger un data paper,q8_data_paper_help,False,object,10
+"26. FAIRiser des données, gérer des données selon les principes FAIR",q8_fair_data_help,False,object,10
+27. utilite_accomp,q9_utilite_accomp,False,object,11
+28. type_data,q10_type_data,False,object,12
+"29. Autre, précisez lesquelles : ",q10_other_type_data,False,object,12
+30. quali_or_quanti,q11_quali_or_quanti,False,object,13
+31. humanum,q12_humanum,False,object,14
+32. how_humanum,q12_1_how_humanum,False,float64,15
+33. Nakala,q13_nakala,False,object,16
+34. Isidore,q13_isidore,False,object,16
+35. ShareDocs,q13_sharedocs,False,object,16
+36. Hébergement web,q13_hébergement_web,False,object,16
+37. Stylo,q14_stylo,False,object,17
+38. Mattermost,q14_mattermost,False,object,17
+39. GitLab,q14_gitlab,False,object,17
+40. Matomo,q14_matomo,False,object,17
+41. HNURL,q14_hnurl,False,object,17
+42. Kanboard,q14_kanboard,False,object,17
+43. Nakala (entrepôt de données),q15_nakala_help,False,object,18
+44. Isidore (moteur de recherche documentaire),q15_isidore_help,False,object,18
+45. ShareDocs (plateforme de partage de fichiers et de traitement des données),q15_sharedocs_help,False,object,18
+46. Hébergement web,q15_hébergement_web_help,False,object,18
+47. Stylo,q15_stylo_help,False,object,18
+48. Mattermost,q15_mattermost_help,False,object,18
+49. GitLab,q15_gitlab_help,False,object,18
+50. Matomo,q15_matomo_help,False,object,18
+51. HNURL,q15_hnurl_help,False,object,18
+52. Kanboard,q15_kanboard_help,False,object,18
+53. Tableur,q16_tableur_help,False,object,19
+54. Logiciels d'analyse statistique (ex. R – Rstudio),q16_logiciels_d'analyse_statistique_help,False,object,19
+"55. Python (web-scraping, traitement automatique des langues…)",q16_python_help,False,object,19
+"56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q16_garg_iram_hyperbase_help,False,object,19
+57. Logiciels d'OCR : reconnaissance Optique de Caractères,q16_ocr_help,False,object,19
+58. Logiciels d'analyse de réseaux (ex. Gephi),q16_network_analysis_help,False,object,19
+"59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q16_odette_atom_help,False,object,19
+"60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q16_caqdas_help,False,object,19
+61. Logiciels de cartographie thématique (ex. Magrit),q16_carto_help,False,object,19
+62. Logiciels de SIG (ex. QGis),q16_sig_help,False,object,19
+63. Système de gestion de base de données,q16_sgbd_help,False,object,19
+64. Autre,q16_autre_help,False,object,19
+65. other_accomp_software,q16_1_other_software_help,False,object,20
+66. util_accomp_software,q17_util_accomp_software,False,object,21
+67. Statistiques descriptives,q18_stat_desc_help,False,object,22
+68. Régressions,q18_regressions_help,False,object,22
+"69. Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)",q18_temporal_analysis_help,False,object,22
+70. Cartographie,q18_cartographie_help,False,object,22
+71. Analyse textuelle,q18_analyse_text_help,False,object,22
+72. Analyse de réseaux,q18_net_analysis_help,False,object,22
+73. Extraction de données du web (web-scraping),q18_webscrapping,False,object,22
+"74. Intelligence artificielle (deep learning, active learning)",q18_deeplearning_help,False,object,22
+75. Edition numérique,q18_edit_num_help,False,object,22
+76. Construction d'un questionnaire,q18_questionnaire_help,False,object,22
+77. Bibliométrie,q18_bibliométrie_help,False,object,22
+78. utilite_accomp_methode,q18_1_utilite_accomp_methode,False,object,23
+79. Tableur,q19_tableur_help,False,object,24
+80. Logiciels d'analyse statistique (ex. R – Rstudio),q19_logiciels_d'analyse_statistique_help,False,object,24
+"81. Python : web-scraping, traitement automatique des langues…",q19_python_help,False,object,24
+"82. Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q19_garg_iram_hyperbase_help,False,object,24
+83. Logiciels d'OCR : reconnaissance Optique de Caractère,q19_ocr_help,False,object,24
+84. Logiciels d'analyse de réseaux (ex. Gephi),q19_network_analysis_help,False,object,24
+"85. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q19_odette_atom_help,False,object,24
+"86. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q19_caqdas_help,False,object,24
+87. Logiciels de cartographie thématique (ex. Magrit),q19_carto_help,False,object,24
+88. Logiciels de SIG (ex. QGis),q19_sig_help,False,object,24
+89. Système de gestion de base de données,q19_sgbd_help,False,object,24
+90. Autre,q19_autre_help,False,object,24
+91. accomp_other_software_2,q19_1_other_software_help,False,object,25
+92. Excel,q20_excel_help,False,object,26
+93. SAS,q20_sas_help,False,object,26
+94. SPSS,q20_spss_help,False,object,26
+95. STATA,q20_stata_help,False,object,26
+96. Nvivo,q20_nvivo_help,False,object,26
+97. Atlas.ti,q20_atlasti_help,False,object,26
+98. Oxygen,q20_oxygen_help,False,object,26
+99. ArcGis,q20_arcgis_help,False,object,26
+100. Autre,q20_autre_help,False,object,26
+101. accomp_other_closed_software,q20_1_other_closed_software_help,False,object,27
+102. util_accomp_closed_software,q21_util_accomp_closed_software,False,object,28
+103. Des postes informatiques équipés de logiciels,q22_postes_info,False,object,29
+"104. Des ressources documentaires (ouvrages méthodologiques, thématiques…)",q22_ressources_doc,False,object,29
+"105. Des espaces de travail, salle de réunion",q22_working_spaces,False,object,29
+"106. Une permanence d'accueil tenue par des ingénieur·e·s, bibliothécaires à créneaux fixes",q22_permanences,False,object,29
+107. Un équipement (SdBox) et une aide au financement pour l'accès aux données du CASD (Centre d'Accès Sécurisé aux Données),q22_sdbox_casd,False,object,29
+108. other_service_univ,q23_other_service_univ,False,object,30
+109. research_fields,q24_research_fields,False,object,31
+110. statut,q25_statut,False,object,32
+111. Autre : ,q25_1_statut_autre,False,object,32
+112. env_travail,q26_env_travail,False,object,33
+"113. Autre, précisez : ",q26_1_autre_env,False,object,33
+114. Ordinateur fixe bureau,q27_pc_fixe_bureau_freq,False,int64,34
+115. Ordinateur fixe maison,q27_pc_fixe_home_freq,False,int64,34
+116. Ordinateur portable perso,q27_laptop_perso_freq,False,int64,34
+117. Ordinateur portable pro,q27_laptop_pro_freq,False,int64,34
+118. Téléphone portable perso,q27_phone_perso_freq,False,int64,34
+119. Téléphone portable pro,q27_phone_pro_freq,False,int64,34
+120. Tablette perso,q27_tablette_perso_freq,False,int64,34
+121. Tablette pro,q27_tablette_pro_freq,False,int64,34
+122. Stylos et papier,q27_stylos et papiers_freq,False,int64,34
+123. archive_data,q28_archive_data,False,object,35
+"124. Autre, précisez : ",q28_1_autre_archive_data,False,object,35
+125. os_sys,q29_os_sys,False,object,36
+126. webbrowser,q30_webbrowser,False,object,37
+"127. Autre, précisez : ",q30_1_autre_webbrowser,False,object,37
+128. stockage_doc,q31_stockage_doc,False,object,38
+"129. Autre, précisez : ",q31_1_autre_stockage,False,object,38
+130. collab_tools,q32_collab_tools,False,object,39
+"131. Oui, précisez : ",q32_1_autre_collab_tools,False,object,39
+132. sauvegarde_data,q33_sauvegarde_data,False,object,40
+"133. Autre, précisez : ",q33_1_autre_suavegarde,False,object,40
+134. ia_for_research,q34_ia_for_research,False,object,41
+135. ia_tools,q35_ia_tools,False,object,42
+136. gratuit_ou_payant,q36_gratuit_ou_payant,False,object,43
+137. raison_util_ia,q37_raison_util_ia,False,object,44
+138. ok_contact,q38_ok_contact,False,object,45
+139. etre_informer,q39_etre_informer,False,object,46
+140. present_work,q40_present_work,False,object,47
+141. ok_teaching,q41_ok_teaching,False,object,48
+142. Nom :,q42_nom_,True,,49
+143. Prénom :,q42_prénom_,True,,49
+144. Adresse e-mail :,q43_adresse_e-mail_,True,,49
+"145. Votre UFR, département, laboratoire d'affiliation :",q44_ufr_labo,True,,49
+146. Clé,q45_clé,True,,49
+147. Date de saisie,q46_date_de_saisie,False,object,
+148. Date de dernière modification,q47_date_de_dernière_modification,False,float64,
+149. Date de dernier enregistrement,q48_date_de_dernier_enregistrement,False,object,
+150. Temps de saisie,q49_temps_de_saisie,False,object,
+151. Langue,q50_langue,False,object,
+152. Progression,q51_progression,False,object,
+153. Dernière question saisie,q52_dernière_question_saisie,False,float64,
+154. Origine,q53_origine,False,object,
+155. Appareil utilisé pour la saisie,q54_appareil_utilisé_pour_la_saisie,False,object,
