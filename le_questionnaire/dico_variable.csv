@@ -52,67 +52,67 @@ N°Obs,qno_obs,False,numérique,False,int64,0.0,
 50. Matomo,q15_matomo_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
 51. HNURL,q15_hnurl_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
 52. Kanboard,q15_kanboard_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-53. Tableur,q16_tableur_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-54. Logiciels d'analyse statistique (ex. R – Rstudio),q16_logiciels_d'analyse_statistique_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-"55. Python (web-scraping, traitement automatique des langues…)",q16_python_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-"56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q16_garg_iram_hyperbase_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-57. Logiciels d'OCR : reconnaissance Optique de Caractères,q16_ocr_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-58. Logiciels d'analyse de réseaux (ex. Gephi),q16_network_analysis_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-"59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q16_odette_atom_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-"60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q16_caqdas_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-61. Logiciels de cartographie thématique (ex. Magrit),q16_carto_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-62. Logiciels de SIG (ex. QGis),q16_sig_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-63. Système de gestion de base de données,q16_sgbd_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-64. Autre,q16_autre_help,False,nominal_multiple,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+53. Tableur,q16_tableur_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+54. Logiciels d'analyse statistique (ex. R – Rstudio),q16_logiciels_d'analyse_statistique_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+"55. Python (web-scraping, traitement automatique des langues…)",q16_python_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+"56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q16_garg_iram_hyperbase_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+57. Logiciels d'OCR : reconnaissance Optique de Caractères,q16_ocr_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+58. Logiciels d'analyse de réseaux (ex. Gephi),q16_network_analysis_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+"59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q16_odette_atom_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+"60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q16_caqdas_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+61. Logiciels de cartographie thématique (ex. Magrit),q16_carto_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+62. Logiciels de SIG (ex. QGis),q16_sig_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+63. Système de gestion de base de données,q16_sgbd_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+64. Autre,q16_autre_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
 65. other_accomp_software,q16_1_other_software_help,False,texte_libre,True,object,20.0,"7.1/ Si Autre, précisez lequel (lesquels) ?"
 66. util_accomp_software,q17_util_accomp_software,False,texte_libre,False,object,21.0,"8/ Ce type d'accompagnements serait-il utile pour votre équipe ou vos étudiants ? Si oui, précisez lesquels :"
-67. Statistiques descriptives,q18_stat_desc_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-68. Régressions,q18_regressions_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-"69. Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)",q18_temporal_analysis_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-70. Cartographie,q18_cartographie_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-71. Analyse textuelle,q18_analyse_text_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-72. Analyse de réseaux,q18_net_analysis_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-73. Extraction de données du web (web-scraping),q18_webscrapping,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-"74. Intelligence artificielle (deep learning, active learning)",q18_deeplearning_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-75. Edition numérique,q18_edit_num_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-76. Construction d'un questionnaire,q18_questionnaire_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-77. Bibliométrie,q18_bibliométrie_help,False,nominal_multiple,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+67. Statistiques descriptives,q18_stat_desc_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+68. Régressions,q18_regressions_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+"69. Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)",q18_temporal_analysis_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+70. Cartographie,q18_cartographie_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+71. Analyse textuelle,q18_analyse_text_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+72. Analyse de réseaux,q18_net_analysis_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+73. Extraction de données du web (web-scraping),q18_webscrapping,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+"74. Intelligence artificielle (deep learning, active learning)",q18_deeplearning_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+75. Edition numérique,q18_edit_num_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+76. Construction d'un questionnaire,q18_questionnaire_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+77. Bibliométrie,q18_bibliométrie_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
 78. utilite_accomp_methode,q18_1_utilite_accomp_methode,False,texte_libre,False,object,23.0,"2/  Ce type d’accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si
 oui, lesquels ?"
-79. Tableur,q19_tableur_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+79. Tableur,q19_tableur_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-80. Logiciels d'analyse statistique (ex. R – Rstudio),q19_logiciels_d'analyse_statistique_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+80. Logiciels d'analyse statistique (ex. R – Rstudio),q19_logiciels_d'analyse_statistique_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-"81. Python : web-scraping, traitement automatique des langues…",q19_python_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+"81. Python : web-scraping, traitement automatique des langues…",q19_python_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-"82. Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q19_garg_iram_hyperbase_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+"82. Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q19_garg_iram_hyperbase_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-83. Logiciels d'OCR : reconnaissance Optique de Caractère,q19_ocr_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+83. Logiciels d'OCR : reconnaissance Optique de Caractère,q19_ocr_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-84. Logiciels d'analyse de réseaux (ex. Gephi),q19_network_analysis_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+84. Logiciels d'analyse de réseaux (ex. Gephi),q19_network_analysis_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-"85. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q19_odette_atom_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+"85. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q19_odette_atom_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-"86. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q19_caqdas_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+"86. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q19_caqdas_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-87. Logiciels de cartographie thématique (ex. Magrit),q19_carto_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+87. Logiciels de cartographie thématique (ex. Magrit),q19_carto_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-88. Logiciels de SIG (ex. QGis),q19_sig_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+88. Logiciels de SIG (ex. QGis),q19_sig_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-89. Système de gestion de base de données,q19_sgbd_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+89. Système de gestion de base de données,q19_sgbd_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-90. Autre,q19_autre_help,False,nominal_multiple,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+90. Autre,q19_autre_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
 91. accomp_other_software_2,q19_1_other_software_help,False,texte_libre,True,object,25.0,"3.1/ Si Autre, précisez lequel (lesquels) ?"
-92. Excel,q20_excel_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-93. SAS,q20_sas_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-94. SPSS,q20_spss_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-95. STATA,q20_stata_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-96. Nvivo,q20_nvivo_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-97. Atlas.ti,q20_atlasti_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-98. Oxygen,q20_oxygen_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-99. ArcGis,q20_arcgis_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-100. Autre,q20_autre_help,False,nominal_multiple,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+92. Excel,q20_excel_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+93. SAS,q20_sas_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+94. SPSS,q20_spss_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+95. STATA,q20_stata_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+96. Nvivo,q20_nvivo_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+97. Atlas.ti,q20_atlasti_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+98. Oxygen,q20_oxygen_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+99. ArcGis,q20_arcgis_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+100. Autre,q20_autre_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
 101. accomp_other_closed_software,q20_1_other_closed_software_help,False,texte_libre,True,object,27.0,"4.1/ Si Autre, lequel (lesquels) ?"
 102. util_accomp_closed_software,q21_util_accomp_closed_software,False,texte_libre,False,object,28.0,"5/ Ce type d’accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si oui, lesquels ?"
 103. Des postes informatiques équipés de logiciels,q22_postes_info,False,nominal_multiple,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
