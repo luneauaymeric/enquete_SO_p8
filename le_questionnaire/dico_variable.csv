@@ -1,170 +1,170 @@
-,name,label,personal_data,type,opened_question,type_panda,no_question,question
-0,N°Obs,qno_obs,False,numérique,False,int64,0.0,
-1,1. so_principles,q1_so_principles,False,ordinal,False,object,1.0,1/ Diriez-vous que vous êtes familier.ère des principes de la Science Ouverte ?
-2,2. hal_depot,q2_hal_depot,False,ordinal,False,object,2.0,"2/ Avez-vous déjà déposé une production scientifique (article, communication...) sur HAL ?"
-3,3. octavi_depot,q3_octavi_depot,False,nominal_multiple,False,object,3.0,"3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?"
-4,4. open_data,q4_diff_data,False,nominal_multiple,False,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?
-5,"5. Autre, précisez : ",q4_autres_entrepots,False,texte_libre,True,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?
-6,6. R,q5_r,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
-7,7. Python,q5_python,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
-8,8. Excel,q5_excel,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
-9,9. Julia,q5_julia,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
-10,10. Stata,q5_stata,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
-11,11. SAS,q5_sas,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
-12,12. Aucun,q5_aucun,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
-13,13. Autre,q5_autre,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
-14,14. other_lang,q5_1_other_lang,False,texte_libre,True,object,6.0,"5.1/ Si Autre, précisez lequel (lesquels) ?"
-15,15. dev_code,q6_dev_code,False,booléen,False,object,7.0,"6/ Dans le cadre de vos activités de recherche, êtes-vous amené.e à développer ou faire développer des logiciels/du code spécialisé(s) ?"
-16,16. dev_exemple,q6_1_dev_exemple,False,texte_libre,True,object,8.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?"
-17,17. software_depot,q7_software_depot,False,nominal_multiple,False,object,9.0,7/ Avez-vous déjà déposé des logiciels ou codes sources dans un entrepôt dédié ?
-18,"18. Oui, autre, précisez : ",q7_1_other_sw_depot,False,texte_libre,True,object,9.0,7/ Avez-vous déjà déposé des logiciels ou codes sources dans un entrepôt dédié ?
-19,19. Faire un dépôt sur HAL,q8_depot_hal_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
-20,20. Rédiger un Plan de Gestion de données (PGD ou DMP),q8_rediger_pdg_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
-21,21. Respecter les principes RGPD dans le cadre d'enquêtes ou d'entretiens,q8_respect_rgpd_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
-22,22. Connaître les différents types de licence pour la diffusion des résultats de recherche,q8_licences_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
-23,23. Déposer des données dans un entrepôt,q8_depot_donnees_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
-24,24. Connaître les standards de métadonnées,q8_metadonnees_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
-25,25. Rédiger un data paper,q8_data_paper_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
-26,"26. FAIRiser des données, gérer des données selon les principes FAIR",q8_fair_data_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
-27,27. utilite_accomp,q9_utilite_accomp,False,texte_libre,False,object,11.0,"9/ Ce type d'accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si oui, lesquels ?"
-28,28. type_data,q10_type_data,False,nominal_multiple,False,object,12.0,1/ Quelles types de données produisez-vous ?
-29,"29. Autre, précisez lesquelles : ",q10_other_type_data,False,texte_libre,True,object,12.0,1/ Quelles types de données produisez-vous ?
-30,30. quali_or_quanti,q11_quali_or_quanti,False,nominal_multiple,False,object,13.0,2/ Diriez-vous que vous travaillez le plus souvent avec ?
-31,31. humanum,q12_humanum,False,booléen,False,object,14.0,3/ Connaissez-vous la TGIR Huma-Num ?
-32,32. how_humanum,q12_1_how_humanum,False,nominal_multiple,False,float64,15.0,3.1/ Par quel(s) moyen(s) l'avez-vous connue ?
-33,33. Nakala,q13_nakala,False,booléen,False,object,16.0,"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
-34,34. Isidore,q13_isidore,False,booléen,False,object,16.0,"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
-35,35. ShareDocs,q13_sharedocs,False,booléen,False,object,16.0,"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
-36,36. Hébergement web,q13_hébergement_web,False,booléen,False,object,16.0,"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
-37,37. Stylo,q14_stylo,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
-38,38. Mattermost,q14_mattermost,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
-39,39. GitLab,q14_gitlab,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
-40,40. Matomo,q14_matomo,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
-41,41. HNURL,q14_hnurl,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
-42,42. Kanboard,q14_kanboard,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
-43,43. Nakala (entrepôt de données),q15_nakala_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-44,44. Isidore (moteur de recherche documentaire),q15_isidore_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-45,45. ShareDocs (plateforme de partage de fichiers et de traitement des données),q15_sharedocs_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-46,46. Hébergement web,q15_hébergement_web_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-47,47. Stylo,q15_stylo_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-48,48. Mattermost,q15_mattermost_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-49,49. GitLab,q15_gitlab_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-50,50. Matomo,q15_matomo_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-51,51. HNURL,q15_hnurl_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-52,52. Kanboard,q15_kanboard_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
-53,53. Tableur,q16_tableur_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-54,54. Logiciels d'analyse statistique (ex. R – Rstudio),q16_logiciels_d'analyse_statistique_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-55,"55. Python (web-scraping, traitement automatique des langues…)",q16_python_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-56,"56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q16_garg_iram_hyperbase_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-57,57. Logiciels d'OCR : reconnaissance Optique de Caractères,q16_ocr_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-58,58. Logiciels d'analyse de réseaux (ex. Gephi),q16_network_analysis_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-59,"59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q16_odette_atom_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-60,"60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q16_caqdas_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-61,61. Logiciels de cartographie thématique (ex. Magrit),q16_carto_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-62,62. Logiciels de SIG (ex. QGis),q16_sig_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-63,63. Système de gestion de base de données,q16_sgbd_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-64,64. Autre,q16_autre_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
-65,65. other_accomp_software,q16_1_other_software_help,False,texte_libre,True,object,20.0,"7.1/ Si Autre, précisez lequel (lesquels) ?"
-66,66. util_accomp_software,q17_util_accomp_software,False,texte_libre,False,object,21.0,"8/ Ce type d'accompagnements serait-il utile pour votre équipe ou vos étudiants ? Si oui, précisez lesquels :"
-67,67. Statistiques descriptives,q18_stat_desc_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-68,68. Régressions,q18_regressions_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-69,"69. Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)",q18_temporal_analysis_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-70,70. Cartographie,q18_cartographie_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-71,71. Analyse textuelle,q18_analyse_text_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-72,72. Analyse de réseaux,q18_net_analysis_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-73,73. Extraction de données du web (web-scraping),q18_webscrapping,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-74,"74. Intelligence artificielle (deep learning, active learning)",q18_deeplearning_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-75,75. Edition numérique,q18_edit_num_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-76,76. Construction d'un questionnaire,q18_questionnaire_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-77,77. Bibliométrie,q18_bibliométrie_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
-78,78. utilite_accomp_methode,q18_1_utilite_accomp_methode,False,texte_libre,False,object,23.0,"2/  Ce type d’accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si
+name,label,personal_data,type,opened_question,type_panda,no_question,question
+N°Obs,qno_obs,False,numérique,False,int64,0.0,
+1. so_principles,q1_so_principles,False,ordinal,False,object,1.0,1/ Diriez-vous que vous êtes familier.ère des principes de la Science Ouverte ?
+2. hal_depot,q2_hal_depot,False,ordinal,False,object,2.0,"2/ Avez-vous déjà déposé une production scientifique (article, communication...) sur HAL ?"
+3. octavi_depot,q3_octavi_depot,False,nominal_multiple,False,object,3.0,"3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?"
+4. open_data,q4_diff_data,False,nominal_multiple,False,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?
+"5. Autre, précisez : ",q4_autres_entrepots,False,texte_libre,True,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?
+6. R,q5_r,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+7. Python,q5_python,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+8. Excel,q5_excel,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+9. Julia,q5_julia,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+10. Stata,q5_stata,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+11. SAS,q5_sas,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+12. Aucun,q5_aucun,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+13. Autre,q5_autre,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
+14. other_lang,q5_1_other_lang,False,texte_libre,True,object,6.0,"5.1/ Si Autre, précisez lequel (lesquels) ?"
+15. dev_code,q6_dev_code,False,booléen,False,object,7.0,"6/ Dans le cadre de vos activités de recherche, êtes-vous amené.e à développer ou faire développer des logiciels/du code spécialisé(s) ?"
+16. dev_exemple,q6_1_dev_exemple,False,texte_libre,True,object,8.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?"
+17. software_depot,q7_software_depot,False,nominal_multiple,False,object,9.0,7/ Avez-vous déjà déposé des logiciels ou codes sources dans un entrepôt dédié ?
+"18. Oui, autre, précisez : ",q7_1_other_sw_depot,False,texte_libre,True,object,9.0,7/ Avez-vous déjà déposé des logiciels ou codes sources dans un entrepôt dédié ?
+19. Faire un dépôt sur HAL,q8_depot_hal_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+20. Rédiger un Plan de Gestion de données (PGD ou DMP),q8_rediger_pdg_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+21. Respecter les principes RGPD dans le cadre d'enquêtes ou d'entretiens,q8_respect_rgpd_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+22. Connaître les différents types de licence pour la diffusion des résultats de recherche,q8_licences_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+23. Déposer des données dans un entrepôt,q8_depot_donnees_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+24. Connaître les standards de métadonnées,q8_metadonnees_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+25. Rédiger un data paper,q8_data_paper_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+"26. FAIRiser des données, gérer des données selon les principes FAIR",q8_fair_data_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
+27. utilite_accomp,q9_utilite_accomp,False,texte_libre,False,object,11.0,"9/ Ce type d'accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si oui, lesquels ?"
+28. type_data,q10_type_data,False,nominal_multiple,False,object,12.0,1/ Quelles types de données produisez-vous ?
+"29. Autre, précisez lesquelles : ",q10_other_type_data,False,texte_libre,True,object,12.0,1/ Quelles types de données produisez-vous ?
+30. quali_or_quanti,q11_quali_or_quanti,False,nominal_multiple,False,object,13.0,2/ Diriez-vous que vous travaillez le plus souvent avec ?
+31. humanum,q12_humanum,False,booléen,False,object,14.0,3/ Connaissez-vous la TGIR Huma-Num ?
+32. how_humanum,q12_1_how_humanum,False,nominal_multiple,False,float64,15.0,3.1/ Par quel(s) moyen(s) l'avez-vous connue ?
+33. Nakala,q13_nakala,False,booléen,False,object,16.0,"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
+34. Isidore,q13_isidore,False,booléen,False,object,16.0,"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
+35. ShareDocs,q13_sharedocs,False,booléen,False,object,16.0,"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
+36. Hébergement web,q13_hébergement_web,False,booléen,False,object,16.0,"4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?"
+37. Stylo,q14_stylo,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
+38. Mattermost,q14_mattermost,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
+39. GitLab,q14_gitlab,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
+40. Matomo,q14_matomo,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
+41. HNURL,q14_hnurl,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
+42. Kanboard,q14_kanboard,False,booléen,False,object,17.0,5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
+43. Nakala (entrepôt de données),q15_nakala_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+44. Isidore (moteur de recherche documentaire),q15_isidore_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+45. ShareDocs (plateforme de partage de fichiers et de traitement des données),q15_sharedocs_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+46. Hébergement web,q15_hébergement_web_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+47. Stylo,q15_stylo_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+48. Mattermost,q15_mattermost_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+49. GitLab,q15_gitlab_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+50. Matomo,q15_matomo_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+51. HNURL,q15_hnurl_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+52. Kanboard,q15_kanboard_help,False,booléen,False,object,18.0,6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+53. Tableur,q16_tableur_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+54. Logiciels d'analyse statistique (ex. R – Rstudio),q16_logiciels_d'analyse_statistique_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+"55. Python (web-scraping, traitement automatique des langues…)",q16_python_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+"56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q16_garg_iram_hyperbase_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+57. Logiciels d'OCR : reconnaissance Optique de Caractères,q16_ocr_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+58. Logiciels d'analyse de réseaux (ex. Gephi),q16_network_analysis_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+"59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q16_odette_atom_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+"60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q16_caqdas_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+61. Logiciels de cartographie thématique (ex. Magrit),q16_carto_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+62. Logiciels de SIG (ex. QGis),q16_sig_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+63. Système de gestion de base de données,q16_sgbd_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+64. Autre,q16_autre_help,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+65. other_accomp_software,q16_1_other_software_help,False,texte_libre,True,object,20.0,"7.1/ Si Autre, précisez lequel (lesquels) ?"
+66. util_accomp_software,q17_util_accomp_software,False,texte_libre,False,object,21.0,"8/ Ce type d'accompagnements serait-il utile pour votre équipe ou vos étudiants ? Si oui, précisez lesquels :"
+67. Statistiques descriptives,q18_stat_desc_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+68. Régressions,q18_regressions_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+"69. Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)",q18_temporal_analysis_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+70. Cartographie,q18_cartographie_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+71. Analyse textuelle,q18_analyse_text_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+72. Analyse de réseaux,q18_net_analysis_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+73. Extraction de données du web (web-scraping),q18_webscrapping,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+"74. Intelligence artificielle (deep learning, active learning)",q18_deeplearning_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+75. Edition numérique,q18_edit_num_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+76. Construction d'un questionnaire,q18_questionnaire_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+77. Bibliométrie,q18_bibliométrie_help,False,ordinal,False,object,22.0,1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+78. utilite_accomp_methode,q18_1_utilite_accomp_methode,False,texte_libre,False,object,23.0,"2/  Ce type d’accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si
 oui, lesquels ?"
-79,79. Tableur,q19_tableur_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+79. Tableur,q19_tableur_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-80,80. Logiciels d'analyse statistique (ex. R – Rstudio),q19_logiciels_d'analyse_statistique_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+80. Logiciels d'analyse statistique (ex. R – Rstudio),q19_logiciels_d'analyse_statistique_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-81,"81. Python : web-scraping, traitement automatique des langues…",q19_python_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+"81. Python : web-scraping, traitement automatique des langues…",q19_python_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-82,"82. Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q19_garg_iram_hyperbase_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+"82. Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q19_garg_iram_hyperbase_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-83,83. Logiciels d'OCR : reconnaissance Optique de Caractère,q19_ocr_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+83. Logiciels d'OCR : reconnaissance Optique de Caractère,q19_ocr_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-84,84. Logiciels d'analyse de réseaux (ex. Gephi),q19_network_analysis_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+84. Logiciels d'analyse de réseaux (ex. Gephi),q19_network_analysis_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-85,"85. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q19_odette_atom_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+"85. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q19_odette_atom_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-86,"86. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q19_caqdas_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+"86. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q19_caqdas_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-87,87. Logiciels de cartographie thématique (ex. Magrit),q19_carto_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+87. Logiciels de cartographie thématique (ex. Magrit),q19_carto_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-88,88. Logiciels de SIG (ex. QGis),q19_sig_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+88. Logiciels de SIG (ex. QGis),q19_sig_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-89,89. Système de gestion de base de données,q19_sgbd_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+89. Système de gestion de base de données,q19_sgbd_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-90,90. Autre,q19_autre_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+90. Autre,q19_autre_help,False,ordinal,False,object,24.0,"3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
 open source ?"
-91,91. accomp_other_software_2,q19_1_other_software_help,False,texte_libre,True,object,25.0,"3.1/ Si Autre, précisez lequel (lesquels) ?"
-92,92. Excel,q20_excel_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-93,93. SAS,q20_sas_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-94,94. SPSS,q20_spss_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-95,95. STATA,q20_stata_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-96,96. Nvivo,q20_nvivo_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-97,97. Atlas.ti,q20_atlasti_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-98,98. Oxygen,q20_oxygen_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-99,99. ArcGis,q20_arcgis_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-100,100. Autre,q20_autre_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
-101,101. accomp_other_closed_software,q20_1_other_closed_software_help,False,texte_libre,True,object,27.0,"4.1/ Si Autre, lequel (lesquels) ?"
-102,102. util_accomp_closed_software,q21_util_accomp_closed_software,False,texte_libre,False,object,28.0,"5/ Ce type d’accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si oui, lesquels ?"
-103,103. Des postes informatiques équipés de logiciels,q22_postes_info,False,nominal_multiple,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
-104,"104. Des ressources documentaires (ouvrages méthodologiques, thématiques…)",q22_ressources_doc,False,nominal_multiple,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
-105,"105. Des espaces de travail, salle de réunion",q22_working_spaces,False,nominal_multiple,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
-106,"106. Une permanence d'accueil tenue par des ingénieur·e·s, bibliothécaires à créneaux fixes",q22_permanences,False,nominal_multiple,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
-107,107. Un équipement (SdBox) et une aide au financement pour l'accès aux données du CASD (Centre d'Accès Sécurisé aux Données),q22_sdbox_casd,False,nominal_multiple,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
-108,108. other_service_univ,q23_other_service_univ,False,texte_libre,True,object,30.0,7/ D'autres services vous paraîtraient-ils utiles ?
-109,109. research_fields,q24_research_fields,False,simple_nominal,False,object,31.0,1/ Votre/vos champ(s) principaux de recherche ? <i>Catégories issues de la nomenclature ERC</i>
-110,110. statut,q25_statut,False,simple_nominal,False,object,32.0,2/ Êtes-vous ?
-111,111. Autre : ,q25_1_statut_autre,False,texte_libre,True,object,32.0,2/ Êtes-vous ?
-112,112. env_travail,q26_env_travail,False,simple_nominal,False,object,33.0,1/ Où travaillez-vous le plus souvent ?
-113,"113. Autre, précisez : ",q26_1_autre_env,False,texte_libre,True,object,33.0,1/ Où travaillez-vous le plus souvent ?
-114,114. Ordinateur fixe bureau,q27_pc_fixe_bureau_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-115,115. Ordinateur fixe maison,q27_pc_fixe_home_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-116,116. Ordinateur portable perso,q27_laptop_perso_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-117,117. Ordinateur portable pro,q27_laptop_pro_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-118,118. Téléphone portable perso,q27_phone_perso_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-119,119. Téléphone portable pro,q27_phone_pro_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-120,120. Tablette perso,q27_tablette_perso_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-121,121. Tablette pro,q27_tablette_pro_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-122,122. Stylos et papier,q27_stylos et papiers_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
-123,123. archive_data,q28_archive_data,False,nominal_multiple,False,object,35.0,8/ Où archivez-vous vos données de recherche une fois le projet terminé ?
-124,"124. Autre, précisez : ",q28_1_autre_archive_data,False,texte_libre,True,object,35.0,8/ Où archivez-vous vos données de recherche une fois le projet terminé ?
-125,125. os_sys,q29_os_sys,False,simple_nominal,False,object,36.0,3/ Sous quel système d’exploitation travaillez-vous au quotidien ?
-126,126. webbrowser,q30_webbrowser,False,simple_nominal,False,object,37.0,4/ Quel navigateur utilisez-vous au quotidien ?
-127,"127. Autre, précisez : ",q30_1_autre_webbrowser,False,texte_libre,True,object,37.0,4/ Quel navigateur utilisez-vous au quotidien ?
-128,128. stockage_doc,q31_stockage_doc,False,nominal_multiple,False,object,38.0,5/ Où stockez-vous vos documents de travail ?
-129,"129. Autre, précisez : ",q31_1_autre_stockage,False,texte_libre,True,object,38.0,5/ Où stockez-vous vos documents de travail ?
-130,130. collab_tools,q32_collab_tools,False,booléen,False,object,39.0,6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
-131,"131. Oui, précisez : ",q32_1_autre_collab_tools,False,texte_libre,True,object,39.0,6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
-132,132. sauvegarde_data,q33_sauvegarde_data,False,nominal_multiple,False,object,40.0,7/ Quels outils de sauvegarde des données utilisez-vous pendant la durée d'un projet ?
-133,"133. Autre, précisez : ",q33_1_autre_suavegarde,False,texte_libre,True,object,40.0,7/ Quels outils de sauvegarde des données utilisez-vous pendant la durée d'un projet ?
-134,134. ia_for_research,q34_ia_for_research,False,booléen,False,object,41.0,"9/ Utilisez-vous, dans le cadre de vos travaux universitaires (enseignement, recherche) des outils d'intelligence artificielle ?"
-135,135. ia_tools,q35_ia_tools,False,texte_libre,False,object,42.0,"9.2/ Si oui, lesquels ?"
-136,136. gratuit_ou_payant,q36_gratuit_ou_payant,False,simple_nominal,False,object,43.0,9.3/ Les utilisez-vous en version :
-137,137. raison_util_ia,q37_raison_util_ia,False,texte_libre,False,object,44.0,9.4/ Pourquoi les utilisez-vous ?
-138,138. ok_contact,q38_ok_contact,False,booléen,False,object,45.0,"1/ Acceptez-vous que nous vous contactions pour une proposition de formation collective (méthodologie, logiciels...), d'après vos réponses précédentes ?"
-139,139. etre_informer,q39_etre_informer,False,booléen,False,object,46.0,"2/ Souhaitez-vous des informations de la part des différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) (événements scientifiques, calendrier des formations…) ?"
-140,140. present_work,q40_present_work,False,booléen,False,object,47.0,"3/ Seriez- vous intéressé·e pour présenter vos travaux et expériences de recherche à l’occasion de séminaires, journées d’études, colloques, organisés par les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) ?"
-141,141. ok_teaching,q41_ok_teaching,False,booléen,False,object,48.0,"3/ Seriez-vous intéressé·e par le fait de dispenser vous-même des formations (méthodologies, logiciels) selon vos domaines de compétence, dans le cadre des formations organisées par les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) ?"
-142,142. Nom :,q42_nom_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
-143,143. Prénom :,q42_prénom_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
-144,144. Adresse e-mail :,q43_adresse_e-mail_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
-145,"145. Votre UFR, département, laboratoire d'affiliation :",q44_ufr_labo,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
-146,146. Clé,q45_clé,False,string,False,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
-147,147. Date de saisie,q46_date_de_saisie,False,date,False,object,,
-148,148. Date de dernière modification,q47_date_de_dernière_modification,False,date,False,float64,,
-149,149. Date de dernier enregistrement,q48_date_de_dernier_enregistrement,False,date,False,object,,
-150,150. Temps de saisie,q49_temps_de_saisie,False,quanti_continue,False,object,,
-151,151. Langue,q50_langue,False,simple_nominal,False,object,,
-152,152. Progression,q51_progression,False,,False,object,,
-153,153. Dernière question saisie,q52_dernière_question_saisie,False,simple_nominal,False,float64,,
-154,154. Origine,q53_origine,False,simple_nominal,False,object,,
-155,155. Appareil utilisé pour la saisie,q54_appareil_utilisé_pour_la_saisie,False,simple_nominal,False,object,,
+91. accomp_other_software_2,q19_1_other_software_help,False,texte_libre,True,object,25.0,"3.1/ Si Autre, précisez lequel (lesquels) ?"
+92. Excel,q20_excel_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+93. SAS,q20_sas_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+94. SPSS,q20_spss_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+95. STATA,q20_stata_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+96. Nvivo,q20_nvivo_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+97. Atlas.ti,q20_atlasti_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+98. Oxygen,q20_oxygen_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+99. ArcGis,q20_arcgis_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+100. Autre,q20_autre_help,False,ordinal,False,object,26.0,4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+101. accomp_other_closed_software,q20_1_other_closed_software_help,False,texte_libre,True,object,27.0,"4.1/ Si Autre, lequel (lesquels) ?"
+102. util_accomp_closed_software,q21_util_accomp_closed_software,False,texte_libre,False,object,28.0,"5/ Ce type d’accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si oui, lesquels ?"
+103. Des postes informatiques équipés de logiciels,q22_postes_info,False,ordinal,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
+"104. Des ressources documentaires (ouvrages méthodologiques, thématiques…)",q22_ressources_doc,False,ordinal,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
+"105. Des espaces de travail, salle de réunion",q22_working_spaces,False,ordinal,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
+"106. Une permanence d'accueil tenue par des ingénieur·e·s, bibliothécaires à créneaux fixes",q22_permanences,False,ordinal,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
+107. Un équipement (SdBox) et une aide au financement pour l'accès aux données du CASD (Centre d'Accès Sécurisé aux Données),q22_sdbox_casd,False,ordinal,False,object,29.0,"6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?"
+108. other_service_univ,q23_other_service_univ,False,texte_libre,True,object,30.0,7/ D'autres services vous paraîtraient-ils utiles ?
+109. research_fields,q24_research_fields,False,simple_nominal,False,object,31.0,1/ Votre/vos champ(s) principaux de recherche ? <i>Catégories issues de la nomenclature ERC</i>
+110. statut,q25_statut,False,simple_nominal,False,object,32.0,2/ Êtes-vous ?
+111. Autre : ,q25_1_statut_autre,False,texte_libre,True,object,32.0,2/ Êtes-vous ?
+112. env_travail,q26_env_travail,False,simple_nominal,False,object,33.0,1/ Où travaillez-vous le plus souvent ?
+"113. Autre, précisez : ",q26_1_autre_env,False,texte_libre,True,object,33.0,1/ Où travaillez-vous le plus souvent ?
+114. Ordinateur fixe bureau,q27_pc_fixe_bureau_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+115. Ordinateur fixe maison,q27_pc_fixe_home_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+116. Ordinateur portable perso,q27_laptop_perso_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+117. Ordinateur portable pro,q27_laptop_pro_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+118. Téléphone portable perso,q27_phone_perso_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+119. Téléphone portable pro,q27_phone_pro_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+120. Tablette perso,q27_tablette_perso_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+121. Tablette pro,q27_tablette_pro_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+122. Stylos et papier,q27_stylos et papiers_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
+123. archive_data,q28_archive_data,False,nominal_multiple,False,object,35.0,8/ Où archivez-vous vos données de recherche une fois le projet terminé ?
+"124. Autre, précisez : ",q28_1_autre_archive_data,False,texte_libre,True,object,35.0,8/ Où archivez-vous vos données de recherche une fois le projet terminé ?
+125. os_sys,q29_os_sys,False,simple_nominal,False,object,36.0,3/ Sous quel système d’exploitation travaillez-vous au quotidien ?
+126. webbrowser,q30_webbrowser,False,simple_nominal,False,object,37.0,4/ Quel navigateur utilisez-vous au quotidien ?
+"127. Autre, précisez : ",q30_1_autre_webbrowser,False,texte_libre,True,object,37.0,4/ Quel navigateur utilisez-vous au quotidien ?
+128. stockage_doc,q31_stockage_doc,False,nominal_multiple,False,object,38.0,5/ Où stockez-vous vos documents de travail ?
+"129. Autre, précisez : ",q31_1_autre_stockage,False,texte_libre,True,object,38.0,5/ Où stockez-vous vos documents de travail ?
+130. collab_tools,q32_collab_tools,False,booléen,False,object,39.0,6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
+"131. Oui, précisez : ",q32_1_autre_collab_tools,False,texte_libre,True,object,39.0,6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
+132. sauvegarde_data,q33_sauvegarde_data,False,nominal_multiple,False,object,40.0,7/ Quels outils de sauvegarde des données utilisez-vous pendant la durée d'un projet ?
+"133. Autre, précisez : ",q33_1_autre_suavegarde,False,texte_libre,True,object,40.0,7/ Quels outils de sauvegarde des données utilisez-vous pendant la durée d'un projet ?
+134. ia_for_research,q34_ia_for_research,False,booléen,False,object,41.0,"9/ Utilisez-vous, dans le cadre de vos travaux universitaires (enseignement, recherche) des outils d'intelligence artificielle ?"
+135. ia_tools,q35_ia_tools,False,texte_libre,False,object,42.0,"9.2/ Si oui, lesquels ?"
+136. gratuit_ou_payant,q36_gratuit_ou_payant,False,simple_nominal,False,object,43.0,9.3/ Les utilisez-vous en version :
+137. raison_util_ia,q37_raison_util_ia,False,texte_libre,False,object,44.0,9.4/ Pourquoi les utilisez-vous ?
+138. ok_contact,q38_ok_contact,False,booléen,False,object,45.0,"1/ Acceptez-vous que nous vous contactions pour une proposition de formation collective (méthodologie, logiciels...), d'après vos réponses précédentes ?"
+139. etre_informer,q39_etre_informer,False,booléen,False,object,46.0,"2/ Souhaitez-vous des informations de la part des différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) (événements scientifiques, calendrier des formations…) ?"
+140. present_work,q40_present_work,False,booléen,False,object,47.0,"3/ Seriez- vous intéressé·e pour présenter vos travaux et expériences de recherche à l’occasion de séminaires, journées d’études, colloques, organisés par les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) ?"
+141. ok_teaching,q41_ok_teaching,False,booléen,False,object,48.0,"3/ Seriez-vous intéressé·e par le fait de dispenser vous-même des formations (méthodologies, logiciels) selon vos domaines de compétence, dans le cadre des formations organisées par les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) ?"
+142. Nom :,q42_nom_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
+143. Prénom :,q42_prénom_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
+144. Adresse e-mail :,q43_adresse_e-mail_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
+"145. Votre UFR, département, laboratoire d'affiliation :",q44_ufr_labo,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
+146. Clé,q45_clé,False,string,False,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
+147. Date de saisie,q46_date_de_saisie,False,date,False,object,,
+148. Date de dernière modification,q47_date_de_dernière_modification,False,date,False,float64,,
+149. Date de dernier enregistrement,q48_date_de_dernier_enregistrement,False,date,False,object,,
+150. Temps de saisie,q49_temps_de_saisie,False,quanti_continue,False,object,,
+151. Langue,q50_langue,False,simple_nominal,False,object,,
+152. Progression,q51_progression,False,,False,object,,
+153. Dernière question saisie,q52_dernière_question_saisie,False,simple_nominal,False,float64,,
+154. Origine,q53_origine,False,simple_nominal,False,object,,
+155. Appareil utilisé pour la saisie,q54_appareil_utilisé_pour_la_saisie,False,simple_nominal,False,object,,
