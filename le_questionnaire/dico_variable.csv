@@ -17,7 +17,7 @@ N°Obs,qno_obs,False,numérique,False,int64,0.0,
 15. dev_code,q6_dev_code,False,booléen,False,object,7.0,"6/ Dans le cadre de vos activités de recherche, êtes-vous amené.e à développer ou faire développer des logiciels/du code spécialisé(s) ?"
 16. dev_exemple,q6_1_dev_exemple,False,texte_libre,True,object,8.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?"
 17. software_depot,q7_software_depot,False,nominal_multiple,False,object,9.0,7/ Avez-vous déjà déposé des logiciels ou codes sources dans un entrepôt dédié ?
-"18. Oui, autre, précisez : ",q7_1_other_sw_depot,False,texte_libre,True,object,9.0,7/ Avez-vous déjà déposé des logiciels ou codes sources dans un entrepôt dédié ?
+"18. Oui, autre, précisez",q7_1_other_sw_depot,False,texte_libre,True,object,9.0,7/ Avez-vous déjà déposé des logiciels ou codes sources dans un entrepôt dédié ?
 19. Faire un dépôt sur HAL,q8_depot_hal_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
 20. Rédiger un Plan de Gestion de données (PGD ou DMP),q8_rediger_pdg_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
 21. Respecter les principes RGPD dans le cadre d'enquêtes ou d'entretiens,q8_respect_rgpd_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
@@ -28,7 +28,7 @@ N°Obs,qno_obs,False,numérique,False,int64,0.0,
 "26. FAIRiser des données, gérer des données selon les principes FAIR",q8_fair_data_help,False,ordinal,False,object,10.0,"8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :"
 27. utilite_accomp,q9_utilite_accomp,False,texte_libre,False,object,11.0,"9/ Ce type d'accompagnement serait-il utile pour votre équipe ou vos étudiants ? Si oui, lesquels ?"
 28. type_data,q10_type_data,False,nominal_multiple,False,object,12.0,1/ Quelles types de données produisez-vous ?
-"29. Autre, précisez lesquelles : ",q10_other_type_data,False,texte_libre,True,object,12.0,1/ Quelles types de données produisez-vous ?
+"29. Autre, précisez lesquelles",q10_other_type_data,False,texte_libre,True,object,12.0,1/ Quelles types de données produisez-vous ?
 30. quali_or_quanti,q11_quali_or_quanti,False,nominal_multiple,False,object,13.0,2/ Diriez-vous que vous travaillez le plus souvent avec ?
 31. humanum,q12_humanum,False,booléen,False,object,14.0,3/ Connaissez-vous la TGIR Huma-Num ?
 32. how_humanum,q12_1_how_humanum,False,nominal_multiple,False,float64,15.0,3.1/ Par quel(s) moyen(s) l'avez-vous connue ?
@@ -123,9 +123,9 @@ open source ?"
 108. other_service_univ,q23_other_service_univ,False,texte_libre,True,object,30.0,7/ D'autres services vous paraîtraient-ils utiles ?
 109. research_fields,q24_research_fields,False,simple_nominal,False,object,31.0,1/ Votre/vos champ(s) principaux de recherche ? <i>Catégories issues de la nomenclature ERC</i>
 110. statut,q25_statut,False,simple_nominal,False,object,32.0,2/ Êtes-vous ?
-111. Autre : ,q25_1_statut_autre,False,texte_libre,True,object,32.0,2/ Êtes-vous ?
+111. Autre,q25_1_statut_autre,False,texte_libre,True,object,32.0,2/ Êtes-vous ?
 112. env_travail,q26_env_travail,False,simple_nominal,False,object,33.0,1/ Où travaillez-vous le plus souvent ?
-"113. Autre, précisez : ",q26_1_autre_env,False,texte_libre,True,object,33.0,1/ Où travaillez-vous le plus souvent ?
+"113. Autre, précisez",q26_1_autre_env,False,texte_libre,True,object,33.0,1/ Où travaillez-vous le plus souvent ?
 114. Ordinateur fixe bureau,q27_pc_fixe_bureau_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
 115. Ordinateur fixe maison,q27_pc_fixe_home_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
 116. Ordinateur portable perso,q27_laptop_perso_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
@@ -136,16 +136,16 @@ open source ?"
 121. Tablette pro,q27_tablette_pro_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
 122. Stylos et papier,q27_stylos et papiers_freq,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
 123. archive_data,q28_archive_data,False,nominal_multiple,False,object,35.0,8/ Où archivez-vous vos données de recherche une fois le projet terminé ?
-"124. Autre, précisez : ",q28_1_autre_archive_data,False,texte_libre,True,object,35.0,8/ Où archivez-vous vos données de recherche une fois le projet terminé ?
+"124. Autre, précisez",q28_1_autre_archive_data,False,texte_libre,True,object,35.0,8/ Où archivez-vous vos données de recherche une fois le projet terminé ?
 125. os_sys,q29_os_sys,False,simple_nominal,False,object,36.0,3/ Sous quel système d’exploitation travaillez-vous au quotidien ?
 126. webbrowser,q30_webbrowser,False,simple_nominal,False,object,37.0,4/ Quel navigateur utilisez-vous au quotidien ?
-"127. Autre, précisez : ",q30_1_autre_webbrowser,False,texte_libre,True,object,37.0,4/ Quel navigateur utilisez-vous au quotidien ?
+"127. Autre, précisez",q30_1_autre_webbrowser,False,texte_libre,True,object,37.0,4/ Quel navigateur utilisez-vous au quotidien ?
 128. stockage_doc,q31_stockage_doc,False,nominal_multiple,False,object,38.0,5/ Où stockez-vous vos documents de travail ?
-"129. Autre, précisez : ",q31_1_autre_stockage,False,texte_libre,True,object,38.0,5/ Où stockez-vous vos documents de travail ?
+"129. Autre, précisez",q31_1_autre_stockage,False,texte_libre,True,object,38.0,5/ Où stockez-vous vos documents de travail ?
 130. collab_tools,q32_collab_tools,False,booléen,False,object,39.0,6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
-"131. Oui, précisez : ",q32_1_autre_collab_tools,False,texte_libre,True,object,39.0,6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
+"131. Oui, précisez",q32_1_autre_collab_tools,False,texte_libre,True,object,39.0,6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
 132. sauvegarde_data,q33_sauvegarde_data,False,nominal_multiple,False,object,40.0,7/ Quels outils de sauvegarde des données utilisez-vous pendant la durée d'un projet ?
-"133. Autre, précisez : ",q33_1_autre_suavegarde,False,texte_libre,True,object,40.0,7/ Quels outils de sauvegarde des données utilisez-vous pendant la durée d'un projet ?
+"133. Autre, précisez",q33_1_autre_suavegarde,False,texte_libre,True,object,40.0,7/ Quels outils de sauvegarde des données utilisez-vous pendant la durée d'un projet ?
 134. ia_for_research,q34_ia_for_research,False,booléen,False,object,41.0,"9/ Utilisez-vous, dans le cadre de vos travaux universitaires (enseignement, recherche) des outils d'intelligence artificielle ?"
 135. ia_tools,q35_ia_tools,False,texte_libre,False,object,42.0,"9.2/ Si oui, lesquels ?"
 136. gratuit_ou_payant,q36_gratuit_ou_payant,False,simple_nominal,False,object,43.0,9.3/ Les utilisez-vous en version :
