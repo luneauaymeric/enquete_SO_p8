@@ -4,7 +4,7 @@ N°Obs,qno_obs,False,numérique,False,int64,0.0,
 2. hal_depot,q2_hal_depot,False,ordinal,False,object,2.0,"2/ Avez-vous déjà déposé une production scientifique (article, communication...) sur HAL ?"
 3. octavi_depot,q3_octavi_depot,False,nominal_multiple,False,object,3.0,"3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?"
 4. open_data,q4_diff_data,False,nominal_multiple,False,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?
-"5. Autre, précisez : ",q4_autres_entrepots,False,texte_libre,True,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?
+"5. Autre, précisez",q4_autres_entrepots,False,texte_libre,True,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?
 6. R,q5_r,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
 7. Python,q5_python,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
 8. Excel,q5_excel,False,booléen,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?"
