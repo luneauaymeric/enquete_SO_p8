@@ -157,7 +157,7 @@ open source ?"
 142. Nom :,q42_nom_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
 143. Prénom :,q42_prénom_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
 144. Adresse e-mail :,q43_adresse_e-mail_,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
-"145. Votre UFR, département, laboratoire d'affiliation :",q44_ufr_labo,True,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
+"145. Votre UFR, département, laboratoire d'affiliation :",q44_ufr_labo,False,texte_libre,True,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
 146. Clé,q45_clé,False,string,False,object,49.0,"4/ Si vous souhaitez un suivi ou un échange à la suite de cette enquête, vous avez la possibilité de renseigner vos coordonnées ci-dessous :"
 147. Date de saisie,q46_date_de_saisie,False,date,False,object,,
 148. Date de dernière modification,q47_date_de_dernière_modification,False,date,False,float64,,
