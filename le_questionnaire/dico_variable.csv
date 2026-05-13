@@ -168,3 +168,6 @@ open source ?"
 153. Dernière question saisie,q52_dernière_question_saisie,17_metadonnee,False,simple_nominal,False,float64,,
 154. Origine,q53_origine,17_metadonnee,False,simple_nominal,False,object,,
 155. Appareil utilisé pour la saisie,q54_appareil_utilisé_pour_la_saisie,17_metadonnee,False,simple_nominal,False,object,,
+110. statut_rec,q25_statut_rec,12_descript_repondant,False,simple_nominal,False,object,25.0,2/ Êtes-vous ?
+110. doctorant,q25_doctorant,12_descript_repondant,False,simple_nominal,False,bool,25.0,2/ Êtes-vous ?
+3. octavi_depot_rec,q3_octavi_rec,2_bib_num,False,simple_nominal,False,object,3.0,"3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?"
