@@ -124,7 +124,7 @@ open source ?"
 109. research_fields,q24_research_fields,12_descript_repondant,False,nominal_multiple,False,object,31.0,1/ Votre/vos champ(s) principaux de recherche ? <i>Catégories issues de la nomenclature ERC</i>
 110. statut,q25_statut,12_descript_repondant,False,simple_nominal,False,object,32.0,2/ Êtes-vous ?
 111. Autre,q25_1_statut_autre,12_descript_repondant,False,texte_libre,True,object,32.0,2/ Êtes-vous ?
-112. env_travail,q26_env_travail,13_env_travail,False,simple_nominal,False,object,33.0,1/ Où travaillez-vous le plus souvent ?
+112. env_travail,q26_env_travail,13_env_travail,False,nominal_multiple,False,object,33.0,1/ Où travaillez-vous le plus souvent ?
 "113. Autre, précisez",q26_1_autre_env,13_env_travail,False,texte_libre,True,object,33.0,1/ Où travaillez-vous le plus souvent ?
 114. Ordinateur fixe bureau,q27_pc_fixe_bureau_freq,13_env_travail,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
 115. Ordinateur fixe maison,q27_pc_fixe_home_freq,13_env_travail,False,quanti_discrete,False,int64,34.0,"2/ Au cours de la semaine, à quelle fréquence avez-vous utilisé les matériels ci-dessous :"
