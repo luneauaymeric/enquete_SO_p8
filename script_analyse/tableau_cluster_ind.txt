@@ -1,135 +1,153 @@
-PS8W-TJ9P, 7.0,4.0,5.0,Des données qualitatives, Individus marchés et organisations,nan,nan,nan,nan,nan,nan,Outlier
-M5L8-UM9F, 0.0,0.0,2.0,Des données quantitatives, Le monde social et ses interactions,Psychologie,Dysco,nan,nan,Vallat-Azouvi,Claire,Cognition,Psychologie
-ANM4-SD9B, 5.0,0.0,0.0,Les deux, Le monde social et ses interactions,Arts,AIAC/EPHA,Photo,nan,Sennewald ,J. Emil,Études des cultures et des arts,Études des mondes de l'art
-GLRV-TMM9, 3.0,0.0,0.0,Des données qualitatives, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Outlier,Humanités numériques
-3V5K-8FEA, 4.0,0.0,1.0,Les deux, Individus marchés et organisations,Psychologie,nan,nan,nan,Henry,Sophie,Cognition,Psychologie
+=====================
+Cluster 0: Environnement et espace
 
-639H-EH8R, 1.0,0.0,0.0,Des données qualitatives, Études des cultures et des arts,nan,nan,nan,nan,nan,nan,Études des cultures et des arts,Études des arts et création
-GK5N-J3SV, 1.0,0.0,0.0,Des données qualitatives, Études des cultures et des arts,Arts, philosophie, esthétiqu,AIAC/EPHA,Arts,nan,Seiderer,Anna,Études des cultures et des arts,Études des arts et création
-A2YY-FL32, 1.0,0.0,0.0,Des données qualitatives, Études des cultures et des arts,nan,nan,nan,nan,nan,nan,Études des cultures et des arts,Études des arts et création
-HE87-K3JL, 1.0,0.0,0.0,Des données quantitatives, Études des cultures et des arts,nan,nan,nan,nan,nan,nan,Études des cultures et des arts,Études des cultures et des arts,Études des arts et création
-VQH6-7NJP, 1.0,0.0,0.0,Des données qualitatives, Études des cultures et des arts,nan,nan,nan,nan,nan,nan,Études des cultures et des arts,Études des arts et création
-LXKU-XDYA, 1.0,0.0,0.0,Des données qualitatives, Études des cultures et des arts,nan,nan,nan,nan,nan,nan,Études des cultures et des arts,Études des arts et création
-M47N-T9DZ, 1.0,0.0,0.0,Des données qualitatives, Études des cultures et des arts,nan,nan,nan,nan,nan,nan,Études des cultures et des arts,Études des arts et création
+N99W-FKD9: Mobilité humaine environnement et espace,Environnement et espace
+CALH-8CSE: Mobilité humaine environnement et espace,environnement et espace
+8NR6-Q3ED: Mobilité humaine environnement et espace,Environnement et espace
+WYVU-F8DF: Mobilité humaine environnement et espace,Environnement et espace
+NSK5-6STJ: Mobilité humaine environnement et espace,Environnement et espace
+SZY2-JZTU: Mobilité humaine environnement et espace,Environnement et espace
+A3S4-MJGK: Mobilité humaine environnement et espace,Environnement et espace
+KBVW-94Y2: Mobilité humaine environnement et espace,Environnement et espace
 
-N99W-FKD9, 2.0,0.0,0.0,Des données qualitatives, Mobilité humaine, environnement et espace,nan,nan,nan,nan,nan,nan,Mobilité humaine environnement et espace
-CALH-8CSE, 2.0,0.0,0.0,Des données qualitatives, Mobilité humaine, environnement et espace,nan,nan,nan,nan,nan,nan,Mobilité humaine environnement et espace
-8NR6-Q3ED, 2.0,0.0,0.0,Des données qualitatives, Mobilité humaine, environnement et espace,nan,nan,nan,nan,nan,nan,Mobilité humaine environnement et espace
-WYVU-F8DF, 2.0,0.0,0.0,Les deux, Mobilité humaine, environnement et espace,nan,nan,nan,nan,nan,nan,Mobilité humaine environnement et espace
-NSK5-6STJ, 2.0,0.0,0.0,Des données qualitatives, Mobilité humaine, environnement et espace,nan,nan,nan,nan,nan,nan,Mobilité humaine environnement et espace
-SZY2-JZTU, 2.0,0.0,0.0,Les deux, Mobilité humaine, environnement et espace,ERITES,nan,nan,nan,Valette,Jean-François,Mobilité humaine environnement et espace
-A3S4-MJGK, 2.0,0.0,0.0,Des données qualitatives, Mobilité humaine, environnement et espace,ERITES,nan,nan,nan,Tillous,Marion,Mobilité humaine environnement et espace
-KBVW-94Y2, 1.0,1.0,0.0,Des données quantitatives, Mobilité humaine, environnement et espace,nan,nan,nan,nan,nan,nan,Mobilité humaine environnement et espace
+=====================
+Cluster 1: Information et communication
 
-AVQG-73T4, 3.0,0.0,0.0,Des données qualitatives, nan,Droit,nan,nan,nan,TA,Isabelle,Institutions et organisations
-RXPG-46ZW, 3.0,0.0,0.0,Des données qualitatives, nan,nan,nan,nan,nan,nan,nan,Institutions et organisations
-Q5AZ-855W, 2.0,0.0,0.0,Des données qualitatives, nan,nan,nan,nan,nan,nan,nan,Institutions et organisations
-SKD4-XJMH, 1.0,0.0,0.0,Des données quantitatives, nan,AES-EG,LED,nan,nan,Terracol,Antoine,Institutions et organisations
-5FJS-YCLW, 4.0,0.0,0.0,Des données qualitatives, nan,Textes et sociétés,Cressppa,nan,nan,Siblot,Yasmine,Institutions et organisations
-RAUZ-BRFQ, 2.0,0.0,0.0,Des données quantitatives, nan,AES-EG,LED,nan,nan,Bouacida,Elias,Institutions et organisations
-4FYP-H9TX, 3.0,0.0,0.0,Les deux, nan,AES-EG,LED,nan,nan,NUNEZ-REGUEIRO,Santiago,Institutions et organisations
-7L5G-35JG, 3.0,0.0,0.0,Des données qualitatives, nan,ERITES,Ladyss,Géographie,nan,Lemarchand,Nathalie,Institutions et organisations
-FDGG-VDE6, 3.0,0.0,0.0,Les deux, nan,nan,nan,nan,nan,nan,nan,Institutions et organisations
-SYWH-2Y8T, 3.0,0.0,0.0,Des données qualitatives, nan,ERITES,Ladyss,Géographie,nan,Le Visage,Selin,Institutions et organisations
-DBQD-JQTW, 1.0,0.0,0.0,Les deux, nan,Culture et communication,CEMTI,nan,nan,Rossi,Julien,Institutions et organisations
-GYQJ-9DVE, 2.0,0.0,0.0,Des données qualitatives, nan,nan,LED,MLT,nan,Cecchi,Saveria,Institutions et organisations
-2QNC-8AAQ, 4.0,0.0,0.0,Des données qualitatives, nan,nan,nan,nan,nan,nan,nan,Institutions et organisations
-78P8-N4BA, 5.0,0.0,0.0,Des données qualitatives, nan,nan,nan,nan,nan,nan,nan,Institutions et organisations
-Q934-QKAW, 2.0,1.0,0.0,Des données qualitatives, nan,MITSIC,nan,nan,nan,Lekic,Dijana,Institutions et organisations
-WAR9-LFJP, 3.0,0.0,0.0,Des données qualitatives, nan,SEPF,LIAgE,Sciences de l’éducation,nan,Odasso,Laura,Institutions et organisations
-HRZG-6JGE, 4.0,0.0,0.0,Les deux, nan,ERITES,nan,nan,nan,Darly,Segolene,Institutions et organisations
+R9R6-P7CN: Pratiques informationnelles, Information et communication
+MXD6-JC3F: Pratiques informationnelles, Information et communication
+E3YL-PHZV: Pratiques informationnelles, Information et communication
+S3JS-37LL: Pratiques informationnelles, Information et communication
+PQML-4NVQ: Pratiques informationnelles, Information et communication
+6454-S2QM: Pratiques informationnelles, Information et communication
+XA8V-2558: Pratiques informationnelles, Information et communication
+572G-RBZC: Pratiques informationnelles, Information et communication
+VTX9-R7JQ: Pratiques informationnelles, Information et communication
+HKN6-95PQ: Pratiques informationnelles, Information et communication
 
-HT8V-PSKZ, 0.0,1.0,0.0,Des données quantitatives, Sciences informatiques,nan,nan,nan,nan,nan,nan,Sciences informatiques
-Q5PB-ETLB, 0.0,1.0,0.0,Les deux, Sciences informatiques,Mitsic,LIASD,nan,nan,RAUZY,Pablo,Sciences informatiques
-DT4P-FHKY, 0.0,2.0,0.0,Les deux, Sciences informatiques,nan,nan,nan,nan,nan,nan,Sciences informatiques
-ZBFK-V8BA, 0.0,1.0,0.0,Les deux, Sciences informatiques,nan,nan,nan,nan,nan,nan,Sciences informatiques
-QYE4-8EYZ, 0.0,1.0,0.0,Les deux, Sciences informatiques,nan,nan,nan,nan,nan,nan,Sciences informatiques
-BNVM-K8M9, 0.0,1.0,0.0,Des données quantitatives, Sciences informatiques,Mitsic,nan,nan,nan,Ammi,Mehdi,Sciences informatiques
+=====================
+Cluster 2: Cognition et raisonnement
 
-9K9T-RVNL, 2.0,0.0,0.0,Des données quantitatives, Sciences cognitives,Psychologie,Dysco,nan,nan,HABIB,Marianne,Cognition
-YTMC-B4DP, 2.0,0.0,0.0,Les deux, Sciences cognitives,IED,Paragraphe,nan,nan,Meunier,Jean-Marc,Cognition
-35EN-C9DW, 2.0,0.0,0.0,Des données quantitatives, Sciences cognitives,Psychologie,nan,nan,nan,nan,nan,Cognition
-ET2V-ZA9Z, 2.0,0.0,0.0,Les deux, Sciences cognitives,nan,nan,nan,nan,nan,nan,Cognition
-A33H-5ZS7, 2.0,0.0,0.0,Des données quantitatives, Sciences cognitives,nan,nan,nan,nan,nan,nan,Cognition
-PEG4-89LR, 2.0,0.0,0.0,Des données quantitatives, Sciences cognitives,Psychologie,LAPPS,nan,nan,WONG,Hoï-Tong,Cognition
+9K9T-RVNL: Cognition, Cognition et raisonnement
+YTMC-B4DP: Cognition, Cognition et raisonnement
+35EN-C9DW: Cognition, Cognition et raisonnement
+ET2V-ZA9Z: Cognition, Cognition et raisonnement
+A33H-5ZS7: Cognition, Cognition et raisonnement
+PEG4-89LR: Cognition, Cognition et raisonnement
 
-R9R6-P7CN, 1.0,0.0,0.0,Les deux, Le monde social et ses interactions,Culture et communication,CEMTI,nan,nan,nan,nan,Pratiques informationnelles
-MXD6-JC3F, 1.0,0.0,0.0,Des données qualitatives, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Pratiques informationnelles
-E3YL-PHZV, 1.0,0.0,0.0,Les deux, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Pratiques informationnelles
-S3JS-37LL, 1.0,0.0,0.0,Des données quantitatives, Le monde social et ses interactions,Psychologie,nan,nan,nan,Mollaret,Pratiques informationnelles
-PQML-4NVQ, 1.0,0.0,0.0,Les deux, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Pratiques informationnelles
-XA8V-2558, 1.0,0.0,0.0,Des données qualitatives, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Pratiques informationnelles
-572G-RBZC, 1.0,0.0,0.0,Des données qualitatives, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Pratiques informationnelles
-VTX9-R7JQ, 1.0,0.0,0.0,Des données qualitatives, Le monde social et ses interactions,Culture et communication,CEMTI,nan,nan,Gonzalez,Daniela,Pratiques informationnelles
-HKN6-95PQ, 1.0,0.0,0.0,Des données quantitatives, Le monde social et ses interactions,nan,Paragraphe,nan,nan,de Chalvron,stephanie,Pratiques informationnelles
+=====================
+Cluster 3: Sciences informatiques
 
-FCCB-GMYA, 1.0,0.0,0.0,Des données qualitatives, Psychologie (sociale),Psychologie,nan,nan,nan,Boudra,Leïla,Troubles mentaux,Psychologie
-CV3G-95CT, 1.0,0.0,0.0,Des données quantitatives, Psychologie (sociale),Sciences du langage,SFL,nan,nan,COLONNA,SAVERIA,Cognition,Psychologie
-BKF8-SNEZ, 1.0,0.0,0.0,Des données quantitatives, Psychologie (sociale),Psychologie,CHArt,nan,nan,Jacquet,Baptiste,Cognition,Psychologie
-Y7ZW-AP6B, 1.0,0.0,0.0,Les deux, Psychologie (sociale),Psychologie,Paragraphe,nan,nan,VANWALLEGHEM,Stéphanie,Troubles mentaux,Psychologie
-XW7R-FDND, 1.0,0.0,0.0,Des données quantitatives, Psychologie (sociale),Psychologie,Dysco,nan,nan,Caparos,Serge,Cognition,Psychologie
-9X9M-JRJW, 1.0,0.0,0.0,Les deux, Psychologie (sociale),Psychologie,nan,nan,nan,Villemonteix,Thomas,Troubles mentaux,Psychologie
-H5X6-KL2Z, 0.0,1.0,0.0,Les deux, Psychologie (sociale),nan,LED,nan,nan,SIMO,Hani,Outlier
-NLVG-2YZ5, 1.0,0.0,0.0,Des données quantitatives, Psychologie (sociale),Psychologie,CHArt,nan,nan,nan,nan,Cognition,Psychologie
-A7R6-3SWC, 1.0,0.0,0.0,Les deux, Psychologie (sociale),Psychologie,CHArt,nan,nan,Zibetti,Elisabetta,Cognition,Psychologie
-2JQN-P9PA, 1.0,0.0,0.0,Les deux, Psychologie (sociale),nan,nan,nan,nan,nan,nan,Outlier,Psychologie
-H8B2-2AYQ, 1.0,0.0,0.0,Les deux, Psychologie (sociale),Sciences du langage,nan,nan,nan,Wauquier,Sophie,Cognition,Psychologie
-RZY3-LPES, 1.0,0.0,0.0,Des données qualitatives, Psychologie (sociale),nan,nan,nan,nan,nan,nan,Outlier,Psychologie
-MLSN-NBUS, 1.0,0.0,1.0,Les deux, Psychologie (sociale),nan,Dysco,nan,nan,EL MARDI,Wassila,Cognition,Psychologie
+HT8V-PSKZ: Sciences informatiques, Sciences informatiques
+Q5PB-ETLB: Sciences informatiques, Sciences informatiques
+DT4P-FHKY: Sciences informatiques, Sciences informatiques
+ZBFK-V8BA: Sciences informatiques, Sciences informatiques
+QYE4-8EYZ: Sciences informatiques, Sciences informatiques
+BNVM-K8M9: Sciences informatiques, Sciences informatiques
 
-TZYG-EKYM, 4.0,0.0,0.0,Des données qualitatives, L'étude du passé humain,nan,IDHES,nan,nan,Sibeud,Emmanuelle,Étude du passé humain
-JF4U-H3UM, 4.0,0.0,0.0,Des données quantitatives, L'étude du passé humain,nan,nan,nan,nan,nan,nan,Étude du passé humain
-SJWJ-3QKL, 3.0,0.0,0.0,Les deux, L'étude du passé humain,Textes et sociétés,Arscan,Histoire,nan,Noizet,Hélène,Étude du passé humain
-3EAA-2Q9U, 2.0,0.0,0.0,Des données qualitatives, L'étude du passé humain,nan,nan,nan,nan,nan,nan,Étude du passé humain
+=====================
+Cluster 4: Recherche et création
 
-CN6B-UEHQ, 2.0,2.0,0.0,Les deux, Langue et culture étrangère,nan,nan,nan,nan,nan,nan,Traitement du signal
-5G5M-BM3L, 3.0,2.0,0.0,Les deux, Langue et culture étrangère,nan,nan,nan,nan,nan,nan,Traitement du signal
-RVX8-7FSV, 1.0,1.0,0.0,Les deux, Langue et culture étrangère,nan,nan,nan,nan,nan,nan,Traitement du signal,Études des arts et création
-QH7Q-PJZ9, 3.0,2.0,0.0,Les deux, Langue et culture étrangère,nan,nan,nan,nan,nan,nan,Traitement du signal
+639H-EH8R: Études des arts et création, Recherche et création
+GK5N-J3SV: Études des arts et création, Recherche et création
+RVX8-7FSV: Études des arts et création, Recherche et création
+A2YY-FL32: Études des arts et création, Recherche et création
+Q3YA-587D: Études des arts et création, Recherche et création
+HE87-K3JL: Études des arts et création, Recherche et création
+VQH6-7NJP: Études des arts et création, Recherche et création
+LXKU-XDYA: Études des arts et création, Recherche et création
+M47N-T9DZ: Études des arts et création, Recherche et création
 
-VR4Q-ZFTH, 5.0,2.0,0.0,Des données qualitatives, Langue et culture étrangère,nan,nan,nan,CLI,micaletti,pierre-michael,Traitement du signal
-Q3YA-587D, 1.0,1.0,0.0,Les deux, Langue et culture étrangère,Arts,Musidanse,Musique,nan,BONARDI,Alain,Traitement du signal,Études des arts et création
-6454-S2QM, 1.0,1.0,0.0,Les deux, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Traitement du signal
-2DRU-P3AV, 1.0,1.0,0.0,Les deux, Langue et culture étrangère,Mitsic,nan,nan,nan,Saleh,Imad,Traitement du signal
-L755-EYSR, 3.0,3.0,1.0,Les deux, Langue et culture étrangère,nan,nan,nan,nan,nan,nan,Traitement du signal
+=====================
+Cluster 5: Humanités (numériques)
 
-9JNL-L3RA, 1.0,0.0,0.0,Des données qualitatives, nan,nan,nan,nan,nan,nan,nan,Langes et cultures étrangères
-EM6U-9PNF, 2.0,0.0,0.0,Des données qualitatives, nan,nan,nan,nan,nan,nan,nan,Langes et cultures étrangères
-D4JC-WN3B, 2.0,0.0,0.0,Des données qualitatives, nan,Langes et cultures étrangères,nan,nan,nan,LE COR,Gwen,Langes et cultures étrangères
-QX8A-4JAQ, 3.0,0.0,0.0,Des données qualitatives, nan,nan,nan,nan,nan,nan,nan,Langes et cultures étrangères
-LS4U-JEBR, 2.0,0.0,0.0,Les deux, nan,Langes et cultures étrangères,Transcrit,Études des Pays Anglophones,nan,BROQUA,vincent,Langes et cultures étrangères
+GNEG-5QXQ: Médiations culturelles et numériques, Humanités (numériques)
+CN6B-UEHQ: Médiations culturelles et numériques, Humanités (numériques)
+5G5M-BM3L: Cultures passées et étrangères, Humanités (numériques)
+QV7Q-KLNA: Cultures passées et étrangères, Humanités (numériques)
+ZGPH-2FPH: Médiations culturelles et numériques, Humanités (numériques)
+TSZM-D83G: Cultures passées et étrangères, Humanités (numériques)
+ANM4-SD9B: Médiations culturelles et numériques, Humanités (numériques)
+44RN-J48S: Cultures passées et étrangères, Humanités (numériques)
+QH7Q-PJZ9: Cultures passées et étrangères, Humanités (numériques)
+VR4Q-ZFTH: Médiations culturelles et numériques, Humanités (numériques)
+QVLJ-HWKA: Médiations culturelles et numériques, Humanités (numériques)
+JYD7-6Y6B: Médiations culturelles et numériques, Humanités (numériques)
+5NUL-RKJ9: Cultures passées et étrangères, Humanités (numériques)
+QX8A-4JAQ: Médiations culturelles et numériques, Humanités (numériques)
+GLRV-TMM9: Médiations culturelles et numériques, Humanités (numériques)
+ZB5S-ABHN: Médiations culturelles et numériques, Humanités (numériques)
+G35P-HV8F: Cultures passées et étrangères, Humanités (numériques)
+SVRN-5BFD: Médiations culturelles et numériques, Humanités (numériques)
+3V5K-8FEA: Médiations culturelles et numériques, Humanités (numériques)
+L755-EYSR: Médiations culturelles et numériques, Humanités (numériques)
+7CU7-JG8K: Médiations culturelles et numériques, Humanités (numériques)
+2Y89-7BR9: Médiations culturelles et numériques, Humanités (numériques)
 
-QV7Q-KLNA, 5.0,0.0,0.0,Les deux, Individus marchés et organisations,Langes et cultures étrangères,nan,nan,nan,Bertilotti ,Paola,Langes et cultures étrangères
-44RN-J48S, 4.0,0.0,0.0,Des données qualitatives, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Langes et cultures étrangères
-G35P-HV8F, 4.0,0.0,0.0,Des données qualitatives, Individus marchés et organisations,nan,nan,nan,nan,nan,nan,Langes et cultures étrangères
+=====================
+Cluster 6: Sciences humaines et sociales
 
-QLPJ-DVVQ, 2.0,0.0,0.0,Des données qualitatives, Humanités numériques,nan,nan,nan,nan,nan,nan,Étude du passé humain,Histoire contemporaine
-PSFJ-S7YE, 2.0,0.0,0.0,Des données qualitatives, Humanités numériques,nan,nan,nan,nan,Coffinch,Jean christophe,Étude du passé humain,Histoire contemporaine
-3LVR-PYLH, 1.0,0.0,0.0,Des données qualitatives, Humanités numériques,nan,nan,nan,nan,nan,nan,Étude du passé humain,Histoire contemporaine
-Z37Y-6JGC, 1.0,0.0,0.0,Les deux, Humanités numériques,Textes et sociétés,IDHES,nan,nan,bouju,marie-cecile,Étude du passé humain,Histoire contemporaine
-TUUJ-9K9W, 1.0,0.0,0.0,Des données qualitatives, Humanités numériques,nan,nan,nan,nan,nan,nan,Étude du passé humain,Histoire contemporaine
+AVQG-73T4: Institutions et organisations, Sciences humaines et sociales
+9JNL-L3RA: Textes arts et cultures, Sciences humaines et sociales
+RXPG-46ZW: Institutions et organisations, Sciences humaines et sociales
+Q5AZ-855W: Institutions et organisations, Sciences humaines et sociales
+TZYG-EKYM: Histoire et structures sociales, Sciences humaines et sociales
+LPNF-H5YQ: Textes arts et cultures, Sciences humaines et sociales
+ASQY-ZGVK: Institutions et organisations, Sciences humaines et sociales
+SKD4-XJMH: Institutions et organisations, Sciences humaines et sociales
+YL4Q-KQAK: Institutions et organisations, Sciences humaines et sociales
+5FJS-YCLW: Institutions et organisations, Sciences humaines et sociales
+EM6U-9PNF: Textes arts et cultures, Sciences humaines et sociales
+XGV3-TLNC: Textes arts et cultures, Sciences humaines et sociales
+4VJV-R74Q: Textes arts et cultures, Sciences humaines et sociales
+RAUZ-BRFQ: Institutions et organisations, Sciences humaines et sociales
+4FYP-H9TX: Institutions et organisations, Sciences humaines et sociales
+7L5G-35JG: Institutions et organisations, Sciences humaines et sociales
+FDGG-VDE6: Institutions et organisations, Sciences humaines et sociales
+D4JC-WN3B: Textes arts et cultures, Sciences humaines et sociales
+JF4U-H3UM: Histoire et structures sociales, Sciences humaines et sociales
+SYWH-2Y8T: Institutions et organisations, Sciences humaines et sociales
+SJWJ-3QKL: Histoire et structures sociales, Sciences humaines et sociales
+3EAA-2Q9U: Histoire et structures sociales, Sciences humaines et sociales
+LS4U-JEBR: Textes arts et cultures, Sciences humaines et sociales
+DBQD-JQTW: Institutions et organisations, Sciences humaines et sociales
+GYQJ-9DVE: Institutions et organisations, Sciences humaines et sociales
+FRLS-PTRU: Institutions et organisations, Sciences humaines et sociales
+2QNC-8AAQ: Institutions et organisations, Sciences humaines et sociales
+78P8-N4BA: Institutions et organisations, Sciences humaines et sociales
+QAMR-B8EH: Histoire et structures sociales, Sciences humaines et sociales
+82N2-HDNU: Institutions et organisations, Sciences humaines et sociales
+X48K-M3K4: Institutions et organisations, Sciences humaines et sociales
+Q934-QKAW: Institutions et organisations, Sciences humaines et sociales
+5V62-N439: Histoire et structures sociales, Sciences humaines et sociales
+WAR9-LFJP: Institutions et organisations, Sciences humaines et sociales
+HRZG-6JGE: Institutions et organisations, Sciences humaines et sociales
 
-ZB5S-ABHN, 2.0,0.0,0.0,Les deux, Humanités numériques,LE,nan,nan,nan,nan,nan,Outlier
-SVRN-5BFD, 4.0,0.0,0.0,Des données qualitatives, Humanités numériques,nan,nan,nan,nan,nan,nan,Outlier
-2Y89-7BR9, 2.0,0.0,0.0,Des données qualitatives, Le monde social et ses interactions,nan,nan,nan,nan,Larsonneur,Claire,Langes et cultures étrangères
+=====================
+Cluster 7: Histoire
 
-LPNF-H5YQ, 3.0,0.0,0.0,Des données quantitatives, Langues et litteratures,nan,nan,nan,nan,nan,nan,Études des mondes de l'art
-XGV3-TLNC, 3.0,0.0,0.0,Des données qualitatives, Langues et litteratures,Institut d’études européennes,Cressppa,nan,nan,Levy,Clara,Études des mondes de l'art
-4VJV-R74Q, 2.0,0.0,0.0,Des données qualitatives, Langues et litteratures,Arts,AIAC/EPHA,Arts plastiques,nan,Barbut,Clélia,Études des mondes de l'art
-5NUL-RKJ9, 3.0,0.0,0.0,Des données qualitatives, Langues et litteratures,nan,nan,nan,nan,nan,nan,Études des mondes de l'art
+PSFJ-S7YE: Histoire contemporaine, Histoire
+3LVR-PYLH: Histoire contemporaine, Histoire
+Z37Y-6JGC: Histoire contemporaine, Histoire
+TUUJ-9K9W: Histoire contemporaine, Histoire
+QLPJ-DVVQ: Histoire contemporaine,Histoire
 
-GNEG-5QXQ, 4.0,0.0,0.0,Des données qualitatives, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Humanités numériques
-ZGPH-2FPH, 6.0,1.0,0.0,Les deux, Langues et litteratures,Mitsic,Paragraphe,Humanités numériques,nan,Szoniecky,Samuel,Humanités numériques
-TSZM-D83G, 4.0,1.0,0.0,Des données qualitatives, Le monde social et ses interactions,nan,nan,nan,nan,nan,nan,Humanités numériques
-QVLJ-HWKA, 5.0,0.0,0.0,Des données qualitatives, Langues et litteratures,nan,nan,nan,nan,nan,nan,Humanités numériques
-JYD7-6Y6B, 6.0,0.0,0.0,Des données qualitatives, Langues et litteratures,nan,nan,nan,nan,nan,nan,Humanités numériques
-7CU7-JG8K, 5.0,1.0,0.0,Les deux, Langues et litteratures,Culture et communication,CEMTI,nan,nan,CHOMEL,Laurent,Humanités numériques
+=====================
+Cluster 8:  Psychologie
 
-FRLS-PTRU, 2.0,0.0,0.0,Des données qualitatives, Individus marchés et organisations,nan,nan,nan,nan,nan,nan,Histoire économique,Institutions et organisations
-QAMR-B8EH, 3.0,0.0,0.0,Les deux, Individus marchés et organisations,nan,IDHES,Histoire,nan,Balois-Proyart,Jean-Christophe,Histoire économique,Institutions et organisations
-82N2-HDNU, 2.0,0.0,0.0,Des données qualitatives, Individus marchés et organisations,AES-EG,nan,nan,nan,Rieucau,Nicolas,Histoire économique,Institutions et organisations
-5V62-N439, 4.0,0.0,0.0,Les deux, Individus marchés et organisations,AES-EG,nan,nan,nan,Charles,Loïc,Histoire économique,Institutions et organisations
+FCCB-GMYA: Psychologie, Psychologie
+CV3G-95CT: Psychologie, Psychologie
+BKF8-SNEZ: Psychologie, Psychologie
+Y7ZW-AP6B: Psychologie, Psychologie
+XW7R-FDND: Psychologie, Psychologie
+9X9M-JRJW: Psychologie, Psychologie
+NLVG-2YZ5: Psychologie, Psychologie
+2DRU-P3AV: Psychologie, Psychologie
+A7R6-3SWC: Psychologie, Psychologie
+2JQN-P9PA: Psychologie, Psychologie
+H8B2-2AYQ: Psychologie, Psychologie
+RZY3-LPES: Psychologie, Psychologie
+MLSN-NBUS: Psychologie, Psychologie
+M5L8-UM9F: Psychologie,Psychologie
 
-ASQY-ZGVK, 3.0,0.0,0.0,Des données qualitatives, Individus marchés et organisations,nan,nan,nan,nan,nan,nan,Outlier,Institutions et organisations
-YL4Q-KQAK, 3.0,0.0,0.0,Les deux, Individus marchés et organisations,nan,nan,nan,nan,nan,nan,Outlier,Institutions et organisations
-X48K-M3K4, 4.0,0.0,0.0,Des données qualitatives, Individus marchés et organisations,nan,CIRCEFT,nan,PTS,Delépine,Joachim,Outlier,Institutions et organisations
+
+
