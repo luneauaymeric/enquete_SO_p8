@@ -1,0 +1,22 @@
+research_field,hdbscan_cluster,id_cluster,lab_cluster
+SH4 L'esprit humain et sa complexité,0,0,Humanités
+SH5 Textes et concepts,0,0,Humanités
+SH6 L'étude du passé humain,0,0,Humanités
+SH8 Études des cultures et des arts,0,0,Humanités
+"LS4 Physiologie de la santé, de la maladie et du vieillissement",1,1,"Psychologie, neurosciences"
+LS5 Neurosciences et troubles du système nerveux,1,1,"Psychologie, neurosciences"
+PE5 Chimie de synthèse et matériaux,1,7,Chimie de synthèse
+"SH1 Individus, marchés et organisations",2,2,"Droit, économie et sciences politiques"
+"SH2 Institutions, gouvernance et systèmes juridiques",2,2,"Droit, économie et sciences politiques"
+SH3 Le monde social et ses interactions,3,3,Sciences sociales
+"SH7 Mobilité humaine, environnement et espace",3,3,Sciences sociales
+PE1 Mathématiques,4,4,Maths info
+PE6 Sciences informatiques et informatique,4,4,Maths info
+PE7 Ingénierie des systèmes et de la communication,4,4,Maths info
+"LS6 Immunité, infection et immunothérapie",5,5,"Biologie, maladie"
+"LS7 Prévention, diagnostic et traitement des maladies humaines",5,5,"Biologie, maladie"
+PE10 Sciences du Système Terre,5,5,"Biologie, maladie"
+"LS8 Biologie environnementale, écologie et évolution",6,6,Ecologie et biosystèmes
+LS9 Biotechnologie et ingénierie des biosystèmes,6,6,Ecologie et biosystèmes
+PE8 Ingénierie des produits et des procédés,6,6,Ecologie et biosystèmes
+PE9 Sciences de l'Univers,6,6,Ecologie et biosystèmes
