@@ -2,7 +2,7 @@
 Cluster 0: Environnement et espace
 
 N99W-FKD9: Mobilité humaine environnement et espace,Environnement et espace
-CALH-8CSE: Mobilité humaine environnement et espace,environnement et espace
+CALH-8CSE: Mobilité humaine environnement et espace,Environnement et espace
 8NR6-Q3ED: Mobilité humaine environnement et espace,Environnement et espace
 WYVU-F8DF: Mobilité humaine environnement et espace,Environnement et espace
 NSK5-6STJ: Mobilité humaine environnement et espace,Environnement et espace
@@ -35,7 +35,7 @@ A33H-5ZS7: Cognition, Cognition et raisonnement
 PEG4-89LR: Cognition, Cognition et raisonnement
 
 =====================
-Cluster 3: Sciences informatiques
+Cluster 3: 
 
 HT8V-PSKZ: Sciences informatiques, Sciences informatiques
 Q5PB-ETLB: Sciences informatiques, Sciences informatiques
