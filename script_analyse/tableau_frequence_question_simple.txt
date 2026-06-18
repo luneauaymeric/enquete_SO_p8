@@ -1,0 +1,761 @@
+==================
+ 1/ Diriez-vous que vous êtes familier.ère des principes de la Science Ouverte ?
+1. so_principles
+   q1_so_principles  nb  total       freq  total_freq
+0               Non  12    119  10.084034       100.0
+1  Oui, tout à fait  38    119  31.932773       100.0
+2       Oui, un peu  69    119  57.983193       100.0
+---------------------
+
+==================
+ 2/ Avez-vous déjà déposé une production scientifique (article, communication...) sur HAL ?
+2. hal_depot
+            q2_hal_depot  nb  total       freq  total_freq
+0                    Non  15    119  12.605042       100.0
+1    Oui, plusieurs fois  48    119  40.336134       100.0
+2  Oui, systématiquement  42    119  35.294118       100.0
+3          Oui, une fois  14    119  11.764706       100.0
+---------------------
+
+==================
+ 3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?
+3. octavi_depot_rec
+  q3_octavi_rec   nb  total       freq  total_freq
+0           Non  108    119  90.756303       100.0
+1           Oui   11    119   9.243697       100.0
+---------------------
+
+==================
+ 5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?
+6. R
+  q5_r  nb  total       freq  total_freq
+0  Non  81    119  68.067227       100.0
+1  Oui  38    119  31.932773       100.0
+---------------------
+
+7. Python
+  q5_python  nb  total       freq  total_freq
+0       Non  97    119  81.512605       100.0
+1       Oui  22    119  18.487395       100.0
+---------------------
+
+8. Excel
+  q5_excel  nb  total       freq  total_freq
+0      Non  39    119  32.773109       100.0
+1      Oui  80    119  67.226891       100.0
+---------------------
+
+9. Julia
+  q5_julia   nb  total       freq  total_freq
+0      Non  117    119  98.319328       100.0
+1      Oui    2    119   1.680672       100.0
+---------------------
+
+10. Stata
+  q5_stata   nb  total       freq  total_freq
+0      Non  115    119  96.638655       100.0
+1      Oui    4    119   3.361345       100.0
+---------------------
+
+11. SAS
+  q5_sas   nb  total       freq  total_freq
+0    Non  116    119  97.478992       100.0
+1    Oui    3    119   2.521008       100.0
+---------------------
+
+12. Aucun
+  q5_aucun   nb  total       freq  total_freq
+0      Non  104    119  87.394958       100.0
+1      Oui   15    119  12.605042       100.0
+---------------------
+
+13. Autre
+  q5_autre  nb  total       freq  total_freq
+0      Non  82    119  68.907563       100.0
+1      Oui  37    119  31.092437       100.0
+---------------------
+
+==================
+ 6/ Dans le cadre de vos activités de recherche, êtes-vous amené.e à développer ou faire développer des logiciels/du code spécialisé(s) ?
+15. dev_code
+  q6_dev_code  nb  total      freq  total_freq
+0         Non  88    119  73.94958       100.0
+1         Oui  31    119  26.05042       100.0
+---------------------
+
+==================
+ 8/ En termes d'accompagnement à la Science Ouverte, ressentez-vous le besoin d'être formé.e pour :
+19. Faire un dépôt sur HAL
+   q8_depot_hal_help  nb  total       freq  total_freq
+0     Non, pas utile  82    119  68.907563       100.0
+1  Oui, plutôt utile  26    119  21.848739       100.0
+2    Oui, très utile  11    119   9.243697       100.0
+---------------------
+
+20. Rédiger un Plan de Gestion de données (PGD ou DMP)
+  q8_rediger_pdg_help  nb  total       freq  total_freq
+0      Non, pas utile  43    119  36.134454       100.0
+1   Oui, plutôt utile  47    119  39.495798       100.0
+2     Oui, très utile  29    119  24.369748       100.0
+---------------------
+
+21. Respecter les principes RGPD dans le cadre d'enquêtes ou d'entretiens
+  q8_respect_rgpd_help  nb  total       freq  total_freq
+0       Non, pas utile  40    119  33.613445       100.0
+1    Oui, plutôt utile  51    119  42.857143       100.0
+2      Oui, très utile  28    119  23.529412       100.0
+---------------------
+
+22. Connaître les différents types de licence pour la diffusion des résultats de recherche
+    q8_licences_help  nb  total       freq  total_freq
+0     Non, pas utile  30    119  25.210084       100.0
+1  Oui, plutôt utile  53    119  44.537815       100.0
+2    Oui, très utile  36    119  30.252101       100.0
+---------------------
+
+23. Déposer des données dans un entrepôt
+  q8_depot_donnees_help  nb  total       freq  total_freq
+0        Non, pas utile  52    119  43.697479       100.0
+1     Oui, plutôt utile  47    119  39.495798       100.0
+2       Oui, très utile  20    119  16.806723       100.0
+---------------------
+
+24. Connaître les standards de métadonnées
+  q8_metadonnees_help  nb  total       freq  total_freq
+0      Non, pas utile  39    119  32.773109       100.0
+1   Oui, plutôt utile  54    119  45.378151       100.0
+2     Oui, très utile  26    119  21.848739       100.0
+---------------------
+
+25. Rédiger un data paper
+  q8_data_paper_help  nb  total       freq  total_freq
+0     Non, pas utile  50    119  42.016807       100.0
+1  Oui, plutôt utile  47    119  39.495798       100.0
+2    Oui, très utile  22    119  18.487395       100.0
+---------------------
+
+26. FAIRiser des données, gérer des données selon les principes FAIR
+   q8_fair_data_help  nb  total       freq  total_freq
+0     Non, pas utile  36    119  30.252101       100.0
+1  Oui, plutôt utile  62    119  52.100840       100.0
+2    Oui, très utile  21    119  17.647059       100.0
+---------------------
+
+==================
+ 3/ Connaissez-vous la TGIR Huma-Num ?
+31. humanum
+  q12_humanum  nb  total       freq  total_freq
+0         Non  65    119  54.621849       100.0
+1         Oui  54    119  45.378151       100.0
+---------------------
+
+==================
+ 4/ LA TGIR Huma-Num propose plusieurs services à destination de la communauté de recherche, avez-vous déjà utilisé les services suivants ?
+33. Nakala
+  q13_nakala   nb  total       freq  total_freq
+0        Non  104    119  87.394958       100.0
+1        Oui   15    119  12.605042       100.0
+---------------------
+
+34. Isidore
+  q13_isidore  nb  total       freq  total_freq
+0         Non  96    119  80.672269       100.0
+1         Oui  23    119  19.327731       100.0
+---------------------
+
+35. ShareDocs
+  q13_sharedocs  nb  total       freq  total_freq
+0           Non  74    119  62.184874       100.0
+1           Oui  45    119  37.815126       100.0
+---------------------
+
+36. Hébergement web
+  q13_hébergement_web   nb  total       freq  total_freq
+0                 Non  105    119  88.235294       100.0
+1                 Oui   14    119  11.764706       100.0
+---------------------
+
+==================
+ 5/ Avez-vous utilisé d'autres services de la TGIR Huma-Num ?
+37. Stylo
+  q14_stylo   nb  total       freq  total_freq
+0       Non  114    119  95.798319       100.0
+1       Oui    5    119   4.201681       100.0
+---------------------
+
+38. Mattermost
+  q14_mattermost   nb  total       freq  total_freq
+0            Non  113    119  94.957983       100.0
+1            Oui    6    119   5.042017       100.0
+---------------------
+
+39. GitLab
+  q14_gitlab   nb  total       freq  total_freq
+0        Non  103    119  86.554622       100.0
+1        Oui   16    119  13.445378       100.0
+---------------------
+
+40. Matomo
+  q14_matomo   nb  total   freq  total_freq
+0        Non  119    119  100.0       100.0
+---------------------
+
+41. HNURL
+  q14_hnurl   nb  total       freq  total_freq
+0       Non  116    119  97.478992       100.0
+1       Oui    3    119   2.521008       100.0
+---------------------
+
+42. Kanboard
+  q14_kanboard   nb  total       freq  total_freq
+0          Non  114    119  95.798319       100.0
+1          Oui    5    119   4.201681       100.0
+---------------------
+
+==================
+ 6/ Ressentez-vous bénéficier d'un accompagnement à l'utilisation de certains de ces services ?
+43. Nakala (entrepôt de données)
+  q15_nakala_help  nb  total       freq  total_freq
+0             Non  73    119  61.344538       100.0
+1             Oui  46    119  38.655462       100.0
+---------------------
+
+44. Isidore (moteur de recherche documentaire)
+  q15_isidore_help  nb  total       freq  total_freq
+0              Non  76    119  63.865546       100.0
+1              Oui  43    119  36.134454       100.0
+---------------------
+
+45. ShareDocs (plateforme de partage de fichiers et de traitement des données)
+  q15_sharedocs_help  nb  total       freq  total_freq
+0                Non  76    119  63.865546       100.0
+1                Oui  43    119  36.134454       100.0
+---------------------
+
+46. Hébergement web
+  q15_hébergement_web_help  nb  total       freq  total_freq
+0                      Non  72    119  60.504202       100.0
+1                      Oui  47    119  39.495798       100.0
+---------------------
+
+47. Stylo
+  q15_stylo_help  nb  total      freq  total_freq
+0            Non  88    119  73.94958       100.0
+1            Oui  31    119  26.05042       100.0
+---------------------
+
+48. Mattermost
+  q15_mattermost_help  nb  total       freq  total_freq
+0                 Non  93    119  78.151261       100.0
+1                 Oui  26    119  21.848739       100.0
+---------------------
+
+49. GitLab
+  q15_gitlab_help  nb  total       freq  total_freq
+0             Non  89    119  74.789916       100.0
+1             Oui  30    119  25.210084       100.0
+---------------------
+
+50. Matomo
+  q15_matomo_help  nb  total       freq  total_freq
+0             Non  92    119  77.310924       100.0
+1             Oui  27    119  22.689076       100.0
+---------------------
+
+51. HNURL
+  q15_hnurl_help  nb  total       freq  total_freq
+0            Non  93    119  78.151261       100.0
+1            Oui  26    119  21.848739       100.0
+---------------------
+
+52. Kanboard
+  q15_kanboard_help  nb  total       freq  total_freq
+0               Non  91    119  76.470588       100.0
+1               Oui  28    119  23.529412       100.0
+---------------------
+
+==================
+ 7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?
+53. Tableur
+  q16_tableur_help  nb  total       freq  total_freq
+0              Non  81    119  68.067227       100.0
+1      Oui, avancé  23    119  19.327731       100.0
+2    Oui, débutant  15    119  12.605042       100.0
+---------------------
+
+54. Logiciels d'analyse statistique (ex. R – Rstudio)
+  q16_logiciels_d'analyse_statistique_help  nb  total       freq  total_freq
+0                                      Non  69    119  57.983193       100.0
+1                              Oui, avancé  23    119  19.327731       100.0
+2                            Oui, débutant  27    119  22.689076       100.0
+---------------------
+
+55. Python (web-scraping, traitement automatique des langues…)
+  q16_python_help  nb  total       freq  total_freq
+0             Non  75    119  63.025210       100.0
+1     Oui, avancé  11    119   9.243697       100.0
+2   Oui, débutant  33    119  27.731092       100.0
+---------------------
+
+56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)
+  q16_garg_iram_hyperbase_help  nb  total       freq  total_freq
+0                          Non  62    119  52.100840       100.0
+1                  Oui, avancé  18    119  15.126050       100.0
+2                Oui, débutant  39    119  32.773109       100.0
+---------------------
+
+57. Logiciels d'OCR : reconnaissance Optique de Caractères
+    q16_ocr_help  nb  total       freq  total_freq
+0            Non  91    119  76.470588       100.0
+1    Oui, avancé   7    119   5.882353       100.0
+2  Oui, débutant  21    119  17.647059       100.0
+---------------------
+
+58. Logiciels d'analyse de réseaux (ex. Gephi)
+  q16_network_analysis_help  nb  total       freq  total_freq
+0                       Non  82    119  68.907563       100.0
+1               Oui, avancé   7    119   5.882353       100.0
+2             Oui, débutant  30    119  25.210084       100.0
+---------------------
+
+59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)
+  q16_odette_atom_help  nb  total       freq  total_freq
+0                  Non  88    119  73.949580       100.0
+1          Oui, avancé   5    119   4.201681       100.0
+2        Oui, débutant  26    119  21.848739       100.0
+---------------------
+
+60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)
+  q16_caqdas_help  nb  total       freq  total_freq
+0             Non  73    119  61.344538       100.0
+1     Oui, avancé  12    119  10.084034       100.0
+2   Oui, débutant  34    119  28.571429       100.0
+---------------------
+
+61. Logiciels de cartographie thématique (ex. Magrit)
+  q16_carto_help  nb  total       freq  total_freq
+0            Non  83    119  69.747899       100.0
+1    Oui, avancé   8    119   6.722689       100.0
+2  Oui, débutant  28    119  23.529412       100.0
+---------------------
+
+62. Logiciels de SIG (ex. QGis)
+    q16_sig_help  nb  total       freq  total_freq
+0            Non  96    119  80.672269       100.0
+1    Oui, avancé   8    119   6.722689       100.0
+2  Oui, débutant  15    119  12.605042       100.0
+---------------------
+
+63. Système de gestion de base de données
+   q16_sgbd_help  nb  total       freq  total_freq
+0            Non  80    119  67.226891       100.0
+1    Oui, avancé  12    119  10.084034       100.0
+2  Oui, débutant  27    119  22.689076       100.0
+---------------------
+
+64. Autre
+  q16_autre_help   nb  total       freq  total_freq
+0            Non  110    119  92.436975       100.0
+1    Oui, avancé    3    119   2.521008       100.0
+2  Oui, débutant    6    119   5.042017       100.0
+---------------------
+
+==================
+ 1/ Ressentez-vous le besoin d'un accompagnement méthodologique ?
+67. Statistiques descriptives
+  q18_stat_desc_help  nb  total       freq  total_freq
+0                Non  88    119  73.949580       100.0
+1        Oui, avancé  15    119  12.605042       100.0
+2      Oui, débutant  16    119  13.445378       100.0
+---------------------
+
+68. Régressions
+  q18_regressions_help  nb  total       freq  total_freq
+0                  Non  85    119  71.428571       100.0
+1          Oui, avancé  14    119  11.764706       100.0
+2        Oui, débutant  20    119  16.806723       100.0
+---------------------
+
+69. Analyse de données temporelles (analyse de survie, de séquence, de données longitudinales...)
+  q18_temporal_analysis_help  nb  total       freq  total_freq
+0                        Non  81    119  68.067227       100.0
+1                Oui, avancé  12    119  10.084034       100.0
+2              Oui, débutant  26    119  21.848739       100.0
+---------------------
+
+70. Cartographie
+  q18_cartographie_help  nb  total       freq  total_freq
+0                   Non  77    119  64.705882       100.0
+1           Oui, avancé   9    119   7.563025       100.0
+2         Oui, débutant  33    119  27.731092       100.0
+---------------------
+
+71. Analyse textuelle
+  q18_analyse_text_help  nb  total       freq  total_freq
+0                   Non  66    119  55.462185       100.0
+1           Oui, avancé  17    119  14.285714       100.0
+2         Oui, débutant  36    119  30.252101       100.0
+---------------------
+
+72. Analyse de réseaux
+  q18_net_analysis_help  nb  total       freq  total_freq
+0                   Non  71    119  59.663866       100.0
+1           Oui, avancé  11    119   9.243697       100.0
+2         Oui, débutant  37    119  31.092437       100.0
+---------------------
+
+73. Extraction de données du web (web-scraping)
+  q18_webscrapping  nb  total       freq  total_freq
+0              Non  63    119  52.941176       100.0
+1      Oui, avancé  14    119  11.764706       100.0
+2    Oui, débutant  42    119  35.294118       100.0
+---------------------
+
+74. Intelligence artificielle (deep learning, active learning)
+  q18_deeplearning_help  nb  total       freq  total_freq
+0                   Non  53    119  44.537815       100.0
+1           Oui, avancé  18    119  15.126050       100.0
+2         Oui, débutant  48    119  40.336134       100.0
+---------------------
+
+75. Edition numérique
+  q18_edit_num_help  nb  total       freq  total_freq
+0               Non  76    119  63.865546       100.0
+1       Oui, avancé   7    119   5.882353       100.0
+2     Oui, débutant  36    119  30.252101       100.0
+---------------------
+
+76. Construction d'un questionnaire
+  q18_questionnaire_help  nb  total       freq  total_freq
+0                    Non  86    119  72.268908       100.0
+1            Oui, avancé  14    119  11.764706       100.0
+2          Oui, débutant  19    119  15.966387       100.0
+---------------------
+
+77. Bibliométrie
+  q18_bibliométrie_help  nb  total       freq  total_freq
+0                   Non  83    119  69.747899       100.0
+1           Oui, avancé  15    119  12.605042       100.0
+2         Oui, débutant  21    119  17.647059       100.0
+---------------------
+
+==================
+ 3/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en
+open source ?
+79. Tableur
+  q19_tableur_help  nb  total       freq  total_freq
+0              Non  90    119  75.630252       100.0
+1      Oui, avancé  16    119  13.445378       100.0
+2    Oui, débutant  13    119  10.924370       100.0
+---------------------
+
+80. Logiciels d'analyse statistique (ex. R – Rstudio)
+  q19_logiciels_d'analyse_statistique_help  nb  total       freq  total_freq
+0                                      Non  71    119  59.663866       100.0
+1                              Oui, avancé  18    119  15.126050       100.0
+2                            Oui, débutant  30    119  25.210084       100.0
+---------------------
+
+81. Python : web-scraping, traitement automatique des langues…
+  q19_python_help  nb  total       freq  total_freq
+0             Non  78    119  65.546218       100.0
+1     Oui, avancé  11    119   9.243697       100.0
+2   Oui, débutant  30    119  25.210084       100.0
+---------------------
+
+82. Logiciels d'exploration de textes : analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)
+  q19_garg_iram_hyperbase_help  nb  total       freq  total_freq
+0                          Non  62    119  52.100840       100.0
+1                  Oui, avancé  15    119  12.605042       100.0
+2                Oui, débutant  42    119  35.294118       100.0
+---------------------
+
+83. Logiciels d'OCR : reconnaissance Optique de Caractère
+    q19_ocr_help  nb  total       freq  total_freq
+0            Non  90    119  75.630252       100.0
+1    Oui, avancé   5    119   4.201681       100.0
+2  Oui, débutant  24    119  20.168067       100.0
+---------------------
+
+84. Logiciels d'analyse de réseaux (ex. Gephi)
+  q19_network_analysis_help  nb  total       freq  total_freq
+0                       Non  79    119  66.386555       100.0
+1               Oui, avancé   9    119   7.563025       100.0
+2             Oui, débutant  31    119  26.050420       100.0
+---------------------
+
+85. Logiciels d'édition numérique en ligne (ex. Odette, Atom)
+  q19_odette_atom_help  nb  total       freq  total_freq
+0                  Non  88    119  73.949580       100.0
+1          Oui, avancé   3    119   2.521008       100.0
+2        Oui, débutant  28    119  23.529412       100.0
+---------------------
+
+86. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)
+  q19_caqdas_help  nb  total       freq  total_freq
+0             Non  71    119  59.663866       100.0
+1     Oui, avancé  13    119  10.924370       100.0
+2   Oui, débutant  35    119  29.411765       100.0
+---------------------
+
+87. Logiciels de cartographie thématique (ex. Magrit)
+  q19_carto_help  nb  total       freq  total_freq
+0            Non  80    119  67.226891       100.0
+1    Oui, avancé   6    119   5.042017       100.0
+2  Oui, débutant  33    119  27.731092       100.0
+---------------------
+
+88. Logiciels de SIG (ex. QGis)
+    q19_sig_help  nb  total       freq  total_freq
+0            Non  99    119  83.193277       100.0
+1    Oui, avancé   6    119   5.042017       100.0
+2  Oui, débutant  14    119  11.764706       100.0
+---------------------
+
+89. Système de gestion de base de données
+   q19_sgbd_help  nb  total       freq  total_freq
+0            Non  87    119  73.109244       100.0
+1    Oui, avancé   8    119   6.722689       100.0
+2  Oui, débutant  24    119  20.168067       100.0
+---------------------
+
+90. Autre
+  q19_autre_help   nb  total       freq  total_freq
+0            Non  116    119  97.478992       100.0
+1    Oui, avancé    1    119   0.840336       100.0
+2  Oui, débutant    2    119   1.680672       100.0
+---------------------
+
+==================
+ 4/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels sous licence ?
+92. Excel
+  q20_excel_help  nb  total       freq  total_freq
+0            Non  87    119  73.109244       100.0
+1    Oui, avancé  17    119  14.285714       100.0
+2  Oui, débutant  15    119  12.605042       100.0
+---------------------
+
+93. SAS
+    q20_sas_help   nb  total       freq  total_freq
+0            Non  110    119  92.436975       100.0
+1    Oui, avancé    1    119   0.840336       100.0
+2  Oui, débutant    8    119   6.722689       100.0
+---------------------
+
+94. SPSS
+   q20_spss_help   nb  total       freq  total_freq
+0            Non  112    119  94.117647       100.0
+1    Oui, avancé    3    119   2.521008       100.0
+2  Oui, débutant    4    119   3.361345       100.0
+---------------------
+
+95. STATA
+  q20_stata_help   nb  total       freq  total_freq
+0            Non  108    119  90.756303       100.0
+1    Oui, avancé    1    119   0.840336       100.0
+2  Oui, débutant   10    119   8.403361       100.0
+---------------------
+
+96. Nvivo
+  q20_nvivo_help  nb  total       freq  total_freq
+0            Non  92    119  77.310924       100.0
+1    Oui, avancé   9    119   7.563025       100.0
+2  Oui, débutant  18    119  15.126050       100.0
+---------------------
+
+97. Atlas.ti
+  q20_atlasti_help   nb  total       freq  total_freq
+0              Non  108    119  90.756303       100.0
+1      Oui, avancé    1    119   0.840336       100.0
+2    Oui, débutant   10    119   8.403361       100.0
+---------------------
+
+98. Oxygen
+  q20_oxygen_help   nb  total       freq  total_freq
+0             Non  110    119  92.436975       100.0
+1   Oui, débutant    9    119   7.563025       100.0
+---------------------
+
+99. ArcGis
+  q20_arcgis_help   nb  total       freq  total_freq
+0             Non  111    119  93.277311       100.0
+1     Oui, avancé    2    119   1.680672       100.0
+2   Oui, débutant    6    119   5.042017       100.0
+---------------------
+
+100. Autre
+  q20_autre_help   nb  total       freq  total_freq
+0            Non  116    119  97.478992       100.0
+1    Oui, avancé    2    119   1.680672       100.0
+2  Oui, débutant    1    119   0.840336       100.0
+---------------------
+
+==================
+ 6/ Parmi les services que pourraient proposer les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ), lesquels vous paraissent les plus utiles ?
+103. Des postes informatiques équipés de logiciels
+     q22_postes_info  nb  total       freq  total_freq
+0     Non, pas utile  42    119  35.294118       100.0
+1  Oui, plutôt utile  50    119  42.016807       100.0
+2    Oui, très utile  27    119  22.689076       100.0
+---------------------
+
+104. Des ressources documentaires (ouvrages méthodologiques, thématiques…)
+  q22_ressources_doc  nb  total       freq  total_freq
+0     Non, pas utile  19    119  15.966387       100.0
+1  Oui, plutôt utile  64    119  53.781513       100.0
+2    Oui, très utile  36    119  30.252101       100.0
+---------------------
+
+105. Des espaces de travail, salle de réunion
+  q22_working_spaces  nb  total       freq  total_freq
+0     Non, pas utile  21    119  17.647059       100.0
+1  Oui, plutôt utile  53    119  44.537815       100.0
+2    Oui, très utile  45    119  37.815126       100.0
+---------------------
+
+106. Une permanence d'accueil tenue par des ingénieur·e·s, bibliothécaires à créneaux fixes
+     q22_permanences  nb  total       freq  total_freq
+0     Non, pas utile  23    119  19.327731       100.0
+1  Oui, plutôt utile  45    119  37.815126       100.0
+2    Oui, très utile  51    119  42.857143       100.0
+---------------------
+
+107. Un équipement (SdBox) et une aide au financement pour l'accès aux données du CASD (Centre d'Accès Sécurisé aux Données)
+      q22_sdbox_casd  nb  total       freq  total_freq
+0     Non, pas utile  43    119  36.134454       100.0
+1  Oui, plutôt utile  42    119  35.294118       100.0
+2    Oui, très utile  34    119  28.571429       100.0
+---------------------
+
+==================
+ 2/ Êtes-vous ?
+110. statut
+                            q25_statut   nb  total       freq  total_freq
+0                                Autre    6    119   5.042017       100.0
+1                          Doctorant·e   10    119   8.403361       100.0
+2             Enseignant·e chercheur·e  101    119  84.873950       100.0
+3  Personnel de soutien à la recherche    2    119   1.680672       100.0
+---------------------
+
+110. statut_rec
+                     q25_statut_rec   nb  total       freq  total_freq
+0                         Chercheur  104    119  87.394958       100.0
+1                         Doctorant   12    119  10.084034       100.0
+2  Personnel d'appui à la recherche    3    119   2.521008       100.0
+---------------------
+
+110. doctorant
+   q25_doctorant   nb  total       freq  total_freq
+0          False  107    119  89.915966       100.0
+1           True   12    119  10.084034       100.0
+---------------------
+
+==================
+ 3/ Sous quel système d’exploitation travaillez-vous au quotidien ?
+125. os_sys
+  q29_os_sys  nb  total       freq  total_freq
+0      Apple  54    119  45.378151       100.0
+1   ChromeOS   4    119   3.361345       100.0
+2      Linux   7    119   5.882353       100.0
+3    Windows  54    119  45.378151       100.0
+---------------------
+
+==================
+ 4/ Quel navigateur utilisez-vous au quotidien ?
+126. webbrowser
+    q30_webbrowser  nb  total       freq  total_freq
+0  Autre, précisez   6    119   5.042017       100.0
+1           Chrome  26    119  21.848739       100.0
+2         Chromium   3    119   2.521008       100.0
+3             Edge   1    119   0.840336       100.0
+4          Firefox  63    119  52.941176       100.0
+5           Safari  18    119  15.126050       100.0
+6      Tor browser   2    119   1.680672       100.0
+---------------------
+
+==================
+ 6/ Utilisez-vous une suite collaborative adossée pour travailler à plusieurs sur des documents ?
+130. collab_tools
+  q32_collab_tools  nb  total       freq  total_freq
+0              Non  54    119  45.378151       100.0
+1    Oui, précisez  65    119  54.621849       100.0
+---------------------
+
+==================
+ 9/ Utilisez-vous, dans le cadre de vos travaux universitaires (enseignement, recherche) des outils d'intelligence artificielle ?
+134. ia_for_research
+  q34_ia_for_research  nb  total       freq  total_freq
+0                 Non  52    119  43.697479       100.0
+1                 Oui  67    119  56.302521       100.0
+---------------------
+
+==================
+ 9.3/ Les utilisez-vous en version :
+136. gratuit_ou_payant
+  q36_gratuit_ou_payant  nb  total       freq  total_freq
+0              Gratuite  43    119  36.134454       100.0
+1               Payante  24    119  20.168067       100.0
+---------------------
+
+==================
+ 1/ Acceptez-vous que nous vous contactions pour une proposition de formation collective (méthodologie, logiciels...), d'après vos réponses précédentes ?
+138. ok_contact
+  q38_ok_contact  nb  total       freq  total_freq
+0            Non  45    119  37.815126       100.0
+1            Oui  74    119  62.184874       100.0
+---------------------
+
+==================
+ 2/ Souhaitez-vous des informations de la part des différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) (événements scientifiques, calendrier des formations…) ?
+139. etre_informer
+  q39_etre_informer  nb  total       freq  total_freq
+0               Non  45    119  37.815126       100.0
+1               Oui  74    119  62.184874       100.0
+---------------------
+
+==================
+ 3/ Seriez- vous intéressé·e pour présenter vos travaux et expériences de recherche à l’occasion de séminaires, journées d’études, colloques, organisés par les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) ?
+140. present_work
+  q40_present_work  nb  total       freq  total_freq
+0              Non  66    119  55.462185       100.0
+1              Oui  53    119  44.537815       100.0
+---------------------
+
+==================
+ 3/ Seriez-vous intéressé·e par le fait de dispenser vous-même des formations (méthodologies, logiciels) selon vos domaines de compétence, dans le cadre des formations organisées par les différents services de l’université (bibliothèque, direction de la recherche, pôle développement RH… ) ?
+141. ok_teaching
+  q41_ok_teaching  nb  total       freq  total_freq
+0             Non  89    119  74.789916       100.0
+1             Oui  30    119  25.210084       100.0
+---------------------
+
+==================
+ nan
+151. Langue
+  q50_langue   nb  total   freq  total_freq
+0         FR  119    119  100.0       100.0
+---------------------
+
+==================
+ nan
+153. Dernière question saisie
+Empty DataFrame
+Columns: [q52_dernière_question_saisie, nb, total, freq, total_freq]
+Index: []
+---------------------
+
+==================
+ nan
+154. Origine
+  q53_origine   nb  total   freq  total_freq
+0      Direct  119    119  100.0       100.0
+---------------------
+
+==================
+ nan
+155. Appareil utilisé pour la saisie
+  q54_appareil_utilisé_pour_la_saisie   nb  total       freq  total_freq
+0                                  PC  109    119  91.596639       100.0
+1                          Smartphone   10    119   8.403361       100.0
+---------------------
+
