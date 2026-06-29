@@ -4,5 +4,5 @@
 format: jb-book
 root: intro.md
 chapters:
-- file: ./script_analyse/connaissance_science_ouverte.ipynb
+- file: script_analyse/connaissance_science_ouverte.ipynb
 - file: biblio.md
