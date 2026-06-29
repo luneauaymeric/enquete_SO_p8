@@ -1,9 +1,0 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
-format: jb-book
-root: intro.md
-chapters:
-- file: ./script_analyse/connaissance_science_ouverte.ipynb
-- file: ./script_analyse/clusterisation_indiv_research_fields.ipynb
-- file: biblio.md
