@@ -1,0 +1,3666 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Notes : umap.UMAP(n_neighbors=7, min_dist=0.1, n_components=3, metric=’cosine’, random_state =42).fit_transform(m_row1, target = target_labels) &#8212; Enquête Science Ouverte</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'data/clusterisation/pseudo/pseudo_7_tableau_codage_cluster_v7';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Enquête Science Ouverte</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Données de Recherche et Science Ouverte, pratiques et besoins - Enquête 2025-2026
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../biblio.html">Bibliographie</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/data/clusterisation/pseudo/pseudo_7_tableau_codage_cluster_v7.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Notes : umap.UMAP(n_neighbors=7, min_dist=0.1, n_components=3, metric=’cosine’, random_state =42).fit_transform(m_row1, target = target_labels)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Notes : umap.UMAP(n_neighbors=7, min_dist=0.1, n_components=3, metric=’cosine’, random_state =42).fit_transform(m_row1, target = target_labels)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hdbscan-hdbscan-min-samples-4-min-cluster-size-4-gen-min-span-tree-true-fit-embedding">hdbscan.HDBSCAN(min_samples=4,min_cluster_size=4, gen_min_span_tree=True).fit(embedding)</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="notes-umap-umap-n-neighbors-7-min-dist-0-1-n-components-3-metric-cosine-random-state-42-fit-transform-m-row1-target-target-labels">
+<h1>Notes : umap.UMAP(n_neighbors=7, min_dist=0.1, n_components=3, metric=’cosine’, random_state =42).fit_transform(m_row1, target = target_labels)<a class="headerlink" href="#notes-umap-umap-n-neighbors-7-min-dist-0-1-n-components-3-metric-cosine-random-state-42-fit-transform-m-row1-target-target-labels" title="Link to this heading">#</a></h1>
+</section>
+<section id="hdbscan-hdbscan-min-samples-4-min-cluster-size-4-gen-min-span-tree-true-fit-embedding">
+<h1>hdbscan.HDBSCAN(min_samples=4,min_cluster_size=4, gen_min_span_tree=True).fit(embedding)<a class="headerlink" href="#hdbscan-hdbscan-min-samples-4-min-cluster-size-4-gen-min-span-tree-true-fit-embedding" title="Link to this heading">#</a></h1>
+<p>=====================
+Cluster 0 : Géographie</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>LS4-</p></th>
+<th class="head"><p>LS5-</p></th>
+<th class="head"><p>LS6-</p></th>
+<th class="head"><p>LS7-</p></th>
+<th class="head"><p>LS8-</p></th>
+<th class="head"><p>LS9-</p></th>
+<th class="head"><p>PE1-</p></th>
+<th class="head"><p>PE10-</p></th>
+<th class="head"><p>PE5-</p></th>
+<th class="head"><p>PE6-</p></th>
+<th class="head"><p>PE7-</p></th>
+<th class="head"><p>PE8-</p></th>
+<th class="head"><p>PE9-</p></th>
+<th class="head"><p>SH1-</p></th>
+<th class="head"><p>SH2-</p></th>
+<th class="head"><p>SH3-</p></th>
+<th class="head"><p>SH4-</p></th>
+<th class="head"><p>SH5-</p></th>
+<th class="head"><p>SH6-</p></th>
+<th class="head"><p>SH7-</p></th>
+<th class="head"><p>SH8</p></th>
+<th class="head"><p>key</p></th>
+<th class="head"><p>cluster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>8NR6-Q3ED</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>A3S4-MJGK</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>CALH-8CSE</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>KBVW-94Y2</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>N99W-FKD9</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>NSK5-6STJ</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>SZY2-JZTU</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>WYVU-F8DF</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-even"><td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>7.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>8.0-</p></td>
+<td><p>0.0</p></td>
+<td><p>Total</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=====================
+Cluster 1 : Information et communication</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>LS4-</p></th>
+<th class="head"><p>LS5-</p></th>
+<th class="head"><p>LS6-</p></th>
+<th class="head"><p>LS7-</p></th>
+<th class="head"><p>LS8-</p></th>
+<th class="head"><p>LS9-</p></th>
+<th class="head"><p>PE1-</p></th>
+<th class="head"><p>PE10-</p></th>
+<th class="head"><p>PE5-</p></th>
+<th class="head"><p>PE6-</p></th>
+<th class="head"><p>PE7-</p></th>
+<th class="head"><p>PE8-</p></th>
+<th class="head"><p>PE9-</p></th>
+<th class="head"><p>SH1-</p></th>
+<th class="head"><p>SH2-</p></th>
+<th class="head"><p>SH3-</p></th>
+<th class="head"><p>SH4-</p></th>
+<th class="head"><p>SH5-</p></th>
+<th class="head"><p>SH6-</p></th>
+<th class="head"><p>SH7-</p></th>
+<th class="head"><p>SH8</p></th>
+<th class="head"><p>key</p></th>
+<th class="head"><p>cluster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>572G-RBZC</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>E3YL-PHZV</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>HKN6-95PQ</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>MXD6-JC3F</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>PQML-4NVQ</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>R9R6-P7CN</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>S3JS-37LL</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>VTX9-R7JQ</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>XA8V-2558</p></td>
+<td><p>Information et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>9.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0</p></td>
+<td><p>Total</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=====================
+Cluster 2 :Recherche et création</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>LS4-</p></th>
+<th class="head"><p>LS5-</p></th>
+<th class="head"><p>LS6-</p></th>
+<th class="head"><p>LS7-</p></th>
+<th class="head"><p>LS8-</p></th>
+<th class="head"><p>LS9-</p></th>
+<th class="head"><p>PE1-</p></th>
+<th class="head"><p>PE10-</p></th>
+<th class="head"><p>PE5-</p></th>
+<th class="head"><p>PE6-</p></th>
+<th class="head"><p>PE7-</p></th>
+<th class="head"><p>PE8-</p></th>
+<th class="head"><p>PE9-</p></th>
+<th class="head"><p>SH1-</p></th>
+<th class="head"><p>SH2-</p></th>
+<th class="head"><p>SH3-</p></th>
+<th class="head"><p>SH4-</p></th>
+<th class="head"><p>SH5-</p></th>
+<th class="head"><p>SH6-</p></th>
+<th class="head"><p>SH7-</p></th>
+<th class="head"><p>SH8</p></th>
+<th class="head"><p>key</p></th>
+<th class="head"><p>cluster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>639H-EH8R</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>A2YY-FL32</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>GK5N-J3SV</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>HE87-K3JL</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>LXKU-XDYA</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>M47N-T9DZ</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>Q3YA-587D</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>RVX8-7FSV</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>VQH6-7NJP</p></td>
+<td><p>Recherche et création</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>2.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>9.0</p></td>
+<td><p>Total</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=====================
+Cluster 3 : Sciences informatiques</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>LS4-</p></th>
+<th class="head"><p>LS5-</p></th>
+<th class="head"><p>LS6-</p></th>
+<th class="head"><p>LS7-</p></th>
+<th class="head"><p>LS8-</p></th>
+<th class="head"><p>LS9-</p></th>
+<th class="head"><p>PE1-</p></th>
+<th class="head"><p>PE10-</p></th>
+<th class="head"><p>PE5-</p></th>
+<th class="head"><p>PE6-</p></th>
+<th class="head"><p>PE7-</p></th>
+<th class="head"><p>PE8-</p></th>
+<th class="head"><p>PE9-</p></th>
+<th class="head"><p>SH1-</p></th>
+<th class="head"><p>SH2-</p></th>
+<th class="head"><p>SH3-</p></th>
+<th class="head"><p>SH4-</p></th>
+<th class="head"><p>SH5-</p></th>
+<th class="head"><p>SH6-</p></th>
+<th class="head"><p>SH7-</p></th>
+<th class="head"><p>SH8</p></th>
+<th class="head"><p>key</p></th>
+<th class="head"><p>cluster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>2DRU-P3AV</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>6454-S2QM</p></td>
+<td><p>Sciences informatiques</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>BNVM-K8M9</p></td>
+<td><p>Sciences informatiques</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>DT4P-FHKY</p></td>
+<td><p>Sciences informatiques</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>HT8V-PSKZ</p></td>
+<td><p>Sciences informatiques</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>Q5PB-ETLB</p></td>
+<td><p>Sciences informatiques</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>QYE4-8EYZ</p></td>
+<td><p>Sciences informatiques</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>ZBFK-V8BA</p></td>
+<td><p>Sciences informatiques</p></td>
+</tr>
+<tr class="row-even"><td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>8.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0</p></td>
+<td><p>Total</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=====================
+Cluster 4 : Psychologie</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>LS4-</p></th>
+<th class="head"><p>LS5-</p></th>
+<th class="head"><p>LS6-</p></th>
+<th class="head"><p>LS7-</p></th>
+<th class="head"><p>LS8-</p></th>
+<th class="head"><p>LS9-</p></th>
+<th class="head"><p>PE1-</p></th>
+<th class="head"><p>PE10-</p></th>
+<th class="head"><p>PE5-</p></th>
+<th class="head"><p>PE6-</p></th>
+<th class="head"><p>PE7-</p></th>
+<th class="head"><p>PE8-</p></th>
+<th class="head"><p>PE9-</p></th>
+<th class="head"><p>SH1-</p></th>
+<th class="head"><p>SH2-</p></th>
+<th class="head"><p>SH3-</p></th>
+<th class="head"><p>SH4-</p></th>
+<th class="head"><p>SH5-</p></th>
+<th class="head"><p>SH6-</p></th>
+<th class="head"><p>SH7-</p></th>
+<th class="head"><p>SH8</p></th>
+<th class="head"><p>key</p></th>
+<th class="head"><p>cluster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>2JQN-P9PA</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>9X9M-JRJW</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>A7R6-3SWC</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>BKF8-SNEZ</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>CV3G-95CT</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>FCCB-GMYA</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>H8B2-2AYQ</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-odd"><td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>M5L8-UM9F</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>MLSN-NBUS</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>NLVG-2YZ5</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>PSFJ-S7YE</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>RZY3-LPES</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>XW7R-FDND</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>Y7ZW-AP6B</p></td>
+<td><p>Psychologie</p></td>
+</tr>
+<tr class="row-even"><td><p>1.0-</p></td>
+<td><p>2.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>13.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0</p></td>
+<td><p>Total</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=====================
+Cluster 5 : Individus, normes, sociétés</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>LS4-</p></th>
+<th class="head"><p>LS5-</p></th>
+<th class="head"><p>LS6-</p></th>
+<th class="head"><p>LS7-</p></th>
+<th class="head"><p>LS8-</p></th>
+<th class="head"><p>LS9-</p></th>
+<th class="head"><p>PE1-</p></th>
+<th class="head"><p>PE10-</p></th>
+<th class="head"><p>PE5-</p></th>
+<th class="head"><p>PE6-</p></th>
+<th class="head"><p>PE7-</p></th>
+<th class="head"><p>PE8-</p></th>
+<th class="head"><p>PE9-</p></th>
+<th class="head"><p>SH1-</p></th>
+<th class="head"><p>SH2-</p></th>
+<th class="head"><p>SH3-</p></th>
+<th class="head"><p>SH4-</p></th>
+<th class="head"><p>SH5-</p></th>
+<th class="head"><p>SH6-</p></th>
+<th class="head"><p>SH7-</p></th>
+<th class="head"><p>SH8</p></th>
+<th class="head"><p>key</p></th>
+<th class="head"><p>cluster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>2QNC-8AAQ</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>4FYP-H9TX</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>4VJV-R74Q</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>5FJS-YCLW</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>5V62-N439</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>78P8-N4BA</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>7L5G-35JG</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>82N2-HDNU</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>9JNL-L3RA</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>ASQY-ZGVK</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>AVQG-73T4</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>D4JC-WN3B</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>DBQD-JQTW</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>EM6U-9PNF</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>FDGG-VDE6</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>FRLS-PTRU</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>GYQJ-9DVE</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>HRZG-6JGE</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>LPNF-H5YQ</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>LS4U-JEBR</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>Q5AZ-855W</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>Q934-QKAW</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>QAMR-B8EH</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>QX8A-4JAQ</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>RAUZ-BRFQ</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>RXPG-46ZW</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>SKD4-XJMH</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>SYWH-2Y8T</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>WAR9-LFJP</p></td>
+<td><p>Géographie</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>X48K-M3K4</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>XGV3-TLNC</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>YL4Q-KQAK</p></td>
+<td><p>Individus, normes, sociétés</p></td>
+</tr>
+<tr class="row-even"><td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>19.0-</p></td>
+<td><p>13.0-</p></td>
+<td><p>21.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>11.0-</p></td>
+<td><p>4.0-</p></td>
+<td><p>9.0-</p></td>
+<td><p>10.0</p></td>
+<td><p>Total</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=====================
+Cluster 6 : Sciences historiques</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>LS4-</p></th>
+<th class="head"><p>LS5-</p></th>
+<th class="head"><p>LS6-</p></th>
+<th class="head"><p>LS7-</p></th>
+<th class="head"><p>LS8-</p></th>
+<th class="head"><p>LS9-</p></th>
+<th class="head"><p>PE1-</p></th>
+<th class="head"><p>PE10-</p></th>
+<th class="head"><p>PE5-</p></th>
+<th class="head"><p>PE6-</p></th>
+<th class="head"><p>PE7-</p></th>
+<th class="head"><p>PE8-</p></th>
+<th class="head"><p>PE9-</p></th>
+<th class="head"><p>SH1-</p></th>
+<th class="head"><p>SH2-</p></th>
+<th class="head"><p>SH3-</p></th>
+<th class="head"><p>SH4-</p></th>
+<th class="head"><p>SH5-</p></th>
+<th class="head"><p>SH6-</p></th>
+<th class="head"><p>SH7-</p></th>
+<th class="head"><p>SH8</p></th>
+<th class="head"><p>key</p></th>
+<th class="head"><p>cluster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>3EAA-2Q9U</p></td>
+<td><p>Sciences historiques</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>3LVR-PYLH</p></td>
+<td><p>Sciences historiques</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>QLPJ-DVVQ</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>TUUJ-9K9W</p></td>
+<td><p>Sciences historiques</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>Z37Y-6JGC</p></td>
+<td><p>Sciences historiques</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>5.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>1.0</p></td>
+<td><p>Total</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>=====================
+Cluster 7 : Art, cultures et communication</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>LS4-</p></th>
+<th class="head"><p>LS5-</p></th>
+<th class="head"><p>LS6-</p></th>
+<th class="head"><p>LS7-</p></th>
+<th class="head"><p>LS8-</p></th>
+<th class="head"><p>LS9-</p></th>
+<th class="head"><p>PE1-</p></th>
+<th class="head"><p>PE10-</p></th>
+<th class="head"><p>PE5-</p></th>
+<th class="head"><p>PE6-</p></th>
+<th class="head"><p>PE7-</p></th>
+<th class="head"><p>PE8-</p></th>
+<th class="head"><p>PE9-</p></th>
+<th class="head"><p>SH1-</p></th>
+<th class="head"><p>SH2-</p></th>
+<th class="head"><p>SH3-</p></th>
+<th class="head"><p>SH4-</p></th>
+<th class="head"><p>SH5-</p></th>
+<th class="head"><p>SH6-</p></th>
+<th class="head"><p>SH7-</p></th>
+<th class="head"><p>SH8</p></th>
+<th class="head"><p>key</p></th>
+<th class="head"><p>cluster</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>2Y89-7BR9</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>35EN-C9DW</p></td>
+<td><p>Cognitions</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>3V5K-8FEA</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>44RN-J48S</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>5G5M-BM3L</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>5NUL-RKJ9</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>7CU7-JG8K</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>9K9T-RVNL</p></td>
+<td><p>Cognitions</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>A33H-5ZS7</p></td>
+<td><p>Cognitions</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0</p></td>
+<td><p>ANM4-SD9B</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>CN6B-UEHQ</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>ET2V-ZA9Z</p></td>
+<td><p>Cognitions</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>G35P-HV8F</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>GLRV-TMM9</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>GNEG-5QXQ</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0</p></td>
+<td><p>JF4U-H3UM</p></td>
+<td><p>Sciences historiques</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0</p></td>
+<td><p>JYD7-6Y6B</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>L755-EYSR</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>PEG4-89LR</p></td>
+<td><p>Cognitions</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>QH7Q-PJZ9</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>QV7Q-KLNA</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>QVLJ-HWKA</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—</p></td>
+<td><p>SJWJ-3QKL</p></td>
+<td><p>Sciences historiques</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>SVRN-5BFD</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0</p></td>
+<td><p>TSZM-D83G</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0</p></td>
+<td><p>TZYG-EKYM</p></td>
+<td><p>Sciences historiques</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>VR4Q-ZFTH</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>YTMC-B4DP</p></td>
+<td><p>Cognitions</p></td>
+</tr>
+<tr class="row-even"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—</p></td>
+<td><p>ZB5S-ABHN</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-odd"><td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>—-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>1.0</p></td>
+<td><p>ZGPH-2FPH</p></td>
+<td><p>Art, cultures et communication</p></td>
+</tr>
+<tr class="row-even"><td><p>0.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>1.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>3.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>6.0-</p></td>
+<td><p>5.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>0.0-</p></td>
+<td><p>2.0-</p></td>
+<td><p>5.0-</p></td>
+<td><p>25.0-</p></td>
+<td><p>25.0-</p></td>
+<td><p>14.0-</p></td>
+<td><p>13.0-</p></td>
+<td><p>6.0-</p></td>
+<td><p>15.0</p></td>
+<td><p>Total</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./data/clusterisation/pseudo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Notes : umap.UMAP(n_neighbors=7, min_dist=0.1, n_components=3, metric=’cosine’, random_state =42).fit_transform(m_row1, target = target_labels)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#hdbscan-hdbscan-min-samples-4-min-cluster-size-4-gen-min-span-tree-true-fit-embedding">hdbscan.HDBSCAN(min_samples=4,min_cluster_size=4, gen_min_span_tree=True).fit(embedding)</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By BU Paris 8
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
