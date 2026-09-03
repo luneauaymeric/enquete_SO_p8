@@ -4,5 +4,6 @@
 format: jb-book
 root: intro.md
 chapters:
-- file: script_analyse/connaissance_science_ouverte.ipynb
+- file: script_analyse/stat_descriptive/connaissance_science_ouverte.ipynb
+- file: script_analyse/stat_descriptive/production_et_analyse_donnees.ipynb
 - file: biblio.md
