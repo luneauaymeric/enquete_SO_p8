@@ -57,7 +57,7 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'script_analyse/profil_repondant';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'calssification_repondant/profil_repondant';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -174,9 +174,8 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="connaissance_science_ouverte.html">Notebook consacré à l’analyse des questions relatives à la Science Ouverte</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/connaissance_science_ouverte.html">Connaissance et pratique de la Science Ouverte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/production_et_analyse_donnees.html">Production et analyse des données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../biblio.html">Bibliographie</a></li>
 </ul>
 
@@ -232,7 +231,7 @@
       
       
       
-      <li><a href="../_sources/script_analyse/profil_repondant.ipynb" target="_blank"
+      <li><a href="../_sources/calssification_repondant/profil_repondant.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -670,7 +669,7 @@ La question étant à choix multiple, l’objectif de l’analyse est de parveni
 <h2>Les paramètres de UMAP<a class="headerlink" href="#les-parametres-de-umap" title="Link to this heading">#</a></h2>
 <p>Umap est un algorithme dont les résultats dépendent des paramètres définis par l’utilisateur. Ces paramètres sont le nombre de voisins (<em>n_neighbors</em>) pris en compte pour calculer la position d’un point au sein de l’espace vectoriel, la distance minimale à respecter entre les points (<em>min_dist</em>), le nombre de dimensions à conserver (<em>n_components</em>) et la métrique utilisée pour calculer la distance entre les points (<em>metric</em>).</p>
 <p>La figure ci-dessous montre l’influence du paramètre <em>n_neighbors</em> sur la spatialisation des points. Plus la valeur est importante, plus l’algorithme tend à conserver la structure globale. Inversement, plus la valeur est basse, plus l’algorithme préserve les spécificités locales du graphe. Dans notre cas, on voit apparaître plusieurs groupes au sein des sciences sociales et humaines lorsque <em>n_neighbors</em> vaut 2, qui disparaissent lorsque ce paramètre vaut 5 ou 10. C’est alors la distinction entre les SHS et les 2 autres “panels disciplinaires” qui ressort. le graphique devient même difficle à “lire” lorsqu’on passe a une valeur de 10.</p>
-<p><img alt="" src="../_images/umap_researchfield.jpeg" /></p>
+<p><img alt="" src="calssification_repondant/viz/umap_researchfield.jpeg" /></p>
 <p>Dans notre cas, il nous semble donc plus intéressant de définir la valeur de <em>n_neighbors</em> à 2 afin de saisir les différences entre les disciplines SHS, sachant que la distinction en les SHS d’un côté et les sciences de la vie et les sciences physiques nous est déjà donnée par le biais de la nomenclature ERC.</p>
 </section>
 <section id="clusterisation-avec-hdbscan">
@@ -853,7 +852,7 @@ La question étant à choix multiple, l’objectif de l’analyse est de parveni
 </ul>
 </li>
 </ul>
-<p><img alt="" src="../_images/umap_hdbscancluster.jpeg" /></p>
+<p><img alt="" src="calssification_repondant/viz/umap_hdbscancluster.jpeg" /></p>
 <div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD;
 SHS --&gt; 0;
 SHS --&gt; 2;
@@ -3849,7 +3848,7 @@ Non-SHS --&gt; 6;
         },
         kernelOptions: {
             name: "python3",
-            path: "./script_analyse"
+            path: "./calssification_repondant"
         },
         predefinedOutput: true
     }

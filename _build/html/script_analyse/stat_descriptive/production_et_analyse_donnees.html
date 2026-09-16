@@ -1,0 +1,1102 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Production et analyse des données &#8212; Enquête Science Ouverte</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'script_analyse/stat_descriptive/production_et_analyse_donnees';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Bibliographie" href="../../biblio.html" />
+    <link rel="prev" title="Connaissance et pratique de la Science Ouverte" href="connaissance_science_ouverte.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Enquête Science Ouverte</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Données de Recherche et Science Ouverte, pratiques et besoins - Enquête 2025-2026
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="connaissance_science_ouverte.html">Connaissance et pratique de la Science Ouverte</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Production et analyse des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../biblio.html">Bibliographie</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/script_analyse/stat_descriptive/production_et_analyse_donnees.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Production et analyse des données</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-de-donnees-produites">Types de données produites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outils-de-traitement">Outils de traitement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developpement-et-depot-de-codes-ou-de-logiciels">Développement et dépôt de codes ou de logiciels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accompagnements-et-formations-methodologiques">Accompagnements et formations méthodologiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes">Méthodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outils">Outils</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outils-proprietaires">Outils propriétaires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#services-a-developper">Services à développer</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="production-et-analyse-des-donnees">
+<h1>Production et analyse des données<a class="headerlink" href="#production-et-analyse-des-donnees" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">tab_croise</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">regroup_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">khideux</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    x = variable en ligne</span>
+<span class="sd">    y = variable en colonne</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">regroup_y</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+
+        <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;oui&quot;</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Oui&quot;</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;non&quot;</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Non&quot;</span>
+
+        <span class="n">cross_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">_rec&quot;</span><span class="p">],</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">margins_name</span><span class="o">=</span><span class="s2">&quot;Total&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">cross_tab0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">_rec&quot;</span><span class="p">],</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cross_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">margins_name</span><span class="o">=</span><span class="s2">&quot;Total&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">cross_tab0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">khideux</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">cross_tab0</span><span class="p">))</span>
+        <span class="n">st_chi2</span><span class="p">,</span> <span class="n">st_p</span><span class="p">,</span> <span class="n">st_dof</span><span class="p">,</span> <span class="n">st_exp</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">cross_tab0</span><span class="p">)</span>
+        <span class="n">chi2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;stats&quot;</span><span class="p">:[</span><span class="s2">&quot;chi2&quot;</span><span class="p">,</span><span class="s2">&quot;df&quot;</span><span class="p">,</span><span class="s2">&quot;p-value&quot;</span><span class="p">],</span> <span class="s2">&quot;values&quot;</span><span class="p">:[</span><span class="n">st_chi2</span><span class="p">,</span> <span class="n">st_dof</span><span class="p">,</span> <span class="n">st_p</span><span class="p">]})</span>
+        <span class="n">cross_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">cross_tab</span><span class="p">,</span> <span class="n">chi2</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">cross_tab</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">cross_tab0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="types-de-donnees-produites">
+<h2>Types de données produites<a class="headerlink" href="#types-de-donnees-produites" title="Link to this heading">#</a></h2>
+<p>Les personnes interrogées travaillant exclusivement avec des données dites “quantitatives” sont minoritaires, près de la moitié s’appuient essentiellement sur des données qualitatives et environ un tiers manipulent les deux types de données.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>q11_quali_or_quanti</p></th>
+<th class="head text-right"><p>nb</p></th>
+<th class="head text-right"><p>freq</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Des données qualitatives</p></td>
+<td class="text-right"><p>57</p></td>
+<td class="text-right"><p>47,9</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Des données quantitatives</p></td>
+<td class="text-right"><p>19</p></td>
+<td class="text-right"><p>16,0</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Les deux</p></td>
+<td class="text-right"><p>43</p></td>
+<td class="text-right"><p>36,1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Total</p></td>
+<td class="text-right"><p>119</p></td>
+<td class="text-right"><p>100,0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Les quatre types de données les plus fréquemment produites sont les entretiens, les données textuelles, les données d’enquête et les données expérimentales ou d’observation. On notera toutefois le caractère ambigü de certaines catégories. Ainsi la notion d‘“enquête” est largement utilisé en sciences sociales pour désigner la partie empirique des recherche et peut renvoyer aussi bien aux méthodes d’enquêtes ethnographiques qu’aux méthodes d’enquêtes par questionnaire. De même, les données d’observation peuvent se comprendre au sens de l’anthropologue qui observe les interactions au sein d’un groupe humain  ou de l’ornithologue qui compte les espèces d’oiseau. Parmi les “autres types de données”, une personne a d’ailleurs précisé qu’il s’agissait d “observations in situ non expérimentales”. Tandis qu’une autre ne se reconnait pas dans la notion de “donnée”.</p>
+<p><img alt="" src="../../_images/type_donnee_quali.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=-</span><span class="mi">1</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_col</span><span class="o">.</span><span class="n">question_family</span><span class="o">==</span><span class="s2">&quot;q5&quot;</span><span class="p">)</span><span class="o">&amp;</span> <span class="p">((</span><span class="o">~</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;q5_1&quot;</span><span class="p">))</span><span class="o">&amp;</span><span class="p">(</span><span class="o">~</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;rec&quot;</span><span class="p">))</span><span class="o">&amp;</span><span class="p">(</span><span class="o">~</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;family&quot;</span><span class="p">)))]:</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="n">gb_data0</span> <span class="o">=</span> <span class="n">grouped_question</span><span class="p">(</span><span class="n">df0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">x</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="s2">&quot;q45_clé&quot;</span><span class="p">)</span>
+    <span class="n">gb_data</span> <span class="o">=</span> <span class="n">gb_data0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gb_data0</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;Oui&quot;</span><span class="p">]</span>
+    <span class="n">gb_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">gb_data</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;Oui&quot;</span><span class="p">,</span> <span class="s2">&quot;logiciel_traitement&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;q5_&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">gb_q5</span> <span class="o">=</span> <span class="n">gb_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="c1">#.copy()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">gb_q5</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">gb_q5</span><span class="p">,</span> <span class="n">gb_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">x</span><span class="p">])])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3806/2686485856.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gb_data.loc[gb_data[x]==&quot;Oui&quot;, &quot;logiciel_traitement&quot;] = x.replace(&quot;q5_&quot;,&quot;&quot;)
+/tmp/ipykernel_3806/2686485856.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gb_data.loc[gb_data[x]==&quot;Oui&quot;, &quot;logiciel_traitement&quot;] = x.replace(&quot;q5_&quot;,&quot;&quot;)
+/tmp/ipykernel_3806/2686485856.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gb_data.loc[gb_data[x]==&quot;Oui&quot;, &quot;logiciel_traitement&quot;] = x.replace(&quot;q5_&quot;,&quot;&quot;)
+/tmp/ipykernel_3806/2686485856.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gb_data.loc[gb_data[x]==&quot;Oui&quot;, &quot;logiciel_traitement&quot;] = x.replace(&quot;q5_&quot;,&quot;&quot;)
+/tmp/ipykernel_3806/2686485856.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gb_data.loc[gb_data[x]==&quot;Oui&quot;, &quot;logiciel_traitement&quot;] = x.replace(&quot;q5_&quot;,&quot;&quot;)
+/tmp/ipykernel_3806/2686485856.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gb_data.loc[gb_data[x]==&quot;Oui&quot;, &quot;logiciel_traitement&quot;] = x.replace(&quot;q5_&quot;,&quot;&quot;)
+/tmp/ipykernel_3806/2686485856.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gb_data.loc[gb_data[x]==&quot;Oui&quot;, &quot;logiciel_traitement&quot;] = x.replace(&quot;q5_&quot;,&quot;&quot;)
+/tmp/ipykernel_3806/2686485856.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  gb_data.loc[gb_data[x]==&quot;Oui&quot;, &quot;logiciel_traitement&quot;] = x.replace(&quot;q5_&quot;,&quot;&quot;)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="outils-de-traitement">
+<h2>Outils de traitement<a class="headerlink" href="#outils-de-traitement" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/type_of_software.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_in</span><span class="p">:</span>
+    <span class="n">type_logi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_in</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+<span class="n">type_logi</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">family_logi</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">type_logi</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="p">,</span> <span class="n">type_logi</span><span class="o">.</span><span class="n">q5_family_logi</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Le graphique ci-dessous donne à voir les logiciels qui sont cités par plus de deux répondants. Il regroupe les questions 5 et 5.1 sur les logiciels et langages utilisés pour le traitement des données. La question 5 proposait 6 outils : Excel, R, python, SAS, Stata et Julia. Pour chacun de ces outils, les personnes interrogées devaient répondre si elles les utilisaient ou non. Avec la question 5.1, elles pouvaient ensuite compléter leur réponse en donnant le nom d’autres outils informatiques. Les 36 personnes qui ont répondu à la question 5.1 ont ainsi cité 26 autres logiciels et langages, ce qui fait au total 48  outils informatiques différents. Pour faciliter la lecture, nous les avons regroupés par “familles”. On retrouve ainsi :</p>
+<ul class="simple">
+<li><p>les “logiciels de statistiques” comme SPSS, Jamovi, Stata ;</p></li>
+<li><p>les langages de “scripts et de programmations” comme R, Python, Matlab ou C++. Probablement qu’une subdivision de cette catégorie serait justifiée afin de distinguer les langages généralement employés pour l’analyse de données (R, Julia, Matlab, Python) et les langages de programmation comme C++ ;</p></li>
+<li><p>les outils de gestion de bibliographie (Zotero, Endnote) ;</p></li>
+<li><p>les logiciels de “tableurs” et les feuilles de calculs : Excel, Libre Calc ;</p></li>
+<li><p>les langages liés au développement web (css, html, php, javascript) ;</p></li>
+<li><p>les outils d’analyse textuelle (Iramuteq, ActiveTigger) ;</p></li>
+<li><p>les “CAQDAS” (Computer-Assisted Qualitative Data Analysis Software) comme Nvivo, Qualcoder, Atlas.ti</p></li>
+</ul>
+<p>En termes d’utilisateurs, Excel est l’outil le plus répendu. Deux tiers des répondants (N=79) y recourent pour traiter leurs données. Ce sont ensuite les langage R (N=38) et Python (N=23) qui sont les plus utilisés. Jamovi (N=9) est le plus cité des logiciels d’analyse statistique, comme Nvivo (N=6) pour les logiciels CAQDAS. On note par ailleurs qu’une peronne sur cinq dit n’utiliser aucun outil informatique pour traiter les données.</p>
+<p><img alt="" src="../../_images/logiciel_traitement_use_by_2people.png" /></p>
+</section>
+<section id="developpement-et-depot-de-codes-ou-de-logiciels">
+<h2>Développement et dépôt de codes ou de logiciels<a class="headerlink" href="#developpement-et-depot-de-codes-ou-de-logiciels" title="Link to this heading">#</a></h2>
+<p>Parallèlement  à l’utilisation d’outils informatiques pour le traitement des données, près d’un quart des répondants ont déjà été amenés à développer ou faire développer du code ou des logiciels dans le cadre de leurs recherches, dont deux n’ont jamais déposé leur code ou logiciel sur un entrepot dédié.</p>
+<p>Si le dépôt de code sur Github et Gitlab restent les solutions les plus usitées, 6 personnes déposent leus codes et logiciels ailleurs :</p>
+<ul class="simple">
+<li><p>“Sur les dépôts SSC des commandes Stata”;</p></li>
+<li><p>“sur des repositories personnels”;</p></li>
+<li><p>“sur Hal”;</p></li>
+<li><p>“sur Ortolang et Huma-Num”,</p></li>
+<li><p>“Sur des instances auto-hébergées de Gitlab”</p></li>
+<li><p>ou “sur l’INPI”.</p></li>
+</ul>
+<p>Sur les 32 personnes ayant répondu “Oui” à la question “êtes-vous amené.e à développer ou faire développer des logiciels/du code spécialisé(s) ?”, 31 ont donnée des indications plus ou moins précises sur ce qu’elles développent ou font développer en répondant à la question 16. Nous avons analysé les réponses manuellement. On a ainsi 8 personnes qui disent développer des “logiciels variés”, des “algorithmes” ou encore des “plateformes, programmes logiciels, œuvres” sans données d’autres précisions. Les chercheurs qui manipulent du code afin de traiter et d’analyser les données constituent le groupe le plus importants (N=14). On observe enfin un petit groupe de personnes (N=7) construisant des outils liés à la collecte de données d’expérience via des jeux ou le logiciel Psytoolkit.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Type de développement</p></th>
+<th class="head text-right"><p>nb</p></th>
+<th class="head text-right"><p>total</p></th>
+<th class="head text-right"><p>freq</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>traitement et analyse de données</p></td>
+<td class="text-right"><p>15</p></td>
+<td class="text-right"><p>31</p></td>
+<td class="text-right"><p>48,4</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>programmes et logiciels variés</p></td>
+<td class="text-right"><p>8</p></td>
+<td class="text-right"><p>31</p></td>
+<td class="text-right"><p>25,8</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>collecte de données</p></td>
+<td class="text-right"><p>7</p></td>
+<td class="text-right"><p>31</p></td>
+<td class="text-right"><p>22,6</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>diffusion</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>31</p></td>
+<td class="text-right"><p>6,5</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="accompagnements-et-formations-methodologiques">
+<h2>Accompagnements et formations méthodologiques<a class="headerlink" href="#accompagnements-et-formations-methodologiques" title="Link to this heading">#</a></h2>
+<section id="methodes">
+<h3>Méthodes<a class="headerlink" href="#methodes" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">q18_bis</span><span class="o">.</span><span class="n">accomp_name</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">non</span> <span class="o">=</span> <span class="n">q18_bis</span><span class="o">.</span><span class="n">nb</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">q18_bis</span><span class="o">.</span><span class="n">accomp_name</span><span class="o">==</span><span class="n">x</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">q18_bis</span><span class="o">.</span><span class="n">interet_accomp</span><span class="o">==</span><span class="s2">&quot;Non&quot;</span><span class="p">)]</span>
+    <span class="n">q18_bis</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">q18_bis</span><span class="o">.</span><span class="n">accomp_name</span><span class="o">==</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;Non&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">non</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">q18_bis</span> <span class="o">=</span> <span class="n">q18_bis</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;Non&quot;</span><span class="p">,</span><span class="s2">&quot;accomp_name&quot;</span><span class="p">,</span><span class="s2">&quot;interet_accomp&quot;</span><span class="p">],</span>  <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="outils">
+<h3>Outils<a class="headerlink" href="#outils" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q16_ter</span> <span class="o">=</span> <span class="n">q16_ter</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">q16_bis</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;accomp_name&quot;</span><span class="p">,</span><span class="s2">&quot;interet_accomp&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Les questions concernant les besoins d’accompagnement à différents types de logiciels open source a été posé deux fois :</p>
+<ul class="simple">
+<li><p>question 7, partie “Gestion et traitement des données”</p></li>
+<li><p>la question 3 de la partie “Analyse des données”.</p></li>
+</ul>
+<p>La comparaison des tris à plat montre que certaines personnes ont répondu différrement. La différence reste néanmoins marginale. Par exemple, la première fois que la question a été posée, 39 personnes ressentaient le besoin d’être accompagné pour utiliser un tableur contre 30 la seconde fois que la question a été posée.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Tableur</p></th>
+<th class="head text-right"><p>Réponse 1</p></th>
+<th class="head text-right"><p>Réponse 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Non</p></td>
+<td class="text-right"><p>80</p></td>
+<td class="text-right"><p>89</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Oui, avancé</p></td>
+<td class="text-right"><p>23</p></td>
+<td class="text-right"><p>16</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Oui, débutant</p></td>
+<td class="text-right"><p>16</p></td>
+<td class="text-right"><p>14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Total</p></td>
+<td class="text-right"><p>119</p></td>
+<td class="text-right"><p>119</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>: “Ressentez-vous le besoin d’un accompagnement à l’utilisation de logiciels en open source ?” {#tbl:q16_q19_tableaur}</p>
+<p>Dans l’ensemble, entre un quart et un tiers des répondants estime avoir besoin d’un accompagnement pour les différents logiciels cités. Les quatre premier types de logiciel demandés sont :</p>
+<ol class="arabic simple">
+<li><p>les logiciels d’analyse textuelle. 48% des répondants disent ressentir le besoin d’un accompagnement (35% à un niveau débutant et 13% à un niveau avancé). À noter que les logiciels cités renvoient à des approches et des méthodes d’analyse différentes.</p></li>
+<li><p>les logiciel d’analyse statistique (40%)</p></li>
+<li><p>les logiciels d’analyse de données qualitatives comme Qualcoder (environ 37%)</p></li>
+<li><p>le langage python (environ 35%)</p></li>
+</ol>
+<p>Ensuite, on observe des demandes d’accompagnement pour les logiciels concernant des méthodes, des données ou des langages plus spécifiques comme les outils d’analyse de réseau de cartographie ou de gestion de bases de données. En bas de classement, nous trouvons enfin les logiciels d’océrisation et de système d’information géographique.</p>
+<p>Dans le cas des besoins en accompagnement à la prise en main de logiciels propriétaires, 5 “familles” de logiciels étaient proposaient :</p>
+<ul class="simple">
+<li><p>Les tableurs représentés par Excel</p></li>
+<li><p>les logiciels de traitements statistiques comme SPSS, Stata, SAS</p></li>
+<li><p>les logiciels de traitement des données textuelles avec Atlas.ti</p></li>
+<li><p>les systèmes d’information géographique via ArcGis</p></li>
+<li><p>les logiciels d’analyse des données qualitative (CAQDAS, Nvivo)</p></li>
+</ul>
+<p>Le taux de personnes exprimant un besoin d’accompagnement est globablement plus faible que pour les outils open source. Excel est l’outil qui obtient le taux le plus élevé : environ 27% des personnes disent ressentir le besoin d’être accompagnées. On retrouve une proportion relativement similaire à celles des outils de tableur en open source. On constate par contre un écart de 20 personnes entre celles qui sont intéressées par un accompagnement aux logiciels CAQDAS open source et Nvivo.</p>
+<p>Il semblerait donc que les chercheurs de Paris 8 sont d’avantage intéressés par des outils open source plutôt que propriétaires. Il faut toutefois rester prudent sur cette interprétation des écarts observés dans la mesure où ils peuvent être également lié à une fatigue des répondants. Ces derniers choisiraient “non” par facilité. Il est possible aussi que la question sur les logiciels open source apparaissent plus générale : en répondant “oui je ressens un besoin d’accompagnement à un logiciel d’analyse textuelle”, les personnes visent autant un outil en particulier que la méthode en elle-même (indépendamment du logiciel utilisé).</p>
+<p>Une manière de valider l’idée d’une plus grande affinité des chercheurs de Paris 8 pour les logiciels libres serait de comparer ces résultats avec ceux du sondage de la DSIN sur le type de suite bureautique (microsoft, google, outils libres) péblicitée par le personnel de l’université.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p></p></th>
+<th class="head text-right"><p>Non, je ne ressens pas le besoin d’un accompagnement à un outil CAQDAS open source</p></th>
+<th class="head text-right"><p>je ressens le besoin d’un accompagnement à un outil CAQDAS open source</p></th>
+<th class="head text-right"><p>Total</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Non, je ne ressens pas le besoin d’un accompagnement à Nvivo</p></td>
+<td class="text-right"><p>66</p></td>
+<td class="text-right"><p>26</p></td>
+<td class="text-right"><p>92</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Oui, je ressens le besoin d’un accompagnement à Nvivo</p></td>
+<td class="text-right"><p>6</p></td>
+<td class="text-right"><p>21</p></td>
+<td class="text-right"><p>27</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Total</p></td>
+<td class="text-right"><p>72</p></td>
+<td class="text-right"><p>47</p></td>
+<td class="text-right"><p>119</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>: Comparaison des besoins en accompagnement à Nvivo et au logiciels CAQDAS open source {#tbl:q20_19_nvivo}</p>
+<p><img alt="" src="../../_images/q16_q19_help_outil.png" /></p>
+<p><img alt="" src="../../_images/9_help_outil_proprio.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df0</span><span class="o">.</span><span class="n">q19_1_other_software_help</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>nan
+wikidata, sparql
+Bases de données en graphe
+logiciel d&#39;analyse de l&#39;intonation et des gestes sur vidéos
+​-
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="outils-proprietaires">
+<h3>Outils propriétaires<a class="headerlink" href="#outils-proprietaires" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q20_ter</span> <span class="o">=</span> <span class="n">q20_ter</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">q20_bis</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;accomp_name&quot;</span><span class="p">,</span><span class="s2">&quot;interet_accomp&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q20_nvivo_help</span><span class="o">==</span><span class="s2">&quot;Non&quot;</span><span class="p">,</span> <span class="s2">&quot;Nvivo&quot;</span><span class="p">]</span> <span class="o">=</span><span class="s2">&quot;NON&quot;</span>
+<span class="n">df0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q20_nvivo_help</span><span class="o">!=</span><span class="s2">&quot;Non&quot;</span><span class="p">,</span> <span class="s2">&quot;Nvivo&quot;</span><span class="p">]</span> <span class="o">=</span><span class="s2">&quot;Oui&quot;</span>
+<span class="n">df0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q19_caqdas_help</span><span class="o">==</span><span class="s2">&quot;Non&quot;</span><span class="p">,</span> <span class="s2">&quot;CAQDAS_os&quot;</span><span class="p">]</span> <span class="o">=</span><span class="s2">&quot;NON&quot;</span>
+<span class="n">df0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q19_caqdas_help</span><span class="o">!=</span><span class="s2">&quot;Non&quot;</span><span class="p">,</span> <span class="s2">&quot;CAQDAS_os&quot;</span><span class="p">]</span> <span class="o">=</span><span class="s2">&quot;Oui&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="services-a-developper">
+<h3>Services à développer<a class="headerlink" href="#services-a-developper" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;q22_&quot;</span><span class="p">))</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_col</span><span class="o">.</span><span class="n">type</span><span class="o">==</span><span class="s2">&quot;ordinal&quot;</span><span class="p">)]:</span>
+    <span class="n">gb_data</span><span class="o">=</span> <span class="n">grouped_question</span><span class="p">(</span><span class="n">df0</span><span class="p">,</span> <span class="n">column</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">gb_data</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>|    | q22_postes_info   |   nb |   total |    freq |   total_freq |
+|---:|:------------------|-----:|--------:|--------:|-------------:|
+|  0 | Non, pas utile    |   42 |     119 | 35.2941 |          100 |
+|  1 | Oui, plutôt utile |   50 |     119 | 42.0168 |          100 |
+|  2 | Oui, très utile   |   27 |     119 | 22.6891 |          100 |
+|    | q22_ressources_doc   |   nb |   total |    freq |   total_freq |
+|---:|:---------------------|-----:|--------:|--------:|-------------:|
+|  0 | Non, pas utile       |   19 |     119 | 15.9664 |          100 |
+|  1 | Oui, plutôt utile    |   62 |     119 | 52.1008 |          100 |
+|  2 | Oui, très utile      |   38 |     119 | 31.9328 |          100 |
+|    | q22_working_spaces   |   nb |   total |    freq |   total_freq |
+|---:|:---------------------|-----:|--------:|--------:|-------------:|
+|  0 | Non, pas utile       |   20 |     119 | 16.8067 |          100 |
+|  1 | Oui, plutôt utile    |   54 |     119 | 45.3782 |          100 |
+|  2 | Oui, très utile      |   45 |     119 | 37.8151 |          100 |
+|    | q22_permanences   |   nb |   total |    freq |   total_freq |
+|---:|:------------------|-----:|--------:|--------:|-------------:|
+|  0 | Non, pas utile    |   23 |     119 | 19.3277 |          100 |
+|  1 | Oui, plutôt utile |   47 |     119 | 39.4958 |          100 |
+|  2 | Oui, très utile   |   49 |     119 | 41.1765 |          100 |
+|    | q22_sdbox_casd    |   nb |   total |    freq |   total_freq |
+|---:|:------------------|-----:|--------:|--------:|-------------:|
+|  0 | Non, pas utile    |   44 |     119 | 36.9748 |          100 |
+|  1 | Oui, plutôt utile |   42 |     119 | 35.2941 |          100 |
+|  2 | Oui, très utile   |   33 |     119 | 27.7311 |          100 |
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;q22_&quot;</span><span class="p">))</span><span class="o">&amp;</span><span class="p">(</span><span class="n">df_col</span><span class="o">.</span><span class="n">type</span><span class="o">==</span><span class="s2">&quot;ordinal&quot;</span><span class="p">)]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;q22_postes_info&#39;,
+ &#39;q22_ressources_doc&#39;,
+ &#39;q22_working_spaces&#39;,
+ &#39;q22_permanences&#39;,
+ &#39;q22_sdbox_casd&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q22_ter</span> <span class="o">=</span> <span class="n">q22_ter</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">q22_bis</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;accomp_name&quot;</span><span class="p">,</span><span class="s2">&quot;interet_accomp&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q22_ter</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>accomp_name</th>
+      <th>interet_accomp</th>
+      <th>cum_sum</th>
+      <th>nb</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Ressources documentaires</td>
+      <td>Oui, très utile</td>
+      <td>0.840336</td>
+      <td>0.319328</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Ressources documentaires</td>
+      <td>Oui, plutôt utile</td>
+      <td>0.521008</td>
+      <td>0.521008</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ressources documentaires</td>
+      <td>Non, pas utile</td>
+      <td>1.000000</td>
+      <td>0.159664</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Postes informatiques</td>
+      <td>Oui, très utile</td>
+      <td>0.647059</td>
+      <td>0.226891</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Postes informatiques</td>
+      <td>Oui, plutôt utile</td>
+      <td>0.420168</td>
+      <td>0.420168</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Postes informatiques</td>
+      <td>Non, pas utile</td>
+      <td>1.000000</td>
+      <td>0.352941</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Permanences d'accueil</td>
+      <td>Oui, très utile</td>
+      <td>0.806723</td>
+      <td>0.411765</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Permanences d'accueil</td>
+      <td>Oui, plutôt utile</td>
+      <td>0.394958</td>
+      <td>0.394958</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Permanences d'accueil</td>
+      <td>Non, pas utile</td>
+      <td>1.000000</td>
+      <td>0.193277</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Espaces de travail</td>
+      <td>Oui, très utile</td>
+      <td>0.831933</td>
+      <td>0.378151</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Espaces de travail</td>
+      <td>Oui, plutôt utile</td>
+      <td>0.453782</td>
+      <td>0.453782</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Espaces de travail</td>
+      <td>Non, pas utile</td>
+      <td>1.000000</td>
+      <td>0.168067</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Accès SdBox et CASD</td>
+      <td>Oui, très utile</td>
+      <td>0.630252</td>
+      <td>0.277311</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Accès SdBox et CASD</td>
+      <td>Oui, plutôt utile</td>
+      <td>0.352941</td>
+      <td>0.352941</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Accès SdBox et CASD</td>
+      <td>Non, pas utile</td>
+      <td>1.000000</td>
+      <td>0.369748</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df0</span><span class="o">.</span><span class="n">q23_other_service_univ</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df0</span><span class="o">.</span><span class="n">q23_other_service_univ</span><span class="o">.</span><span class="n">isna</span><span class="p">()]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;####</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>####
+ Non 
+####
+ DE quoi déposer et échanges des données en toute confidentialité et selon les règles imposées par le CNRS notamment
+####
+ je n&#39; y ai pas suffisamment songé
+####
+ Certaines université américaines ont des partenariats avec des éditeurs, qui leur permet de valoriser leurs travaux en publiant gratuitement en open access. Pourrait-on avoir ce service ? 
+####
+ service dans les labos
+####
+ non
+####
+ Je ne connais pas le CASD
+####
+ Apprendre à coder avec l&#39;IA sans devenir soi-même développeur : donc un accès personnalisé à des développeurs (notamment en Python), comme une permanence d&#39;accueil à créneaux fixes
+####
+ je ne sais pas
+####
+ Quand je parle de documentation je parle d&#39;ouvrages pour la recherche la bibliothèque étant très loin d&#39;être au niveau sur cet aspect même si elle a un bon.fonds pour la formation... idem pour les salles de réunion ou de travail il y a eu un espace avanius avons b
+####
+ La possibilité de créer des accès wifi pour les stagiaires et les nouveaux collègues dans un délai raisonnable. Actuellement, il faut parfois des mois d&#39;attente, et cela nous empêche très concrètement de travailler. Un accès à un serveur chiffré de bout en bout pour les données de la recherche serait utile, de même que la possibilité d&#39;avoir des machines virtuelles accessibles derrière un VPN (compatible avec tous les OS, dont Linux)
+####
+ Non
+####
+ Non
+####
+ Non
+####
+ une formation des chercheurs à des obligations/engagements éthiques ; le comité d&#39;éthique de P8 est récent mais son existence est peu connu ; des validations des études de terrain par le comité éthique de l&#39;institution d&#39;appartenance sont obligatoires à l&#39;étranger, mais à Paris 8 il n&#39;y a pas de pratique définie et connue par l&#39;ensemble de chercheurs ; ça met les chercheurs dans une position désagreable face à des participants solicités pour une étude qui demandent l&#39;avis du comité d&#39;éthique.
+####
+ Un bureau pérenne (local avec connexion réseau, attribué nominativement, individuel ou en partage avec un ou deux collègues) pour les EC titulaires  
+####
+ Non
+####
+ Je n&#39;ai pas assez de compréhension de ces éléments pour répondre. Il est certain que les ressources documentaires de la bibliothèque sont très pauvres en ce qui concerne la recherche et ne peuvent être utilisées, à mon sens, par des chercheurs d&#39;aujourd&#39;hui. J&#39;ai ou j&#39;ai eu accès à des ressources d&#39;autres centres bien plus riches et professionnelles, mais peut-être est-ce une question de moyens. Il est à peu près certain de mon point de vue que l&#39;aspect recherche n&#39;est pas sérieusement pris en compte dans notre université. Enseignant-chercheur titulaire depuis près de 15 ans je n&#39;ai jamais eu l&#39;occasion de bénéficier d&#39;une véritable rencontre sérieuse avec le service de la recherche qui ne me semble avoir aucune idée ni aucun intérêt pour le travail effectif des chercheurs.. La maison de la recherche reste une belle réalisation et l&#39;une des réalisations les plus positives à Paris 8 de même que ArTeC et la participation à la MSH Paris Nord. Le potentiel de synergie avec le Campus Condorcet est sous-exploité à ma connaissance et en tant qu&#39;enseignants-chercheurs nous ne sommes pas du tout (ou en tout cas je ne me sens pas du tout) impliqué par l&#39;Université dans ce formidable milieu de recherche. La direction de la Recherche ou les laboratoires ne semblent pas du tout vouloir que nous y soyons associés, de même que la plupart des enjeux Recherche. Cela semble géré en dehors du personnel d&#39;enseignants chercheurs: c&#39;est un avis très subjectif mais très persistant. Cela n&#39;empêche de pouvoir faire de la recherche mais elle n&#39;est qu&#39;assez nominalement située à Paris 8... De mon point de vue un chercheur peut avoir besoin d&#39;un bureau, d&#39;un accompagnement occasionnel, d&#39;accès à des ressources de recherche ou des formations pointues en arts, SHS, langues, certains éléments complémentaires. Le présent questionnaire que je vois passer à l&#39;identique depuis plusieurs années ne relève pas du tout de cette catégorie à mes yeux, il n&#39;y a là aucun enjeu de recherche clairement présenté et je peux me tromper mais cela ne relève que d&#39;une procédure administrative qui ne vise pas du tout à développer réellement de façon qualitative ou quantitative la recherche à Paris 8. Je trouve cela regrettable mais je me suis bien sûr fait tout à fait une raison depuis ces années... Il y a de la recherche à Paris 8 dans la mesure où il y  a d&#39;excellents chercheurs mais je ne pense pas (ou alors je n&#39;en ai pas connaissance) qu&#39;il y ait une politique de la recherche partagée en tout cas je n&#39;ai jamais été convié à en partager les enjeux et les possibilités (mis à part en partie ArTeC et antérieurement le Labex Arts H2H c&#39;est bien sûr très partiel et partial mais c&#39;est mon sentiment tout à fait persistant corroboré par une analyse assez fine par l&#39;expérience que j&#39;ai pu avoir des enjeux de la recherche au point de vue européen.  
+</pre></div>
+</div>
+</div>
+</div>
+<p>Enfin, les services à développer proposés dans le questionnaire ont rencontré un plébiscite dans la mesure où la majorité des personnes les considèrent comme utiles. Le service ayant le moins de succès concerne l’accès à une SD-Box et au CASD (Centre d’accès sécurisé aux données). Près de 63% le jugent utile contre 84% pour les ressources documentaires ou 80% pour les permanences d’accueil. Parmi les 44 personnes non-intéressées par ce dernier service (36%), il est possible qu’une partie d’entre elles ne connaissent pas les services du CASD et la “SD-Box”.</p>
+<blockquote>
+<div><p>La SD-BOX “La SD-Box est le seul moyen d’accès à l’infrastructure centrale du CASD et à l’environnement de travail de l’utilisateur. C’est un dispositif technique conçu et mis au point par le CASD pour répondre aux besoins et contraintes des utilisateurs et déposants de données”.</p>
+</div></blockquote>
+<p><img alt="" src="../../_images/11_ressources.png" /></p>
+<p>Par ailleurs, une quinzaine de personnes ont répondu à la question ouverte : “d’autres services vous paraitraient-ils utiles ?”. Plusieurs réponse portent sur les ressources documentaires de la bibliothèque qu’ils jugent “pauvres” au regard d’autre centres ou davantage orientées vers la formation que la recherche.</p>
+<blockquote>
+<div><p>“Quand je parle de documentation je parle d’ouvrages pour la recherche la bibliothèque étant très loin d’être au niveau sur cet aspect même si elle a un bon.fonds pour la formation.”</p>
+</div></blockquote>
+<blockquote>
+<div><p>“Il est certain que les ressources documentaires de la bibliothèque sont très pauvres en ce qui concerne la recherche et ne peuvent être utilisées, à mon sens, par des chercheurs d’aujourd’hui.”</p>
+</div></blockquote>
+<p>Les autres commentaires portent sur l’accès à des bureaux nominatifs et équipés informatiquement, “la possibilité de créer des accès wifi pour les stagiaires et les nouveaux collègues dans un délai raisonnable”, le développement de services liés à la sécurité des données (accès à un serveur chiffré et des lieux de stockages sécurisés) ou de formation sur l’éthique de la recherche.</p>
+<blockquote>
+<div><p>“une formation des chercheurs à des obligations/engagements éthiques ; le comité d’éthique de P8 est récent mais son existence est peu connu ;”</p>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./script_analyse/stat_descriptive"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="connaissance_science_ouverte.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Connaissance et pratique de la Science Ouverte</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../../biblio.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Bibliographie</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-de-donnees-produites">Types de données produites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outils-de-traitement">Outils de traitement</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developpement-et-depot-de-codes-ou-de-logiciels">Développement et dépôt de codes ou de logiciels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accompagnements-et-formations-methodologiques">Accompagnements et formations méthodologiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodes">Méthodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outils">Outils</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outils-proprietaires">Outils propriétaires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#services-a-developper">Services à développer</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By BU Paris 8
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
