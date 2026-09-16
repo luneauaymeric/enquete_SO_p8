@@ -174,9 +174,8 @@
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../script_analyse/connaissance_science_ouverte.html">Notebook consacré à l’analyse des questions relatives à la Science Ouverte</a></li>
-
-
+<li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/connaissance_science_ouverte.html">Connaissance et pratique de la Science Ouverte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/production_et_analyse_donnees.html">Production et analyse des données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../biblio.html">Bibliographie</a></li>
 </ul>
 
@@ -303,7 +302,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -319,6 +320,23 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Recodage variable q25_statut</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#production-et-analyse-des-donnees">Production et analyse des données</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developpement-et-depot-de-codes-ou-de-logiciels">Développement et dépôt de codes ou de logiciels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accompagnements-et-formations-methodologiques">Accompagnements et formations méthodologiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outils">Outils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -365,6 +383,37 @@ document.write(`
 
 <span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
 <span class="n">df_col</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">tab_croise</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">regroup_y</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">khideux</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    x = variable en ligne</span>
+<span class="sd">    y = variable en colonne</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">regroup_y</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+
+        <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;oui&quot;</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Oui&quot;</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;non&quot;</span><span class="p">),</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Non&quot;</span>
+
+        <span class="n">cross_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">_rec&quot;</span><span class="p">],</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">margins_name</span><span class="o">=</span><span class="s2">&quot;Total&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">cross_tab0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">_rec&quot;</span><span class="p">],</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cross_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">margins_name</span><span class="o">=</span><span class="s2">&quot;Total&quot;</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">cross_tab0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">x</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">margins</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">khideux</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">cross_tab0</span><span class="p">))</span>
+        <span class="n">st_chi2</span><span class="p">,</span> <span class="n">st_p</span><span class="p">,</span> <span class="n">st_dof</span><span class="p">,</span> <span class="n">st_exp</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">cross_tab0</span><span class="p">)</span>
+        <span class="n">chi2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;stats&quot;</span><span class="p">:[</span><span class="s2">&quot;chi2&quot;</span><span class="p">,</span><span class="s2">&quot;df&quot;</span><span class="p">,</span><span class="s2">&quot;p-value&quot;</span><span class="p">],</span> <span class="s2">&quot;values&quot;</span><span class="p">:[</span><span class="n">st_chi2</span><span class="p">,</span> <span class="n">st_dof</span><span class="p">,</span> <span class="n">st_p</span><span class="p">]})</span>
+        <span class="n">cross_tab</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">cross_tab</span><span class="p">,</span> <span class="n">chi2</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">cross_tab</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(),</span> <span class="n">cross_tab0</span>
 </pre></div>
 </div>
 </div>
@@ -476,6 +525,73 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 </div>
 </div>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="production-et-analyse-des-donnees">
+<h1>Production et analyse des données<a class="headerlink" href="#production-et-analyse-des-donnees" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exp</span><span class="p">,</span> <span class="n">gb_data</span> <span class="o">=</span> <span class="n">split_multiple_choices</span><span class="p">(</span><span class="n">df01</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df01</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">isna</span><span class="p">()],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+<span class="n">df_exp1</span><span class="p">,</span> <span class="n">gb_data1</span> <span class="o">=</span> <span class="n">split_multiple_choices</span><span class="p">(</span><span class="n">df01</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df01</span><span class="o">.</span><span class="n">q5_1_other_lang_rec</span><span class="o">.</span><span class="n">isna</span><span class="p">()],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;q5_1_other_lang_rec&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+
+<span class="n">df_exp2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_exp</span><span class="p">[[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">]],</span> <span class="n">df_exp1</span><span class="p">[[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span><span class="s2">&quot;q5_1_other_lang_rec&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;q5_1_other_lang_rec&quot;</span><span class="p">:</span><span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">})])</span>
+<span class="n">df_exp2</span><span class="p">[</span><span class="s2">&quot;q5_family_logi&quot;</span><span class="p">]</span><span class="o">=</span> <span class="n">df_exp2</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">family_logi</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="n">df_exp3</span> <span class="o">=</span> <span class="n">df_exp2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df_exp2</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;aucun&quot;</span><span class="p">,</span><span class="s2">&quot;autre&quot;</span><span class="p">])]</span>
+<span class="n">df_exp3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="developpement-et-depot-de-codes-ou-de-logiciels">
+<h2>Développement et dépôt de codes ou de logiciels<a class="headerlink" href="#developpement-et-depot-de-codes-ou-de-logiciels" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;16. dev_exemple&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q6_1_dev_group&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;5_developpement&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df01</span><span class="o">.</span><span class="n">q6_1_dev_group</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
+               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="n">df_col</span><span class="o">.</span><span class="n">question</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">==</span><span class="s2">&quot;q6_1_dev_exemple&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;Classe les exemples de logiciels développés dans des groupes : outils de traitement et d&#39;analyse, outils de diffusion, collecte de données, etc.&quot;</span>
+              <span class="p">}</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
+<span class="n">new_variable</span>
+<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col1</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;16. dev_exemple&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q6_1_dev_how&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;5_developpement&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df01</span><span class="o">.</span><span class="n">q6_1_dev_how</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
+               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="n">df_col</span><span class="o">.</span><span class="n">question</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">==</span><span class="s2">&quot;q6_1_dev_exemple&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;Précise le langage ou l&#39;outil de programmation utilisé&quot;</span>
+              <span class="p">}</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
+<span class="n">new_variable</span>
+<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col1</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="accompagnements-et-formations-methodologiques">
+<h2>Accompagnements et formations méthodologiques<a class="headerlink" href="#accompagnements-et-formations-methodologiques" title="Link to this heading">#</a></h2>
+<section id="outils">
+<h3>Outils<a class="headerlink" href="#outils" title="Link to this heading">#</a></h3>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -513,6 +629,30 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Recodage variable q25_statut</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#production-et-analyse-des-donnees">Production et analyse des données</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#developpement-et-depot-de-codes-ou-de-logiciels">Développement et dépôt de codes ou de logiciels</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accompagnements-et-formations-methodologiques">Accompagnements et formations méthodologiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outils">Outils</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
