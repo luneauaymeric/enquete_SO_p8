@@ -6,4 +6,7 @@ root: intro.md
 chapters:
 - file: script_analyse/stat_descriptive/connaissance_science_ouverte.ipynb
 - file: script_analyse/stat_descriptive/production_et_analyse_donnees.ipynb
+- file: script_analyse/stat_descriptive/Outils_humanum.ipynb
+- file: script_analyse/stat_descriptive/profil_repondant.ipynb
+- file: script_analyse/stat_descriptive/glossaire.md
 - file: biblio.md
