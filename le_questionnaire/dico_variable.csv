@@ -178,3 +178,4 @@ open source ?",q19,
 63. Système de gestion de base de données,q16_sgbd_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
 64. Autre,q16_autre_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
 65. other_accomp_software,q16_1_other_software_help,9_help_outil,False,texte_libre,True,object,20.0,"7.1/ Si Autre, précisez lequel (lesquels) ?",q16,
+"113. Autre, précisez",q26_1_autre_rec,13_env_travail,False,nominal_multiple,False,object,113.0,"Où travaillez-vous le plus souvent? Si autre, précisez",q26,recode les autre lieux
