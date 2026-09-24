@@ -179,3 +179,4 @@ open source ?",q19,
 64. Autre,q16_autre_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
 65. other_accomp_software,q16_1_other_software_help,9_help_outil,False,texte_libre,True,object,20.0,"7.1/ Si Autre, précisez lequel (lesquels) ?",q16,
 "113. Autre, précisez",q26_1_autre_rec,13_env_travail,False,nominal_multiple,False,object,113.0,"Où travaillez-vous le plus souvent? Si autre, précisez",q26,recode les autre lieux
+135. ia_tools,q35_ia_tools,4_logiciel_traitement,False,nominal_multiple,False,object,135.0,"Si oui, lesquels ?",q35,recode les outils ia
