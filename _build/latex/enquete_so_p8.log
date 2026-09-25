@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.27)  25 SEP 2026 15:51
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.11.27)  25 SEP 2026 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1657,11 +1657,9 @@ fd)))
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 96.
+(./enquete_so_p8.out) (./enquete_so_p8.out)
 \@outlinefile=\write6
 \openout6 = `enquete_so_p8.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/FreeSerif(0)/m/n on input line 96.
@@ -1844,6 +1842,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
 t line 96.
 Package hyperref Info: Option `pageanchor' set `false' on input line 99.
+
 (/usr/local/texlive/2025/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
@@ -1883,11 +1882,20 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 ]
-No file enquete_so_p8.toc.
+(./enquete_so_p8.toc
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 3.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 3.
+)
 \tf@toc=\write7
 \openout7 = `enquete_so_p8.toc'.
 
-[1
+ [1
 
 ] [2
 
@@ -1895,106 +1903,88 @@ No file enquete_so_p8.toc.
 
 ]
 Chapter 1.
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/connaissance_sc
-ience_ouverte:principe-so' on page 3 undefined on input line 137.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/connaissance_science_
-ouverte:principe-so' on page 3 undefined on input line 137.
-
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/connaissance_sc
-ience_ouverte:depot-hal' on page 3 undefined on input line 137.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/connaissance_science_
-ouverte:depot-hal' on page 3 undefined on input line 137.
-
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/connaissance_sc
-ience_ouverte:depot-octaviana' on page 3 undefined on input line 137.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/connaissance_science_
-ouverte:depot-octaviana' on page 3 undefined on input line 137.
-
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/connaissance_sc
-ience_ouverte:opened-data' on page 3 undefined on input line 137.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/connaissance_science_
-ouverte:opened-data' on page 3 undefined on input line 137.
-
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 204.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 204.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 204.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 204.
 [3]
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/connaissance_sc
-ience_ouverte:autre-entrepot-fig' on page 4 undefined on input line 435.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/connaissance_science_
-ouverte:autre-entrepot-fig' on page 4 undefined on input line 435.
-
 File: autre_entrepot_rec.png Graphic file (type bmp)
 <autre_entrepot_rec.png>
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/connaissance_sc
-ience_ouverte:utilite-accomp-so-fig' on page 4 undefined on input line 448.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/connaissance_science_
-ouverte:utilite-accomp-so-fig' on page 4 undefined on input line 448.
-
 File: util_accomp_so.png Graphic file (type bmp)
 <util_accomp_so.png>
-[4]
+ [4]
 File: pratiques_sauvegardes.png Graphic file (type bmp)
 <pratiques_sauvegardes.png>
  [5] [6]
 Chapter 2.
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/production_et_a
-nalyse_donnees:quali-or-quanti' on page 7 undefined on input line 482.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/production_et_analyse
-_donnees:quali-or-quanti' on page 7 undefined on input line 482.
-
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/production_et_a
-nalyse_donnees:type-donnee-quali' on page 7 undefined on input line 551.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/production_et_analyse
-_donnees:type-donnee-quali' on page 7 undefined on input line 551.
-
 File: type_donnee_quali.png Graphic file (type bmp)
 <type_donnee_quali.png>
-
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/production_et_a
-nalyse_donnees:logiciel-traitement-use-by-2people' on page 7 undefined on input
- line 567.
-
-
-LaTeX Warning: Reference `script_analyse/stat_descriptive/production_et_analyse
-_donnees:logiciel-traitement-use-by-2people' on page 7 undefined on input line 
-567.
-
 [7
 
 ]
 File: logiciel_traitement_use_by_2people.png Graphic file (type bmp)
 <logiciel_traitement_use_by_2people.png>
- [8]
+ [8] [9]
+File: q16_q19_help_outil.png Graphic file (type bmp)
+<q16_q19_help_outil.png>
+File: 9_help_outil_proprio.png Graphic file (type bmp)
+<9_help_outil_proprio.png>
+ [10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 956--956
+[]\TU/FreeSans(0)/m/n/10 To-
+ []
 
-LaTeX Warning: Hyper reference `script_analyse/stat_descriptive/production_et_a
-nalyse_don
+
+Underfull \hbox (badness 7221) in paragraph at lines 956--956
+\TU/FreeSerif(0)/m/n/10 d’un accompagnement à
+ []
+
+[12]
+File: 11_ressources.png Graphic file (type bmp)
+<11_ressources.png>
+ [13] [14
+
+]
+Chapter 3.
+File: q13_q14_outil_humanum.png Graphic file (type bmp)
+<q13_q14_outil_humanum.png>
+File: q15_help_outil_humanum.png Graphic file (type bmp)
+<q15_help_outil_humanum.png>
+[15] [16]
+Chapter 4.
+[17
+
+]
+File: raison_ia_bertopic.png Graphic file (type bmp)
+<raison_ia_bertopic.png>
+ [18] [19] [20
+
+]
+Chapter 5.
+[21] [22]
+Chapter 6.
+[23
+
+] [24
+
+] (./enquete_so_p8.ind [25
+
+] [26
+
+] [27
+
+
+]) (./enquete_so_p8.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-11-14>
+ ***********
+Package rerunfilecheck Info: File `enquete_so_p8.out' has not changed.
+(rerunfilecheck)             Checksum: C4DCF76D1F7B9278489E2675CCEBF241;3176.
+ ) 
+Here is how much of TeX's memory you used:
+ 45593 strings out of 468179
+ 1038062 string characters out of 5433206
+ 1710673 words of memory out of 5000000
+ 73497 multiletter control sequences out of 15000+600000
+ 633157 words of font info for 114 fonts, out of 8000000 for 9000
+ 1349 hyphenation exceptions out of 8191
+ 99i,11n,108p,1416b,2100s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on enquete_so_p8.pdf (31 pages).
