@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -337,6 +337,7 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ia-tools">IA Tools</a></li>
 </ul>
 
             </nav>
@@ -374,13 +375,15 @@ document.write(`
 <span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">client_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;endpoint_url&#39;</span><span class="p">:</span> <span class="n">S3_ENDPOINT_URL</span><span class="p">})</span>
 
 <span class="n">BUCKET_OUT</span> <span class="o">=</span> <span class="s2">&quot;aluneau&quot;</span>
+
+<span class="n">last_file</span> <span class="o">=</span> <span class="s2">&quot;anonymous_answer_2026-07-24.csv&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/anonymous_answer_2026-05-11.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_in</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_in</span><span class="p">:</span>
     <span class="n">df0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_in</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
 
 
@@ -389,6 +392,197 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>label</th>
+      <th>group</th>
+      <th>personal_data</th>
+      <th>type</th>
+      <th>opened_question</th>
+      <th>type_panda</th>
+      <th>no_question</th>
+      <th>question</th>
+      <th>question_family</th>
+      <th>comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>N°Obs</td>
+      <td>qno_obs</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>numérique</td>
+      <td>False</td>
+      <td>int64</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>qno</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1. so_principles</td>
+      <td>q1_so_principles</td>
+      <td>1_connaissance_so</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>1.0</td>
+      <td>1/ Diriez-vous que vous êtes familier.ère des ...</td>
+      <td>q1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2. hal_depot</td>
+      <td>q2_hal_depot</td>
+      <td>1_connaissance_so</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>2.0</td>
+      <td>2/ Avez-vous déjà déposé une production scient...</td>
+      <td>q2</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3. octavi_depot</td>
+      <td>q3_octavi_depot</td>
+      <td>2_bib_num</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>3.0</td>
+      <td>3/ Avez-vous des productions déposées sur Octa...</td>
+      <td>q3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4. open_data</td>
+      <td>q4_diff_data</td>
+      <td>3_entrepot</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>4.0</td>
+      <td>4/ Avez-vous déjà diffusé vos données de reche...</td>
+      <td>q4</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>62. Logiciels de SIG (ex. QGis)</td>
+      <td>q16_sig_help</td>
+      <td>9_help_outil</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>19.0</td>
+      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
+      <td>q16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>63. Système de gestion de base de données</td>
+      <td>q16_sgbd_help</td>
+      <td>9_help_outil</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>19.0</td>
+      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
+      <td>q16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>64. Autre</td>
+      <td>q16_autre_help</td>
+      <td>9_help_outil</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>19.0</td>
+      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
+      <td>q16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>65. other_accomp_software</td>
+      <td>q16_1_other_software_help</td>
+      <td>9_help_outil</td>
+      <td>False</td>
+      <td>texte_libre</td>
+      <td>True</td>
+      <td>object</td>
+      <td>20.0</td>
+      <td>7.1/ Si Autre, précisez lequel (lesquels) ?</td>
+      <td>q16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>113. Autre, précisez</td>
+      <td>q26_1_autre_rec</td>
+      <td>13_env_travail</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>113.0</td>
+      <td>Où travaillez-vous le plus souvent? Si autre, ...</td>
+      <td>q26</td>
+      <td>recode les autre lieux</td>
+    </tr>
+  </tbody>
+</table>
+<p>167 rows × 11 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -548,7 +742,7 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># on enregistre les nouvelles variables dans le dataframe original</span>
-<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/anonymous_answer_2026-07-24.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
     <span class="n">df0</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -690,7 +884,7 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># on enregistre les nouvelles variables dans le dataframe original</span>
-<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/anonymous_answer_2026-07-24.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
     <span class="n">df0</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -984,6 +1178,412 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 </section>
 </section>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="ia-tools">
+<h1>IA Tools<a class="headerlink" href="#ia-tools" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df0</span><span class="p">[</span><span class="s2">&quot;q35_ia_tools&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df0</span><span class="o">.</span><span class="n">q35_ia_tools</span><span class="o">.</span><span class="n">isna</span><span class="p">()]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Chat GPT, Mistral IA, LM Notebook
+chatgpt, euria
+Chat-GPT, Perplexity
+le chat ; chatgpt
+Intelligence Artificielle désigne de nombreuses technologies. Je n&#39;utilise pas d&#39;outils génératifs mais je travaille avec et développe des outils de transcription, d&#39;analyse de texte et de la parole, d&#39;analyse d&#39;image. Il s&#39;agit de logiciels qui tournent en local sur mon matériel.
+hugging face, openAI, gemini, midjourney
+Cursor
+whisper sur sharedocs
+Lumo
+Gemini, Ollama, Copilot
+DeepL - objection de conscience par rapport à l&#39;IA générative
+gemini, chatpgt, claude
+chatgpt
+Claude, ChatPGT
+chatGTP, Perplexity, Emmy
+NoScribe en local pour des transcriptions d&#39;entretiens + deepl pour des traductions courtes et ponctuelles.
+Deep L, Coco SSD dans le cadre d&#39;un projet de recherche, parfois Chat GPT pour tester les éventuels usages dans des travaux des étudiant.es
+chat gpt
+ChatGPT et Le CHat
+claude ia 
+ChatGPT
+chatgpt
+Chatgpt, deepl
+ChatGPT, Gemini, ResearchRabbit, NoteBookLM
+Deepl pour la traduction ; Buzz pour la retranscription
+Claude
+Antidote
+chatgpt, claude, perplexity...
+ChatGPT, Firefly
+Anara, Notebook lm, chat gpt, antidote
+Claude
+très peu ; chat GPT mais je l&#39;utilise très peu car ce n&#39;est pas un compte pro; je préfère attendre que l&#39;on ait des recommandations en terme d&#39;utilisation de l&#39;IA par l&#39;université, avec peut être un compte pro pour protéger le contenu dépose ; j&#39;utilise par contre deep pour une aide à la traduction
+ChatGPT
+ChatGPT, Claude, outils spécialisés (génération sonore : architectures Rave)
+Chatgpt
+Chat GPT
+ChatGPT, Gemini, claude
+Claude / ChatGPT
+Perplexity
+Chat GPT
+mistral, whisper
+ChatGPT, Gemini, ....
+ChatGPT
+ChatGPT, Claude, Sigmund
+Mistral, GPT
+traduction (Deepl)
+IA gratuites
+Claude, Elicit
+Mistral, Chat GPT, Claude
+chatgpt, Claude, etc.
+ChatGPT
+ChatGPT, OpenAI (recherche)
+Chat GPT, Perplexity
+GPT, gpt-oss-120, DeepSeek
+Claude et ChatGPT
+Claude Desktop, LeChat, SciSpace
+Je participe à deux projets de recherche qui utilisent ce type d&#39;outil
+Mistral, Gemini, Copilot, Chatgpt, DeepL
+Claude
+Emmy
+Perplexity, Claude, ChatGPT 
+Copilot, Deepseek, Whisper
+Chat GPT,  IA associée aux App (dont Apple IA)
+Chat GPT ; Claude
+Elicit
+mistral
+Claude, ChatGPT
+Correcteurs d&#39;orthographe 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pour le recodage de la question &quot;q35_ia_tools&quot; on ne prend que les noms d&#39;IA. On traitera les &quot;justifications&quot; avec la qeustion &quot;q37_raison_util_ia&quot;</span>
+<span class="n">list_ia</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chat GPT, Mistral IA, LM Notebook&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|mistral|notebooklm&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt, euria&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|euria&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chat-GPT, Perplexity&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|perplexity&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;le chat ; chatgpt&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;le chat|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Intelligence Artificielle désigne de nombreuses technologies. Je n&#39;utilise pas d&#39;outils génératifs mais je travaille avec et développe des outils de transcription, d&#39;analyse de texte et de la parole, d&#39;analyse d&#39;image. Il s&#39;agit de logiciels qui tournent en local sur mon matériel.&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;hugging face, openAI, gemini, midjourney&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;openai|hugging face|gemini&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Cursor&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;cursor&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;whisper sur sharedocs&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;whisper&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Lumo&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;lumo&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Gemini, Ollama, Copilot&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;gemini|ollama|copilot&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;DeepL - objection de conscience par rapport à l&#39;IA générative&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;deepl&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;gemini, chatpgt, claude&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;gemini|chatgpt|claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude, ChatPGT&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;chatGTP, Perplexity, Emmy&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|emmy|perplexity&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;NoScribe en local pour des transcriptions d&#39;entretiens + deepl pour des traductions courtes et ponctuelles.&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;whisper|deepl&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Deep L, Coco SSD dans le cadre d&#39;un projet de recherche, parfois Chat GPT pour tester les éventuels usages dans des travaux des étudiant.es&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;deepl|coco ssd|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;chat gpt&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT et Le CHat&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|le chat&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;claude ia&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chatgpt, deepl&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT, Gemini, ResearchRabbit, NoteBookLM&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|gemini|researchrabbit|notebooklm&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Deepl pour la traduction ; Buzz pour la retranscription&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;deepl|buzz&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Antidote&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;antidote&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt, claude, perplexity...&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|claude|perplexity&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT, Firefly&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|firefly&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Anara, Notebook lm, chat gpt, antidote&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;anara|notebooklm|chatgpt|antidote&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;très peu ; chat GPT mais je l&#39;utilise très peu car ce n&#39;est pas un compte pro; je préfère attendre que l&#39;on ait des recommandations en terme d&#39;utilisation de l&#39;IA par l&#39;université, avec peut être un compte pro pour protéger le contenu dépose ; j&#39;utilise par contre deep pour une aide à la traduction&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|deepl&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT, Claude, outils spécialisés (génération sonore : architectures Rave)&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|claude|outils spécialisés&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chatgpt&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chat GPT&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT, Gemini, claude&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|gemini|claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude / ChatGPT&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Perplexity&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;perplexity&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chat GPT&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;mistral, whisper&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;mistral|whisper&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT, Gemini, ....&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|gemini&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT, Claude, Sigmund&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|claude|sigmund&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Mistral&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;mistral|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;traduction (Deepl)&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;deepl&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;IA gratuites&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude, Elicit&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude|elicit&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Mistral, Chat GPT, Claude&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;mistral|chatgpt|claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt, Claude, etc.&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;ChatGPT, OpenAI (recherche)&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;openai|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chat GPT, Perplexity&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|perplexity&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;GPT, gpt-oss-120, DeepSeek&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|gpt-oss-120|deepseek&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude et ChatGPT&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude Desktop, LeChat, SciSpace&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude|le chat|scispace&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Je participe à deux projets de recherche qui utilisent ce type d&#39;outil&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Mistral, Gemini, Copilot, Chatgpt, DeepL&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;mistral|gemini|copilot|chatgpt|deepl&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Emmy&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;emmy&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Perplexity, Claude, ChatGPT&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;perplexity|claude|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Copilot, Deepseek, Whisper&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;copilot|deepseek|whisper&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chat GPT,  IA associée aux App (dont Apple IA)&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|apple ia&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Chat GPT ; Claude&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;chatgpt|claude&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Elicit&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;elicit&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;mistral&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;mistral&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Claude, ChatGPT&quot;</span><span class="p">,</span> <span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;claude|chatgpt&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s2">&quot;reponse&quot;</span><span class="p">:</span><span class="s2">&quot;Correcteurs d&#39;orthographe&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;correcteurs d&#39;orthographe&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df0</span><span class="p">[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df0</span><span class="o">.</span><span class="n">q35_ia_tools</span><span class="o">.</span><span class="n">isna</span><span class="p">()]):</span>
+    <span class="n">dict_ia</span><span class="o">=</span> <span class="n">list_ia</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    <span class="n">dict_ia</span><span class="p">[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_ia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">list_ia</span><span class="p">)</span>
+<span class="n">df01</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_ia</span><span class="p">[[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span><span class="s2">&quot;ia_name&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;ia_name&quot;</span><span class="p">:</span><span class="s2">&quot;q35_ia_tools_rec&quot;</span><span class="p">}),</span> <span class="n">on</span> <span class="o">=</span><span class="p">[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># on enregistre les nouvelles variables dans le dataframe original</span>
+<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
+    <span class="n">df01</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;135. ia_tools&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q35_ia_tools&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;4_logiciel_traitement&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;nominal_multiple&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df01</span><span class="o">.</span><span class="n">q35_ia_tools_rec</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">135</span><span class="p">,</span>
+               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="s2">&quot;Si oui, lesquels ?&quot;</span><span class="p">,</span>
+               <span class="s1">&#39;question_family&#39;</span><span class="p">:</span><span class="s1">&#39;q35&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;recode les outils ia&quot;</span>
+              <span class="p">}</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
+<span class="n">new_variable</span>
+<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>label</th>
+      <th>group</th>
+      <th>personal_data</th>
+      <th>type</th>
+      <th>opened_question</th>
+      <th>type_panda</th>
+      <th>no_question</th>
+      <th>question</th>
+      <th>question_family</th>
+      <th>comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>N°Obs</td>
+      <td>qno_obs</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>numérique</td>
+      <td>False</td>
+      <td>int64</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>qno</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1. so_principles</td>
+      <td>q1_so_principles</td>
+      <td>1_connaissance_so</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>1.0</td>
+      <td>1/ Diriez-vous que vous êtes familier.ère des ...</td>
+      <td>q1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2. hal_depot</td>
+      <td>q2_hal_depot</td>
+      <td>1_connaissance_so</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>2.0</td>
+      <td>2/ Avez-vous déjà déposé une production scient...</td>
+      <td>q2</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3. octavi_depot</td>
+      <td>q3_octavi_depot</td>
+      <td>2_bib_num</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>3.0</td>
+      <td>3/ Avez-vous des productions déposées sur Octa...</td>
+      <td>q3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4. open_data</td>
+      <td>q4_diff_data</td>
+      <td>3_entrepot</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>4.0</td>
+      <td>4/ Avez-vous déjà diffusé vos données de reche...</td>
+      <td>q4</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>63. Système de gestion de base de données</td>
+      <td>q16_sgbd_help</td>
+      <td>9_help_outil</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>19.0</td>
+      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
+      <td>q16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>64. Autre</td>
+      <td>q16_autre_help</td>
+      <td>9_help_outil</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>19.0</td>
+      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
+      <td>q16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>65. other_accomp_software</td>
+      <td>q16_1_other_software_help</td>
+      <td>9_help_outil</td>
+      <td>False</td>
+      <td>texte_libre</td>
+      <td>True</td>
+      <td>object</td>
+      <td>20.0</td>
+      <td>7.1/ Si Autre, précisez lequel (lesquels) ?</td>
+      <td>q16</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>113. Autre, précisez</td>
+      <td>q26_1_autre_rec</td>
+      <td>13_env_travail</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>113.0</td>
+      <td>Où travaillez-vous le plus souvent? Si autre, ...</td>
+      <td>q26</td>
+      <td>recode les autre lieux</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>135. ia_tools</td>
+      <td>q35_ia_tools</td>
+      <td>4_logiciel_traitement</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>135.0</td>
+      <td>Si oui, lesquels ?</td>
+      <td>q35</td>
+      <td>recode les outils ia</td>
+    </tr>
+  </tbody>
+</table>
+<p>168 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_col1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1040,6 +1640,7 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 </li>
 </ul>
 </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#ia-tools">IA Tools</a></li>
 </ul>
 
   </nav></div>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -356,6 +356,33 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting fr-core-news-md==3.8.0
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading fr_core_news_md-3.8.0-py3-none-any.whl (45.8 MB)
+?25l     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/45.8 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">12.3/45.8 MB</span> <span class=" -Color -Color-Red">71.3 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">27.5/45.8 MB</span> <span class=" -Color -Color-Red">73.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">45.6/45.8 MB</span> <span class=" -Color -Color-Red">83.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ <span class=" -Color -Color-Green">45.6/45.8 MB</span> <span class=" -Color -Color-Red">83.4 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">45.8/45.8 MB</span> <span class=" -Color -Color-Red">56.8 MB/s</span>  <span class=" -Color -Color-Yellow">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-C2">✔ Download and installation successful</span>
+You can now load the package via spacy.load(&#39;fr_core_news_md&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -387,12 +414,24 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/anonymous_answer_2026-05-11.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_in</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/anonymous_answer_2026-07-24.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_in</span><span class="p">:</span>
     <span class="n">df0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_in</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
 
 
-<span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
 <span class="n">df0</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Unnamed: 0&#39;, &#39;qno_obs&#39;, &#39;q1_so_principles&#39;, &#39;q2_hal_depot&#39;,
+       &#39;q3_octavi_depot&#39;, &#39;q4_diff_data&#39;, &#39;q4_autres_entrepots&#39;, &#39;q5_r&#39;,
+       &#39;q5_python&#39;, &#39;q5_excel&#39;,
+       ...
+       &#39;q16_ocr_help&#39;, &#39;q16_network_analysis_help&#39;, &#39;q16_odette_atom_help&#39;,
+       &#39;q16_caqdas_help&#39;, &#39;q16_carto_help&#39;, &#39;q16_sig_help&#39;, &#39;q16_sgbd_help&#39;,
+       &#39;q16_autre_help&#39;, &#39;q16_1_other_software_help&#39;, &#39;q26_1_autre_rec&#39;],
+      dtype=&#39;object&#39;, length=168)
 </pre></div>
 </div>
 </div>
@@ -417,6 +456,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;q4_autres_entrepots&#39;: 26, &#39;q5_1_other_lang&#39;: 37, &#39;q6_1_dev_exemple&#39;: 32, &#39;q7_1_other_sw_depot&#39;: 6, &#39;q9_utilite_accomp&#39;: 50, &#39;q10_other_type_data&#39;: 4, &#39;q17_util_accomp_software&#39;: 46, &#39;q18_1_utilite_accomp_methode&#39;: 46, &#39;q19_1_other_software_help&#39;: 4, &#39;q20_1_other_closed_software_help&#39;: 4, &#39;q21_util_accomp_closed_software&#39;: 46, &#39;q23_other_service_univ&#39;: 18, &#39;q25_1_statut_autre&#39;: 6, &#39;q26_1_autre_env&#39;: 27, &#39;q28_1_autre_archive_data&#39;: 15, &#39;q30_1_autre_webbrowser&#39;: 8, &#39;q31_1_autre_stockage&#39;: 13, &#39;q32_1_autre_collab_tools&#39;: 64, &#39;q33_1_autre_suavegarde&#39;: 12, &#39;q35_ia_tools&#39;: 68, &#39;q37_raison_util_ia&#39;: 68, &#39;q44_ufr_labo&#39;: 59, &#39;q16_1_other_software_help&#39;: 10}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -425,6 +469,124 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>q4_autres_entrepots</th>
+      <td>26</td>
+    </tr>
+    <tr>
+      <th>q5_1_other_lang</th>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>q6_1_dev_exemple</th>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>q7_1_other_sw_depot</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>q9_utilite_accomp</th>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>q10_other_type_data</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>q17_util_accomp_software</th>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>q18_1_utilite_accomp_methode</th>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>q19_1_other_software_help</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>q20_1_other_closed_software_help</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>q21_util_accomp_closed_software</th>
+      <td>46</td>
+    </tr>
+    <tr>
+      <th>q23_other_service_univ</th>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>q25_1_statut_autre</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>q26_1_autre_env</th>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>q28_1_autre_archive_data</th>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>q30_1_autre_webbrowser</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>q31_1_autre_stockage</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>q32_1_autre_collab_tools</th>
+      <td>64</td>
+    </tr>
+    <tr>
+      <th>q33_1_autre_suavegarde</th>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>q35_ia_tools</th>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>q37_raison_util_ia</th>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>q44_ufr_labo</th>
+      <td>59</td>
+    </tr>
+    <tr>
+      <th>q16_1_other_software_help</th>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -443,6 +605,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /home/onyxia/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="recuperation-des-affiliations">
@@ -458,6 +626,69 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df0</span><span class="o">.</span><span class="n">q44_ufr_labo</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df0</span><span class="o">.</span><span class="n">q44_ufr_labo</span><span class="o">.</span><span class="n">isna</span><span class="p">()]):</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 UFR Psychologie
+2 SDL, SFL
+3 UFR de Psychologie, UR DysCo
+4 UFR DROIT 
+5 UFR Culture et communication / CEMTI
+6 UFR de psychologie, Laboratoire DysCo
+7 Psychologie, Laboratoire CHArt
+8 IED / Laboratoire Paragraphe
+9 UFR LLCE LEA 
+10 Mitsic, Humanités numériques, Paragraphe
+11 IDHES (UMR 8533)
+12 UFR AES-EG, laboratoire LED
+13 Textes et sociétés, Cresppa
+14 UFR Arts, philosophie, esthétique, département Arts, AIAC/EPHA
+15 SEPF
+16 Psychologie
+17 UFR Psychologie
+18 IEE/cresppa
+19 UFR Arts, Département Photo, Aiac, epha
+20 Arts, Arts plastiques, AIAC
+21 AES-EG, LED
+22 UFR Psychologie, affiliation laboratoire : LAPPS
+23 ED-CLI
+24 UFR Psychologie, UR Paragraphe
+25 UFR Psychologie, laboratoire DysCo
+26 UFR Arts, Département Musique, Laboratoire Musidanse
+27 UFR de psychologie
+28 Laboratoire d&#39;économie dionysien (LED)
+29 UFR AES Economie Gestion / LED
+30 UFR ERITES ; Géographie ; Ladyss
+31 UFR LLCE/LEA
+32 UFR Psychologie - CHART
+33 MITSIC / LIASD
+34 UFR eriTES
+35 UFR eritES, géographie, UMR LADYSS
+36 UFR eriTES
+37 UFR LE
+38 UFR Textes et sociétés, Département Histoire, laboratoire ARSCAN (UMR 7041)
+39 Textes et sociétés ; UMR IDHES
+40 UFR LLCE-LEA, DEPA, UR TRANSCRIT
+41 MITSIC
+42 UFR-CC / CÉMTI
+43 UFR de Psychologie
+44 IUT Tremblay-en-France, département MLT, LED
+45 Culture et communication, Cemti
+46 MITSIC
+47 département d&#39;histoire, laboratoire IDHE.S
+48 UFR Culture et Communication, CEMTI
+49 ufr 5
+50 IED Psychologie/ CHArt
+51 UFR SDL
+52 AES-Eco. Gestion
+53 ED PTS, CIRCEFT
+54 UFR MITSIC
+55 Paragraphe
+56 AES économie-gestion
+57 UR DysCo
+58 UFR SEPF, département de sciences de l&#39;education, LIAgE
+59 eristes
 </pre></div>
 </div>
 </div>
@@ -497,6 +728,71 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tokenizer</span><span class="p">(</span><span class="n">df0</span><span class="p">,</span> <span class="s1">&#39;q37_raison_util_ia&#39;</span><span class="p">,</span> <span class="n">list_stopword</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;NOUN&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Chat GPT, Mistral IA, LM Notebook&#39;: &#39;chat gpt&#39;,
+ &#39;chatgpt, euria&#39;: &#39;chatgpt|euria&#39;,
+ &#39;Chat-GPT, Perplexity&#39;: &#39;&#39;,
+ &#39;le chat ; chatgpt&#39;: &#39;chat|chatgpt&#39;,
+ &quot;Intelligence Artificielle désigne de nombreuses technologies. Je n&#39;utilise pas d&#39;outils génératifs mais je travaille avec et développe des outils de transcription, d&#39;analyse de texte et de la parole, d&#39;analyse d&#39;image. Il s&#39;agit de logiciels qui tournent en local sur mon matériel.&quot;: &#39;technologies|outils|outils|transcription|analyse|texte|parole|analyse|image|logiciels|local|matériel&#39;,
+ &#39;hugging face, openAI, gemini, midjourney&#39;: &#39;face|openai&#39;,
+ &#39;Cursor&#39;: &#39;cursor&#39;,
+ &#39;whisper sur sharedocs&#39;: &#39;sharedocs&#39;,
+ &#39;Lumo&#39;: &#39;lumo&#39;,
+ &#39;Gemini, Ollama, Copilot&#39;: &#39;&#39;,
+ &quot;DeepL - objection de conscience par rapport à l&#39;IA générative&quot;: &#39;objection|conscience|rapport&#39;,
+ &#39;gemini, chatpgt, claude&#39;: &#39;gemini&#39;,
+ &#39;chatgpt&#39;: &#39;chatgpt&#39;,
+ &#39;Claude, ChatPGT&#39;: &#39;&#39;,
+ &#39;chatGTP, Perplexity, Emmy&#39;: &#39;&#39;,
+ &quot;NoScribe en local pour des transcriptions d&#39;entretiens + deepl pour des traductions courtes et ponctuelles.&quot;: &#39;local|transcriptions|entretiens|traductions&#39;,
+ &quot;Deep L, Coco SSD dans le cadre d&#39;un projet de recherche, parfois Chat GPT pour tester les éventuels usages dans des travaux des étudiant.es&quot;: &#39;cadre|projet|recherche|chat gpt|usages|travaux|étudiant.es&#39;,
+ &#39;chat gpt&#39;: &#39;chat gpt&#39;,
+ &#39;ChatGPT et Le CHat&#39;: &#39;le chat&#39;,
+ &#39;claude ia &#39;: &#39;claude ia&#39;,
+ &#39;ChatGPT&#39;: &#39;chatgpt&#39;,
+ &#39;Chatgpt, deepl&#39;: &#39;&#39;,
+ &#39;ChatGPT, Gemini, ResearchRabbit, NoteBookLM&#39;: &#39;&#39;,
+ &#39;Deepl pour la traduction ; Buzz pour la retranscription&#39;: &#39;traduction|buzz|retranscription&#39;,
+ &#39;Claude&#39;: &#39;claude&#39;,
+ &#39;Antidote&#39;: &#39;antidote&#39;,
+ &#39;chatgpt, claude, perplexity...&#39;: &#39;chatgpt|perplexity&#39;,
+ &#39;ChatGPT, Firefly&#39;: &#39;&#39;,
+ &#39;Anara, Notebook lm, chat gpt, antidote&#39;: &#39;chat gpt|antidote&#39;,
+ &quot;très peu ; chat GPT mais je l&#39;utilise très peu car ce n&#39;est pas un compte pro; je préfère attendre que l&#39;on ait des recommandations en terme d&#39;utilisation de l&#39;IA par l&#39;université, avec peut être un compte pro pour protéger le contenu dépose ; j&#39;utilise par contre deep pour une aide à la traduction&quot;: &#39;chat|compte|recommandations|terme|utilisation|université|compte|contenu|aide|traduction&#39;,
+ &#39;ChatGPT, Claude, outils spécialisés (génération sonore : architectures Rave)&#39;: &#39;outils|génération|sonore : architectures rave&#39;,
+ &#39;Chatgpt&#39;: &#39;chatgpt&#39;,
+ &#39;Chat GPT&#39;: &#39;chat gpt&#39;,
+ &#39;ChatGPT, Gemini, claude&#39;: &#39;&#39;,
+ &#39;Claude / ChatGPT&#39;: &#39;&#39;,
+ &#39;Perplexity&#39;: &#39;perplexity&#39;,
+ &#39;mistral, whisper&#39;: &#39;mistral&#39;,
+ &#39;ChatGPT, Gemini, ....&#39;: &#39;&#39;,
+ &#39;ChatGPT, Claude, Sigmund&#39;: &#39;&#39;,
+ &#39;Mistral, GPT&#39;: &#39;&#39;,
+ &#39;traduction (Deepl)&#39;: &#39;traduction&#39;,
+ &#39;IA gratuites&#39;: &#39;ia gratuites&#39;,
+ &#39;Claude, Elicit&#39;: &#39;&#39;,
+ &#39;Mistral, Chat GPT, Claude&#39;: &#39;chat gpt&#39;,
+ &#39;chatgpt, Claude, etc.&#39;: &#39;chatgpt&#39;,
+ &#39;ChatGPT, OpenAI (recherche)&#39;: &#39;recherche&#39;,
+ &#39;Chat GPT, Perplexity&#39;: &#39;chat gpt&#39;,
+ &#39;GPT, gpt-oss-120, DeepSeek&#39;: &#39;gpt-oss-120&#39;,
+ &#39;Claude et ChatGPT&#39;: &#39;&#39;,
+ &#39;Claude Desktop, LeChat, SciSpace&#39;: &#39;scispace&#39;,
+ &quot;Je participe à deux projets de recherche qui utilisent ce type d&#39;outil&quot;: &#39;projets|recherche|type|outil&#39;,
+ &#39;Mistral, Gemini, Copilot, Chatgpt, DeepL&#39;: &#39;&#39;,
+ &#39;Emmy&#39;: &#39;emmy&#39;,
+ &#39;Perplexity, Claude, ChatGPT &#39;: &#39;&#39;,
+ &#39;Copilot, Deepseek, Whisper&#39;: &#39;deepseek&#39;,
+ &#39;Chat GPT,  IA associée aux App (dont Apple IA)&#39;: &#39;chat gpt&#39;,
+ &#39;Chat GPT ; Claude&#39;: &#39;chat gpt&#39;,
+ &#39;Elicit&#39;: &#39;elicit&#39;,
+ &#39;mistral&#39;: &#39;mistral&#39;,
+ &#39;Claude, ChatGPT&#39;: &#39;&#39;,
+ &quot;Correcteurs d&#39;orthographe &quot;: &#39;correcteurs|orthographe&#39;}
 </pre></div>
 </div>
 </div>
