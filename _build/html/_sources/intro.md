@@ -17,4 +17,6 @@ C’est dans ce cadre qu’une enquête est conduite auprès des chercheurs, des
 * les pratiques de publication en accès ouvert et la diffusion des résultats scientifiques.
 
 
-[![](https://badgen.net/badge/Download/PDF/009485?scale=1.6)](https://github.com/luneauaymeric/enquete_SO_p8/blob/8b83b931d60c3169e1eb86d7e88b89f70333cb88/enquete_so_p8.pdf) 
+[![](https://badgen.net/badge/Download/PDF/009485?scale=1.6)](https://raw.githubusercontent.com//luneauaymeric/enquete_SO_p8/main/enquete_so_p8.pdf) 
+
+
