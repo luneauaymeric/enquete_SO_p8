@@ -15,3 +15,6 @@ C’est dans ce cadre qu’une enquête est conduite auprès des chercheurs, des
 * le cycle de vie des données de la recherche (collecte, traitement, gestion, documentation, ouverture et partage) ;
 
 * les pratiques de publication en accès ouvert et la diffusion des résultats scientifiques.
+
+
+[![](https://badgen.net/badge/Download/PDF/009485?scale=1.6)](https://github.com/luneauaymeric/enquete_SO_p8/blob/8b83b931d60c3169e1eb86d7e88b89f70333cb88/enquete_so_p8.pdf) 

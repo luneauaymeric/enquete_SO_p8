@@ -1,9 +1,15 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Enquête Science Ouverte
-author: BU Paris 8
-#logo: logo.png
+# Book settings
+title                       : Enquête sur les besoins à 8 en matière de Science Ouverte
+author                      : Aymeric Luneau, BU Paris 8  # The author of the book
+copyright                   : "2022"  # Copyright year to be placed in the footer
+logo                        : logo.png
+
+
+
+#logo: 
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -12,6 +18,8 @@ execute:
 
 # Define the name of the latex output file for PDF builds
 latex:
+  latex_engine              : pdflatex  # one of 'pdflatex', 'xelatex' (recommended for unicode), 'luatex', 'platex', 'uplatex'
+  use_jupyterbook_latex     : true # use sphinx-jupyterbook-latex for pdf builds as default
   latex_documents:
     targetname: enquete_so_p8.tex
 
