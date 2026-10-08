@@ -20,6 +20,9 @@ Mattermost
 Nakala
   Nakala est un entrepôt de données de recherche pour les Sciences Humaines et Sociales certifié entrepôt de données de confiance par le Core Trust Seal en 2026 et par le Comité pour la science ouverte depuis 2024.
 
+SD-Box
+  La SD-Box est le seul moyen d’accès à l’infrastructure centrale du Centre d'accès sécurisé aux données (CASD) et à l’environnement de travail de l'utilisateur. C'est un dispositif technique conçu et mis au point par le CASD pour répondre aux besoins et contraintes des utilisateurs et déposants de données.
+
 ShareDocs
   ShareDocs est un gestionnaire de fichiers mis en oeuvre par l'IR* Huma-Num, sur ses propres serveurs, pouvant être utilisé via un navigateur web, un client WebDAV ou un logiciel de synchronisation de fichiers.
 
