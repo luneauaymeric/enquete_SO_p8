@@ -1,0 +1,20 @@
+<svg width="153.28000000000003" height="32" viewBox="0 0 958 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Download: PDF">
+  <title>Download: PDF</title>
+  <linearGradient id="tDGcZ" x2="0" y2="100%">
+    <stop offset="0" stop-opacity=".1" stop-color="#EEE"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <mask id="PLssz"><rect width="958" height="200" rx="30" fill="#FFF"/></mask>
+  <g mask="url(#PLssz)">
+    <rect width="644" height="200" fill="#555"/>
+    <rect width="314" height="200" fill="#009485" x="644"/>
+    <rect width="958" height="200" fill="url(#tDGcZ)"/>
+  </g>
+  <g aria-hidden="true" text-anchor="start" font-family="Verdana,DejaVu Sans,sans-serif" font-size="110">
+    <text x="60" y="148" textLength="544" fill="#000" opacity="0.25">Download</text>
+    <text x="50" y="138" textLength="544" fill="#fff">Download</text>
+    <text x="699" y="148" textLength="214" fill="#000" opacity="0.25">PDF</text>
+    <text x="689" y="138" textLength="214" fill="#fff">PDF</text>
+  </g>
+  
+</svg>
