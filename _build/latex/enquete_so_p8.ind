@@ -1,0 +1,45 @@
+\begin{sphinxtheindex}
+\let\lettergroup\sphinxstyleindexlettergroup
+\let\lettergroupDefault\sphinxstyleindexlettergroupDefault
+\let\spxpagem\sphinxstyleindexpagemain
+\let\spxentry\sphinxstyleindexentry
+\let\spxextra\sphinxstyleindexextra
+
+
+  \lettergroup{G}
+  \item \spxentry{Gitlab}, \spxpagem{\hyperpage{33}}
+
+  \indexspace
+
+  \lettergroup{H}
+  \item \spxentry{HNurl}, \spxpagem{\hyperpage{33}}
+
+  \indexspace
+
+  \lettergroup{I}
+  \item \spxentry{Isidore}, \spxpagem{\hyperpage{33}}
+
+  \indexspace
+
+  \lettergroup{K}
+  \item \spxentry{Kanboard}, \spxpagem{\hyperpage{33}}
+
+  \indexspace
+
+  \lettergroup{M}
+  \item \spxentry{Mattermost}, \spxpagem{\hyperpage{33}}
+
+  \indexspace
+
+  \lettergroup{N}
+  \item \spxentry{Nakala}, \spxpagem{\hyperpage{33}}
+
+  \indexspace
+
+  \lettergroup{S}
+  \item \spxentry{SD\sphinxhyphen {}Box}, \spxpagem{\hyperpage{33}}
+  \item \spxentry{ShareDocs}, \spxpagem{\hyperpage{33}}
+  \item \spxentry{Statistical Software Components}, \spxpagem{\hyperpage{34}}
+  \item \spxentry{Stylo}, \spxpagem{\hyperpage{34}}
+
+\end{sphinxtheindex}
