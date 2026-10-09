@@ -20,8 +20,14 @@ Mattermost
 Nakala
   Nakala est un entrepôt de données de recherche pour les Sciences Humaines et Sociales certifié entrepôt de données de confiance par le Core Trust Seal en 2026 et par le Comité pour la science ouverte depuis 2024.
 
+SD-Box
+  La SD-Box est le seul moyen d’accès à l’infrastructure centrale du Centre d'accès sécurisé aux données (CASD) et à l’environnement de travail de l'utilisateur. C'est un dispositif technique conçu et mis au point par le CASD pour répondre aux besoins et contraintes des utilisateurs et déposants de données.
+
 ShareDocs
   ShareDocs est un gestionnaire de fichiers mis en oeuvre par l'IR* Huma-Num, sur ses propres serveurs, pouvant être utilisé via un navigateur web, un client WebDAV ou un logiciel de synchronisation de fichiers.
+
+Statistical Software Components
+  Le dépôt SSC (*Statistical Software Components)*, souvent appelé l'*archive de Boston College*, est le principal catalogue de commandes et de packages développés par la communauté d'utilisateurs de Stata.
 
 Stylo
     Stylo est un éditeur de texte scientifique simplifiant la rédaction et l'édition d'articles scientifiques en Sciences Humaines et Sociales. Il est hébergé sur https://stylo.huma-num.fr. Stylo est un logiciel libre, dont le code est disponible sur github. Il est développé developpé depuis 2020 par la Chaire de recherche du Canada sur les écritures numériques, avec le soutien de l'Université de Montréal, d'Érudit, du Centre de recherche interuniversitaire sur les humanités numériques et de l'IR* Huma-Num dans le cadre l'entente CRIHN-HN, sous licence GPL-3.0. 
