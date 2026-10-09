@@ -341,7 +341,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#champs-disciplinaires">Champs disciplinaires</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-pratiques-de-travail">Les pratiques de travail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-lieux-de-travail">Les lieux de travail</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-systemes-d-exploitation">Les systèmes d’exploitation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation-de-l-ia">Utilisation de l’IA</a></li>
 </ul>
@@ -393,7 +393,7 @@ document.write(`
 <h2>Cultures épistémiques<a class="headerlink" href="#cultures-epistemiques" title="Link to this heading">#</a></h2>
 <section id="les-laboratoires-et-les-ufr-representes">
 <h3>Les laboratoires et les UFR représentés<a class="headerlink" href="#les-laboratoires-et-les-ufr-representes" title="Link to this heading">#</a></h3>
-<p>Un peu moins de 50% des personnes interrogées ont accepté de donner des informations sur leur ufr ou laboratoire de rattachement. Ces informations ont été collectées à l’aide de la dernière question proposant aux participants de laisser leurs coordonnées afin de poursuivre les échanges ultérieurement (<a class="reference internal" href="#last-question-coordonnee"><span class="std std-numref">Fig. 1</span></a>.</p>
+<p>Un peu moins de 50% des personnes interrogées ont accepté de donner des informations sur leur ufr ou laboratoire de rattachement. Ces informations ont été collectées à l’aide de la dernière question proposant aux participants de laisser leurs coordonnées afin de poursuivre les échanges ultérieurement (<a class="reference internal" href="#last-question-coordonnee"><span class="std std-numref">Fig. 1</span></a>).</p>
 <figure class="align-default" id="last-question-coordonnee">
 <img alt="../../_images/capture_question_coordonnee.jpg" src="../../_images/capture_question_coordonnee.jpg" />
 <figcaption>
@@ -586,49 +586,23 @@ document.write(`
 <section id="champs-disciplinaires">
 <h3>Champs disciplinaires<a class="headerlink" href="#champs-disciplinaires" title="Link to this heading">#</a></h3>
 <p>Nous avons également demandé aux participant de préciser leurs champs de recherches à l’aide de la nomenclature définie par l’European Research Council (ERC). Cette nomenclature compte 22 modalités.</p>
-<p>Sans surprise pour une université ancrée dans les sciences humaines et sociales, 92% des répondants appartiennent à un champ des “sciences sociales et humaines” et plus de la moitié s’inscrivent dans le champ intitulé “Le mond social et ses interactions” (SH3) (<code class="xref std std-numref docutils literal notranslate"><span class="pre">research_fields_fig</span></code>). On observe aussi la présense des sciences informatiques et des mathématiques, ainsi que des neurosciences.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initialize the matplotlib figure</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-
-<span class="c1"># Plot the total crashes</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">set_color_codes</span><span class="p">(</span><span class="s2">&quot;pastel&quot;</span><span class="p">)</span>
-
-<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;total&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">gb_data</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Non&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;nb&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">col</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">gb_data</span><span class="p">,</span>
-            <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Oui&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">titre</span> <span class="o">=</span> <span class="s2">&quot;Les autres lieux de dépot des données de recherche&quot;</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_label_text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">titre</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;i&gt;&quot;</span><span class="p">,</span><span class="s2">&quot;(&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;&lt;/i&gt;&quot;</span><span class="p">,</span><span class="s2">&quot;)&quot;</span><span class="p">))</span>
-    
-
-<span class="n">sns</span><span class="o">.</span><span class="n">despine</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="c1">#plt.savefig(f&quot;viz/autre_entrepot_rec.png&quot;, bbox_inches=&#39;tight&#39;, dpi = 200)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Initialize the matplotlib figure</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Plot the total crashes</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">sns</span><span class="o">.</span><span class="n">set_color_codes</span><span class="p">(</span><span class="s2">&quot;pastel&quot;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
+<figure class="align-default" id="capture-research-fields">
+<img alt="../../_images/Capture_research_field.jpg" src="../../_images/Capture_research_field.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Les champs de recherche, une question à choix multiples</span><a class="headerlink" href="#capture-research-fields" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Sans surprise pour une université ancrée dans les sciences humaines et sociales, 92% des répondants appartiennent à un champ des “sciences sociales et humaines” et plus de la moitié s’inscrivent dans le champ intitulé “SH3 Le mond social et ses interactions” (<a class="reference internal" href="#research-fields-fig"><span class="std std-numref">Fig. 3</span></a>). On observe aussi la présense des sciences informatiques et des mathématiques, ainsi que des neurosciences.</p>
+<figure class="align-default" id="research-fields-fig">
+<img alt="../../_images/research_fields.png" src="../../_images/research_fields.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Les champs de recherche des répondants</span><a class="headerlink" href="#research-fields-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 </section>
-<section id="les-pratiques-de-travail">
-<h2>Les pratiques de travail<a class="headerlink" href="#les-pratiques-de-travail" title="Link to this heading">#</a></h2>
+<section id="les-lieux-de-travail">
+<h2>Les lieux de travail<a class="headerlink" href="#les-lieux-de-travail" title="Link to this heading">#</a></h2>
 <p>Afin de connaître les pratiques de travail des répondants, nous leur avons d’abord demandé où ils travaillaient le plus souvent en classant par ordre de priorité les trois modalités suivantes :</p>
 <ul class="simple">
 <li><p>“À mon domicile”</p></li>
@@ -649,36 +623,76 @@ document.write(`
 <blockquote>
 <div><p>“Où je peux, je n’ai pas de bureau à la fac (15 m2 pour 6 titulaires).”</p>
 </div></blockquote>
-<p>Ces réactions recoupent les résultats observés concernant les services à développer, puisque 80% des répondants estiment qu’il serait utile de développer des espaces de travail (<a class="reference internal" href="production_et_analyse_donnees.html#service-to-develop"><span class="std std-numref">Fig. 13</span></a>).</p>
+<p>Ces réactions recoupent les résultats observés concernant les services à développer, puisque 80% des répondants estiment qu’il serait utile de développer des espaces de travail (<a class="reference internal" href="production_et_analyse_donnees.html#service-to-develop"><span class="std std-numref">Fig. 15</span></a>).</p>
 <div class="pst-scrollable-table-container"><table class="table" id="env-travail">
 <caption><span class="caption-number">Table 4 </span><span class="caption-text">Où travaillez-vous le plus souvent ?</span><a class="headerlink" href="#env-travail" title="Link to this table">#</a></caption>
 <thead>
-<tr class="row-odd"><th class="head text-right"><p>rang</p></th>
-<th class="head text-right"><p>A mon domicile</p></th>
-<th class="head text-right"><p>Dans mon bureau sur site</p></th>
-<th class="head text-right"><p>Autre, précisez</p></th>
+<tr class="row-odd"><th class="head"><p>Lieu de travail</p></th>
+<th class="head"><p>Rang</p></th>
+<th class="head"><p>Effectifs</p></th>
+<th class="head"><p>fréquences (%, total des répondants)</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-right"><p>1</p></td>
-<td class="text-right"><p>85 (71,4%)</p></td>
-<td class="text-right"><p>29 (24,4%)</p></td>
-<td class="text-right"><p>5  (4,2%)</p></td>
+<tr class="row-even"><td><p><strong>A mon domicile</strong></p></td>
+<td><p><strong>Tous rangs confondus</strong></p></td>
+<td><p><strong>108</strong></p></td>
+<td><p><strong>90,76</strong></p></td>
 </tr>
-<tr class="row-odd"><td class="text-right"><p>2</p></td>
-<td class="text-right"><p>20 (16,8%)</p></td>
-<td class="text-right"><p>36 (20,3%)</p></td>
-<td class="text-right"><p>12 (10,1%)</p></td>
+<tr class="row-odd"><td><p></p></td>
+<td><p>1</p></td>
+<td><p>85</p></td>
+<td><p>71,43</p></td>
 </tr>
-<tr class="row-even"><td class="text-right"><p>3</p></td>
-<td class="text-right"><p>3  (2,5%)</p></td>
-<td class="text-right"><p>5  (4,2%)</p></td>
-<td class="text-right"><p>14 (11,8%)</p></td>
+<tr class="row-even"><td><p></p></td>
+<td><p>2</p></td>
+<td><p>20</p></td>
+<td><p>16,81</p></td>
 </tr>
-<tr class="row-odd"><td class="text-right"><p>Total</p></td>
-<td class="text-right"><p>108 (90,8%)</p></td>
-<td class="text-right"><p>70 (58,8%)</p></td>
-<td class="text-right"><p>31 (26,1%)</p></td>
+<tr class="row-odd"><td><p></p></td>
+<td><p>3</p></td>
+<td><p>3</p></td>
+<td><p>2,52</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Dans mon bureau sur site</strong></p></td>
+<td><p><strong>Tous rangs confondus</strong></p></td>
+<td><p><strong>70</strong></p></td>
+<td><p><strong>58,82</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>1</p></td>
+<td><p>29</p></td>
+<td><p>24,37</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>2</p></td>
+<td><p>36</p></td>
+<td><p>30,25</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>3</p></td>
+<td><p>5</p></td>
+<td><p>4,20</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Autre, précisez</strong></p></td>
+<td><p><strong>Tous rangs confondus</strong></p></td>
+<td><p><strong>31</strong></p></td>
+<td><p><strong>26,05</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>1</p></td>
+<td><p>5</p></td>
+<td><p>4,20</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>2</p></td>
+<td><p>12</p></td>
+<td><p>10,08</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>3</p></td>
+<td><p>14</p></td>
+<td><p>11,76</p></td>
 </tr>
 </tbody>
 </table>
@@ -690,9 +704,9 @@ document.write(`
 <div class="pst-scrollable-table-container"><table class="table" id="os-systeme">
 <caption><span class="caption-number">Table 5 </span><span class="caption-text">Les systèmes d’exploitation utilisés</span><a class="headerlink" href="#os-systeme" title="Link to this table">#</a></caption>
 <thead>
-<tr class="row-odd"><th class="head text-left"><p>q29_os_sys</p></th>
-<th class="head text-right"><p>nb</p></th>
-<th class="head text-right"><p>freq</p></th>
+<tr class="row-odd"><th class="head text-left"><p>Systèmes d’exploitation</p></th>
+<th class="head text-right"><p>Effectifs</p></th>
+<th class="head text-right"><p>Frequences (%)</p></th>
 </tr>
 </thead>
 <tbody>
@@ -719,12 +733,56 @@ document.write(`
 </tbody>
 </table>
 </div>
+<div class="pst-scrollable-table-container"><table class="table" id="web-browser">
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Les navigateur Web</span><a class="headerlink" href="#web-browser" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Navigateurs</p></th>
+<th class="head text-right"><p>Effectifs</p></th>
+<th class="head text-right"><p>Frequences (%)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Firefox</p></td>
+<td class="text-right"><p>62</p></td>
+<td class="text-right"><p>52,1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Chrome</p></td>
+<td class="text-right"><p>28</p></td>
+<td class="text-right"><p>23,53</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Safari</p></td>
+<td class="text-right"><p>17</p></td>
+<td class="text-right"><p>14,29</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Autre, précisez</p></td>
+<td class="text-right"><p>6</p></td>
+<td class="text-right"><p>5,04</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Chromium</p></td>
+<td class="text-right"><p>3</p></td>
+<td class="text-right"><p>2,52</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Tor browser</p></td>
+<td class="text-right"><p>2</p></td>
+<td class="text-right"><p>1,68</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Edge</p></td>
+<td class="text-right"><p>1</p></td>
+<td class="text-right"><p>0,84</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Total</p></td>
+<td class="text-right"><p>119</p></td>
+<td class="text-right"><p>100,00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <section id="utilisation-de-l-ia">
 <h2>Utilisation de l’IA<a class="headerlink" href="#utilisation-de-l-ia" title="Link to this heading">#</a></h2>
 <p>68 répondants (soit 57%) disent avoir recourt à l’intelligence artificielle pour leurs recherches, dont 65% utilisent des versions gratuites. La même proportion cite Chat GPT. Il est l’outil le plus utilisé.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="top-5-ia">
-<caption><span class="caption-number">Table 6 </span><span class="caption-text">Les 5 premiers outils IA les plus cités. Les pourcentages sont établis sur les 65 personnes ayant recourt à l’IA</span><a class="headerlink" href="#top-5-ia" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Les 5 premiers outils IA les plus cités. Les pourcentages sont établis sur les 65 personnes ayant recourt à l’IA</span><a class="headerlink" href="#top-5-ia" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Outils IA</p></th>
 <th class="head text-right"><p>nb</p></th>
@@ -761,14 +819,23 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>L’analyse de la question “pourquoi les utilisez-vous ?” à l’aide de l’algorithme de Topic modeling “BERTopic” <span id="id1">[<a class="reference internal" href="../../biblio.html#id3" title="Maarten Grootendorst. BERTopic: Neural topic modeling with a class-based TF-IDF procedure. URL: http://arxiv.org/abs/2203.05794 (visited on 2025-04-11), arXiv:2203.05794, doi:10.48550/arXiv.2203.05794.">Grootendorst, n.d.</a>]</span>. Elle fait ressortir six motifs “idéaltypiques” avancés par les personnes enquêtées pour expliquer leur utilisation de l’IA. Le motif qui revient le plus souvent est le “gain de temps”, que ce soit pour rédiger des e-mails, effectuer des tâches administratives ou rechercher de l’information :</p>
+<p>67 de ces 68 personnes ont ensuite répondu à la question “pourquoi les utilisez-vous ?”. Une première lecture des réponses nous a permis de constater que les répondants mobilisaient parfois plusieurs raisons pour justifier leur utilisationde l’intelligence artificielle. Il nous a alors semblé intéressant de recourir à un algorithme de “topic modeling” afin d’identifier les “répertoires de motifs” idéaltypiques. L’algorithme choisi est BERTopic <span id="id1">[<a class="reference internal" href="../../biblio.html#id3" title="Maarten Grootendorst. BERTopic: Neural topic modeling with a class-based TF-IDF procedure. URL: http://arxiv.org/abs/2203.05794 (visited on 2025-04-11), arXiv:2203.05794, doi:10.48550/arXiv.2203.05794.">Grootendorst, n.d.</a>]</span>. S’appuyant sur des modèles de plongement de mots (<em>word embedding</em>) de type sentence-transformers, BERTopic est réputé pour être plus perfomant que des modèles traditionnels comme le <em>Latent Dirichlet Allocation</em> (LDA) lorsqu’il s’agit d’extraire des thématiques à partir d’un corpus de phrases courtes. Ce qui est le cas ici puisque la réponse la plus longue apportée à la question “pourquoi les utilisez-vous ?” est de 37 mots.</p>
+<p>Une fois le plongement de mot effectué à partir d’un modèle pré-entrainé, l’algorithme BERTopic réduit la dimensionalité de l’embedding avec UMAP et extrait les clusters (groupe de réponses) avec la méthode HDBSCAN. Pour finir, l’aglorithme propose une labellisation en prenant les termes les plus spécificiques de chacun des clusters. Cette spécificité est calculée via un dérivé du TF-IDF (<em>Term frequency-inverse document frequency</em>) où l‘“unité de référence” n’est plus le document, mais le cluster.</p>
+<p>Le détail du traitement effectué est disponible ici : <a class="github reference external" href="https://github.com/luneauaymeric/enquete_SO_p8/blob/main/script_traitement/topic_modeling.ipynb">luneauaymeric/enquete_SO_p8</a></p>
+<figure class="align-default" id="q37-raison-ia">
+<img alt="../../_images/raison_ia_bertopic.png" src="../../_images/raison_ia_bertopic.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">6 raisons d’utiliser l’IA</span><a class="headerlink" href="#q37-raison-ia" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>L’analyse fait ressortir six raisons “idéaltypiques” avancés par les personnes enquêtées pour expliquer leur utilisation de l’IA. La raison qui revient le plus souvent est le “gain de temps”, que ce soit pour rédiger des e-mails, effectuer des tâches administratives ou rechercher de l’information :</p>
 <blockquote>
 <div><p>“Pour gagner du temps sur des procédures routinières ou pour formaliser des courriels ou autres plus rapidement”</p>
 </div></blockquote>
 <blockquote>
 <div><p>“Pour gagner du temps dans la recherche informations”</p>
 </div></blockquote>
-<p>Les deux autres principaux motifs sont :</p>
+<p>Les deux autres principales raisons sont :</p>
 <ul class="simple">
 <li><p>l’aide à la traduction ;</p></li>
 </ul>
@@ -784,10 +851,9 @@ document.write(`
 <blockquote>
 <div><p>analyse d’entretiens, recherche dans de multiples entretiens</p>
 </div></blockquote>
-<p>L’IA est enfin utilisée  pour :</p>
+<p>L’IA est enfin utilisée pour :</p>
 <ul class="simple">
 <li><p>relire et corriger des textes;</p></li>
-<li></li>
 </ul>
 <blockquote>
 <div><p>Relectures, améliorations du manuscrit</p>
@@ -800,18 +866,11 @@ document.write(`
 </div></blockquote>
 <ul class="simple">
 <li><p>comprendre ce que ces outils font ;</p></li>
-<li></li>
 </ul>
 <blockquote>
 <div><p>J’essaye de comprendre comment ils fonctionnent</p>
 </div></blockquote>
-<p>Bien sûr, plusieurs motifs peuvent apparaître au sein d’une même réponse. Par exemple, un des répondants a écrit : “NoScribe en local pour des <strong>transcriptions d’entretiens</strong> et deepl pour des <strong>traductions courtes et ponctuelles</strong>”.</p>
-<figure class="align-default" id="q37-raison-ia">
-<img alt="../../_images/raison_ia_bertopic.png" src="../../_images/raison_ia_bertopic.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">6 raisons d’utiliser l’IA</span><a class="headerlink" href="#q37-raison-ia" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
+<p>Bien sûr, plusieurs raisons peuvent apparaître au sein d’une même réponse. Par exemple, un des répondants a écrit : “NoScribe en local pour des <strong>transcriptions d’entretiens</strong> et deepl pour des <strong>traductions courtes et ponctuelles</strong>”.</p>
 </section>
 </section>
 
@@ -885,7 +944,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#champs-disciplinaires">Champs disciplinaires</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-pratiques-de-travail">Les pratiques de travail</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-lieux-de-travail">Les lieux de travail</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-systemes-d-exploitation">Les systèmes d’exploitation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utilisation-de-l-ia">Utilisation de l’IA</a></li>
 </ul>
