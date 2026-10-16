@@ -2,6 +2,10 @@
 
 ```{glossary}
 
+Principes FAIR
+ Facile à trouver (*findable*), Accessible
+
+
 Gitlab
   L'IR* Huma-Num met à disposition des projets de recherche en sciences humaines et sociales (SHS) une instance du logiciel Gitlab. L'instance GitLab d'Huma-Num permet l'hébergement sécurisé et le partage maîtrisé de fichiers, en particulier des fichiers de code informatique (tous langages) selon le protocole de versionnage git.
 
@@ -20,6 +24,9 @@ Mattermost
 Nakala
   Nakala est un entrepôt de données de recherche pour les Sciences Humaines et Sociales certifié entrepôt de données de confiance par le Core Trust Seal en 2026 et par le Comité pour la science ouverte depuis 2024.
 
+Principes FAIR
+ Facile à trouver, Accessible, Interoperable, Réutilisable
+ 
 SD-Box
   La SD-Box est le seul moyen d’accès à l’infrastructure centrale du Centre d'accès sécurisé aux données (CASD) et à l’environnement de travail de l'utilisateur. C'est un dispositif technique conçu et mis au point par le CASD pour répondre aux besoins et contraintes des utilisateurs et déposants de données.
 
