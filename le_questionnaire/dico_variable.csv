@@ -155,28 +155,14 @@ open source ?",q19,
 153. Dernière question saisie,q52_dernière_question_saisie,17_metadonnee,False,simple_nominal,False,float64,,,q52,
 154. Origine,q53_origine,17_metadonnee,False,simple_nominal,False,object,,,q53,
 155. Appareil utilisé pour la saisie,q54_appareil_utilisé_pour_la_saisie,17_metadonnee,False,simple_nominal,False,object,,,q54,
-110. statut_rec,q25_statut_rec,12_descript_repondant,False,simple_nominal,False,object,25.0,2/ Êtes-vous ?,q25,
-110. doctorant,q25_doctorant,12_descript_repondant,False,simple_nominal,False,bool,25.0,2/ Êtes-vous ?,q25,
-3. octavi_depot_rec,q3_octavi_rec,2_bib_num,False,simple_nominal,False,object,3.0,"3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?",q3,
-"5.rec Autre, précisez",q4_autres_entrepots_rec,3_entrepot,False,nominal_multiple,False,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?,q4,
-13.1 logiciel de traitment,q5_logiciel_traitement_rec,4_logiciel_traitement,False,multiple_choice,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?",q5,Regroupe les questions 5 et 6 sur les logiciels de traitement
-13.2 familles de logiciel,q5_family_logi,4_logiciel_traitement,False,multiple_choice,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?",q5,Classe les logiciels par famille
-16. dev_exemple,q6_1_dev_what,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",q6,"Recodage de la question 16. Restitue le type d'objet développé : traitement du son, jeu, base de donnée, site web"
-16. dev_exemple,q6_1_dev_group,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",q6,"Classe les exemples de logiciels développés dans des groupes : outils de traitement et d'analyse, outils de diffusion, d'expériences"
-16. dev_exemple,q6_1_dev_how,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",q6,Précise le langage ou l'outil de programmation utilisé
-14. other_lang,q5_1_other_lang_rec,4_logiciel_traitement,False,multiple_choice,False,object,14.0,"5.1/ Si Autre, précisez lequel (lesquels) ?",q5,Recodage de la question 14. mise en basse casse des logiciels cités.
-53. Tableur,q16_tableur_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-54. Logiciels d'analyse statistique (ex. R – Rstudio),q16_logiciels_d'analyse_statistique_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-"55. Python (web-scraping, traitement automatique des langues…)",q16_python_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-"56. Logiciels d'exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)",q16_garg_iram_hyperbase_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-57. Logiciels d'OCR : reconnaissance Optique de Caractères,q16_ocr_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-58. Logiciels d'analyse de réseaux (ex. Gephi),q16_network_analysis_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-"59. Logiciels d'édition numérique en ligne (ex. Odette, Atom)",q16_odette_atom_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-"60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)",q16_caqdas_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-61. Logiciels de cartographie thématique (ex. Magrit),q16_carto_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-62. Logiciels de SIG (ex. QGis),q16_sig_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-63. Système de gestion de base de données,q16_sgbd_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-64. Autre,q16_autre_help,9_help_outil,False,ordinal,False,object,19.0,7/ Ressentez-vous le besoin d'un accompagnement à l'utilisation de logiciels en open source ?,q16,
-65. other_accomp_software,q16_1_other_software_help,9_help_outil,False,texte_libre,True,object,20.0,"7.1/ Si Autre, précisez lequel (lesquels) ?",q16,
-"113. Autre, précisez",q26_1_autre_rec,13_env_travail,False,nominal_multiple,False,object,113.0,"Où travaillez-vous le plus souvent? Si autre, précisez",q26,recode les autre lieux
-135. ia_tools,q35_ia_tools,4_logiciel_traitement,False,nominal_multiple,False,object,135.0,"Si oui, lesquels ?",q35,recode les outils ia
+110. statut_rec,q25_statut_rec,12_descript_repondant,False,simple_nominal,False,object,25.0,2/ Êtes-vous ?,,
+110. doctorant,q25_doctorant,12_descript_repondant,False,simple_nominal,False,object,25.0,2/ Êtes-vous ?,,
+3. octavi_depot_rec,q3_octavi_rec,2_bib_num,False,simple_nominal,False,object,3.0,"3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?",,
+14. other_lang_rec,q5_1_other_lang_rec,4_logiciel_traitement,False,multiple_choice,False,object,14.0,"5.1/ Si Autre, précisez lequel (lesquels) ?",q5,Recodage de la question 14. mise en basse casse des logiciels cités.
+13.1 recodage logiciel de traitment,q5_logiciel_traitement_rec,4_logiciel_traitement,False,multiple_choice,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?",q5,Regroupe les questions 5 et 6 sur les logiciels de traitement
+13.2 recodage familles de logiciel,q5_family_logi,4_logiciel_traitement,False,multiple_choice,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?",q5,Classe les logiciels par famille
+16. recodage dev_exemple,q6_1_dev_what,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",,"Recodage de la question 16. Restitue le type d'objet développé : traitement du son, jeu, base de donnée, site web"
+16. recodage dev_exemple groupe,q6_1_dev_group,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",,"Classe les exemples de logiciels développés dans des groupes : outils de traitement et d'analyse, outils de diffusion, collecte de données, etc."
+16. recodage dev_exemple how,q6_1_dev_how,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",,Précise le langage ou l'outil de programmation utilisé
+Research area id,no_cluster,champ de recherche,False,simple_nominal,False,float64,135.0,,,recode des champs de recherche
+Research area nom,nom_cluster,champ de recherche,False,simple_nominal,False,object,135.0,,,recode des champs de recherche
