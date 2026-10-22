@@ -1,0 +1,1197 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Chargement et préparation des données &#8212; Enquête sur les besoins à 8 en matière de Science Ouverte</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'term_term_analysis';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Enquête sur les besoins à 8 en matière de Science Ouverte - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Enquête sur les besoins à 8 en matière de Science Ouverte - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Données de Recherche et Science Ouverte, pratiques et besoins - Enquête 2025-2026
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Synthèse</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="methode.html">Modalités de passation du questionnaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="script_analyse/synthese/main_results.html">Principaux résultats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/profil_repondant.html">Profils des enquêtés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Glossaire et bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexe I - Analyses descriptives</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/connaissance_science_ouverte.html">Connaissance et pratique de la Science Ouverte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/production_et_analyse_donnees.html">Production et analyse des données</a></li>
+<li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/Outils_humanum.html">Le TGIR Huma-num et ses outils</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes II - Méthodes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="calssification_repondant/profil_repondant_discpline.html">Identification des profils disciplinaires</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="calssification_repondant/clusterisation_indiv_research_fields.html">Profil disciplinaire</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="script_traitement/topic_modeling.html">Les raisons d’utiliser l’IA</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/term_term_analysis.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chargement et préparation des données</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequence-des-termes-par-documents-sur-facebook">Fréquence des termes par documents (sur facebook)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-de-la-matrice-termes-termes">Création de la matrice termes-termes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcule-du-cosine">Calcule du cosine</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">functools</span><span class="w"> </span><span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tqdm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="c1">#import bamboolib as bam</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sklearn</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> 
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">metrics</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.neighbors</span><span class="w"> </span><span class="kn">import</span> <span class="n">NearestNeighbors</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+    
+<span class="kn">from</span><span class="w"> </span><span class="nn">kneed</span><span class="w"> </span><span class="kn">import</span> <span class="n">KneeLocator</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.express</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">px</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx.algorithms.community</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx_comm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ipysigma</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sigma</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">community</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">community_louvain</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.cm</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">igraph</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ig</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="chargement-et-preparation-des-donnees">
+<h1>Chargement et préparation des données<a class="headerlink" href="#chargement-et-preparation-des-donnees" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aymeric</span> <span class="o">=</span> <span class="s2">&quot;/home/aymeric/python-scripts/anses_medialab/datas&quot;</span> <span class="c1">#aymeric</span>
+<span class="n">jp</span> <span class="o">=</span> <span class="s1">&#39;d:/Projects/Medialab/Anses/&#39;</span> <span class="c1"># Jean Philippe</span>
+
+<span class="n">path</span><span class="o">=</span> <span class="n">aymeric</span>
+<span class="n">tfidf</span><span class="o">=</span><span class="s1">&#39;tfidf&#39;</span>
+<span class="c1">#domain=&#39;media&#39;</span>
+<span class="c1">#domain=&#39;twitter&#39;</span>
+<span class="c1">#domain=&#39;facebook&#39;</span>
+
+<span class="n">index_file_JP</span><span class="o">=</span><span class="s2">&quot;indexation_results/index_alldefault_nameexhaustive_aymeric.csv&quot;</span>
+<span class="n">index_file_AL</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;index_alldefault_nameexhaustive_aymeric.csv&quot;</span>
+<span class="n">term_specific</span> <span class="o">=</span><span class="s2">&quot;list_100_term_chi2.csv&quot;</span>
+<span class="n">index_file</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">index_file_AL</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">index_file</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;/home/aymeric/python-scripts/anses_medialab/datas/index_alldefault_nameexhaustive_aymeric.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">index_file</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;doc_id&quot;</span> <span class="p">:</span><span class="s2">&quot;string&quot;</span><span class="p">,</span> <span class="s2">&quot;sent_id&quot;</span><span class="p">:</span> <span class="s2">&quot;string&quot;</span><span class="p">})</span>
+<span class="n">specific_term</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">term_specific</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">specific_term</span> <span class="o">=</span> <span class="n">specific_term</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Unnamed: 2&quot;</span><span class="p">])</span>
+<span class="n">list_periods</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">path</span><span class="si">}</span><span class="s1">/analyse_periods/list_periods_all_sources.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span> <span class="n">infer_datetime_format</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;yearmonth&#39;</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y-%m&#39;</span><span class="p">))</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;yearmonth&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;2008-04&#39;</span><span class="p">,</span> <span class="s1">&#39;2010-01&#39;</span><span class="p">,</span><span class="s1">&#39;2021-02&#39;</span><span class="p">])]</span>
+<span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;yearmonth&#39;</span><span class="p">])</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7832372
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="n">df0</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">list_periods</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;origin&quot;</span><span class="p">,</span> <span class="s2">&quot;yearmonth&quot;</span><span class="p">],</span> <span class="n">how</span><span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="frequence-des-termes-par-documents-sur-facebook">
+<h2>Fréquence des termes par documents (sur facebook)<a class="headerlink" href="#frequence-des-termes-par-documents-sur-facebook" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span><span class="p">[</span><span class="s2">&quot;doc_sent_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df0</span><span class="p">[</span><span class="s2">&quot;doc_id&quot;</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;_&quot;</span><span class="o">+</span><span class="n">df0</span><span class="p">[</span><span class="s2">&quot;sent_id&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">if</span> <span class="n">l</span> <span class="ow">is</span> <span class="n">Null</span><span class="p">:</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>term</th>
+      <th>doc_id</th>
+      <th>sent_id</th>
+      <th>origin</th>
+      <th>source</th>
+      <th>date</th>
+      <th>yearmonth</th>
+      <th>P_twitter</th>
+      <th>P_media</th>
+      <th>P_facebook</th>
+      <th>doc_sent_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>glyphosate</td>
+      <td>707244725942747136</td>
+      <td>1</td>
+      <td>twitter</td>
+      <td>Titrespresse.com</td>
+      <td>2016-03-08</td>
+      <td>2016-03</td>
+      <td>4.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>707244725942747136_1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>europe</td>
+      <td>707244725942747136</td>
+      <td>1</td>
+      <td>twitter</td>
+      <td>Titrespresse.com</td>
+      <td>2016-03-08</td>
+      <td>2016-03</td>
+      <td>4.0</td>
+      <td>8.0</td>
+      <td>6.0</td>
+      <td>707244725942747136_1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>pesticides</td>
+      <td>1396436134209720320</td>
+      <td>0</td>
+      <td>twitter</td>
+      <td>ChachaP</td>
+      <td>2021-05-23</td>
+      <td>2021-05</td>
+      <td>7.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>1396436134209720320_0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>herbicide</td>
+      <td>1396436134209720320</td>
+      <td>0</td>
+      <td>twitter</td>
+      <td>ChachaP</td>
+      <td>2021-05-23</td>
+      <td>2021-05</td>
+      <td>7.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>1396436134209720320_0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>glyphosate</td>
+      <td>1396436134209720320</td>
+      <td>0</td>
+      <td>twitter</td>
+      <td>ChachaP</td>
+      <td>2021-05-23</td>
+      <td>2021-05</td>
+      <td>7.0</td>
+      <td>10.0</td>
+      <td>11.0</td>
+      <td>1396436134209720320_0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>3836926</th>
+      <td>sortie</td>
+      <td>968101561401561088</td>
+      <td>0</td>
+      <td>twitter</td>
+      <td>RiskAssur/Notre-Siecle/PereLaFouine</td>
+      <td>2018-02-26</td>
+      <td>2018-02</td>
+      <td>5.0</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>968101561401561088_0</td>
+    </tr>
+    <tr>
+      <th>3836927</th>
+      <td>sortie du glyphosate</td>
+      <td>968101561401561088</td>
+      <td>0</td>
+      <td>twitter</td>
+      <td>RiskAssur/Notre-Siecle/PereLaFouine</td>
+      <td>2018-02-26</td>
+      <td>2018-02</td>
+      <td>5.0</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>968101561401561088_0</td>
+    </tr>
+    <tr>
+      <th>3836928</th>
+      <td>glyphosate</td>
+      <td>968101561401561088</td>
+      <td>0</td>
+      <td>twitter</td>
+      <td>RiskAssur/Notre-Siecle/PereLaFouine</td>
+      <td>2018-02-26</td>
+      <td>2018-02</td>
+      <td>5.0</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>968101561401561088_0</td>
+    </tr>
+    <tr>
+      <th>3836929</th>
+      <td>nicolas hulot</td>
+      <td>968101561401561088</td>
+      <td>0</td>
+      <td>twitter</td>
+      <td>RiskAssur/Notre-Siecle/PereLaFouine</td>
+      <td>2018-02-26</td>
+      <td>2018-02</td>
+      <td>5.0</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>968101561401561088_0</td>
+    </tr>
+    <tr>
+      <th>3836930</th>
+      <td>hulot</td>
+      <td>968101561401561088</td>
+      <td>0</td>
+      <td>twitter</td>
+      <td>RiskAssur/Notre-Siecle/PereLaFouine</td>
+      <td>2018-02-26</td>
+      <td>2018-02</td>
+      <td>5.0</td>
+      <td>8.0</td>
+      <td>7.0</td>
+      <td>968101561401561088_0</td>
+    </tr>
+  </tbody>
+</table>
+<p>3836931 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">term_doc_freq</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">name_period</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">what</span><span class="p">,</span> <span class="n">targeted_terms</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    
+    <span class="n">df_p</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;origin&quot;</span><span class="p">]</span><span class="o">==</span> <span class="n">origin</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">name_period</span><span class="p">]</span><span class="o">==</span> <span class="n">period</span><span class="p">)]</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">targeted_terms</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">doc_with_targeted_terms</span> <span class="o">=</span> <span class="n">df_p</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_p</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">targeted_terms</span><span class="p">)]</span>
+        <span class="n">doc_with_glypho</span> <span class="o">=</span> <span class="n">glypho</span><span class="p">[</span><span class="s2">&quot;doc_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+        <span class="n">df_p</span> <span class="o">=</span> <span class="n">df_p</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">doc_with_targeted_terms</span><span class="p">[[</span><span class="s2">&quot;doc_id&quot;</span><span class="p">]],</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;doc_id&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+ 
+    
+    <span class="k">if</span> <span class="n">origin</span> <span class="o">==</span> <span class="s2">&quot;facebook&quot;</span><span class="p">:</span>
+        <span class="c1"># Step: Keep rows where origin is one of: facebook</span>
+        <span class="n">specific_term_origin</span> <span class="o">=</span> <span class="n">specific_term</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">specific_term</span><span class="p">[</span><span class="s1">&#39;origin&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;facebook&#39;</span><span class="p">)</span> <span class="o">&amp;</span> 
+                                          <span class="p">(</span><span class="n">specific_term</span><span class="p">[</span><span class="s2">&quot;P&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">period</span><span class="p">)]</span>
+        
+        <span class="n">specific_term_origin</span> <span class="o">=</span> <span class="n">specific_term_origin</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chi2&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+        <span class="n">topN</span> <span class="o">=</span> <span class="n">specific_term_origin</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span>
+        
+    <span class="k">elif</span> <span class="n">origin</span> <span class="o">==</span> <span class="s2">&quot;media&quot;</span><span class="p">:</span>
+        <span class="n">specific_term_origin</span> <span class="o">=</span> <span class="n">specific_term</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">specific_term</span><span class="p">[</span><span class="s1">&#39;origin&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;media&#39;</span><span class="p">)</span> <span class="o">&amp;</span> 
+                                      <span class="p">(</span><span class="n">specific_term</span><span class="p">[</span><span class="s2">&quot;P&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">period</span><span class="p">)]</span>
+        
+        <span class="n">specific_term_origin</span> <span class="o">=</span> <span class="n">specific_term_origin</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chi2&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+        <span class="n">topN</span> <span class="o">=</span> <span class="n">specific_term_origin</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span>
+    
+    <span class="k">elif</span> <span class="n">origin</span> <span class="o">==</span> <span class="s2">&quot;twitter&quot;</span><span class="p">:</span>
+        <span class="n">specific_term_origin</span> <span class="o">=</span> <span class="n">specific_term</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">specific_term</span><span class="p">[</span><span class="s1">&#39;origin&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;twitter&#39;</span><span class="p">)</span> <span class="o">&amp;</span> 
+                                      <span class="p">(</span><span class="n">specific_term</span><span class="p">[</span><span class="s2">&quot;P&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">period</span><span class="p">)]</span>
+        
+        <span class="n">specific_term_origin</span> <span class="o">=</span> <span class="n">specific_term_origin</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chi2&#39;</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="p">[</span><span class="kc">False</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+        <span class="n">topN</span> <span class="o">=</span> <span class="n">specific_term_origin</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span>
+    
+    <span class="c1">#topN = df_p[&quot;term&quot;].value_counts().index[:N]</span>
+    <span class="n">df_p</span><span class="o">=</span><span class="n">df_p</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_p</span><span class="p">[</span><span class="s2">&quot;origin&quot;</span><span class="p">]</span><span class="o">==</span><span class="n">origin</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_p</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">topN</span><span class="p">))]</span>
+
+    <span class="n">df_term_freq</span> <span class="o">=</span> <span class="n">df_p</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;term&#39;</span><span class="p">,</span> <span class="n">what</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;sent_id&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">df_term_freq</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">term_doc_freq</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">name_period</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">period</span><span class="p">,</span> <span class="n">what</span><span class="p">,</span> <span class="n">targeted_terms</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    
+    <span class="n">df_p</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;origin&quot;</span><span class="p">]</span><span class="o">==</span> <span class="n">origin</span><span class="p">)]</span><span class="c1"># &amp; (data[name_period]&lt;= period)]</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">targeted_terms</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">doc_with_targeted_terms</span> <span class="o">=</span> <span class="n">df_p</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_p</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">targeted_terms</span><span class="p">)]</span>
+        <span class="n">doc_with_glypho</span> <span class="o">=</span> <span class="n">glypho</span><span class="p">[</span><span class="s2">&quot;doc_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+        <span class="n">df_p</span> <span class="o">=</span> <span class="n">df_p</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">doc_with_targeted_terms</span><span class="p">[[</span><span class="s2">&quot;doc_id&quot;</span><span class="p">]],</span> <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;doc_id&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">pass</span>
+        
+    <span class="n">topN</span><span class="o">=</span><span class="n">df_p</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">index</span><span class="p">[:</span><span class="n">N</span><span class="p">]</span>
+    
+    <span class="c1">#topN = df_p[&quot;term&quot;].value_counts().index[:N]</span>
+    <span class="n">df_p</span><span class="o">=</span><span class="n">df_p</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df_p</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">topN</span><span class="p">))]</span>
+
+    <span class="n">df_term_freq</span> <span class="o">=</span> <span class="n">df_p</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;term&#39;</span><span class="p">,</span> <span class="n">what</span><span class="p">])</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;sent_id&#39;</span><span class="p">,</span> <span class="s1">&#39;size&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">df_term_freq</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="creation-de-la-matrice-termes-termes">
+<h2>Création de la matrice termes-termes<a class="headerlink" href="#creation-de-la-matrice-termes-termes" title="Link to this heading">#</a></h2>
+<p>multiplication de la matrice documents-termes par sa transposée</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_term_term_matrix</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">what</span><span class="p">):</span>
+    <span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> 
+                           <span class="n">values</span><span class="o">=</span><span class="s1">&#39;freq&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="n">what</span><span class="p">],</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">],</span> <span class="n">aggfunc</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">observed</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">term_term</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">table</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span> <span class="c1"># multiplication de la transposé de</span>
+    <span class="k">return</span> <span class="n">term_term</span><span class="p">,</span> <span class="n">table</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">mutual_information_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">):</span> <span class="c1"># a term_term matrix</span>
+    <span class="n">mi_matrix</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="c1">#freq_term = [x for x in matrix.diagonal()] # pour obtenir la fréquence de chaque terme (somme de chaque ligne)</span>
+    <span class="n">freq_term</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">-</span> <span class="n">matrix</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span>
+    
+    <span class="c1">#Nombre de paires est égale à la somme des lignes moins la diagonale (à diviser par 2?)</span>
+    <span class="c1">#Nb_pairs = (sum(np.sum(matrix,axis=1).tolist()) -  sum(freq_term))/2 </span>
+    <span class="n">Nb_pairs</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">freq_term</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>
+        <span class="n">list_mi</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)):</span>
+            <span class="n">nb_cooc</span> <span class="o">=</span> <span class="n">matrix</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="c1">#nombre de cooccurrences des termes i et j</span>
+            <span class="n">freq_i</span> <span class="o">=</span> <span class="n">freq_term</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># fréquence de i</span>
+            <span class="n">freq_j</span> <span class="o">=</span> <span class="n">freq_term</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1"># fréquence de j</span>
+        
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span> <span class="p">:</span> 
+                <span class="n">mutual_info</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">nb_cooc</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">:</span>
+                    <span class="n">mutual_info</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">else</span><span class="p">:</span> <span class="c1">#calcule mutual information</span>
+                    <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="n">nb_cooc</span><span class="o">*</span><span class="n">Nb_pairs</span><span class="p">)</span>
+                    <span class="n">denom</span> <span class="o">=</span> <span class="n">freq_i</span><span class="o">*</span><span class="n">freq_j</span>
+                    <span class="n">mutual_info</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">num</span><span class="o">/</span><span class="n">denom</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">mutual_info</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">mutual_info</span> <span class="o">=</span> <span class="mi">0</span>
+
+            <span class="n">list_mi</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mutual_info</span><span class="p">)</span>
+        <span class="n">mi_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">list_mi</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">mi_matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mi_matrix</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">freq_term</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">term_term</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">-</span> <span class="n">term_term</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span> <span class="c1"># pour obtenir la fréquence de chaque terme (somme de chaque ligne)</span>
+<span class="c1">#Nombre de paires est égale à la somme des lignes moins la diagonale (à diviser par 2?)</span>
+
+<span class="n">freq_term</span>
+<span class="n">Nb_pairs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13694</span><span class="o">/</span><span class="mf">406267054.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">mi_matrix</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">freq_term</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">term_term</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">-</span> <span class="n">term_term</span><span class="o">.</span><span class="n">diagonal</span><span class="p">()</span> <span class="c1"># pour obtenir la fréquence de chaque terme (somme de chaque ligne)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#Nombre de paires est égale à la somme des lignes moins la diagonale (à diviser par 2?)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">freq_term</span>
+
+<span class="ne">NameError</span>: name &#39;term_term&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="calcule-du-cosine">
+<h2>Calcule du cosine<a class="headerlink" href="#calcule-du-cosine" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">find_k_neighbor</span><span class="p">(</span><span class="n">mi_matrix</span><span class="p">,</span> <span class="n">precompute</span><span class="p">):</span>
+    <span class="n">mi_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mi_matrix</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">precompute</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span><span class="n">scipy</span><span class="o">.</span><span class="n">sparse</span><span class="o">.</span><span class="n">csc_matrix</span><span class="p">(</span><span class="n">mi_array</span><span class="p">)</span>
+        <span class="n">dist</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">pairwise</span><span class="o">.</span><span class="n">cosine_distances</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+        <span class="n">list_voisin</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">list_voisin_dist</span> <span class="o">=</span><span class="p">[]</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="n">dist</span><span class="p">,</span> <span class="n">x</span>
+        <span class="n">neigh</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;precomputed&#39;</span><span class="p">)</span>
+        <span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">dist</span><span class="p">)):</span>
+            <span class="n">voisins</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">dist</span><span class="p">[[</span><span class="n">x</span><span class="p">]],</span> <span class="n">return_distance</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">voisins_dist</span> <span class="o">=</span> <span class="n">voisins</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="n">voisins_id</span> <span class="o">=</span> <span class="n">voisins</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="c1">#print(voisins_id)</span>
+            <span class="n">list_voisin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisins_id</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">list_voisin_dist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisins_dist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">list_voisin</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">list_voisin_dist</span> <span class="o">=</span><span class="p">[]</span>
+        <span class="n">samples</span> <span class="o">=</span> <span class="n">mi_array</span>
+        <span class="n">neigh</span> <span class="o">=</span> <span class="n">NearestNeighbors</span><span class="p">(</span><span class="n">n_neighbors</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;cosine&#39;</span><span class="p">)</span>
+        <span class="n">neigh</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">samples</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mi_array</span><span class="p">)):</span>
+            <span class="n">voisins</span> <span class="o">=</span> <span class="n">neigh</span><span class="o">.</span><span class="n">kneighbors</span><span class="p">(</span><span class="n">mi_array</span><span class="p">[[</span><span class="n">x</span><span class="p">]],</span> <span class="n">return_distance</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">voisins_dist</span> <span class="o">=</span> <span class="n">voisins</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="n">voisins_id</span> <span class="o">=</span> <span class="n">voisins</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+            <span class="c1">#print(voisins_id)</span>
+            <span class="n">list_voisin</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisins_id</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">list_voisin_dist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">voisins_dist</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">list_voisin</span><span class="p">,</span> <span class="n">list_voisin_dist</span>
+    
+    
+        
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">matrix_to_df</span><span class="p">(</span><span class="n">list_voisin</span><span class="p">,</span> <span class="n">list_voisin_dist</span><span class="p">,</span> <span class="n">table</span><span class="p">):</span>
+    <span class="n">df_dist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">list_voisin_dist</span><span class="p">)</span>
+    <span class="n">df_dist</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">columns</span>
+    <span class="n">df_dist</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dist</span><span class="o">.</span><span class="n">index</span>
+    <span class="n">list_id</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">list_term</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">list_voisins_dist</span> <span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">term</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_dist</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_dist</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="n">list_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">list_term</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+            <span class="n">neig_dist</span> <span class="o">=</span> <span class="n">df_dist</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+            <span class="n">list_voisins_dist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neig_dist</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">list_id</span><span class="p">,</span> <span class="s2">&quot;term&quot;</span><span class="p">:</span> <span class="n">list_term</span><span class="p">,</span> <span class="s2">&quot;distances&quot;</span><span class="p">:</span><span class="n">list_voisins_dist</span><span class="p">}</span>
+    <span class="n">df_dist_voisin</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="c1">#dtype={&quot;id&quot; :&quot;string&quot;})</span>
+    <span class="n">df_dist_voisin</span><span class="p">[</span><span class="s2">&quot;row_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_dist_voisin</span><span class="o">.</span><span class="n">index</span> <span class="c1">#.astype(&#39;str&#39;)</span>
+    <span class="n">df_dist_voisin</span> <span class="o">=</span> <span class="n">df_dist_voisin</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;row_id&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
+
+    <span class="n">df_voisin</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">list_voisin</span><span class="p">)</span>
+    <span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="o">.</span><span class="n">columns</span>
+    <span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="o">.</span><span class="n">index</span>
+    <span class="n">list_id</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">list_term</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">list_voisins</span> <span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">term</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;term&quot;</span><span class="p">]):</span>
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_voisin</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="n">list_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">list_term</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">term</span><span class="p">)</span>
+            <span class="n">neig</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">x</span><span class="p">]</span>
+            <span class="n">list_voisins</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">neig</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">list_id</span><span class="p">,</span> <span class="s2">&quot;term&quot;</span><span class="p">:</span> <span class="n">list_term</span><span class="p">,</span> <span class="s2">&quot;voisins&quot;</span><span class="p">:</span><span class="n">list_voisins</span><span class="p">}</span>
+    <span class="n">df_voisin</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;row_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="o">.</span><span class="n">index</span>
+    <span class="n">df_voisin</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;row_id&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;voisins&quot;</span> <span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
+    <span class="n">df_voisin</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_dist_voisin</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;row_id&quot;</span><span class="p">,</span> <span class="s2">&quot;term&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span> <span class="s2">&quot;left&quot;</span><span class="p">)</span>
+    
+    <span class="n">df_id</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="p">[[</span><span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;term&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+    <span class="n">df_id</span><span class="p">[</span><span class="s2">&quot;voisins&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_id</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;str&#39;</span><span class="p">)</span>
+    <span class="n">df_id</span> <span class="o">=</span> <span class="n">df_id</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s2">&quot;voisins&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">})</span>
+    <span class="n">df_voisin</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_id</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;voisins&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+    
+    <span class="n">df_voisin</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;voisins&quot;</span><span class="p">])</span>
+    <span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;id_x&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;id_&quot;</span><span class="o">+</span><span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;id_x&quot;</span><span class="p">]</span>
+    <span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;id_y&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;id_&quot;</span><span class="o">+</span><span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;id_y&quot;</span><span class="p">]</span>
+    <span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;row_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;row_id_&quot;</span><span class="o">+</span><span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;row_id&quot;</span><span class="p">]</span>
+    <span class="n">df_voisin</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;term_x&quot;</span><span class="p">]</span><span class="o">!=</span><span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;term_y&quot;</span><span class="p">]]</span>
+    
+    <span class="k">return</span> <span class="n">df_voisin</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_term_freq</span> <span class="o">=</span> <span class="n">term_doc_freq</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df0</span><span class="p">,</span> <span class="n">origin</span> <span class="o">=</span> <span class="s2">&quot;twitter&quot;</span><span class="p">,</span> 
+                             <span class="n">name_period</span> <span class="o">=</span> <span class="s2">&quot;P_twitter&quot;</span><span class="p">,</span> <span class="n">period</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span> 
+                             <span class="n">what</span> <span class="o">=</span> <span class="s2">&quot;doc_id&quot;</span><span class="p">,</span> <span class="n">targeted_terms</span> <span class="o">=</span> <span class="p">[],</span>
+                            <span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_13694</span><span class="o">/</span><span class="mf">220138478.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">df_term_freq</span> <span class="o">=</span> <span class="n">term_doc_freq</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df0</span><span class="p">,</span> <span class="n">origin</span> <span class="o">=</span> <span class="s2">&quot;twitter&quot;</span><span class="p">,</span> 
+<span class="g g-Whitespace">      </span><span class="mi">2</span>                              <span class="n">name_period</span> <span class="o">=</span> <span class="s2">&quot;P_twitter&quot;</span><span class="p">,</span> <span class="n">period</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>                              <span class="n">what</span> <span class="o">=</span> <span class="s2">&quot;doc_id&quot;</span><span class="p">,</span> <span class="n">targeted_terms</span> <span class="o">=</span> <span class="p">[],</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                             <span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;df0&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">term_term</span><span class="p">,</span> <span class="n">table</span> <span class="o">=</span> <span class="n">create_term_term_matrix</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">df_term_freq</span><span class="p">,</span>  <span class="n">what</span> <span class="o">=</span><span class="s2">&quot;doc_id&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mi_matrix</span> <span class="o">=</span> <span class="n">mutual_information_matrix</span><span class="p">(</span><span class="n">matrix</span><span class="o">=</span> <span class="n">term_term</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_voisin</span><span class="p">,</span> <span class="n">list_voisin_dist</span> <span class="o">=</span> <span class="n">find_k_neighbor</span><span class="p">(</span><span class="n">mi_matrix</span> <span class="o">=</span> <span class="n">mi_matrix</span><span class="p">,</span> <span class="n">precompute</span> <span class="o">=</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_voisin</span> <span class="o">=</span> <span class="n">matrix_to_df</span><span class="p">(</span><span class="n">list_voisin</span><span class="p">,</span> <span class="n">list_voisin_dist</span><span class="p">,</span> <span class="n">table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#df_voisin.to_csv(f&quot;{path}/analyse_periods/5_plus_proche_voisins_periode_0_fb.csv&quot;, sep =&quot;,&quot;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_voisin0</span> <span class="o">=</span> <span class="n">df_voisin</span><span class="p">[[</span><span class="s2">&quot;term_x&quot;</span><span class="p">,</span> <span class="s2">&quot;term_y&quot;</span><span class="p">,</span> <span class="s2">&quot;distances&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_voisin</span><span class="p">[</span><span class="s2">&quot;distances&quot;</span><span class="p">]</span><span class="o">&gt;=</span> <span class="mf">0.2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_voisin0</span><span class="o">.</span><span class="n">distances</span><span class="o">.</span><span class="n">hist</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:&gt;
+</pre></div>
+</div>
+<img alt="_images/7e7dda4d0d2a66a16d208e92c78690850938576ec5183631d68128c75744a092.png" src="_images/7e7dda4d0d2a66a16d208e92c78690850938576ec5183631d68128c75744a092.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span><span class="n">df_voisin0</span><span class="p">,</span> <span class="s1">&#39;term_x&#39;</span><span class="p">,</span> <span class="s1">&#39;term_y&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;distances&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#first compute the best partition</span>
+<span class="n">partition</span> <span class="o">=</span> <span class="n">community_louvain</span><span class="o">.</span><span class="n">best_partition</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">weight</span> <span class="o">=</span> <span class="s2">&quot;distances&quot;</span><span class="p">,</span><span class="n">resolution</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">list_communities</span> <span class="o">=</span> <span class="p">[</span><span class="n">partition</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">partition</span><span class="p">]</span>
+<span class="nb">set</span><span class="p">(</span><span class="n">list_communities</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">partition</span> <span class="k">if</span> <span class="n">partition</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">}</span>
+<span class="n">value</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;% des échantillons&#39;,
+ &#39;@genefutures&#39;,
+ &#39;allemagne&#39;,
+ &#39;ania&#39;,
+ &#39;animal&#39;,
+ &#39;autorité&#39;,
+ &#39;concentration maximale admissible&#39;,
+ &#39;concentration supérieure&#39;,
+ &#39;consommateurs&#39;,
+ &#39;contrôle&#39;,
+ &#39;fipronil&#39;,
+ &#39;futures&#39;,
+ &#39;génération&#39;,
+ &#39;générations futures&#39;,
+ &#39;industrie alimentaire&#39;,
+ &#39;limite&#39;,
+ &#39;limite réglementaire&#39;,
+ &#39;limites maximales&#39;,
+ &#39;liste des produits&#39;,
+ &#39;lmr&#39;,
+ &quot;oxyde d&#39;éthylène&quot;,
+ &#39;résidus&#39;,
+ &#39;résidus de pesticides&#39;,
+ &#39;substance toxique&#39;,
+ &#39;traces&#39;,
+ &#39;traces de fipronil&#39;,
+ &#39;ufc-que&#39;,
+ &#39;élevage&#39;,
+ &#39;œuf&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">set_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">partition</span><span class="p">,</span> <span class="s1">&#39;louvain&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sigma</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">node_size</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">,</span> <span class="n">node_color</span> <span class="o">=</span> <span class="n">partition</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "9da254deb1de421bb8f365e61104b1b3", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Sigma</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">node_size</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">,</span> <span class="n">node_color</span> <span class="o">=</span> <span class="n">partition</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "0c65afcf41cc4311a779a17c1583c647", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#frequence-des-termes-par-documents-sur-facebook">Fréquence des termes par documents (sur facebook)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creation-de-la-matrice-termes-termes">Création de la matrice termes-termes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcule-du-cosine">Calcule du cosine</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Aymeric Luneau, BU Paris 8
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

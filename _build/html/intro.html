@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -58,10 +58,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Profils des enquêtés" href="script_analyse/stat_descriptive/profil_repondant.html" />
+    <link rel="next" title="Modalités de passation du questionnaire" href="methode.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,13 +183,33 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Synthèse</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="methode.html">Modalités de passation du questionnaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="script_analyse/synthese/main_results.html">Principaux résultats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/profil_repondant.html">Profils des enquêtés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Glossaire et bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexe I - Analyses descriptives</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/connaissance_science_ouverte.html">Connaissance et pratique de la Science Ouverte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/production_et_analyse_donnees.html">Production et analyse des données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/Outils_humanum.html">Le TGIR Huma-num et ses outils</a></li>
-<li class="toctree-l1"><a class="reference internal" href="script_analyse/stat_descriptive/glossaire.html">Glossaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes II - Méthodes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="calssification_repondant/profil_repondant_discpline.html">Identification des profils disciplinaires</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="calssification_repondant/clusterisation_indiv_research_fields.html">Profil disciplinaire</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="script_traitement/topic_modeling.html">Les raisons d’utiliser l’IA</a></li>
+
+
 </ul>
 
     </div>
@@ -340,19 +362,41 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="donnees-de-recherche-et-science-ouverte-pratiques-et-besoins-enquete-2025-2026">
 <h1>Données de Recherche et Science Ouverte, pratiques et besoins - Enquête 2025-2026<a class="headerlink" href="#donnees-de-recherche-et-science-ouverte-pratiques-et-besoins-enquete-2025-2026" title="Link to this heading">#</a></h1>
-<p>Dans un contexte de transformation profonde des pratiques de recherche sous l’effet du numérique et du mouvement international en faveur de la science ouverte, l’université engage une
-démarche structurée de réflexion et d’action autour de la gestion, du partage et de la
-valorisation des productions scientifiques. Cette dynamique s’inscrit dans la volonté de construire,
-à moyen et long terme, une politique d’établissement cohérente en matière de science ouverte,
-fondée sur une compréhension fine des besoins de sa communauté et sur la mise en œuvre
+<p>Dans un contexte de transformation profonde des pratiques de recherche sous l’effet du numérique et du mouvement international en faveur de la Science Ouverte, l’université engage une
+démarche structurée de réflexion et d’action autour de la gestion, du partage et de la valorisation des productions scientifiques. Cette dynamique s’inscrit dans la volonté de construire, à moyen et long terme, une politique d’établissement cohérente en matière de Science Ouverte.</p>
+<p>Cette politique s’est traduite récemment par une feuille de route “Science Ouverte”. Elle est également fondée sur une compréhension des besoins de sa communauté et sur la mise en œuvre
 progressive d’une offre de services adaptée.</p>
-<p>C’est dans ce cadre qu’une enquête est conduite auprès des chercheurs, des personnels de laboratoire et des doctorants, afin de mieux connaître leurs pratiques numériques, leurs environnements de travail et leurs besoins d’accompagnement et de formation autour de plusieurs thématiques clés :</p>
+<p>C’est dans ce cadre qu’une enquête par questionnaire a été conduite auprès des chercheurs, des personnels de laboratoire et des doctorants afin de mieux connaître leurs pratiques numériques, leurs environnements de travail ainsi que leurs besoins d’accompagnement et de formation. Le formulaire, constitué de 145 items<a class="footnote-reference brackets" href="#id6" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, était structuré en trois thématiques clés :</p>
 <ul class="simple">
-<li><p>la science ouverte et ses principes ;</p></li>
-<li><p>le cycle de vie des données de la recherche (collecte, traitement, gestion, documentation, ouverture et partage) ;</p></li>
-<li><p>les pratiques de publication en accès ouvert et la diffusion des résultats scientifiques.</p></li>
+<li><p>la science ouverte et le cycle de vie des données de la recherche (collecte, traitement, gestion, documentation, ouverture et partage) ;</p></li>
+<li><p>La “Très grande infrastructure de recherche” Huma-Num ;</p></li>
+<li><p>les pratiques numériques ;</p></li>
 </ul>
-<p><a class="reference external" href="https://raw.githubusercontent.com//luneauaymeric/enquete_SO_p8/main/enquete_so_p8.pdf"><img alt="" src="https://badgen.net/badge/Download/PDF/009485?scale=1.6" /></a></p>
+<p>L’enquête s’inspire en partie de celle que l’université Paris Cité a menée en 2022 <span id="id2">[<a class="reference internal" href="biblio.html#id46" title="Charlotte E Dion. Retour sur la passation d'un questionnaire d'évaluation des pratiques et besoins de la communauté de recherche en SHS d'Université Paris Cité. In Semaine Data-SHS. Paris, France, December 2022. Plateforme Universitaire de Données des Grands Moulins and Université Paris Cité and Centre de Données Socio-Politiques and Sciences Po and CNRS.">Dion, 2022</a>]</span>.</p>
+<p>119 personnes ont répondu au questionnaire entre mars et juillet 2026, dont 104 enseignants-chercheurs et chercheurs, 12 doctorants et trois ingénieurs d’étude (IGE) ou de recherche (IGR)<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> La Direction de la Recherche comptabilise 628 enseignants-chercheurs en 2026, hors enseignants en détachement ou en disponibilité. Les rapports sociaux<a class="footnote-reference brackets" href="#id6" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> de l’université Paris 8 font quant à eux état de 726 enseignants-chercheurs et 81 IGE et IGR en 2024. Concernant la population doctorante, 1109 personnes étaient inscrites en doctorat au printemps 2026.</p>
+<p>Notre échantillon et les résultats que nous présentons ne sont donc pas représentatif de la population étudiée, <em>i.e.</em> les chercheurs, personnels de laboratoire et doctorants de Paris 8.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dans la suite du rapport, nous alternerons entre “répondants”, “enquêtés”, “participants” pour parler des personnes ayant répondu à l’enquête.</p>
+</div>
+</aside>
+<p>Néanmoins, l’enquête apporte des informations intéressantes sur les pratiques numériques et les rapports à la Science Ouverte des répondants. Nous commencerons par une présentation à plat des principaux résultats concernant les trois thématiques citées plus haut. Nous nous arrêterons ensuite sur les différentes “cultures épistémiques” <span id="id5">[]</span> représentées au sein de notre échantillon pour mieux comprendre comment celles-ci se positionnent par rapport à la Science Ouverte et aux pratiques numériques.</p>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id4">3</a>)</span>
+<p>Le questionnaire (au format pdf) est disponible à cette adresse : <a class="reference external" href="https://raw.githubusercontent.com//luneauaymeric/enquete_SO_p8/main/enquete_so_p8.pdf">https://raw.githubusercontent.com//luneauaymeric/enquete_SO_p8/main/enquete_so_p8.pdf</a></p>
+</aside>
+</aside>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -388,11 +432,11 @@ progressive d’une offre de services adaptée.</p>
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="script_analyse/stat_descriptive/profil_repondant.html"
+       href="methode.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Profils des enquêtés</p>
+        <p class="prev-next-title">Modalités de passation du questionnaire</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -180,13 +180,33 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Synthèse</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../methode.html">Modalités de passation du questionnaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script_analyse/synthese/main_results.html">Principaux résultats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/profil_repondant.html">Profils des enquêtés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Glossaire et bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexe I - Analyses descriptives</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/connaissance_science_ouverte.html">Connaissance et pratique de la Science Ouverte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/production_et_analyse_donnees.html">Production et analyse des données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/Outils_humanum.html">Le TGIR Huma-num et ses outils</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/glossaire.html">Glossaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes II - Méthodes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../calssification_repondant/profil_repondant_discpline.html">Identification des profils disciplinaires</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../calssification_repondant/clusterisation_indiv_research_fields.html">Profil disciplinaire</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic_modeling.html">Les raisons d’utiliser l’IA</a></li>
+
+
 </ul>
 
     </div>
@@ -395,7 +415,8 @@ document.write(`
 
 
 <span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
-<span class="n">df_col</span>
+<span class="n">df_col</span> <span class="o">=</span> <span class="n">df_col</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">143</span><span class="p">]</span>
+<span class="n">df0</span>
 </pre></div>
 </div>
 </div>
@@ -418,89 +439,149 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>name</th>
-      <th>label</th>
-      <th>group</th>
-      <th>personal_data</th>
-      <th>type</th>
-      <th>opened_question</th>
-      <th>type_panda</th>
-      <th>no_question</th>
-      <th>question</th>
-      <th>question_family</th>
-      <th>comment</th>
+      <th>qno_obs</th>
+      <th>q1_so_principles</th>
+      <th>q2_hal_depot</th>
+      <th>q3_octavi_depot</th>
+      <th>q4_diff_data</th>
+      <th>q4_autres_entrepots</th>
+      <th>q5_r</th>
+      <th>q5_python</th>
+      <th>q5_excel</th>
+      <th>q5_julia</th>
+      <th>...</th>
+      <th>q45_clé</th>
+      <th>q46_date_de_saisie</th>
+      <th>q47_date_de_dernière_modification</th>
+      <th>q48_date_de_dernier_enregistrement</th>
+      <th>q49_temps_de_saisie</th>
+      <th>q50_langue</th>
+      <th>q51_progression</th>
+      <th>q52_dernière_question_saisie</th>
+      <th>q53_origine</th>
+      <th>q54_appareil_utilisé_pour_la_saisie</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>N°Obs</td>
-      <td>qno_obs</td>
+      <td>1</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
       <td>NaN</td>
-      <td>False</td>
-      <td>numérique</td>
-      <td>False</td>
-      <td>int64</td>
-      <td>0.0</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PS8W-TJ9P</td>
+      <td>09/03/2026 11:01:53</td>
       <td>NaN</td>
-      <td>qno</td>
+      <td>09/03/2026 11:12:04</td>
+      <td>611,0190107</td>
+      <td>FR</td>
+      <td>Terminé</td>
       <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1. so_principles</td>
-      <td>q1_so_principles</td>
-      <td>1_connaissance_so</td>
-      <td>False</td>
-      <td>ordinal</td>
-      <td>False</td>
-      <td>object</td>
-      <td>1.0</td>
-      <td>1/ Diriez-vous que vous êtes familier.ère des ...</td>
-      <td>q1</td>
+      <td>2</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
       <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>GNEG-5QXQ</td>
+      <td>10/03/2026 11:11:19</td>
+      <td>NaN</td>
+      <td>10/03/2026 11:17:47</td>
+      <td>387,3420906</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2. hal_depot</td>
-      <td>q2_hal_depot</td>
-      <td>1_connaissance_so</td>
-      <td>False</td>
-      <td>ordinal</td>
-      <td>False</td>
-      <td>object</td>
-      <td>2.0</td>
-      <td>2/ Avez-vous déjà déposé une production scient...</td>
-      <td>q2</td>
+      <td>3</td>
+      <td>Oui, tout à fait</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Je ne connais pas Octaviana</td>
+      <td>Non</td>
       <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>FCCB-GMYA</td>
+      <td>10/03/2026 11:10:00</td>
+      <td>NaN</td>
+      <td>10/03/2026 11:19:57</td>
+      <td>596,9405636</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3. octavi_depot</td>
-      <td>q3_octavi_depot</td>
-      <td>2_bib_num</td>
-      <td>False</td>
-      <td>nominal_multiple</td>
-      <td>False</td>
-      <td>object</td>
-      <td>3.0</td>
-      <td>3/ Avez-vous des productions déposées sur Octa...</td>
-      <td>q3</td>
+      <td>4</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>CV3G-95CT</td>
+      <td>10/03/2026 11:14:07</td>
       <td>NaN</td>
+      <td>10/03/2026 11:23:25</td>
+      <td>558,0371672</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>4. open_data</td>
-      <td>q4_diff_data</td>
-      <td>3_entrepot</td>
-      <td>False</td>
-      <td>nominal_multiple</td>
-      <td>False</td>
-      <td>object</td>
-      <td>4.0</td>
-      <td>4/ Avez-vous déjà diffusé vos données de reche...</td>
-      <td>q4</td>
+      <td>5</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non</td>
+      <td>Non</td>
       <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>9EAP-NB4B</td>
+      <td>10/03/2026 11:18:54</td>
+      <td>NaN</td>
+      <td>10/03/2026 11:28:09</td>
+      <td>554,5038942</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
     </tr>
     <tr>
       <th>...</th>
@@ -515,80 +596,140 @@ document.write(`
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>162</th>
-      <td>62. Logiciels de SIG (ex. QGis)</td>
-      <td>q16_sig_help</td>
-      <td>9_help_outil</td>
-      <td>False</td>
-      <td>ordinal</td>
-      <td>False</td>
-      <td>object</td>
-      <td>19.0</td>
-      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
-      <td>q16</td>
+      <th>116</th>
+      <td>117</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>MLSN-NBUS</td>
+      <td>28/04/2026 17:33:55</td>
       <td>NaN</td>
-    </tr>
-    <tr>
-      <th>163</th>
-      <td>63. Système de gestion de base de données</td>
-      <td>q16_sgbd_help</td>
-      <td>9_help_outil</td>
-      <td>False</td>
-      <td>ordinal</td>
-      <td>False</td>
-      <td>object</td>
-      <td>19.0</td>
-      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
-      <td>q16</td>
+      <td>28/04/2026 17:49:27</td>
+      <td>932,1846343</td>
+      <td>FR</td>
+      <td>Terminé</td>
       <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
     </tr>
     <tr>
-      <th>164</th>
-      <td>64. Autre</td>
-      <td>q16_autre_help</td>
-      <td>9_help_outil</td>
-      <td>False</td>
-      <td>ordinal</td>
-      <td>False</td>
-      <td>object</td>
-      <td>19.0</td>
-      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
-      <td>q16</td>
+      <th>117</th>
+      <td>118</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non</td>
+      <td>Non</td>
       <td>NaN</td>
-    </tr>
-    <tr>
-      <th>165</th>
-      <td>65. other_accomp_software</td>
-      <td>q16_1_other_software_help</td>
-      <td>9_help_outil</td>
-      <td>False</td>
-      <td>texte_libre</td>
-      <td>True</td>
-      <td>object</td>
-      <td>20.0</td>
-      <td>7.1/ Si Autre, précisez lequel (lesquels) ?</td>
-      <td>q16</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>WAR9-LFJP</td>
+      <td>29/04/2026 14:59:02</td>
       <td>NaN</td>
+      <td>29/04/2026 15:10:56</td>
+      <td>714,0441946</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
     </tr>
     <tr>
-      <th>166</th>
-      <td>113. Autre, précisez</td>
-      <td>q26_1_autre_rec</td>
-      <td>13_env_travail</td>
-      <td>False</td>
-      <td>nominal_multiple</td>
-      <td>False</td>
-      <td>object</td>
-      <td>113.0</td>
-      <td>Où travaillez-vous le plus souvent? Si autre, ...</td>
-      <td>q26</td>
-      <td>recode les autre lieux</td>
+      <th>118</th>
+      <td>119</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>HRZG-6JGE</td>
+      <td>05/05/2026 09:36:22</td>
+      <td>NaN</td>
+      <td>05/05/2026 09:52:15</td>
+      <td>953,6974524</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>120</td>
+      <td>Non</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Autre, précisez</td>
+      <td>Mendeley data</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>32TW-JLY5</td>
+      <td>28/05/2026 10:01:22</td>
+      <td>NaN</td>
+      <td>28/05/2026 10:21:58</td>
+      <td>1235,8811168</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>121</td>
+      <td>Non</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non;Oui, sur Nakala</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>6GVE-N5NJ</td>
+      <td>05/06/2026 22:36:01</td>
+      <td>NaN</td>
+      <td>05/06/2026 22:59:49</td>
+      <td>1427,0935395</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
     </tr>
   </tbody>
 </table>
-<p>167 rows × 11 columns</p>
+<p>121 rows × 153 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -636,9 +777,22 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 <span class="n">df0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q25_statut</span><span class="o">==</span><span class="s2">&quot;Enseignant·e chercheur·e&quot;</span><span class="p">,</span> <span class="s2">&quot;q25_statut_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Chercheur&quot;</span>
 <span class="n">df0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q25_statut</span><span class="o">==</span><span class="s2">&quot;Personnel de soutien à la recherche&quot;</span><span class="p">,</span> <span class="s2">&quot;q25_statut_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Personnel d&#39;appui à la recherche&quot;</span>
 <span class="n">df0</span><span class="o">.</span><span class="n">q25_statut_rec</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-
-
-<span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;110. statut_rec&#39;</span><span class="p">,</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>q25_statut_rec
+Chercheur                           106
+Doctorant                            12
+Personnel d&#39;appui à la recherche      3
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;110. statut_rec&#39;</span><span class="p">,</span> 
                <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q25_statut_rec&#39;</span><span class="p">,</span> 
                <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;12_descript_repondant&#39;</span><span class="p">,</span> 
                <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span> 
@@ -687,14 +841,6 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q3_octavi_depot</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Non|Je ne connais pas&quot;</span><span class="p">),</span> <span class="s2">&quot;q3_octavi_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Non&quot;</span>
-<span class="n">df0</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df0</span><span class="o">.</span><span class="n">q3_octavi_depot</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&quot;Non|Je ne connais pas&quot;</span><span class="p">),</span> <span class="s2">&quot;q3_octavi_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Oui&quot;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;3. octavi_depot_rec&#39;</span><span class="p">,</span>
                <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q3_octavi_rec&#39;</span><span class="p">,</span>
                <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;2_bib_num&#39;</span><span class="p">,</span>
@@ -709,110 +855,6 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 <span class="n">new_variable</span>
 <span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">df_col</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/anonymous_answer_2026-05-11.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
-    <span class="n">df0</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_col</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="production-et-analyse-des-donnees">
-<h1>Production et analyse des données<a class="headerlink" href="#production-et-analyse-des-donnees" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exp</span><span class="p">,</span> <span class="n">gb_data</span> <span class="o">=</span> <span class="n">split_multiple_choices</span><span class="p">(</span><span class="n">df01</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df01</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">isna</span><span class="p">()],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
-<span class="n">df_exp1</span><span class="p">,</span> <span class="n">gb_data1</span> <span class="o">=</span> <span class="n">split_multiple_choices</span><span class="p">(</span><span class="n">df01</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df01</span><span class="o">.</span><span class="n">q5_1_other_lang_rec</span><span class="o">.</span><span class="n">isna</span><span class="p">()],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;q5_1_other_lang_rec&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
-
-<span class="n">df_exp2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_exp</span><span class="p">[[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">]],</span> <span class="n">df_exp1</span><span class="p">[[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span><span class="s2">&quot;q5_1_other_lang_rec&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;q5_1_other_lang_rec&quot;</span><span class="p">:</span><span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">})])</span>
-<span class="n">df_exp2</span><span class="p">[</span><span class="s2">&quot;q5_family_logi&quot;</span><span class="p">]</span><span class="o">=</span> <span class="n">df_exp2</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">family_logi</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
-<span class="n">df_exp3</span> <span class="o">=</span> <span class="n">df_exp2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df_exp2</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;aucun&quot;</span><span class="p">,</span><span class="s2">&quot;autre&quot;</span><span class="p">])]</span>
-<span class="n">df_exp3</span>
-</pre></div>
-</div>
-</div>
-</div>
-<section id="developpement-et-depot-de-codes-ou-de-logiciels">
-<h2>Développement et dépôt de codes ou de logiciels<a class="headerlink" href="#developpement-et-depot-de-codes-ou-de-logiciels" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># on enregistre les nouvelles variables dans le dataframe original</span>
-<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
-    <span class="n">df0</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;16. dev_exemple&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q6_1_dev_group&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;5_developpement&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
-               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
-               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df01</span><span class="o">.</span><span class="n">q6_1_dev_group</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
-               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
-               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="n">df_col</span><span class="o">.</span><span class="n">question</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">==</span><span class="s2">&quot;q6_1_dev_exemple&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;Classe les exemples de logiciels développés dans des groupes : outils de traitement et d&#39;analyse, outils de diffusion, collecte de données, etc.&quot;</span>
-              <span class="p">}</span>
-<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
-<span class="n">new_variable</span>
-<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col1</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">df_col1</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;16. dev_exemple&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q6_1_dev_how&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;5_developpement&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
-               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
-               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df01</span><span class="o">.</span><span class="n">q6_1_dev_how</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
-               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
-               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="n">df_col</span><span class="o">.</span><span class="n">question</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">==</span><span class="s2">&quot;q6_1_dev_exemple&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;Précise le langage ou l&#39;outil de programmation utilisé&quot;</span>
-              <span class="p">}</span>
-<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
-<span class="n">new_variable</span>
-<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col1</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">df_col1</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="profils-repondants">
-<h2>Profils répondants<a class="headerlink" href="#profils-repondants" title="Link to this heading">#</a></h2>
-<section id="recodage-autres-lieux-de-travail">
-<h3>Recodage autres lieux de travail<a class="headerlink" href="#recodage-autres-lieux-de-travail" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df0</span><span class="o">.</span><span class="n">q26_1_autre_env</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df0</span><span class="o">.</span><span class="n">q26_1_autre_env</span><span class="o">.</span><span class="n">isna</span><span class="p">()]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span><span class="p">[</span><span class="s2">&quot;q26_1_autre_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">q26_1_autre_env</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">dict_autre_env</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -835,57 +877,1275 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>q26_1_autre_rec</th>
+      <th>name</th>
+      <th>label</th>
+      <th>group</th>
+      <th>personal_data</th>
+      <th>type</th>
+      <th>opened_question</th>
+      <th>type_panda</th>
+      <th>no_question</th>
+      <th>question</th>
+      <th>question_family</th>
+      <th>comment</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>None</td>
+      <td>N°Obs</td>
+      <td>qno_obs</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>numérique</td>
+      <td>False</td>
+      <td>int64</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>qno</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>None</td>
+      <td>1. so_principles</td>
+      <td>q1_so_principles</td>
+      <td>1_connaissance_so</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>1.0</td>
+      <td>1/ Diriez-vous que vous êtes familier.ère des ...</td>
+      <td>q1</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>None</td>
+      <td>2. hal_depot</td>
+      <td>q2_hal_depot</td>
+      <td>1_connaissance_so</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>2.0</td>
+      <td>2/ Avez-vous déjà déposé une production scient...</td>
+      <td>q2</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>None</td>
+      <td>3. octavi_depot</td>
+      <td>q3_octavi_depot</td>
+      <td>2_bib_num</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>3.0</td>
+      <td>3/ Avez-vous des productions déposées sur Octa...</td>
+      <td>q3</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>None</td>
+      <td>4. open_data</td>
+      <td>q4_diff_data</td>
+      <td>3_entrepot</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>4.0</td>
+      <td>4/ Avez-vous déjà diffusé vos données de reche...</td>
+      <td>q4</td>
+      <td>NaN</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>114</th>
-      <td>None</td>
+      <th>141</th>
+      <td>154. Origine</td>
+      <td>q53_origine</td>
+      <td>17_metadonnee</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>q53</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>115</th>
-      <td>Bibliothèque|Où je peux</td>
+      <th>142</th>
+      <td>155. Appareil utilisé pour la saisie</td>
+      <td>q54_appareil_utilisé_pour_la_saisie</td>
+      <td>17_metadonnee</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>q54</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>116</th>
-      <td>None</td>
+      <th>143</th>
+      <td>110. statut_rec</td>
+      <td>q25_statut_rec</td>
+      <td>12_descript_repondant</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>25.0</td>
+      <td>2/ Êtes-vous ?</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>117</th>
-      <td>None</td>
+      <th>144</th>
+      <td>110. doctorant</td>
+      <td>q25_doctorant</td>
+      <td>12_descript_repondant</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>25.0</td>
+      <td>2/ Êtes-vous ?</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>118</th>
-      <td>Bibliothèque</td>
+      <th>145</th>
+      <td>3. octavi_depot_rec</td>
+      <td>q3_octavi_rec</td>
+      <td>2_bib_num</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>3.0</td>
+      <td>3/ Avez-vous des productions déposées sur Octa...</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>119 rows × 1 columns</p>
+<p>146 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
+    <span class="n">df0</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_col</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tool_diff_data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;OSF&#39;</span><span class="p">:</span><span class="s1">&#39;OSF&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;github&#39;</span><span class="p">:</span><span class="s1">&#39;dépot git&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;osf&#39;</span><span class="p">:</span><span class="s1">&#39;OSF&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sur OSF&#39;</span><span class="p">:</span><span class="s1">&#39;OSF&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;oui, sur des sites personnels&#39;</span><span class="p">:</span><span class="s2">&quot;site personnel&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Oui, au cdsp dans le cadre d&#39;un projet ANR&quot;</span><span class="p">:</span><span class="s2">&quot;CDSP&quot;</span><span class="p">,</span> 
+    <span class="s1">&#39;dépot GIT&#39;</span><span class="p">:</span><span class="s1">&#39;dépot git&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sur mes sites personnels&#39;</span><span class="p">:</span><span class="s2">&quot;site personnel&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;ORTOLANG, COCOON, dev perso&#39;</span><span class="p">:</span><span class="s2">&quot;Ortolang|Coccon|site personnel&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Serveur géré par une fondation de recherche&#39;</span><span class="p">:</span><span class="s2">&quot;Fondation de recherche&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Sur mon site internet&#39;</span><span class="p">:</span><span class="s2">&quot;site personnel&quot;</span><span class="p">,</span> 
+    <span class="s1">&#39;cela ne me concerne pas&#39;</span><span class="p">:</span><span class="s2">&quot;pas concerné&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Sur ma page web&#39;</span><span class="p">:</span><span class="s2">&quot;site personnel&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;directement sur le site de soumission des articles&#39;</span><span class="p">:</span><span class="s2">&quot;Editeur&quot;</span><span class="p">,</span> 
+    <span class="s1">&#39;Ortolang&#39;</span><span class="p">:</span><span class="s2">&quot;Ortolang&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;page  ou transmission personnelle&#39;</span><span class="p">:</span><span class="s2">&quot;site personnel&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sur Nakala mais par l&#39;intermédiaire d&#39;un collègue&quot;</span><span class="p">:</span><span class="s2">&quot;Nakala&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Mendeley data&#39;</span><span class="p">:</span><span class="s2">&quot;Mendeley data&quot;</span>
+<span class="p">}</span>
+
+<span class="n">type_entrepot</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;OSF&#39;</span><span class="p">:</span><span class="s1">&#39;Autre entrepot&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;github&#39;</span><span class="p">:</span><span class="s1">&#39;page personnelle&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;osf&#39;</span><span class="p">:</span><span class="s1">&#39;Autre entrepot&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sur OSF&#39;</span><span class="p">:</span><span class="s1">&#39;Autre entrepot&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;oui, sur des sites personnels&#39;</span><span class="p">:</span><span class="s2">&quot;page personnelle&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Oui, au cdsp dans le cadre d&#39;un projet ANR&quot;</span><span class="p">:</span><span class="s2">&quot;Entrepot institutionnel&quot;</span><span class="p">,</span> 
+    <span class="s1">&#39;dépot GIT&#39;</span><span class="p">:</span><span class="s1">&#39;page personnelle&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;sur mes sites personnels&#39;</span><span class="p">:</span><span class="s2">&quot;page personnelle&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;ORTOLANG, COCOON, dev perso&#39;</span><span class="p">:</span><span class="s2">&quot;Entrepot institutionnel|page personnelle&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Serveur géré par une fondation de recherche&#39;</span><span class="p">:</span><span class="s2">&quot;Autre entrepot&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Sur mon site internet&#39;</span><span class="p">:</span><span class="s2">&quot;page personnelle&quot;</span><span class="p">,</span> 
+    <span class="s1">&#39;cela ne me concerne pas&#39;</span><span class="p">:</span><span class="s2">&quot;pas concerné&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Sur ma page web&#39;</span><span class="p">:</span><span class="s2">&quot;page personnelle&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;directement sur le site de soumission des articles&#39;</span><span class="p">:</span><span class="s2">&quot;Editeur&quot;</span><span class="p">,</span> 
+    <span class="s1">&#39;Ortolang&#39;</span><span class="p">:</span><span class="s2">&quot;Entrepot institutionnel&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;page  ou transmission personnelle&#39;</span><span class="p">:</span><span class="s2">&quot;page personnelle&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Sur Nakala mais par l&#39;intermédiaire d&#39;un collègue&quot;</span><span class="p">:</span><span class="s2">&quot;Entrepot institutionnel&quot;</span><span class="p">,</span>
+    <span class="s1">&#39;Mendeley data&#39;</span><span class="p">:</span><span class="s2">&quot;Autre entrepot&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span><span class="p">[</span><span class="s2">&quot;q4_autres_entrepots_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">q4_autres_entrepots</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">tool_diff_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span><span class="p">[</span><span class="s2">&quot;type_entrepot&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">q4_autres_entrepots</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">type_entrepot</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="n">df0</span><span class="o">.</span><span class="n">q4_diff_data</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="n">type_entrepot2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Non&#39;</span><span class="p">:</span><span class="s1">&#39;Non&#39;</span><span class="p">,</span> 
+                  <span class="s1">&#39;Autre, précisez&#39;</span><span class="p">:</span><span class="s1">&#39;Autre, précisez&#39;</span><span class="p">,</span> 
+                  <span class="s1">&#39;Oui, sur Zenodo, Nakala&#39;</span><span class="p">:</span><span class="s1">&#39;Autre entrepot&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Oui, sur Data Paris 8&#39;</span><span class="p">:</span><span class="s1">&#39;Entrepot institutionnel&#39;</span><span class="p">,</span> 
+                  <span class="s1">&#39;Oui, sur Nakala&#39;</span><span class="p">:</span><span class="s1">&#39;Entrepot institutionnel&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;Non;Oui, sur Nakala&#39;</span><span class="p">:</span><span class="s1">&#39;Entrepot institutionnel&#39;</span><span class="p">}</span>
+<span class="n">df0</span><span class="p">[</span><span class="s2">&quot;type_entrepot1&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">q4_diff_data</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">type_entrepot2</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_key</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">df0</span><span class="o">.</span><span class="n">q45_clé</span><span class="p">:</span>
+    <span class="n">diff_data</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">type_entrepot1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q45_clé</span><span class="o">==</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">autre</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">type_entrepot</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q45_clé</span><span class="o">==</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1">#print(type(autre))</span>
+    <span class="k">if</span> <span class="s1">&#39;entrepot&#39;</span> <span class="ow">in</span> <span class="n">diff_data</span><span class="p">:</span>
+        <span class="n">depot_entrepot</span> <span class="o">=</span> <span class="s2">&quot;Oui&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">autre</span><span class="p">)</span><span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="k">if</span> <span class="s1">&#39;entrepot&#39;</span> <span class="ow">in</span> <span class="n">autre</span><span class="p">:</span>
+                <span class="n">depot_entrepot</span> <span class="o">=</span> <span class="s2">&quot;Oui&quot;</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">depot_entrepot</span> <span class="o">=</span> <span class="s2">&quot;Non&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">depot_entrepot</span> <span class="o">=</span> <span class="s2">&quot;Non&quot;</span>
+    <span class="n">dict_key</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">:</span><span class="n">key</span><span class="p">,</span>
+              <span class="s2">&quot;depot_entrepot&quot;</span><span class="p">:</span><span class="n">depot_entrepot</span><span class="p">}</span>
+    <span class="n">list_key</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dict_key</span><span class="p">)</span>
+<span class="n">df_key</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">list_key</span><span class="p">)</span>
+<span class="n">df0</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df_key</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span><span class="p">[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
+    <span class="n">df0</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>qno_obs</th>
+      <th>q1_so_principles</th>
+      <th>q2_hal_depot</th>
+      <th>q3_octavi_depot</th>
+      <th>q4_diff_data</th>
+      <th>q4_autres_entrepots</th>
+      <th>q5_r</th>
+      <th>q5_python</th>
+      <th>q5_excel</th>
+      <th>q5_julia</th>
+      <th>...</th>
+      <th>q35_ia_tools_rec</th>
+      <th>no_cluster_x</th>
+      <th>nom_cluster_x</th>
+      <th>no_cluster_y</th>
+      <th>nom_cluster_y</th>
+      <th>octavi_depot_rec</th>
+      <th>q4_autres_entrepots_rec</th>
+      <th>type_entrepot</th>
+      <th>type_entrepot1</th>
+      <th>depot_entrepot</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Non</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>Oui, tout à fait</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Je ne connais pas Octaviana</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>chatgpt|mistral|notebooklm</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>Ne connait pas</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Non</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>chatgpt|euria</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>Non</td>
+      <td>OSF</td>
+      <td>Autre entrepot</td>
+      <td>Autre, précisez</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>chatgpt|perplexity</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>Ne connait pas</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Non</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>github</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+      <td>Non</td>
+      <td>dépot git</td>
+      <td>page personnelle</td>
+      <td>Non</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>119</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>Individus, normes, sociétés</td>
+      <td>5.0</td>
+      <td>Individus, normes, sociétés</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Non</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>120</td>
+      <td>Non</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Autre, précisez</td>
+      <td>Mendeley data</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>correcteurs d'orthographe</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+      <td>Ne connait pas</td>
+      <td>Mendeley data</td>
+      <td>Autre entrepot</td>
+      <td>Autre, précisez</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>121</td>
+      <td>Non</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non;Oui, sur Nakala</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Entrepot institutionnel</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>1</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Non</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>58</td>
+      <td>Oui, un peu</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>chatgpt|gemini|claude</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>None</td>
+      <td>Non</td>
+      <td>Non</td>
+    </tr>
+  </tbody>
+</table>
+<p>119 rows × 173 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;4. recodage autre mode diffusion données&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q4_autres_entrepots_rec&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;3_entrepot&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">True</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df0</span><span class="o">.</span><span class="n">q4_autres_entrepots_rec</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="n">df_col</span><span class="o">.</span><span class="n">question</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">==</span><span class="s2">&quot;q4_autres_entrepots&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+              <span class="p">}</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
+<span class="n">new_variable</span>
+<span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col</span>
+
+<span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;4. type entrepots&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;type_entrepot&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;3_entrepot&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df0</span><span class="o">.</span><span class="n">type_entrepot</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span> <span class="s2">&quot;Classification des entrepots proposés en type : institutionnel, autres entrepots&quot;</span><span class="p">,</span>
+              <span class="p">}</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
+<span class="n">new_variable</span>
+<span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col</span>
+
+<span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;4. type entrepots bis&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;type_entrepot1&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;3_entrepot&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df0</span><span class="o">.</span><span class="n">type_entrepot</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span> <span class="s2">&quot;Classification des entrepots cités dans la question si autre, précisez&quot;</span><span class="p">,</span>
+              <span class="p">}</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
+<span class="n">new_variable</span>
+<span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col</span>
+
+<span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;4. depot dans entrepot&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;depot_entrepot&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;3_entrepot&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df0</span><span class="o">.</span><span class="n">depot_entrepot</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span> <span class="s2">&quot;Variable binaire, dit si le répondant a déposé des données dans un entrepot à partir des question q4_diff_data et q4_autres_entrepots&quot;</span><span class="p">,</span>
+              <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_col</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="production-et-analyse-des-donnees">
+<h1>Production et analyse des données<a class="headerlink" href="#production-et-analyse-des-donnees" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df0</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>qno_obs
+q1_so_principles
+q2_hal_depot
+q3_octavi_depot
+q4_diff_data
+q4_autres_entrepots
+q5_r
+q5_python
+q5_excel
+q5_julia
+q5_stata
+q5_sas
+q5_aucun
+q5_autre
+q5_1_other_lang
+q6_dev_code
+q6_1_dev_exemple
+q7_software_depot
+q7_1_other_sw_depot
+q8_depot_hal_help
+q8_rediger_pdg_help
+q8_respect_rgpd_help
+q8_licences_help
+q8_depot_donnees_help
+q8_metadonnees_help
+q8_data_paper_help
+q8_fair_data_help
+q9_utilite_accomp
+q10_type_data
+q10_other_type_data
+q11_quali_or_quanti
+q12_humanum
+q12_1_how_humanum
+q13_nakala
+q13_isidore
+q13_sharedocs
+q13_hébergement_web
+q14_stylo
+q14_mattermost
+q14_gitlab
+q14_matomo
+q14_hnurl
+q14_kanboard
+q15_nakala_help
+q15_isidore_help
+q15_sharedocs_help
+q15_hébergement_web_help
+q15_stylo_help
+q15_mattermost_help
+q15_gitlab_help
+q15_matomo_help
+q15_hnurl_help
+q15_kanboard_help
+53. Tableur
+54. Logiciels d&#39;analyse statistique (ex. R – Rstudio)
+55. Python (web-scraping, traitement automatique des langues…)
+56. Logiciels d&#39;exploration de textes, analyse, statistique... (ex. Gargantext, Iramuteq, Hyperbase)
+57. Logiciels d&#39;OCR : reconnaissance Optique de Caractères
+58. Logiciels d&#39;analyse de réseaux (ex. Gephi)
+59. Logiciels d&#39;édition numérique en ligne (ex. Odette, Atom)
+60. Logiciel de traitement des données qualitatives, CAQDAS (ex. Taguette)
+61. Logiciels de cartographie thématique (ex. Magrit)
+62. Logiciels de SIG (ex. QGis)
+63. Système de gestion de base de données
+64. Autre
+65. other_accomp_software
+q17_util_accomp_software
+q18_stat_desc_help
+q18_regressions_help
+q18_temporal_analysis_help
+q18_cartographie_help
+q18_analyse_text_help
+q18_net_analysis_help
+q18_webscrapping
+q18_deeplearning_help
+q18_edit_num_help
+q18_questionnaire_help
+q18_bibliométrie_help
+q18_1_utilite_accomp_methode
+q19_tableur_help
+q19_logiciels_d&#39;analyse_statistique_help
+q19_python_help
+q19_garg_iram_hyperbase_help
+q19_ocr_help
+q19_network_analysis_help
+q19_odette_atom_help
+q19_caqdas_help
+q19_carto_help
+q19_sig_help
+q19_sgbd_help
+q19_autre_help
+q19_1_other_software_help
+q20_excel_help
+q20_sas_help
+q20_spss_help
+q20_stata_help
+q20_nvivo_help
+q20_atlasti_help
+q20_oxygen_help
+q20_arcgis_help
+q20_autre_help
+q20_1_other_closed_software_help
+q21_util_accomp_closed_software
+q22_postes_info
+q22_ressources_doc
+q22_working_spaces
+q22_permanences
+q22_sdbox_casd
+q23_other_service_univ
+q24_research_fields
+q25_statut
+q25_1_statut_autre
+q26_env_travail
+q26_1_autre_env
+q27_pc_fixe_bureau_freq
+q27_pc_fixe_home_freq
+q27_laptop_perso_freq
+q27_laptop_pro_freq
+q27_phone_perso_freq
+q27_phone_pro_freq
+q27_tablette_perso_freq
+q27_tablette_pro_freq
+q27_stylos et papiers_freq
+q28_archive_data
+q28_1_autre_archive_data
+q29_os_sys
+q30_webbrowser
+q30_1_autre_webbrowser
+q31_stockage_doc
+q31_1_autre_stockage
+q32_collab_tools
+q32_1_autre_collab_tools
+q33_sauvegarde_data
+q33_1_autre_suavegarde
+q34_ia_for_research
+q35_ia_tools
+q36_gratuit_ou_payant
+q37_raison_util_ia
+q38_ok_contact
+q39_etre_informer
+q40_present_work
+q41_ok_teaching
+q44_ufr_labo
+q45_clé
+q46_date_de_saisie
+q47_date_de_dernière_modification
+q48_date_de_dernier_enregistrement
+q49_temps_de_saisie
+q50_langue
+q51_progression
+q52_dernière_question_saisie
+q53_origine
+q54_appareil_utilisé_pour_la_saisie
+q25_statut_rec
+q25_doctorant
+q3_octavi_rec
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_exp</span><span class="p">,</span> <span class="n">gb_data</span> <span class="o">=</span> <span class="n">split_multiple_choices</span><span class="p">(</span><span class="n">df01</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df01</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">isna</span><span class="p">()],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+<span class="n">df_exp1</span><span class="p">,</span> <span class="n">gb_data1</span> <span class="o">=</span> <span class="n">split_multiple_choices</span><span class="p">(</span><span class="n">df01</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df01</span><span class="o">.</span><span class="n">q5_1_other_lang_rec</span><span class="o">.</span><span class="n">isna</span><span class="p">()],</span> <span class="n">column</span><span class="o">=</span><span class="s1">&#39;q5_1_other_lang_rec&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+
+<span class="n">df_exp2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_exp</span><span class="p">[[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">]],</span> <span class="n">df_exp1</span><span class="p">[[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span><span class="s2">&quot;q5_1_other_lang_rec&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;q5_1_other_lang_rec&quot;</span><span class="p">:</span><span class="s1">&#39;q5_logiciel_traitement_rec&#39;</span><span class="p">})])</span>
+<span class="n">df_exp2</span><span class="p">[</span><span class="s2">&quot;q5_family_logi&quot;</span><span class="p">]</span><span class="o">=</span> <span class="n">df_exp2</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">family_logi</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="n">df_exp3</span> <span class="o">=</span> <span class="n">df_exp2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df_exp2</span><span class="o">.</span><span class="n">q5_logiciel_traitement_rec</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;aucun&quot;</span><span class="p">,</span><span class="s2">&quot;autre&quot;</span><span class="p">])]</span>
+<span class="n">df_exp3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>q45_clé</th>
+      <th>q5_logiciel_traitement_rec</th>
+      <th>q5_family_logi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>FCCB-GMYA</td>
+      <td>excel</td>
+      <td>feuille de calcul</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>CV3G-95CT</td>
+      <td>r</td>
+      <td>script et programmation</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>9EAP-NB4B</td>
+      <td>excel</td>
+      <td>feuille de calcul</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>M5L8-UM9F</td>
+      <td>r</td>
+      <td>script et programmation</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>M5L8-UM9F</td>
+      <td>excel</td>
+      <td>feuille de calcul</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>7CU7-JG8K</td>
+      <td>iramuteq</td>
+      <td>analyse de texte</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>A7R6-3SWC</td>
+      <td>jamovi</td>
+      <td>logiciels de stats</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>Q934-QKAW</td>
+      <td>nvivo</td>
+      <td>CAQDAS</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>HKN6-95PQ</td>
+      <td>mplus</td>
+      <td>logiciels de stats</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>HKN6-95PQ</td>
+      <td>spss</td>
+      <td>logiciels de stats</td>
+    </tr>
+  </tbody>
+</table>
+<p>217 rows × 3 columns</p>
+</div></div></div>
+</div>
+<section id="developpement-et-depot-de-codes-ou-de-logiciels">
+<h2>Développement et dépôt de codes ou de logiciels<a class="headerlink" href="#developpement-et-depot-de-codes-ou-de-logiciels" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">dftp</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">],</span> <span class="n">how</span> <span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span>
+<span class="n">df0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>qno_obs</th>
+      <th>q1_so_principles</th>
+      <th>q2_hal_depot</th>
+      <th>q3_octavi_depot</th>
+      <th>q4_diff_data</th>
+      <th>q4_autres_entrepots</th>
+      <th>q5_r</th>
+      <th>q5_python</th>
+      <th>q5_excel</th>
+      <th>q5_julia</th>
+      <th>...</th>
+      <th>q54_appareil_utilisé_pour_la_saisie</th>
+      <th>q25_statut_rec</th>
+      <th>q25_doctorant</th>
+      <th>q3_octavi_rec</th>
+      <th>q5_1_other_lang_rec</th>
+      <th>q5_logiciel_traitement_rec</th>
+      <th>q5_family_logi</th>
+      <th>q6_1_dev_what</th>
+      <th>q6_1_dev_group</th>
+      <th>q6_1_dev_how</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Doctorant</td>
+      <td>True</td>
+      <td>Non</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Chercheur</td>
+      <td>False</td>
+      <td>Non</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Oui, tout à fait</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Je ne connais pas Octaviana</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Chercheur</td>
+      <td>False</td>
+      <td>Non</td>
+      <td>maxqda|endnotes|zotero</td>
+      <td>excel|maxqda|endnotes|zotero</td>
+      <td>feuille de calcul|CAQDAS|gestion biblio</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Chercheur</td>
+      <td>False</td>
+      <td>Non</td>
+      <td>None</td>
+      <td>r</td>
+      <td>script et programmation</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Chercheur</td>
+      <td>False</td>
+      <td>Non</td>
+      <td>access</td>
+      <td>excel|access</td>
+      <td>feuille de calcul|gestion de base de donnée</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>117</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Doctorant</td>
+      <td>True</td>
+      <td>Non</td>
+      <td>None</td>
+      <td>r|python|excel</td>
+      <td>script et programmation|feuille de calcul</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>118</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Chercheur</td>
+      <td>False</td>
+      <td>Non</td>
+      <td>None</td>
+      <td>r|excel</td>
+      <td>script et programmation|feuille de calcul</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>119</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Chercheur</td>
+      <td>False</td>
+      <td>Non</td>
+      <td>None</td>
+      <td>r|excel</td>
+      <td>script et programmation|feuille de calcul</td>
+      <td>scripts</td>
+      <td>traitement et analyse de données</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>120</td>
+      <td>Non</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Autre, précisez</td>
+      <td>Mendeley data</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Chercheur</td>
+      <td>False</td>
+      <td>Non</td>
+      <td>None</td>
+      <td>python|excel</td>
+      <td>script et programmation|feuille de calcul</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>121</td>
+      <td>Non</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non;Oui, sur Nakala</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PC</td>
+      <td>Chercheur</td>
+      <td>False</td>
+      <td>Non</td>
+      <td>None</td>
+      <td>None</td>
+      <td>None</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>121 rows × 162 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -896,96 +2156,23 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">96</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># on enregistre les nouvelles variables dans le dataframe original</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/anonymous_answer_2026-07-24.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">df0</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
-
-<span class="nn">File /opt/python/lib/python3.13/site-packages/fsspec/spec.py:2278,</span> in <span class="ni">AbstractBufferedFile.close</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2276</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2277</span>     <span class="k">if</span> <span class="ow">not</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;forced&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">2278</span>         <span class="bp">self</span><span class="o">.</span><span class="n">flush</span><span class="p">(</span><span class="n">force</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2280</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2281</span>         <span class="bp">self</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">invalidate_cache</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
-
-<span class="nn">File /opt/python/lib/python3.13/site-packages/fsspec/spec.py:2136,</span> in <span class="ni">AbstractBufferedFile.flush</span><span class="nt">(self, force)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2133</span>         <span class="bp">self</span><span class="o">.</span><span class="n">closed</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="g g-Whitespace">   </span><span class="mi">2134</span>         <span class="k">raise</span>
-<span class="ne">-&gt; </span><span class="mi">2136</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_upload_chunk</span><span class="p">(</span><span class="n">final</span><span class="o">=</span><span class="n">force</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">False</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2137</span>     <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2138</span>     <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">()</span>
-
-<span class="nn">File /opt/python/lib/python3.13/site-packages/s3fs/core.py:2762,</span> in <span class="ni">S3File._upload_chunk</span><span class="nt">(self, final)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2759</span>             <span class="n">upload_part</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">part_max</span><span class="p">))</span>
-<span class="g g-Whitespace">   </span><span class="mi">2761</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">autocommit</span> <span class="ow">and</span> <span class="n">final</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2762</span>     <span class="bp">self</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">2763</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2764</span>     <span class="c1"># update &#39;upload offset&#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2765</span>     <span class="bp">self</span><span class="o">.</span><span class="n">offset</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">buffer</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
-
-<span class="nn">File /opt/python/lib/python3.13/site-packages/s3fs/core.py:2788,</span> in <span class="ni">S3File.commit</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2786</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">acl</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2787</span>         <span class="n">kw</span><span class="p">[</span><span class="s2">&quot;ACL&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">acl</span>
-<span class="ne">-&gt; </span><span class="mi">2788</span>     <span class="n">write_result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_s3</span><span class="p">(</span><span class="s2">&quot;put_object&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kw</span><span class="p">,</span> <span class="o">**</span><span class="n">match</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2789</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">2790</span>     <span class="k">raise</span> <span class="ne">RuntimeError</span>
-
-<span class="nn">File /opt/python/lib/python3.13/site-packages/s3fs/core.py:2621,</span> in <span class="ni">S3File._call_s3</span><span class="nt">(self, method, *kwarglist, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2620</span> <span class="k">def</span><span class="w"> </span><span class="nf">_call_s3</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="o">*</span><span class="n">kwarglist</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">2621</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">fs</span><span class="o">.</span><span class="n">call_s3</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">s3_additional_kwargs</span><span class="p">,</span> <span class="o">*</span><span class="n">kwarglist</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/python/lib/python3.13/site-packages/fsspec/asyn.py:118,</span> in <span class="ni">sync_wrapper.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">116</span> <span class="k">def</span><span class="w"> </span><span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">117</span>     <span class="bp">self</span> <span class="o">=</span> <span class="n">obj</span> <span class="ow">or</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="ne">--&gt; </span><span class="mi">118</span>     <span class="k">return</span> <span class="n">sync</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">loop</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/python/lib/python3.13/site-packages/fsspec/asyn.py:91,</span> in <span class="ni">sync</span><span class="nt">(loop, func, timeout, *args, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">88</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run_coroutine_threadsafe</span><span class="p">(</span><span class="n">_runner</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">coro</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">timeout</span><span class="p">),</span> <span class="n">loop</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">89</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">90</span>     <span class="c1"># this loops allows thread to get interrupted</span>
-<span class="ne">---&gt; </span><span class="mi">91</span>     <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">92</span>         <span class="k">break</span>
-<span class="g g-Whitespace">     </span><span class="mi">93</span>     <span class="k">if</span> <span class="n">timeout</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File /opt/python/lib/python3.13/threading.py:660,</span> in <span class="ni">Event.wait</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="n">signaled</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_flag</span>
-<span class="g g-Whitespace">    </span><span class="mi">659</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">signaled</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">660</span>     <span class="n">signaled</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cond</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">661</span> <span class="k">return</span> <span class="n">signaled</span>
-
-<span class="nn">File /opt/python/lib/python3.13/threading.py:363,</span> in <span class="ni">Condition.wait</span><span class="nt">(self, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">361</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span>     <span class="k">if</span> <span class="n">timeout</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">363</span>         <span class="n">gotit</span> <span class="o">=</span> <span class="n">waiter</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">365</span>         <span class="n">gotit</span> <span class="o">=</span> <span class="n">waiter</span><span class="o">.</span><span class="n">acquire</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;113. Autre, précisez&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q26_1_autre_rec&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;13_env_travail&#39;</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;16. recodage dev_exemple groupe&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q6_1_dev_group&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;5_developpement&#39;</span><span class="p">,</span>
                <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
-               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;nominal_multiple&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
                <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
-               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df0</span><span class="o">.</span><span class="n">q26_1_autre_rec</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
-               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">113</span><span class="p">,</span>
-               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="s2">&quot;Où travaillez-vous le plus souvent? Si autre, précisez&quot;</span><span class="p">,</span>
-               <span class="s1">&#39;question_family&#39;</span><span class="p">:</span><span class="s1">&#39;q26&#39;</span><span class="p">,</span>
-               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;recode les autre lieux&quot;</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df0</span><span class="o">.</span><span class="n">q6_1_dev_group</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
+               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="n">df_col</span><span class="o">.</span><span class="n">question</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">==</span><span class="s2">&quot;q6_1_dev_exemple&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;Classe les exemples de logiciels développés dans des groupes : outils de traitement et d&#39;analyse, outils de diffusion, collecte de données, etc.&quot;</span>
               <span class="p">}</span>
 <span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
 <span class="n">new_variable</span>
-<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col1</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">df_col1</span>
 </pre></div>
 </div>
@@ -1108,64 +2295,549 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
       <td>...</td>
     </tr>
     <tr>
-      <th>162</th>
-      <td>62. Logiciels de SIG (ex. QGis)</td>
-      <td>q16_sig_help</td>
-      <td>9_help_outil</td>
+      <th>146</th>
+      <td>14. other_lang_rec</td>
+      <td>q5_1_other_lang_rec</td>
+      <td>4_logiciel_traitement</td>
+      <td>False</td>
+      <td>multiple_choice</td>
+      <td>False</td>
+      <td>object</td>
+      <td>14.0</td>
+      <td>5.1/ Si Autre, précisez lequel (lesquels) ?</td>
+      <td>q5</td>
+      <td>Recodage de la question 14. mise en basse cass...</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>13.1 recodage logiciel de traitment</td>
+      <td>q5_logiciel_traitement_rec</td>
+      <td>4_logiciel_traitement</td>
+      <td>False</td>
+      <td>multiple_choice</td>
+      <td>False</td>
+      <td>object</td>
+      <td>5.0</td>
+      <td>5/ Dans le cadre de vos travaux de recherche, ...</td>
+      <td>q5</td>
+      <td>Regroupe les questions 5 et 6 sur les logiciel...</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>13.2 recodage familles de logiciel</td>
+      <td>q5_family_logi</td>
+      <td>4_logiciel_traitement</td>
+      <td>False</td>
+      <td>multiple_choice</td>
+      <td>False</td>
+      <td>object</td>
+      <td>5.0</td>
+      <td>5/ Dans le cadre de vos travaux de recherche, ...</td>
+      <td>q5</td>
+      <td>Classe les logiciels par famille</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>16. recodage dev_exemple</td>
+      <td>q6_1_dev_what</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Recodage de la question 16. Restitue le type d...</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>16. recodage dev_exemple groupe</td>
+      <td>q6_1_dev_group</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Classe les exemples de logiciels développés da...</td>
+    </tr>
+  </tbody>
+</table>
+<p>151 rows × 11 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;16. recodage dev_exemple how&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q6_1_dev_how&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;5_developpement&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;simple_nominal&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df0</span><span class="o">.</span><span class="n">q6_1_dev_how</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">16</span><span class="p">,</span>
+               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="n">df_col</span><span class="o">.</span><span class="n">question</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">==</span><span class="s2">&quot;q6_1_dev_exemple&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;Précise le langage ou l&#39;outil de programmation utilisé&quot;</span>
+              <span class="p">}</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
+<span class="n">new_variable</span>
+<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col1</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>label</th>
+      <th>group</th>
+      <th>personal_data</th>
+      <th>type</th>
+      <th>opened_question</th>
+      <th>type_panda</th>
+      <th>no_question</th>
+      <th>question</th>
+      <th>question_family</th>
+      <th>comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>N°Obs</td>
+      <td>qno_obs</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>numérique</td>
+      <td>False</td>
+      <td>int64</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>qno</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1. so_principles</td>
+      <td>q1_so_principles</td>
+      <td>1_connaissance_so</td>
       <td>False</td>
       <td>ordinal</td>
       <td>False</td>
       <td>object</td>
-      <td>19.0</td>
-      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
-      <td>q16</td>
+      <td>1.0</td>
+      <td>1/ Diriez-vous que vous êtes familier.ère des ...</td>
+      <td>q1</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>163</th>
-      <td>63. Système de gestion de base de données</td>
-      <td>q16_sgbd_help</td>
-      <td>9_help_outil</td>
+      <th>2</th>
+      <td>2. hal_depot</td>
+      <td>q2_hal_depot</td>
+      <td>1_connaissance_so</td>
       <td>False</td>
       <td>ordinal</td>
       <td>False</td>
       <td>object</td>
-      <td>19.0</td>
-      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
-      <td>q16</td>
+      <td>2.0</td>
+      <td>2/ Avez-vous déjà déposé une production scient...</td>
+      <td>q2</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>164</th>
-      <td>64. Autre</td>
-      <td>q16_autre_help</td>
-      <td>9_help_outil</td>
+      <th>3</th>
+      <td>3. octavi_depot</td>
+      <td>q3_octavi_depot</td>
+      <td>2_bib_num</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>3.0</td>
+      <td>3/ Avez-vous des productions déposées sur Octa...</td>
+      <td>q3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4. open_data</td>
+      <td>q4_diff_data</td>
+      <td>3_entrepot</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>4.0</td>
+      <td>4/ Avez-vous déjà diffusé vos données de reche...</td>
+      <td>q4</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>147</th>
+      <td>13.1 recodage logiciel de traitment</td>
+      <td>q5_logiciel_traitement_rec</td>
+      <td>4_logiciel_traitement</td>
+      <td>False</td>
+      <td>multiple_choice</td>
+      <td>False</td>
+      <td>object</td>
+      <td>5.0</td>
+      <td>5/ Dans le cadre de vos travaux de recherche, ...</td>
+      <td>q5</td>
+      <td>Regroupe les questions 5 et 6 sur les logiciel...</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>13.2 recodage familles de logiciel</td>
+      <td>q5_family_logi</td>
+      <td>4_logiciel_traitement</td>
+      <td>False</td>
+      <td>multiple_choice</td>
+      <td>False</td>
+      <td>object</td>
+      <td>5.0</td>
+      <td>5/ Dans le cadre de vos travaux de recherche, ...</td>
+      <td>q5</td>
+      <td>Classe les logiciels par famille</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>16. recodage dev_exemple</td>
+      <td>q6_1_dev_what</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Recodage de la question 16. Restitue le type d...</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>16. recodage dev_exemple groupe</td>
+      <td>q6_1_dev_group</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Classe les exemples de logiciels développés da...</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>16. recodage dev_exemple how</td>
+      <td>q6_1_dev_how</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Précise le langage ou l'outil de programmation...</td>
+    </tr>
+  </tbody>
+</table>
+<p>152 rows × 11 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="profils-repondants">
+<h2>Profils répondants<a class="headerlink" href="#profils-repondants" title="Link to this heading">#</a></h2>
+<section id="recodage-autres-lieux-de-travail">
+<h3>Recodage autres lieux de travail<a class="headerlink" href="#recodage-autres-lieux-de-travail" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df0</span><span class="o">.</span><span class="n">q26_1_autre_env</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">df0</span><span class="o">.</span><span class="n">q26_1_autre_env</span><span class="o">.</span><span class="n">isna</span><span class="p">()]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bibliothèque 
+Dans les locaux de mes partenaires de recherche
+Bibliothèques 
+Dans le métro
+bibliotheque
+Réunions avec les partenaires hospitaliers sur leur site
+SITE CNRS
+Bibliothèque, archives
+terrain 
+bureau de collègues dans d&#39;autres universités
+Bibliothèque
+bibliothèque et archives
+bureau hors P8
+bibliothèques
+Bureau MSH OU BIBLIOTHÈQUE MAIS JE MANQUE CRUELLEMENT D&#39;UN ESPACE DE TRAVAIL 
+Où je peux, puisque nous n&#39;avon pas de bureaux. Lorsque je peux, j&#39;évite le campus car : difficultés d&#39;accès, de connexion ; risque que les salles soient déjà prises, etc. Cela est très bloquant pour tout travail d&#39;équipe.
+partout
+Au laboratoire CEMTI
+où je peux, je n&#39;ai pas de bureau à la fac (15 m2 pour 6 titulaires)
+colloques, train, hotel
+dans des bibliothèque universitaires, au laboratoire  
+Transports en commun, salles d&#39;attente...
+Lieux de recherche 
+Campus Condorcet (chercheur associé à l&#39;Ined)
+Bibliothèques P8 et ailleurs
+Dans un bureau sur site partagé avec 5 autres collègues, trop petit, peu propice à la concentration et pas adapté aux réunions en visio 
+Bibliothèques.. Je trouve incongru la question du bureau dont nous ne disposons pas du tout (un peu plus depuis la construction de la Maison de la Recherche mais la chose n&#39;a visiblement pas été pensée jusqu&#39;au bout ou vraiment pour les enseignants chercheurs
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span><span class="p">[</span><span class="s2">&quot;q26_1_autre_rec&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df0</span><span class="o">.</span><span class="n">q26_1_autre_env</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">dict_autre_env</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># on enregistre les nouvelles variables dans le dataframe original</span>
+<span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
+    <span class="n">df0</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;113. recodage Autre, précisez&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q26_1_autre_rec&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;13_env_travail&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;nominal_multiple&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;opened_question&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
+               <span class="s1">&#39;type_panda&#39;</span><span class="p">:</span><span class="n">df0</span><span class="o">.</span><span class="n">q26_1_autre_rec</span><span class="o">.</span><span class="n">dtypes</span><span class="p">,</span>
+               <span class="s1">&#39;no_question&#39;</span><span class="p">:</span><span class="mi">113</span><span class="p">,</span>
+               <span class="s1">&#39;question&#39;</span><span class="p">:</span><span class="s2">&quot;Où travaillez-vous le plus souvent? Si autre, précisez&quot;</span><span class="p">,</span>
+               <span class="s1">&#39;question_family&#39;</span><span class="p">:</span><span class="s1">&#39;q26&#39;</span><span class="p">,</span>
+               <span class="s1">&#39;comment&#39;</span><span class="p">:</span><span class="s2">&quot;recode les autre lieux&quot;</span>
+              <span class="p">}</span>
+<span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
+<span class="n">new_variable</span>
+<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col1</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>label</th>
+      <th>group</th>
+      <th>personal_data</th>
+      <th>type</th>
+      <th>opened_question</th>
+      <th>type_panda</th>
+      <th>no_question</th>
+      <th>question</th>
+      <th>question_family</th>
+      <th>comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>N°Obs</td>
+      <td>qno_obs</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>numérique</td>
+      <td>False</td>
+      <td>int64</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>qno</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1. so_principles</td>
+      <td>q1_so_principles</td>
+      <td>1_connaissance_so</td>
       <td>False</td>
       <td>ordinal</td>
       <td>False</td>
       <td>object</td>
-      <td>19.0</td>
-      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
-      <td>q16</td>
+      <td>1.0</td>
+      <td>1/ Diriez-vous que vous êtes familier.ère des ...</td>
+      <td>q1</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>165</th>
-      <td>65. other_accomp_software</td>
-      <td>q16_1_other_software_help</td>
-      <td>9_help_outil</td>
+      <th>2</th>
+      <td>2. hal_depot</td>
+      <td>q2_hal_depot</td>
+      <td>1_connaissance_so</td>
       <td>False</td>
-      <td>texte_libre</td>
-      <td>True</td>
+      <td>ordinal</td>
+      <td>False</td>
       <td>object</td>
-      <td>20.0</td>
-      <td>7.1/ Si Autre, précisez lequel (lesquels) ?</td>
-      <td>q16</td>
+      <td>2.0</td>
+      <td>2/ Avez-vous déjà déposé une production scient...</td>
+      <td>q2</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>166</th>
-      <td>113. Autre, précisez</td>
+      <th>3</th>
+      <td>3. octavi_depot</td>
+      <td>q3_octavi_depot</td>
+      <td>2_bib_num</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>3.0</td>
+      <td>3/ Avez-vous des productions déposées sur Octa...</td>
+      <td>q3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4. open_data</td>
+      <td>q4_diff_data</td>
+      <td>3_entrepot</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>4.0</td>
+      <td>4/ Avez-vous déjà diffusé vos données de reche...</td>
+      <td>q4</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>148</th>
+      <td>13.2 recodage familles de logiciel</td>
+      <td>q5_family_logi</td>
+      <td>4_logiciel_traitement</td>
+      <td>False</td>
+      <td>multiple_choice</td>
+      <td>False</td>
+      <td>object</td>
+      <td>5.0</td>
+      <td>5/ Dans le cadre de vos travaux de recherche, ...</td>
+      <td>q5</td>
+      <td>Classe les logiciels par famille</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>16. recodage dev_exemple</td>
+      <td>q6_1_dev_what</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Recodage de la question 16. Restitue le type d...</td>
+    </tr>
+    <tr>
+      <th>150</th>
+      <td>16. recodage dev_exemple groupe</td>
+      <td>q6_1_dev_group</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Classe les exemples de logiciels développés da...</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>16. recodage dev_exemple how</td>
+      <td>q6_1_dev_how</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Précise le langage ou l'outil de programmation...</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>113. recodage Autre, précisez</td>
       <td>q26_1_autre_rec</td>
       <td>13_env_travail</td>
       <td>False</td>
@@ -1179,7 +2851,7 @@ Je propose également de faire une autre variable : “Doctorant/non doctorant�
     </tr>
   </tbody>
 </table>
-<p>167 rows × 11 columns</p>
+<p>153 rows × 11 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -1372,7 +3044,7 @@ Correcteurs d&#39;orthographe
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;135. ia_tools&#39;</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dic_new_var</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;135. recodage ia_tools&#39;</span><span class="p">,</span>
                <span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="s1">&#39;q35_ia_tools&#39;</span><span class="p">,</span>
                <span class="s1">&#39;group&#39;</span><span class="p">:</span><span class="s1">&#39;4_logiciel_traitement&#39;</span><span class="p">,</span>
                <span class="s1">&#39;personal_data&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span>
@@ -1386,7 +3058,7 @@ Correcteurs d&#39;orthographe
               <span class="p">}</span>
 <span class="n">new_variable</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">dic_new_var</span><span class="p">])</span>
 <span class="n">new_variable</span>
-<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">df_col1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_col1</span><span class="p">,</span><span class="n">new_variable</span><span class="p">],</span> <span class="n">ignore_index</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">df_col1</span>
 </pre></div>
 </div>
@@ -1509,50 +3181,50 @@ Correcteurs d&#39;orthographe
       <td>...</td>
     </tr>
     <tr>
-      <th>163</th>
-      <td>63. Système de gestion de base de données</td>
-      <td>q16_sgbd_help</td>
-      <td>9_help_outil</td>
+      <th>149</th>
+      <td>16. recodage dev_exemple</td>
+      <td>q6_1_dev_what</td>
+      <td>5_developpement</td>
       <td>False</td>
-      <td>ordinal</td>
-      <td>False</td>
-      <td>object</td>
-      <td>19.0</td>
-      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
-      <td>q16</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>164</th>
-      <td>64. Autre</td>
-      <td>q16_autre_help</td>
-      <td>9_help_outil</td>
-      <td>False</td>
-      <td>ordinal</td>
+      <td>simple_nominal</td>
       <td>False</td>
       <td>object</td>
-      <td>19.0</td>
-      <td>7/ Ressentez-vous le besoin d'un accompagnemen...</td>
-      <td>q16</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
       <td>NaN</td>
+      <td>Recodage de la question 16. Restitue le type d...</td>
     </tr>
     <tr>
-      <th>165</th>
-      <td>65. other_accomp_software</td>
-      <td>q16_1_other_software_help</td>
-      <td>9_help_outil</td>
+      <th>150</th>
+      <td>16. recodage dev_exemple groupe</td>
+      <td>q6_1_dev_group</td>
+      <td>5_developpement</td>
       <td>False</td>
-      <td>texte_libre</td>
-      <td>True</td>
+      <td>simple_nominal</td>
+      <td>False</td>
       <td>object</td>
-      <td>20.0</td>
-      <td>7.1/ Si Autre, précisez lequel (lesquels) ?</td>
-      <td>q16</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
       <td>NaN</td>
+      <td>Classe les exemples de logiciels développés da...</td>
     </tr>
     <tr>
-      <th>166</th>
-      <td>113. Autre, précisez</td>
+      <th>151</th>
+      <td>16. recodage dev_exemple how</td>
+      <td>q6_1_dev_how</td>
+      <td>5_developpement</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>16.0</td>
+      <td>6.1/ Si oui, pourriez-vous expliquer ce que vo...</td>
+      <td>NaN</td>
+      <td>Précise le langage ou l'outil de programmation...</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>113. recodage Autre, précisez</td>
       <td>q26_1_autre_rec</td>
       <td>13_env_travail</td>
       <td>False</td>
@@ -1565,8 +3237,8 @@ Correcteurs d&#39;orthographe
       <td>recode les autre lieux</td>
     </tr>
     <tr>
-      <th>167</th>
-      <td>135. ia_tools</td>
+      <th>153</th>
+      <td>135. recodage ia_tools</td>
       <td>q35_ia_tools</td>
       <td>4_logiciel_traitement</td>
       <td>False</td>
@@ -1580,7 +3252,7 @@ Correcteurs d&#39;orthographe
     </tr>
   </tbody>
 </table>
-<p>168 rows × 11 columns</p>
+<p>154 rows × 11 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">

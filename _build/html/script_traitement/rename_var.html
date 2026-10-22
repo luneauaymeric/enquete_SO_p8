@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -180,13 +180,33 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Synthèse</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../methode.html">Modalités de passation du questionnaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../script_analyse/synthese/main_results.html">Principaux résultats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/profil_repondant.html">Profils des enquêtés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Glossaire et bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexe I - Analyses descriptives</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/connaissance_science_ouverte.html">Connaissance et pratique de la Science Ouverte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/production_et_analyse_donnees.html">Production et analyse des données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/Outils_humanum.html">Le TGIR Huma-num et ses outils</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../script_analyse/stat_descriptive/glossaire.html">Glossaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes II - Méthodes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../calssification_repondant/profil_repondant_discpline.html">Identification des profils disciplinaires</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../calssification_repondant/clusterisation_indiv_research_fields.html">Profil disciplinaire</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="topic_modeling.html">Les raisons d’utiliser l’IA</a></li>
+
+
 </ul>
 
     </div>
@@ -372,14 +392,15 @@ document.write(`
 <span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">client_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;endpoint_url&#39;</span><span class="p">:</span> <span class="n">S3_ENDPOINT_URL</span><span class="p">})</span>
 
 <span class="n">BUCKET_OUT</span> <span class="o">=</span> <span class="s2">&quot;aluneau&quot;</span>
+
+<span class="n">last_file</span><span class="o">=</span><span class="s2">&quot;anonymous_answer_2026-07-24.csv&quot;</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;buparis8_chercheurs_besoins_accompagnement_5-11-2026_16_7.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
-<span class="n">df0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;buparis8_chercheurs_besoins_accompagnement_7-24-2026_9_54.csv&#39;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -388,10 +409,202 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_col</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;../le_questionnaire/dico_variable.csv&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
 <span class="c1">#df_col[&quot;name&quot;] = df_col.name.apply(lambda row : row.replace(&#39;:&#39;, &#39;&#39;))</span>
-<span class="n">df_col</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">df_col</span> <span class="o">=</span> <span class="n">df_col</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">143</span><span class="p">]</span>
+<span class="n">df_col</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>label</th>
+      <th>group</th>
+      <th>personal_data</th>
+      <th>type</th>
+      <th>opened_question</th>
+      <th>type_panda</th>
+      <th>no_question</th>
+      <th>question</th>
+      <th>question_family</th>
+      <th>comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>N°Obs</td>
+      <td>qno_obs</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>numérique</td>
+      <td>False</td>
+      <td>int64</td>
+      <td>0.0</td>
+      <td>NaN</td>
+      <td>qno</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1. so_principles</td>
+      <td>q1_so_principles</td>
+      <td>1_connaissance_so</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>1.0</td>
+      <td>1/ Diriez-vous que vous êtes familier.ère des ...</td>
+      <td>q1</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2. hal_depot</td>
+      <td>q2_hal_depot</td>
+      <td>1_connaissance_so</td>
+      <td>False</td>
+      <td>ordinal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>2.0</td>
+      <td>2/ Avez-vous déjà déposé une production scient...</td>
+      <td>q2</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3. octavi_depot</td>
+      <td>q3_octavi_depot</td>
+      <td>2_bib_num</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>3.0</td>
+      <td>3/ Avez-vous des productions déposées sur Octa...</td>
+      <td>q3</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4. open_data</td>
+      <td>q4_diff_data</td>
+      <td>3_entrepot</td>
+      <td>False</td>
+      <td>nominal_multiple</td>
+      <td>False</td>
+      <td>object</td>
+      <td>4.0</td>
+      <td>4/ Avez-vous déjà diffusé vos données de reche...</td>
+      <td>q4</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>151. Langue</td>
+      <td>q50_langue</td>
+      <td>17_metadonnee</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>q50</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>152. Progression</td>
+      <td>q51_progression</td>
+      <td>17_metadonnee</td>
+      <td>False</td>
+      <td>NaN</td>
+      <td>False</td>
+      <td>object</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>q51</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>153. Dernière question saisie</td>
+      <td>q52_dernière_question_saisie</td>
+      <td>17_metadonnee</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>float64</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>q52</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>154. Origine</td>
+      <td>q53_origine</td>
+      <td>17_metadonnee</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>q53</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>155. Appareil utilisé pour la saisie</td>
+      <td>q54_appareil_utilisé_pour_la_saisie</td>
+      <td>17_metadonnee</td>
+      <td>False</td>
+      <td>simple_nominal</td>
+      <td>False</td>
+      <td>object</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>q54</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>143 rows × 11 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -402,6 +615,19 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;qno_obs&#39;, &#39;q1_so_principles&#39;, &#39;q2_hal_depot&#39;, &#39;q3_octavi_depot&#39;,
+       &#39;q4_diff_data&#39;, &#39;q4_autres_entrepots&#39;, &#39;q5_r&#39;, &#39;q5_python&#39;, &#39;q5_excel&#39;,
+       &#39;q5_julia&#39;,
+       ...
+       &#39;q45_clé&#39;, &#39;q46_date_de_saisie&#39;, &#39;q47_date_de_dernière_modification&#39;,
+       &#39;q48_date_de_dernier_enregistrement&#39;, &#39;q49_temps_de_saisie&#39;,
+       &#39;q50_langue&#39;, &#39;q51_progression&#39;, &#39;q52_dernière_question_saisie&#39;,
+       &#39;q53_origine&#39;, &#39;q54_appareil_utilisé_pour_la_saisie&#39;],
+      dtype=&#39;object&#39;, length=156)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -409,11 +635,66 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>label</th>
+      <th>group</th>
+      <th>personal_data</th>
+      <th>type</th>
+      <th>opened_question</th>
+      <th>type_panda</th>
+      <th>no_question</th>
+      <th>question</th>
+      <th>question_family</th>
+      <th>comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>133</th>
+      <td>146. Clé</td>
+      <td>q45_clé</td>
+      <td>12_descript_repondant</td>
+      <td>False</td>
+      <td>string</td>
+      <td>False</td>
+      <td>object</td>
+      <td>49.0</td>
+      <td>4/ Si vous souhaitez un suivi ou un échange à ...</td>
+      <td>q45</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">list_personal_data</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_col</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_col</span><span class="o">.</span><span class="n">personal_data</span><span class="o">==</span><span class="kc">True</span><span class="p">]]</span>
 <span class="n">list_personal_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;q42_nom_&#39;, &#39;q42_prénom_&#39;, &#39;q43_adresse_e-mail_&#39;]
 </pre></div>
 </div>
 </div>
@@ -425,10 +706,423 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>qno_obs</th>
+      <th>q1_so_principles</th>
+      <th>q2_hal_depot</th>
+      <th>q3_octavi_depot</th>
+      <th>q4_diff_data</th>
+      <th>q4_autres_entrepots</th>
+      <th>q5_r</th>
+      <th>q5_python</th>
+      <th>q5_excel</th>
+      <th>q5_julia</th>
+      <th>...</th>
+      <th>q45_clé</th>
+      <th>q46_date_de_saisie</th>
+      <th>q47_date_de_dernière_modification</th>
+      <th>q48_date_de_dernier_enregistrement</th>
+      <th>q49_temps_de_saisie</th>
+      <th>q50_langue</th>
+      <th>q51_progression</th>
+      <th>q52_dernière_question_saisie</th>
+      <th>q53_origine</th>
+      <th>q54_appareil_utilisé_pour_la_saisie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PS8W-TJ9P</td>
+      <td>09/03/2026 11:01:53</td>
+      <td>NaN</td>
+      <td>09/03/2026 11:12:04</td>
+      <td>611,0190107</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>GNEG-5QXQ</td>
+      <td>10/03/2026 11:11:19</td>
+      <td>NaN</td>
+      <td>10/03/2026 11:17:47</td>
+      <td>387,3420906</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Oui, tout à fait</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Je ne connais pas Octaviana</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>FCCB-GMYA</td>
+      <td>10/03/2026 11:10:00</td>
+      <td>NaN</td>
+      <td>10/03/2026 11:19:57</td>
+      <td>596,9405636</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>CV3G-95CT</td>
+      <td>10/03/2026 11:14:07</td>
+      <td>NaN</td>
+      <td>10/03/2026 11:23:25</td>
+      <td>558,0371672</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>9EAP-NB4B</td>
+      <td>10/03/2026 11:18:54</td>
+      <td>NaN</td>
+      <td>10/03/2026 11:28:09</td>
+      <td>554,5038942</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>117</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>MLSN-NBUS</td>
+      <td>28/04/2026 17:33:55</td>
+      <td>NaN</td>
+      <td>28/04/2026 17:49:27</td>
+      <td>932,1846343</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>118</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>WAR9-LFJP</td>
+      <td>29/04/2026 14:59:02</td>
+      <td>NaN</td>
+      <td>29/04/2026 15:10:56</td>
+      <td>714,0441946</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>119</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>HRZG-6JGE</td>
+      <td>05/05/2026 09:36:22</td>
+      <td>NaN</td>
+      <td>05/05/2026 09:52:15</td>
+      <td>953,6974524</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>120</td>
+      <td>Non</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Autre, précisez</td>
+      <td>Mendeley data</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>32TW-JLY5</td>
+      <td>28/05/2026 10:01:22</td>
+      <td>NaN</td>
+      <td>28/05/2026 10:21:58</td>
+      <td>1235,8811168</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>121</td>
+      <td>Non</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non;Oui, sur Nakala</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>6GVE-N5NJ</td>
+      <td>05/06/2026 22:36:01</td>
+      <td>NaN</td>
+      <td>05/06/2026 22:59:49</td>
+      <td>1427,0935395</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+  </tbody>
+</table>
+<p>121 rows × 153 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/anonymous_answer_2026-05-11.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df1</span><span class="o">.</span><span class="n">q45_clé</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;H5X6-KL2Z&quot;</span><span class="p">,</span><span class="s1">&#39;PS8W-TJ9P&#39;</span><span class="p">])]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">)</span><span class="c1">#.merge(list_affil, on = [&quot;q45_clé&quot;, &quot;q44_ufr_labo&quot;], how = &quot;left&quot;)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>qno_obs</th>
+      <th>q1_so_principles</th>
+      <th>q2_hal_depot</th>
+      <th>q3_octavi_depot</th>
+      <th>q4_diff_data</th>
+      <th>q4_autres_entrepots</th>
+      <th>q5_r</th>
+      <th>q5_python</th>
+      <th>q5_excel</th>
+      <th>q5_julia</th>
+      <th>...</th>
+      <th>q45_clé</th>
+      <th>q46_date_de_saisie</th>
+      <th>q47_date_de_dernière_modification</th>
+      <th>q48_date_de_dernier_enregistrement</th>
+      <th>q49_temps_de_saisie</th>
+      <th>q50_langue</th>
+      <th>q51_progression</th>
+      <th>q52_dernière_question_saisie</th>
+      <th>q53_origine</th>
+      <th>q54_appareil_utilisé_pour_la_saisie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>PS8W-TJ9P</td>
+      <td>09/03/2026 11:01:53</td>
+      <td>NaN</td>
+      <td>09/03/2026 11:12:04</td>
+      <td>611,0190107</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>58</td>
+      <td>Oui, un peu</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>H5X6-KL2Z</td>
+      <td>23/03/2026 14:09:16</td>
+      <td>NaN</td>
+      <td>23/03/2026 15:10:28</td>
+      <td>3672,1628372</td>
+      <td>FR</td>
+      <td>Terminé</td>
+      <td>NaN</td>
+      <td>Direct</td>
+      <td>PC</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 153 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">fs</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BUCKET_OUT</span><span class="si">}</span><span class="s2">/data_eP8/raw/</span><span class="si">{</span><span class="n">last_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_out</span><span class="p">:</span>
     <span class="n">df1</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_out</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 </div>

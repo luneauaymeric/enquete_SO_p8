@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -62,7 +62,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Production et analyse des données" href="production_et_analyse_donnees.html" />
-    <link rel="prev" title="Profils des enquêtés" href="profil_repondant.html" />
+    <link rel="prev" title="Bibliographie" href="../../biblio.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -180,13 +180,33 @@
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Synthèse</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../methode.html">Modalités de passation du questionnaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../synthese/main_results.html">Principaux résultats</a></li>
 <li class="toctree-l1"><a class="reference internal" href="profil_repondant.html">Profils des enquêtés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Glossaire et bibliographie</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../glossaire.html">Glossaire</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexe I - Analyses descriptives</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Connaissance et pratique de la Science Ouverte</a></li>
 <li class="toctree-l1"><a class="reference internal" href="production_et_analyse_donnees.html">Production et analyse des données</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Outils_humanum.html">Le TGIR Huma-num et ses outils</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossaire.html">Glossaire</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../biblio.html">Bibliographie</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes II - Méthodes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../calssification_repondant/profil_repondant_discpline.html">Identification des profils disciplinaires</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../../calssification_repondant/clusterisation_indiv_research_fields.html">Profil disciplinaire</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../script_traitement/topic_modeling.html">Les raisons d’utiliser l’IA</a></li>
+
+
 </ul>
 
     </div>
@@ -336,7 +356,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-besoins-d-accompagnement-a-la-science-ouverte">Les besoins d’accompagnement à la Science Ouverte</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stockage-sauvegarde-et-archivage-des-donnees">Stockage, sauvegarde et archivage des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stockage-sauvegarde-et-archivage-des-donnees">Stockage, sauvegarde et archivage des données</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-stockage">Le stockage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-sauvegarde">La sauvegarde</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#archivage">Archivage</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -350,9 +375,333 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="connaissance-et-pratique-de-la-science-ouverte">
 <h1>Connaissance et pratique de la Science Ouverte<a class="headerlink" href="#connaissance-et-pratique-de-la-science-ouverte" title="Link to this heading">#</a></h1>
-<p>Les connaissances et les pratiques de la Science Ouverte constituaient le thème central de l’enquête. La première question évaluait ainsi le degré de familiarité des participants concernant les principes de la Science Ouverte (<a class="reference internal" href="#principe-so"><span class="std std-numref">Table 8</span></a>). 56% ont répond “oui, un peu”, 32% “oui, tout à fait” et 12% “non”.</p>
+<figure class="align-default" id="question-science-ouverte">
+<img alt="script_analyse/stat_descriptive/viz/Capture_science_ouverte_2026-10-15_14-32-26.jpg" src="script_analyse/stat_descriptive/viz/Capture_science_ouverte_2026-10-15_14-32-26.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 9 </span><span class="caption-text">Les questions relatives à la science ouverte</span><a class="headerlink" href="#question-science-ouverte" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>qno_obs</th>
+      <th>q1_so_principles</th>
+      <th>q2_hal_depot</th>
+      <th>q3_octavi_depot</th>
+      <th>q4_diff_data</th>
+      <th>q4_autres_entrepots</th>
+      <th>q5_r</th>
+      <th>q5_python</th>
+      <th>q5_excel</th>
+      <th>q5_julia</th>
+      <th>...</th>
+      <th>q5_family_logi</th>
+      <th>q6_1_dev_what</th>
+      <th>q6_1_dev_group</th>
+      <th>q6_1_dev_how</th>
+      <th>q26_1_autre_rec</th>
+      <th>q35_ia_tools_rec</th>
+      <th>no_cluster_x</th>
+      <th>nom_cluster_x</th>
+      <th>no_cluster_y</th>
+      <th>nom_cluster_y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>Oui, tout à fait</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Je ne connais pas Octaviana</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>feuille de calcul|CAQDAS|gestion biblio</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>chatgpt|mistral|notebooklm</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>script et programmation</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>chatgpt|euria</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>script et programmation|feuille de calcul</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>chatgpt|perplexity</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>github</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>script et programmation</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>119</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>script et programmation|feuille de calcul</td>
+      <td>scripts</td>
+      <td>traitement et analyse de données</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>Individus, normes, sociétés</td>
+      <td>5.0</td>
+      <td>Individus, normes, sociétés</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>120</td>
+      <td>Non</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Autre, précisez</td>
+      <td>Mendeley data</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>script et programmation|feuille de calcul</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>correcteurs d'orthographe</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>121</td>
+      <td>Non</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non;Oui, sur Nakala</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Bibliothèque</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>1</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>58</td>
+      <td>Oui, un peu</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>feuille de calcul</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>chatgpt|gemini|claude</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>119 rows × 168 columns</p>
+</div></div></div>
+</div>
+<p>Les connaissances et les pratiques de la Science Ouverte constituaient le thème central de l’enquête. La première question ({numref} <code class="docutils literal notranslate"><span class="pre">question_science_ouverte</span></code>) évaluait ainsi le degré de familiarité des participants concernant les principes de la Science Ouverte (<a class="reference internal" href="#principe-so"><span class="std std-numref">Table 13</span></a>). 56% ont répond “oui, un peu”, 32% “oui, tout à fait” et 12% “non”.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="principe-so">
-<caption><span class="caption-number">Table 8 </span><span class="caption-text">Connaissance des principes de la Science Ouverte</span><a class="headerlink" href="#principe-so" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 13 </span><span class="caption-text">Connaissance des principes de la Science Ouverte</span><a class="headerlink" href="#principe-so" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Principes de la science ouverte</p></th>
 <th class="head text-right"><p>nb</p></th>
@@ -379,9 +728,9 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>Les questions suivantes portaient sur le dépôt dans HAL, la publication de ressources via Octaviana et la diffusion des données de recherche. Le dépôt dans HAL apparaît être la pratique la plus répandue (<a class="reference internal" href="#depot-hal"><span class="std std-numref">Table 9</span></a>). 35% des répondants disent déposer à chaque fois leurs productions scientifiques sur la plateforme et 40 % l’ont fait plusieurs fois. Sans surprise, les doctorants sont surreprésentés parmi les “non déposants” dans HAL lorsque l’on compare les différents statuts (<a class="reference internal" href="#depot-hal-statut"><span class="std std-numref">Table 10</span></a>). On observe toutefois que 10% des chercheurs ayant répondu à l’enquête disent n’avoir jamais effectué de dépôt sur HAL.</p>
+<p>Les questions suivantes portaient sur le dépôt dans HAL, la publication de ressources via Octaviana et la diffusion des données de recherche. Le dépôt dans HAL apparaît être la pratique la plus répandue (<a class="reference internal" href="#depot-hal"><span class="std std-numref">Table 14</span></a>). 35% des répondants disent déposer à chaque fois leurs productions scientifiques sur la plateforme et 40 % l’ont fait plusieurs fois. Les doctorants sont surreprésentés parmi les “non déposants” dans HAL lorsque l’on compare les différents statuts (<a class="reference internal" href="../synthese/main_results.html#depot-hal-statut"><span class="std std-numref">Table 4</span></a>), probablement parce que tous n’ont pas encore de publication.  On observe toutefois que 10% des chercheurs ayant répondu à l’enquête disent n’avoir jamais effectué de dépôt sur HAL.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="depot-hal">
-<caption><span class="caption-number">Table 9 </span><span class="caption-text">Le dépôt dans HAL</span><a class="headerlink" href="#depot-hal" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 14 </span><span class="caption-text">Le dépôt dans HAL</span><a class="headerlink" href="#depot-hal" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Dépôt dans Hal</p></th>
 <th class="head text-right"><p>nb</p></th>
@@ -413,7 +762,7 @@ document.write(`
 </table>
 </div>
 <div class="pst-scrollable-table-container"><table class="table" id="depot-hal-statut">
-<caption><span class="caption-number">Table 10 </span><span class="caption-text">La proportion de déposants dans HAL en fonction du statut</span><a class="headerlink" href="#depot-hal-statut" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 15 </span><span class="caption-text">La proportion de déposants dans HAL en fonction du statut</span><a class="headerlink" href="#depot-hal-statut" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Statut</p></th>
 <th class="head text-right"><p>Non</p></th>
@@ -455,10 +804,10 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>En compraison des dépôt dans HAL où 87% des répondants l’ont fait au moins une fois, ils ne sont plus que 28% à “avoir déjà diffusé leurs données de recherche une fois le projet terminé”  (<a class="reference internal" href="#opened-data"><span class="std std-numref">Table 11</span></a>). On retrouve la même proportion au sein de la population des chercheurs : 30% d’entre eux ont déjà diffusé leur données (<a class="reference internal" href="#diff-data-statut"><span class="std std-numref">Table 12</span></a>). Tandis que 90% des doctorants ne l’ont jamais fait. On notera par ailleurs que la diffusion des données ne signifie pas nécessairement que celles-ci ont été ouvertes selon les principes FAIR (Facile à trouver, Accessible, Interopérable, Reproductible). Par exemple, le partage de données via une clé usb ou un site web personnel ne répondent pas deux premiers principes.</p>
-<p>Les répondants pouvaient choisir plusieurs modalités de diffusion parmi les quatre options proposées. Cinq personnes (4%) disent avoir utilisé Nakala, quatre (3%) ont des données sur Zenodo et une seulement en entrepose sur Data Paris 8. Les autres modalités les plus citées (<a class="reference internal" href="#autre-entrepot-fig"><span class="std std-numref">Fig. 5</span></a>) sont Open Science Framework (N=10, 8%), les sites web personnels (N=6, 5%), les dépôts “git” (N=2, 2%) et les entrepots spécialisés Ortolang (N=2, 2%) et Cocoon (N=1, 1%).</p>
+<p>En comparaison des dépôts dans HAL où 87% des répondants l’ont fait au moins une fois, ils ne sont plus que 28% à “avoir déjà diffusé leurs données de recherche une fois le projet terminé”  (<a class="reference internal" href="#opened-data"><span class="std std-numref">Table 16</span></a>). Ils sont 30 % parmi les 104 chercheurs et enseignants-et 90% chez les doctorants (<a class="reference internal" href="#diff-data-statut"><span class="std std-numref">Table 17</span></a>). Comme pour les publications, on peut relier ce dernier chiffre au fait que les doctorants sont plutôt dans la phase de production de données que d’ouverture. On notera par ailleurs que la diffusion des données ne signifie pas nécessairement que celles-ci ont été ouvertes selon les principes FAIR (Facile à trouver, Accessible, Interopérable, Reproductible). Par exemple, le partage de données via une clé usb ou un site web personnel ne répondent pas aux deux premiers principes.</p>
+<p>Les répondants pouvaient choisir plusieurs modalités de diffusion parmi les quatre options proposées. Cinq personnes (4%) disent avoir utilisé Nakala, quatre (3%) ont des données sur Zenodo et une seulement en entrepose sur Data Paris 8. Les autres modalités les plus citées (<a class="reference internal" href="#autre-entrepot-fig"><span class="std std-numref">Fig. 10</span></a>) sont Open Science Framework (N=10, 8%), les sites web personnels (N=6, 5%), les dépôts “git” (N=2, 2%) et les entrepots spécialisés Ortolang (N=2, 2%) et Cocoon (N=1, 1%).</p>
 <div class="pst-scrollable-table-container"><table class="table" id="opened-data">
-<caption><span class="caption-number">Table 11 </span><span class="caption-text">La diffusion des données</span><a class="headerlink" href="#opened-data" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 16 </span><span class="caption-text">La diffusion des données</span><a class="headerlink" href="#opened-data" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Ouverture des données</p></th>
 <th class="head text-right"><p>nb</p></th>
@@ -496,7 +845,7 @@ document.write(`
 </table>
 </div>
 <div class="pst-scrollable-table-container"><table class="table" id="diff-data-statut">
-<caption><span class="caption-number">Table 12 </span><span class="caption-text">La diffusion des données en fonction du statut</span><a class="headerlink" href="#diff-data-statut" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 17 </span><span class="caption-text">La diffusion des données en fonction du statut</span><a class="headerlink" href="#diff-data-statut" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Statut</p></th>
 <th class="head text-right"><p>Non</p></th>
@@ -529,14 +878,14 @@ document.write(`
 </table>
 </div>
 <figure class="align-default" id="autre-entrepot-fig">
-<img alt="../../_images/autre_entrepot_rec.png" src="../../_images/autre_entrepot_rec.png" />
+<img alt="script_analyse/stat_descriptive/viz/autre_entrepot_rec.png" src="script_analyse/stat_descriptive/viz/autre_entrepot_rec.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Les modes d’ouverture des données</span><a class="headerlink" href="#autre-entrepot-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Les modes d’ouverture des données</span><a class="headerlink" href="#autre-entrepot-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Concernant Octaviana (<a class="reference internal" href="#depot-octaviana"><span class="std std-numref">Table 13</span></a>), 11 répondants (9%) ont déposé des ressources sur la bibliothèque numérique. Cinq d’entre eux ont mis des publications. Ils sont cinq répondants également à avoir déposé des travaux universitaires et trois ont publié des captations d’événements. En tout une personne interrogée sur cinq n’a jamais entendu parlé d’Octaviana.</p>
+<p>20% des 119 personnes interrogées ont déclaré ne pas connaître Octaviana et 78% n’ont encore rien déposé. Parmi les 11 déposants, cinq ont ont mis des publications, cinq ont déposé des travaux universitaires et trois ont publié des captations d’événements.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="depot-octaviana">
-<caption><span class="caption-number">Table 13 </span><span class="caption-text">Le dépôt dans Octaviana</span><a class="headerlink" href="#depot-octaviana" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 18 </span><span class="caption-text">Le dépôt dans Octaviana</span><a class="headerlink" href="#depot-octaviana" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head text-left"><p>Dépot sur Octaviana</p></th>
 <th class="head text-right"><p>nb</p></th>
@@ -559,19 +908,9 @@ document.write(`
 </tbody>
 </table>
 </div>
-<section id="les-besoins-d-accompagnement-a-la-science-ouverte">
-<h2>Les besoins d’accompagnement à la Science Ouverte<a class="headerlink" href="#les-besoins-d-accompagnement-a-la-science-ouverte" title="Link to this heading">#</a></h2>
-<p>Les besoins d’accompagnement exprimés par les répondants reflètent leur degré de familiarité avec les sujets proposés. En effet, 70% des personnes interrogées jugent utile l’accompagnement à l’ouverture des données selon les principes FAIR  contre 32% pour l’accompagnement au dépôt des publications dans HAL (<a class="reference internal" href="#utilite-accomp-so-fig"><span class="std std-numref">Fig. 6</span></a>).</p>
-<p>Nous pouvons relier ces différences de proportion au fait que la bibliothèque a mis en place des accompagnements et des formations à HAL depuis plus de six ans. Ces dispositifs participent de la mise en oeuvre du premier <em>Plan national pour la Science Ouverte</em> (2018-2021), lequel mettait l’accent sur l’ouverture des productions scientifiques. Les chercheurs ont été d’autant plus incités à signaler leurs publications, à défaut de les ouvrir totalement, que le Haut comité pour l’évaluation de la recherche et de l’enseignement supérieur (HCERES) prend en compte la liste des références présentes dans HAL pour évaluer les unités de recherche. La plateforme HAL est ainsi devenue un objet du quotidien des chercheurs. À l’inverse, instituée par la Directive européenne et mise en avant dans le second Plan national pour la Science Ouverte (2021-2024), l’ouverture des données est un sujet relativement nouveau et les formations proposées par la bibliothèque sur ce sujet sont plus récentes.</p>
-<figure class="align-default" id="utilite-accomp-so-fig">
-<img alt="../../_images/util_accomp_so.png" src="../../_images/util_accomp_so.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Utilité des accompagnements à la Science Ouverte</span><a class="headerlink" href="#utilite-accomp-so-fig" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q8_ter</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df0</span>
 </pre></div>
 </div>
 </div>
@@ -594,221 +933,544 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>accomp_name</th>
-      <th>interet_accomp</th>
-      <th>cum_sum</th>
-      <th>nb</th>
-      <th>Oui</th>
+      <th>qno_obs</th>
+      <th>q1_so_principles</th>
+      <th>q2_hal_depot</th>
+      <th>q3_octavi_depot</th>
+      <th>q4_diff_data</th>
+      <th>q4_autres_entrepots</th>
+      <th>q5_r</th>
+      <th>q5_python</th>
+      <th>q5_excel</th>
+      <th>q5_julia</th>
+      <th>...</th>
+      <th>q6_1_dev_what</th>
+      <th>q6_1_dev_group</th>
+      <th>q6_1_dev_how</th>
+      <th>q26_1_autre_rec</th>
+      <th>q35_ia_tools_rec</th>
+      <th>no_cluster_x</th>
+      <th>nom_cluster_x</th>
+      <th>no_cluster_y</th>
+      <th>nom_cluster_y</th>
+      <th>q4_diff_data_grouped</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>23</th>
-      <td>Choix des licences de diffusion</td>
-      <td>Non, pas utile</td>
-      <td>100.000000</td>
-      <td>0.252101</td>
-      <td>0.747899</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>Choix des licences de diffusion</td>
-      <td>Oui, très utile</td>
-      <td>74.789916</td>
-      <td>0.302521</td>
-      <td>0.747899</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>Choix des licences de diffusion</td>
-      <td>Oui, plutôt utile</td>
-      <td>44.537815</td>
-      <td>0.445378</td>
-      <td>0.747899</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>Fairiser les données</td>
-      <td>Non, pas utile</td>
-      <td>100.000000</td>
-      <td>0.310924</td>
-      <td>0.689076</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>Fairiser les données</td>
-      <td>Oui, très utile</td>
-      <td>68.907563</td>
-      <td>0.168067</td>
-      <td>0.689076</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>Fairiser les données</td>
-      <td>Oui, plutôt utile</td>
-      <td>52.100840</td>
-      <td>0.521008</td>
-      <td>0.689076</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>Connaître les standards de métadonnées</td>
-      <td>Non, pas utile</td>
-      <td>100.000000</td>
-      <td>0.336134</td>
-      <td>0.663866</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>Connaître les standards de métadonnées</td>
-      <td>Oui, très utile</td>
-      <td>66.386555</td>
-      <td>0.218487</td>
-      <td>0.663866</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>Connaître les standards de métadonnées</td>
-      <td>Oui, plutôt utile</td>
-      <td>44.537815</td>
-      <td>0.445378</td>
-      <td>0.663866</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Respecter le RGPD</td>
-      <td>Non, pas utile</td>
-      <td>100.000000</td>
-      <td>0.344538</td>
-      <td>0.655462</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Respecter le RGPD</td>
-      <td>Oui, très utile</td>
-      <td>65.546218</td>
-      <td>0.235294</td>
-      <td>0.655462</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Respecter le RGPD</td>
-      <td>Oui, plutôt utile</td>
-      <td>42.016807</td>
-      <td>0.420168</td>
-      <td>0.655462</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Rédiger un PGD</td>
-      <td>Non, pas utile</td>
-      <td>100.000000</td>
-      <td>0.369748</td>
-      <td>0.630252</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Rédiger un PGD</td>
-      <td>Oui, très utile</td>
-      <td>63.025210</td>
-      <td>0.235294</td>
-      <td>0.630252</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Rédiger un PGD</td>
-      <td>Oui, plutôt utile</td>
-      <td>39.495798</td>
-      <td>0.394958</td>
-      <td>0.630252</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Rédiger un data paper</td>
-      <td>Non, pas utile</td>
-      <td>100.000000</td>
-      <td>0.428571</td>
-      <td>0.571429</td>
-    </tr>
-    <tr>
       <th>0</th>
-      <td>Rédiger un data paper</td>
-      <td>Oui, très utile</td>
-      <td>57.142857</td>
-      <td>0.184874</td>
-      <td>0.571429</td>
+      <td>2</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+      <td>Non</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Rédiger un data paper</td>
-      <td>Oui, plutôt utile</td>
-      <td>38.655462</td>
-      <td>0.386555</td>
-      <td>0.571429</td>
+      <td>3</td>
+      <td>Oui, tout à fait</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Je ne connais pas Octaviana</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>chatgpt|mistral|notebooklm</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>Non</td>
     </tr>
     <tr>
-      <th>17</th>
-      <td>Déposer des données</td>
-      <td>Non, pas utile</td>
-      <td>100.000000</td>
-      <td>0.445378</td>
-      <td>0.554622</td>
+      <th>2</th>
+      <td>4</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Autre, précisez</td>
+      <td>OSF</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>chatgpt|euria</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>Oui</td>
     </tr>
     <tr>
-      <th>15</th>
-      <td>Déposer des données</td>
-      <td>Oui, très utile</td>
-      <td>55.462185</td>
-      <td>0.159664</td>
-      <td>0.554622</td>
+      <th>3</th>
+      <td>6</td>
+      <td>Oui, un peu</td>
+      <td>Oui, systématiquement</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>chatgpt|perplexity</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>4.0</td>
+      <td>Psychologie</td>
+      <td>Non</td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>Déposer des données</td>
-      <td>Oui, plutôt utile</td>
-      <td>39.495798</td>
-      <td>0.394958</td>
-      <td>0.554622</td>
+      <th>4</th>
+      <td>7</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>github</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+      <td>Non</td>
     </tr>
     <tr>
-      <th>14</th>
-      <td>Dépot sur Hal</td>
-      <td>Non, pas utile</td>
-      <td>100.000000</td>
-      <td>0.680672</td>
-      <td>0.319328</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>Dépot sur Hal</td>
-      <td>Oui, très utile</td>
-      <td>31.932773</td>
-      <td>0.092437</td>
-      <td>0.319328</td>
+      <th>114</th>
+      <td>119</td>
+      <td>Oui, un peu</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>scripts</td>
+      <td>traitement et analyse de données</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>Individus, normes, sociétés</td>
+      <td>5.0</td>
+      <td>Individus, normes, sociétés</td>
+      <td>Non</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>Dépot sur Hal</td>
-      <td>Oui, plutôt utile</td>
-      <td>22.689076</td>
-      <td>0.226891</td>
-      <td>0.319328</td>
+      <th>115</th>
+      <td>120</td>
+      <td>Non</td>
+      <td>Oui, plusieurs fois</td>
+      <td>Non;Je ne connais pas Octaviana</td>
+      <td>Autre, précisez</td>
+      <td>Mendeley data</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>correcteurs d'orthographe</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>3.0</td>
+      <td>Sciences informatiques</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>121</td>
+      <td>Non</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non;Oui, sur Nakala</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Bibliothèque</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>Art, cultures et communication</td>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>1</td>
+      <td>Oui, un peu</td>
+      <td>Oui, une fois</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>58</td>
+      <td>Oui, un peu</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>NaN</td>
+      <td>Non</td>
+      <td>Non</td>
+      <td>Oui</td>
+      <td>Non</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>chatgpt|gemini|claude</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Non</td>
+    </tr>
+  </tbody>
+</table>
+<p>119 rows × 169 columns</p>
+</div></div></div>
+</div>
+<section id="les-besoins-d-accompagnement-a-la-science-ouverte">
+<h2>Les besoins d’accompagnement à la Science Ouverte<a class="headerlink" href="#les-besoins-d-accompagnement-a-la-science-ouverte" title="Link to this heading">#</a></h2>
+<p>La bibliothèque de Paris 8 développe des services de formation et d’accompagnement consacrés aux différents aspects de la science ouverte. Nous avons donc interrogé les participants quant à leurs besoins afin de mieux cadrer ces services.</p>
+<p>70% des personnes interrogées ont ainsi jugé utile l’accompagnement à l’ouverture des données selon les principes FAIR  contre 32% pour l’accompagnement au dépôt des publications dans HAL (<a class="reference internal" href="#utilite-accomp-so-fig"><span class="std std-numref">Fig. 11</span></a>).</p>
+<p>Nous pouvons relier ces différences de proportion au fait que la bibliothèque a mis en place des accompagnements et des formations à HAL depuis plus de six ans. Ces dispositifs participent de la mise en oeuvre du premier <em>Plan national pour la Science Ouverte</em> (2018-2021), lequel mettait l’accent sur l’ouverture des productions scientifiques. Les chercheurs ont été d’autant plus incités à signaler leurs publications, à défaut de les ouvrir totalement, que le Haut comité pour l’évaluation de la recherche et de l’enseignement supérieur (HCERES) prend en compte la liste des références présentes dans HAL pour évaluer les unités de recherche. La plateforme HAL est ainsi devenue un outil du quotidien des chercheurs. À l’inverse, l’ouverture des données est un sujet relativement nouveau, instituée par la Directive européenne de 2019 et mise en avant dans le second Plan national pour la Science Ouverte (2021-2024). Les formations proposées par la bibliothèque sur ce sujet sont plus récentes et il n’existe pas d’incitation aux dépôts.</p>
+<figure class="align-default" id="utilite-accomp-so-fig">
+<img alt="script_analyse/stat_descriptive/viz/util_accomp_so.png" src="script_analyse/stat_descriptive/viz/util_accomp_so.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Utilité des accompagnements à la Science Ouverte</span><a class="headerlink" href="#utilite-accomp-so-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="stockage-sauvegarde-et-archivage-des-donnees">
+<h2>Stockage, sauvegarde et archivage des données<a class="headerlink" href="#stockage-sauvegarde-et-archivage-des-donnees" title="Link to this heading">#</a></h2>
+<p>Le stockage, la sauvegarde et l’archivage renvoient à des temps différents du cycle de la donnée. Le stockage correspond au moment où les données sont exploitées. Au contraire l’archivage intervient après la phase de traitement et d’analyse, dans un moment où les données ne sont plus manipulées. Enfin, la sauvegarde est une mesure visant à garantir la sécurité et l’integrité des données. Il est toutefois possible que les différences entre ces trois concepts ne soient pas connues de tous.</p>
+<section id="le-stockage">
+<h3>Le stockage<a class="headerlink" href="#le-stockage" title="Link to this heading">#</a></h3>
+<p>Les trois supports de stockage les plus utilisés par les répondants sont la clé USB ou le disque dur externe (67%), l’ordinateur professionnel (66%) et les clouds commerciaux comme Google Drive ou Icloud (49%). 9% des personnes des personnes interrogées ont déclaré qu’elle stockaient des données sur un cloud de Paris 8.</p>
+</section>
+<section id="la-sauvegarde">
+<h3>La sauvegarde<a class="headerlink" href="#la-sauvegarde" title="Link to this heading">#</a></h3>
+<p>En ce qui concerne la sauvegarde des données, la clé USB ou le disque dur externe sont les outils les plus employés (66% des répondants), devant les clouds commerciaux (49%) et les solutions comme ShareDocs (24%). 5% des répondants sauvegardent leurs données sur “les espaces disques de Paris 8”.</p>
+</section>
+<section id="archivage">
+<h3>Archivage<a class="headerlink" href="#archivage" title="Link to this heading">#</a></h3>
+<p>La clé USB ou le disque dur externe sont également utilisés par 66% des répondants comme solution d’archivage et 42% d’entre eux ont indiqué qu’ils archivaient leurs données sur des clouds commerciaux. Seulement 5% des personnes interrogées ont recourt aux outils de Paris 8.</p>
+<figure class="align-default" id="q33-save-data">
+<img alt="script_analyse/stat_descriptive/viz/pratiques_sauvegardes.png" src="script_analyse/stat_descriptive/viz/pratiques_sauvegardes.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Les lieux de stockage, de sauvegarde et d’archivage des données</span><a class="headerlink" href="#q33-save-data" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_save</span><span class="p">[</span><span class="s2">&quot;statut&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_save</span><span class="o">.</span><span class="n">q45_clé</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">df0</span><span class="o">.</span><span class="n">q45_clé</span><span class="p">,</span> <span class="n">df0</span><span class="o">.</span><span class="n">q25_statut_rec</span><span class="p">))</span><span class="o">.</span><span class="n">get</span><span class="p">)</span>
+<span class="n">list_k</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df_save</span><span class="o">.</span><span class="n">q45_clé</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_save</span><span class="o">.</span><span class="n">q33_sauvegarde_data</span><span class="o">==</span><span class="s2">&quot;Sur les espaces disques de Paris 8&quot;</span><span class="p">]]</span>
+<span class="n">df_exp</span><span class="p">,</span> <span class="n">gb_disque</span> <span class="o">=</span> <span class="n">split_multiple_choices</span><span class="p">(</span><span class="n">df0</span><span class="p">[[</span><span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="s2">&quot;q44_ufr_labo&quot;</span><span class="p">,</span><span class="s2">&quot;q24_research_fields&quot;</span><span class="p">,</span><span class="s2">&quot;q6_1_dev_what&quot;</span><span class="p">,</span><span class="s2">&quot;q6_1_dev_how&quot;</span><span class="p">,</span><span class="s2">&quot;q6_1_dev_group&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df0</span><span class="o">.</span><span class="n">q45_clé</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">list_k</span><span class="p">)],</span> <span class="s2">&quot;q24_research_fields&quot;</span><span class="p">,</span> <span class="s2">&quot;q45_clé&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s1">&#39;|&#39;</span><span class="p">)</span>
+<span class="n">df_exp</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>q45_clé</th>
+      <th>q44_ufr_labo</th>
+      <th>q24_research_fields</th>
+      <th>q6_1_dev_what</th>
+      <th>q6_1_dev_how</th>
+      <th>q6_1_dev_group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7</th>
+      <td>9K9T-RVNL</td>
+      <td>UFR de psychologie, Laboratoire DysCo</td>
+      <td>SH3 Le monde social et ses interactions</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>9K9T-RVNL</td>
+      <td>UFR de psychologie, Laboratoire DysCo</td>
+      <td>SH4 L'esprit humain et sa complexité</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ZGPH-2FPH</td>
+      <td>Mitsic, Humanités numériques, Paragraphe</td>
+      <td>SH3 Le monde social et ses interactions</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>programmes et logiciels variés</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ZGPH-2FPH</td>
+      <td>Mitsic, Humanités numériques, Paragraphe</td>
+      <td>SH4 L'esprit humain et sa complexité</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>programmes et logiciels variés</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ZGPH-2FPH</td>
+      <td>Mitsic, Humanités numériques, Paragraphe</td>
+      <td>SH5 Textes et concepts</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>programmes et logiciels variés</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ZGPH-2FPH</td>
+      <td>Mitsic, Humanités numériques, Paragraphe</td>
+      <td>SH6 L'étude du passé humain</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>programmes et logiciels variés</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ZGPH-2FPH</td>
+      <td>Mitsic, Humanités numériques, Paragraphe</td>
+      <td>SH7 Mobilité humaine, environnement et espace</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>programmes et logiciels variés</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ZGPH-2FPH</td>
+      <td>Mitsic, Humanités numériques, Paragraphe</td>
+      <td>SH8 Études des cultures et des arts</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>programmes et logiciels variés</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>ZGPH-2FPH</td>
+      <td>Mitsic, Humanités numériques, Paragraphe</td>
+      <td>PE6 Sciences informatiques et informatique</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>programmes et logiciels variés</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>SYWH-2Y8T</td>
+      <td>UFR eritES, géographie, UMR LADYSS</td>
+      <td>SH2 Institutions, gouvernance et systèmes juri...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>SYWH-2Y8T</td>
+      <td>UFR eritES, géographie, UMR LADYSS</td>
+      <td>SH3 Le monde social et ses interactions</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>SYWH-2Y8T</td>
+      <td>UFR eritES, géographie, UMR LADYSS</td>
+      <td>SH7 Mobilité humaine, environnement et espace</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>7CU7-JG8K</td>
+      <td>Culture et communication, Cemti</td>
+      <td>SH3 Le monde social et ses interactions</td>
+      <td>classification automatique</td>
+      <td>ia générative</td>
+      <td>traitement et analyse de données</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>7CU7-JG8K</td>
+      <td>Culture et communication, Cemti</td>
+      <td>SH4 L'esprit humain et sa complexité</td>
+      <td>classification automatique</td>
+      <td>ia générative</td>
+      <td>traitement et analyse de données</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>7CU7-JG8K</td>
+      <td>Culture et communication, Cemti</td>
+      <td>SH5 Textes et concepts</td>
+      <td>classification automatique</td>
+      <td>ia générative</td>
+      <td>traitement et analyse de données</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>7CU7-JG8K</td>
+      <td>Culture et communication, Cemti</td>
+      <td>SH6 L'étude du passé humain</td>
+      <td>classification automatique</td>
+      <td>ia générative</td>
+      <td>traitement et analyse de données</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>7CU7-JG8K</td>
+      <td>Culture et communication, Cemti</td>
+      <td>SH8 Études des cultures et des arts</td>
+      <td>classification automatique</td>
+      <td>ia générative</td>
+      <td>traitement et analyse de données</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>7CU7-JG8K</td>
+      <td>Culture et communication, Cemti</td>
+      <td>PE7 Ingénierie des systèmes et de la communica...</td>
+      <td>classification automatique</td>
+      <td>ia générative</td>
+      <td>traitement et analyse de données</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>BNVM-K8M9</td>
+      <td>MITSIC</td>
+      <td>PE6 Sciences informatiques et informatique</td>
+      <td>modélisation</td>
+      <td>deep learning</td>
+      <td>traitement et analyse de données</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
 </section>
-<section id="stockage-sauvegarde-et-archivage-des-donnees">
-<h2>Stockage, sauvegarde et archivage des données<a class="headerlink" href="#stockage-sauvegarde-et-archivage-des-donnees" title="Link to this heading">#</a></h2>
-<p>Le stockage, la sauvegarde et l’archivage renvoient à des temps différents du cycle de la donnée. Le stockage correspond au moment où les données sont exploitées. Au contraire l’archivage intervient après la phase de traitement et d’analyse, dans un moment où les données ne sont plus manipulées. Enfin, la sauvegarde est une mesure visant à garantir la sécurité et l’integrité des données. Il est ainsi recommandé de copier ses données sur trois supports différents. Il est toutefois possible que les différences entre ces trois concepts ne soient pas connues de tous.</p>
-<p>50% des personnes interrogées ont cité au maximum trois supports de stockage. Concernant la sauvegarde des données, le nombre médian est de deux : 50% des personnes interrogées ont cité au maximum deux supports de sauvegarde. La clé usb ou le disque dur externe sont les supports les plus utilisés que ce soit pour le stockage (67%), la sauvegarde (66%) ou l’achivage (66%). Concernant les clouds, ce sont les services commerciaux (Google, Icloud) qui arrivent en tête. 49% des répondants disent stocker ou sauvegarder leurs documents sur ces services et 42% les emploient comme espaces d’achivage. À l’opposé, seulement 9% des personnes interrogées recourent au cloud de Paris 8 (5% si on parle de sauvegarde ou d’archivage).</p>
-<figure class="align-default" id="q33-save-data">
-<img alt="../../_images/pratiques_sauvegardes.png" src="../../_images/pratiques_sauvegardes.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Les lieux de stockage, de sauvegarde et d’archivage des données</span><a class="headerlink" href="#q33-save-data" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
 </section>
 </section>
 
@@ -843,12 +1505,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="profil_repondant.html"
+       href="../../biblio.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Profils des enquêtés</p>
+        <p class="prev-next-title">Bibliographie</p>
       </div>
     </a>
     <a class="right-next"
@@ -877,7 +1539,12 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-besoins-d-accompagnement-a-la-science-ouverte">Les besoins d’accompagnement à la Science Ouverte</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stockage-sauvegarde-et-archivage-des-donnees">Stockage, sauvegarde et archivage des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stockage-sauvegarde-et-archivage-des-donnees">Stockage, sauvegarde et archivage des données</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-stockage">Le stockage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-sauvegarde">La sauvegarde</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#archivage">Archivage</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
