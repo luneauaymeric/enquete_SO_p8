@@ -3,10 +3,23 @@
 
 format: jb-book
 root: intro.md
-chapters:
-- file: script_analyse/stat_descriptive/profil_repondant.ipynb
-- file: script_analyse/stat_descriptive/connaissance_science_ouverte.ipynb
-- file: script_analyse/stat_descriptive/production_et_analyse_donnees.ipynb
-- file: script_analyse/stat_descriptive/Outils_humanum.ipynb
-- file: script_analyse/stat_descriptive/glossaire.md
-- file: biblio.md
+parts:
+    caption: Synthèse
+    chapters:
+    - file : methode.md
+    - file : script_analyse/synthese/main_results.md
+    - file : script_analyse/stat_descriptive/profil_repondant.ipynb
+    caption: Glossaire et bibliographie
+    chapters:
+    - file: glossaire.md
+    - file: biblio.md
+    caption : Annexe I - Analyses descriptives
+    chapters:
+    #- file: script_analyse/stat_descriptive/profil_repondant.ipynb
+    - file: script_analyse/stat_descriptive/connaissance_science_ouverte.ipynb
+    - file: script_analyse/stat_descriptive/production_et_analyse_donnees.ipynb
+    - file: script_analyse/stat_descriptive/Outils_humanum.ipynb
+    caption: Annexes II - Méthodes
+    - file: calssification_repondant/profil_repondant_discpline.ipynb
+    - file: calssification_repondant/clusterisation_indiv_research_fields.ipynb
+    - file: script_traitement/topic_modeling.ipynb

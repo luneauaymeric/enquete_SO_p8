@@ -164,5 +164,10 @@ open source ?",q19,
 16. recodage dev_exemple,q6_1_dev_what,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",,"Recodage de la question 16. Restitue le type d'objet développé : traitement du son, jeu, base de donnée, site web"
 16. recodage dev_exemple groupe,q6_1_dev_group,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",,"Classe les exemples de logiciels développés dans des groupes : outils de traitement et d'analyse, outils de diffusion, collecte de données, etc."
 16. recodage dev_exemple how,q6_1_dev_how,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",,Précise le langage ou l'outil de programmation utilisé
+"113. recodage Autre, précisez",q26_1_autre_rec,13_env_travail,False,nominal_multiple,False,object,113.0,"Où travaillez-vous le plus souvent? Si autre, précisez",q26,recode les autre lieux
+135. recodage ia_tools,q35_ia_tools,4_logiciel_traitement,False,nominal_multiple,False,object,135.0,"Si oui, lesquels ?",q35,recode les outils ia
 Research area id,no_cluster,champ de recherche,False,simple_nominal,False,float64,135.0,,,recode des champs de recherche
 Research area nom,nom_cluster,champ de recherche,False,simple_nominal,False,object,135.0,,,recode des champs de recherche
+4. recodage autre mode diffusion données,q4_autres_entrepots_rec,3_entrepot,False,simple_nominal,True,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?,,
+4. type entrepots,type_entrepot,3_entrepot,False,simple_nominal,False,object,4.0,,,"Classification des entrepots proposés en type : institutionnel, autres entrepots"
+4. type entrepots bis,type_entrepot1,3_entrepot,False,simple_nominal,False,object,4.0,,,"Classification des entrepots cités dans la question si autre, précisez"
