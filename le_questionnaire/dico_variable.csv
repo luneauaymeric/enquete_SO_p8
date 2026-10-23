@@ -158,6 +158,9 @@ open source ?",q19,
 110. statut_rec,q25_statut_rec,12_descript_repondant,False,simple_nominal,False,object,25.0,2/ Êtes-vous ?,,
 110. doctorant,q25_doctorant,12_descript_repondant,False,simple_nominal,False,object,25.0,2/ Êtes-vous ?,,
 3. octavi_depot_rec,q3_octavi_rec,2_bib_num,False,simple_nominal,False,object,3.0,"3/ Avez-vous des productions déposées sur Octaviana, la bibliothèque numérique de l'université ?",,
+4. recodage autre mode diffusion données,q4_autres_entrepots_rec,3_entrepot,False,simple_nominal,True,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?,,
+4. type entrepots,type_entrepot,3_entrepot,False,simple_nominal,False,object,4.0,,,"Classification des entrepots proposés en type : institutionnel, autres entrepots"
+4. type entrepots bis,type_entrepot1,3_entrepot,False,simple_nominal,False,object,4.0,,,"Classification des entrepots cités dans la question si autre, précisez"
 14. other_lang_rec,q5_1_other_lang_rec,4_logiciel_traitement,False,multiple_choice,False,object,14.0,"5.1/ Si Autre, précisez lequel (lesquels) ?",q5,Recodage de la question 14. mise en basse casse des logiciels cités.
 13.1 recodage logiciel de traitment,q5_logiciel_traitement_rec,4_logiciel_traitement,False,multiple_choice,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?",q5,Regroupe les questions 5 et 6 sur les logiciels de traitement
 13.2 recodage familles de logiciel,q5_family_logi,4_logiciel_traitement,False,multiple_choice,False,object,5.0,"5/ Dans le cadre de vos travaux de recherche, quels langages de programmation/logiciels de traitement de données utilisez-vous ?",q5,Classe les logiciels par famille
@@ -166,8 +169,3 @@ open source ?",q19,
 16. recodage dev_exemple how,q6_1_dev_how,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",,Précise le langage ou l'outil de programmation utilisé
 "113. recodage Autre, précisez",q26_1_autre_rec,13_env_travail,False,nominal_multiple,False,object,113.0,"Où travaillez-vous le plus souvent? Si autre, précisez",q26,recode les autre lieux
 135. recodage ia_tools,q35_ia_tools,4_logiciel_traitement,False,nominal_multiple,False,object,135.0,"Si oui, lesquels ?",q35,recode les outils ia
-Research area id,no_cluster,champ de recherche,False,simple_nominal,False,float64,135.0,,,recode des champs de recherche
-Research area nom,nom_cluster,champ de recherche,False,simple_nominal,False,object,135.0,,,recode des champs de recherche
-4. recodage autre mode diffusion données,q4_autres_entrepots_rec,3_entrepot,False,simple_nominal,True,object,4.0,4/ Avez-vous déjà diffusé vos données de recherche une fois le projet terminé ?,,
-4. type entrepots,type_entrepot,3_entrepot,False,simple_nominal,False,object,4.0,,,"Classification des entrepots proposés en type : institutionnel, autres entrepots"
-4. type entrepots bis,type_entrepot1,3_entrepot,False,simple_nominal,False,object,4.0,,,"Classification des entrepots cités dans la question si autre, précisez"
