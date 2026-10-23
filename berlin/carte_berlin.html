@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3d1e13d37f4f141d521afadf9e033bdb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3d1e13d37f4f141d521afadf9e033bdb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3d1e13d37f4f141d521afadf9e033bdb = L.map(
+                "map_3d1e13d37f4f141d521afadf9e033bdb",
+                {
+                    center: [52.52, 13.405],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5fb7db3c0dd294a25410f1fa2c4ea13b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_5fb7db3c0dd294a25410f1fa2c4ea13b.addTo(map_3d1e13d37f4f141d521afadf9e033bdb);
+        
+    
+            var marker_d7f5c42c32b8d1611766e452ab28f3df = L.marker(
+                [52.5163, 13.3777],
+                {
+}
+            ).addTo(map_3d1e13d37f4f141d521afadf9e033bdb);
+        
+    
+            var icon_4b5947151df6b97f4b7131c2b2cd75b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e27115020dad2bf4323897836d70d353 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f776b990466368516f3d36b2d588f663 = $(`<div id="html_f776b990466368516f3d36b2d588f663" style="width: 100.0%; height: 100.0%;">Porte de Brandebourg, Berlin</div>`)[0];
+                popup_e27115020dad2bf4323897836d70d353.setContent(html_f776b990466368516f3d36b2d588f663);
+            
+        
+
+        marker_d7f5c42c32b8d1611766e452ab28f3df.bindPopup(popup_e27115020dad2bf4323897836d70d353)
+        ;
+
+        
+    
+    
+                marker_d7f5c42c32b8d1611766e452ab28f3df.setIcon(icon_4b5947151df6b97f4b7131c2b2cd75b9);
+            
+</script>
+</html>
