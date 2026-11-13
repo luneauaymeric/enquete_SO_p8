@@ -169,3 +169,8 @@ open source ?",q19,
 16. recodage dev_exemple how,q6_1_dev_how,5_developpement,False,simple_nominal,False,object,16.0,"6.1/ Si oui, pourriez-vous expliquer ce que vous avez développé ?",,Précise le langage ou l'outil de programmation utilisé
 "113. recodage Autre, précisez",q26_1_autre_rec,13_env_travail,False,nominal_multiple,False,object,113.0,"Où travaillez-vous le plus souvent? Si autre, précisez",q26,recode les autre lieux
 135. recodage ia_tools,q35_ia_tools,4_logiciel_traitement,False,nominal_multiple,False,object,135.0,"Si oui, lesquels ?",q35,recode les outils ia
+Aire de rechere,label_recherche_1,champ de recherche,False,simple_nominal,False,object,109.0,,,Label donnés manuellement aux clusters des champs de recherche
+Labellisation automatique des clusters de recherche,auto_lab_research_cluster,champ de recherche,False,simple_nominal,False,object,109.0,,,Label donnés automatiques aux clusters des champs de recherche sur la base d'un TF-IDF (champ de recherche le plus spécifiques à chaque cluster)
+Champ de recherche,research_fields,champ de recherche,False,simple_nominal,False,object,109.0,,,"liste des champs de recherche sélectionné avec seulement l'abréviation(SH1, LS1, etc.)"
+Style de données,clust_type_data,Type de données,False,simple_nominal,False,object,28.0,,,Label donnés manuellement aux clusters de données
+Style de données,auto_clust_data,Type de données,False,simple_nominal,False,object,28.0,,,Label donnés automatiquement aux clusters de données avec un tf-idf
