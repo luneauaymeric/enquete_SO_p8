@@ -1,0 +1,7 @@
+networkx
+ipysigma
+myst-nb
+spacy
+tabulate
+bertopic
+datamapplot

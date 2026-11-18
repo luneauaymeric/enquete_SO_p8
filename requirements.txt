@@ -1,10 +1,6 @@
-pandas
-matplotlib
-numpy
+networkx
 ipysigma
-contextily
 myst-nb
-squarify
 spacy
 tabulate
 bertopic
