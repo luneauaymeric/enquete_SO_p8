@@ -6,40 +6,50 @@
 \let\spxextra\sphinxstyleindexextra
 
 
+  \lettergroup{C}
+  \item \spxentry{CRC\sphinxhyphen {}EN}, \spxpagem{\hyperpage{21}}
+
+  \indexspace
+
   \lettergroup{G}
-  \item \spxentry{Gitlab}, \spxpagem{\hyperpage{33}}
+  \item \spxentry{Gitlab}, \spxpagem{\hyperpage{21}}
 
   \indexspace
 
   \lettergroup{H}
-  \item \spxentry{HNurl}, \spxpagem{\hyperpage{33}}
+  \item \spxentry{HNurl}, \spxpagem{\hyperpage{21}}
 
   \indexspace
 
   \lettergroup{I}
-  \item \spxentry{Isidore}, \spxpagem{\hyperpage{33}}
+  \item \spxentry{Isidore}, \spxpagem{\hyperpage{21}}
 
   \indexspace
 
   \lettergroup{K}
-  \item \spxentry{Kanboard}, \spxpagem{\hyperpage{33}}
+  \item \spxentry{Kanboard}, \spxpagem{\hyperpage{21}}
 
   \indexspace
 
   \lettergroup{M}
-  \item \spxentry{Mattermost}, \spxpagem{\hyperpage{33}}
+  \item \spxentry{Mattermost}, \spxpagem{\hyperpage{21}}
 
   \indexspace
 
   \lettergroup{N}
-  \item \spxentry{Nakala}, \spxpagem{\hyperpage{33}}
+  \item \spxentry{Nakala}, \spxpagem{\hyperpage{21}}
+
+  \indexspace
+
+  \lettergroup{P}
+  \item \spxentry{Principes FAIR}, \spxpagem{\hyperpage{21}}
 
   \indexspace
 
   \lettergroup{S}
-  \item \spxentry{SD\sphinxhyphen {}Box}, \spxpagem{\hyperpage{33}}
-  \item \spxentry{ShareDocs}, \spxpagem{\hyperpage{33}}
-  \item \spxentry{Statistical Software Components}, \spxpagem{\hyperpage{34}}
-  \item \spxentry{Stylo}, \spxpagem{\hyperpage{34}}
+  \item \spxentry{SD\sphinxhyphen {}Box}, \spxpagem{\hyperpage{22}}
+  \item \spxentry{ShareDocs}, \spxpagem{\hyperpage{22}}
+  \item \spxentry{Statistical Software Components}, \spxpagem{\hyperpage{22}}
+  \item \spxentry{Stylo}, \spxpagem{\hyperpage{22}}
 
 \end{sphinxtheindex}
