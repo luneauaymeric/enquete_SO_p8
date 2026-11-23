@@ -5,3 +5,4 @@ spacy
 tabulate
 bertopic
 datamapplot
+fanalysis

@@ -174,3 +174,4 @@ Labellisation automatique des clusters de recherche,auto_lab_research_cluster,ch
 Champ de recherche,research_fields,champ de recherche,False,simple_nominal,False,object,109.0,,,"liste des champs de recherche sélectionné avec seulement l'abréviation(SH1, LS1, etc.)"
 Style de données,clust_type_data,Type de données,False,simple_nominal,False,object,28.0,,,Label donnés manuellement aux clusters de données
 Style de données,auto_clust_data,Type de données,False,simple_nominal,False,object,28.0,,,Label donnés automatiquement aux clusters de données avec un tf-idf
+Aire de rechere,hc_label,champ de recherche,False,simple_nominal,False,object,109.0,,,Label donnés manuellement aux clusters des champs de recherche identifié par une classification hiérarchique ascendante après analyse en composantes multiple
